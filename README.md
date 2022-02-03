@@ -1,4 +1,4 @@
-# Elona+ Custom-GX 2.10
+# Elona+ Custom-GX 2.1000
 
 *\~Believe in Jure and hold a determination to mince.\~*
 
