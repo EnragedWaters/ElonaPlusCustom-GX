@@ -164,10 +164,10 @@
 			if ( jp ) {
 				colorres
 				if ( inv(STARTING_INV_ITEM_ENCHANT + cnt * 2 + 1, eq2_itempos) >= 0 ) {
-					mes "‚óè"
+					mes "Åú"
 				}
 				else {
-					mes "‚ñº"
+					mes "Å•"
 				}
 				pos eq2_posx + LoopCount * 20 + 5, eq2_posy + 1
 				color 0, 0, 0

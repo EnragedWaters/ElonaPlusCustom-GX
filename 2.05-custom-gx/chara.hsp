@@ -13,7 +13,7 @@
 			spact(SKILL_SPACT_UNISON_IMPACT - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_UNISON_IMPACT) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_UNISON_IMPACT) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_UNISON_IMPACT) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_UNISON_IMPACT) + ".")
 		}
 	}
 	overp = 0
@@ -22,7 +22,7 @@
 			spact(SKILL_SPACT_BLOOD_STREAM - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_BLOOD_STREAM) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_BLOOD_STREAM) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_BLOOD_STREAM) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_BLOOD_STREAM) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_WIL, CHARA_PLAYER) > 1 ) {
@@ -30,7 +30,7 @@
 			spact(SKILL_SPACT_GAUGE_RELEASE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_GAUGE_RELEASE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_GAUGE_RELEASE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_GAUGE_RELEASE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_GAUGE_RELEASE) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_SENSE_QUALITY, CHARA_PLAYER) > 29 ) {
@@ -38,7 +38,7 @@
 			spact(SKILL_SPACT_DATA_SCAN - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_DATA_SCAN) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_DATA_SCAN) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_DATA_SCAN) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_DATA_SCAN) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_MAGIC_DEVICE, CHARA_PLAYER) > 19 ) {
@@ -46,13 +46,13 @@
 			spact(SKILL_SPACT_DRAW_CHARGE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_DRAW_CHARGE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_DRAW_CHARGE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_DRAW_CHARGE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_DRAW_CHARGE) + ".")
 		}
 		if ( spact(SKILL_SPACT_FILL_CHARGE - STARTING_SKILL_SPACT) == 0 ) {
 			spact(SKILL_SPACT_FILL_CHARGE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_FILL_CHARGE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_FILL_CHARGE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_FILL_CHARGE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_FILL_CHARGE) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_TACTICS, CHARA_PLAYER) > 29 ) {
@@ -60,7 +60,7 @@
 			spact(SKILL_SPACT_SWARM - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_SWARM) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_SWARM) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_SWARM) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_SWARM) + ".")
 		}
 	}
 	if ( trait(TRAIT_NORMAL_SPACT_VINDALIAN_JIUJITSU) != 0 ) {
@@ -68,7 +68,7 @@
 			spact(SKILL_SPACT_VINDALIAN_JIUJITSU - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_VINDALIAN_JIUJITSU) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_VINDALIAN_JIUJITSU) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_VINDALIAN_JIUJITSU) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_VINDALIAN_JIUJITSU) + ".")
 		}
 	}
 	if ( trait(TRAIT_NORMAL_SPACT_UNCONTROL) != 0 ) {
@@ -76,7 +76,7 @@
 			spact(SKILL_SPACT_UNCONTROL - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_UNCONTROL) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_UNCONTROL) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_UNCONTROL) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_UNCONTROL) + ".")
 		}
 	}
 	if ( trait(TRAIT_NORMAL_SPACT_FASCINATION_DANCE) != 0 ) {
@@ -84,7 +84,7 @@
 			spact(SKILL_SPACT_FASCINATION_DANCE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_FASCINATION_DANCE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_FASCINATION_DANCE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_FASCINATION_DANCE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_FASCINATION_DANCE) + ".")
 		}
 	}
 	if ( trait(TRAIT_NORMAL_SPACT_GRAVITY_ACCEL) != 0 ) {
@@ -92,7 +92,7 @@
 			spact(SKILL_SPACT_GRAVITY_ACCEL - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_GRAVITY_ACCEL) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_GRAVITY_ACCEL) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_GRAVITY_ACCEL) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_GRAVITY_ACCEL) + ".")
 		}
 	}
 	if ( trait(TRAIT_NORMAL_SPACT_BLADE_STRINGS) != 0 ) {
@@ -100,7 +100,7 @@
 			spact(SKILL_SPACT_BLADE_STRINGS - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_BLADE_STRINGS) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_BLADE_STRINGS) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_BLADE_STRINGS) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_BLADE_STRINGS) + ".")
 		}
 	}
 	if ( trait(TRAIT_NORMAL_SKILL_NEGOTIATION) != 0 ) {
@@ -108,7 +108,7 @@
 			spact(SKILL_SPACT_PERSUASION - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_PERSUASION) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_PERSUASION) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_PERSUASION) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_PERSUASION) + ".")
 		}
 	}
 	if ( trait(TRAIT_NORMAL_SKILL_NEGOTIATION) != 0 ) {
@@ -116,7 +116,7 @@
 			spact(SKILL_SPACT_PECULIAR_JOKE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_PECULIAR_JOKE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_PECULIAR_JOKE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_PECULIAR_JOKE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_PECULIAR_JOKE) + ".")
 		}
 	}
 	if ( trait(TRAIT_NORMAL_STAT_PV) != 0 ) {
@@ -124,7 +124,7 @@
 			spact(SKILL_SPACT_SAND_CANNON - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_SAND_CANNON) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned new ability, " + skillname(SKILL_SPACT_SAND_CANNON) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_SAND_CANNON) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned new ability, " + skillname(SKILL_SPACT_SAND_CANNON) + ".")
 		}
 	}
 	if ( cdata(CDATA_LEVEL, CHARA_PLAYER) >= 50 & trait(TRAIT_NORMAL_SPACT_DIMENSIONAL_MOVE) != 0 ) {
@@ -132,7 +132,7 @@
 			spact(SKILL_SPACT_SPACE_RETENTION - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_SPACE_RETENTION) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned new ability, " + skillname(SKILL_SPACT_SPACE_RETENTION) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_SPACE_RETENTION) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned new ability, " + skillname(SKILL_SPACT_SPACE_RETENTION) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_STR, CHARA_PLAYER) > 39 & trait(TRAIT_NORMAL_STAT_PV) != 0 ) {
@@ -140,7 +140,7 @@
 			spact(SKILL_SPACT_SMASH_GROUND - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_SMASH_GROUND) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned new ability, " + skillname(SKILL_SPACT_SMASH_GROUND) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_SMASH_GROUND) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned new ability, " + skillname(SKILL_SPACT_SMASH_GROUND) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_CON, CHARA_PLAYER) > 69 & trait(TRAIT_NORMAL_STAT_PV) != 0 ) {
@@ -148,7 +148,7 @@
 			spact(SKILL_SPACT_ROCRUSHER - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_ROCRUSHER) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned new ability, " + skillname(SKILL_SPACT_ROCRUSHER) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_ROCRUSHER) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned new ability, " + skillname(SKILL_SPACT_ROCRUSHER) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_CON, CHARA_PLAYER) > 89 & trait(TRAIT_NORMAL_STAT_PV) != 0 ) {
@@ -156,7 +156,7 @@
 			spact(SKILL_SPACT_MOGRANIC_AURA - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_MOGRANIC_AURA) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned new ability, " + skillname(SKILL_SPACT_MOGRANIC_AURA) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_MOGRANIC_AURA) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned new ability, " + skillname(SKILL_SPACT_MOGRANIC_AURA) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_NEGOTIATION, CHARA_PLAYER) > 19 & trait(TRAIT_NORMAL_SKILL_NEGOTIATION) != 0 ) {
@@ -164,7 +164,7 @@
 			spact(SKILL_SPACT_BLENDED_LIE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_BLENDED_LIE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_BLENDED_LIE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_BLENDED_LIE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_BLENDED_LIE) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_NEGOTIATION, CHARA_PLAYER) > 29 & trait(TRAIT_NORMAL_SKILL_NEGOTIATION) != 0 ) {
@@ -172,7 +172,7 @@
 			spact(SKILL_SPACT_INTIMIDATION - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_INTIMIDATION) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_INTIMIDATION) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_INTIMIDATION) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_INTIMIDATION) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_NEGOTIATION, CHARA_PLAYER) > 39 & trait(TRAIT_NORMAL_SKILL_NEGOTIATION) != 0 ) {
@@ -180,7 +180,7 @@
 			spact(SKILL_SPACT_MYSTERIOUS_SONG - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_MYSTERIOUS_SONG) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_MYSTERIOUS_SONG) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_MYSTERIOUS_SONG) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_MYSTERIOUS_SONG) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_NEGOTIATION, CHARA_PLAYER) > 49 & sorg(SKILL_NORMAL_SENSE_QUALITY, CHARA_PLAYER) > 29 & trait(TRAIT_NORMAL_SKILL_NEGOTIATION) != 0 ) {
@@ -188,7 +188,7 @@
 			spact(SKILL_SPACT_HARMONIC_ASSAULT - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_HARMONIC_ASSAULT) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_HARMONIC_ASSAULT) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_HARMONIC_ASSAULT) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_HARMONIC_ASSAULT) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_PER, CHARA_PLAYER) > 39 & trait(TRAIT_NORMAL_SKILL_CASTING) != 0 ) {
@@ -196,7 +196,7 @@
 			spact(SKILL_SPACT_LINEAR_LAUNCHER - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_LINEAR_LAUNCHER) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned new ability, " + skillname(SKILL_SPACT_LINEAR_LAUNCHER) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_LINEAR_LAUNCHER) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned new ability, " + skillname(SKILL_SPACT_LINEAR_LAUNCHER) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_PER, CHARA_PLAYER) > 69 & trait(TRAIT_NORMAL_SKILL_CASTING) != 0 ) {
@@ -204,7 +204,7 @@
 			spact(SKILL_SPACT_E_MAG_CAGE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_E_MAG_CAGE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned new ability, " + skillname(SKILL_SPACT_E_MAG_CAGE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_E_MAG_CAGE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned new ability, " + skillname(SKILL_SPACT_E_MAG_CAGE) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_PER, CHARA_PLAYER) > 99 & trait(TRAIT_NORMAL_SKILL_CASTING) != 0 ) {
@@ -212,7 +212,7 @@
 			spact(SKILL_SPACT_E_MAG_TORNADO - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_E_MAG_TORNADO) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned new ability, " + skillname(SKILL_SPACT_E_MAG_TORNADO) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_E_MAG_TORNADO) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned new ability, " + skillname(SKILL_SPACT_E_MAG_TORNADO) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_TACTICS, CHARA_PLAYER) > 39 & trait(TRAIT_NORMAL_SPACT_BLADE_STRINGS) != 0 ) {
@@ -220,7 +220,7 @@
 			spact(SKILL_SPACT_DANCING_WIRE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_DANCING_WIRE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_DANCING_WIRE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_DANCING_WIRE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_DANCING_WIRE) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_GENE_ENGINEER, CHARA_PLAYER) > 29 & trait(TRAIT_NORMAL_SPACT_BLADE_STRINGS) != 0 ) {
@@ -228,7 +228,7 @@
 			spact(SKILL_SPACT_THREAD_OF_INNERVATION - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_THREAD_OF_INNERVATION) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_THREAD_OF_INNERVATION) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_THREAD_OF_INNERVATION) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_THREAD_OF_INNERVATION) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_DEX, CHARA_PLAYER) > 69 & trait(TRAIT_NORMAL_SPACT_BLADE_STRINGS) != 0 ) {
@@ -236,7 +236,7 @@
 			spact(SKILL_SPACT_WIRE_WORLD - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_WIRE_WORLD) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned new ability, " + skillname(SKILL_SPACT_WIRE_WORLD) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_WIRE_WORLD) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned new ability, " + skillname(SKILL_SPACT_WIRE_WORLD) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_EVASION, CHARA_PLAYER) > 59 & trait(TRAIT_NORMAL_SPACT_FASCINATION_DANCE) != 0 ) {
@@ -244,7 +244,7 @@
 			spact(SKILL_SPACT_KILLING_DANCE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_KILLING_DANCE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_KILLING_DANCE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_KILLING_DANCE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_KILLING_DANCE) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_LITERACY, CHARA_PLAYER) > 29 ) {
@@ -252,7 +252,7 @@
 			spact(SKILL_SPACT_KIJIN_SHIBARI - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_KIJIN_SHIBARI) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_KIJIN_SHIBARI) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_KIJIN_SHIBARI) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_KIJIN_SHIBARI) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_LITERACY, CHARA_PLAYER) > 39 ) {
@@ -260,7 +260,7 @@
 			spact(SKILL_SPACT_BURN_SCROLLS - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_BURN_SCROLLS) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_BURN_SCROLLS) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_BURN_SCROLLS) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_BURN_SCROLLS) + ".")
 		}
 	}
 	if ( sorg(SKILL_WEAPON_THROWING, CHARA_PLAYER) > 29 ) {
@@ -268,7 +268,7 @@
 			spact(SKILL_SPACT_STRUCK_OUT - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_STRUCK_OUT) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_STRUCK_OUT) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_STRUCK_OUT) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_STRUCK_OUT) + ".")
 		}
 	}
 	if ( sorg(SKILL_WEAPON_THROWING, CHARA_PLAYER) > 39 ) {
@@ -276,7 +276,7 @@
 			spact(SKILL_SPACT_DESTINY_DICE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_DESTINY_DICE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_DESTINY_DICE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_DESTINY_DICE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_DESTINY_DICE) + ".")
 		}
 	}
 	if ( sorg(SKILL_WEAPON_THROWING, CHARA_PLAYER) > 39 | trait(TRAIT_NORMAL_SPACT_VINDALIAN_JIUJITSU) != 0 & sorg(SKILL_ATTR_DEX, CHARA_PLAYER) > 59 ) {
@@ -284,7 +284,7 @@
 			spact(SKILL_SPACT_DISPATCH_FLYING_BEAST - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_DISPATCH_FLYING_BEAST) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_DISPATCH_FLYING_BEAST) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_DISPATCH_FLYING_BEAST) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_DISPATCH_FLYING_BEAST) + ".")
 		}
 	}
 	if ( sorg(SKILL_WEAPON_THROWING, CHARA_PLAYER) > 49 ) {
@@ -292,7 +292,7 @@
 			spact(SKILL_SPACT_SHINING_THROW - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_SHINING_THROW) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_SHINING_THROW) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_SHINING_THROW) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_SHINING_THROW) + ".")
 		}
 	}
 	if ( sorg(SKILL_WEAPON_THROWING, CHARA_PLAYER) > 59 & sorg(SKILL_NORMAL_MEDITATION, CHARA_PLAYER) > 29 ) {
@@ -300,7 +300,7 @@
 			spact(SKILL_SPACT_OVERLIMIT_THROW - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_OVERLIMIT_THROW) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_OVERLIMIT_THROW) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_OVERLIMIT_THROW) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_OVERLIMIT_THROW) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_CASTING, CHARA_PLAYER) > 9 & sorg(SKILL_NORMAL_MEMORIZATION, CHARA_PLAYER) > 9 ) {
@@ -308,7 +308,7 @@
 			spact(SKILL_SPACT_ADVANCED_CASTING - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_ADVANCED_CASTING) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_ADVANCED_CASTING) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_ADVANCED_CASTING) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_ADVANCED_CASTING) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_MAGIC_DEVICE, CHARA_PLAYER) + sorg(SKILL_WEAPON_THROWING, CHARA_PLAYER) + sorg(SKILL_NORMAL_ALCHEMY, CHARA_PLAYER) + sorg(SKILL_NORMAL_LITERACY, CHARA_PLAYER) > 149 ) {
@@ -316,7 +316,7 @@
 			spact(SKILL_SPACT_QUICK_USE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_QUICK_USE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_QUICK_USE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_QUICK_USE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_QUICK_USE) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_TACTICS, CHARA_PLAYER) > 59 ) {
@@ -324,7 +324,7 @@
 			spact(SKILL_SPACT_SHINING_WAVE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_SHINING_WAVE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_SHINING_WAVE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_SHINING_WAVE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_SHINING_WAVE) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_TACTICS, CHARA_PLAYER) > 99 ) {
@@ -332,7 +332,7 @@
 			spact(SKILL_SPACT_SHADOW_RUSH - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_SHADOW_RUSH) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_SHADOW_RUSH) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_SHADOW_RUSH) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_SHADOW_RUSH) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_MINING, CHARA_PLAYER) > 29 ) {
@@ -340,7 +340,7 @@
 			spact(SKILL_SPACT_HOUZANHA - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_HOUZANHA) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_HOUZANHA) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_HOUZANHA) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_HOUZANHA) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_MARKSMAN, CHARA_PLAYER) > 29 ) {
@@ -348,7 +348,7 @@
 			spact(SKILL_SPACT_RAMPAGE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_RAMPAGE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_RAMPAGE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_RAMPAGE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_RAMPAGE) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_MARKSMAN, CHARA_PLAYER) > 49 ) {
@@ -356,7 +356,7 @@
 			spact(SKILL_SPACT_ZERO_SHOOT - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_ZERO_SHOOT) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_ZERO_SHOOT) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_ZERO_SHOOT) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_ZERO_SHOOT) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_MARKSMAN, CHARA_PLAYER) > 39 ) {
@@ -364,7 +364,7 @@
 			spact(SKILL_SPACT_FIRE_A_VOLLEY - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_FIRE_A_VOLLEY) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_FIRE_A_VOLLEY) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_FIRE_A_VOLLEY) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_FIRE_A_VOLLEY) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_CASTING, CHARA_PLAYER) > 39 ) {
@@ -372,7 +372,7 @@
 			spact(SKILL_SPACT_MANA_BURST - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_MANA_BURST) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_MANA_BURST) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_MANA_BURST) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_MANA_BURST) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_STEALTH, CHARA_PLAYER) > 19 ) {
@@ -380,7 +380,7 @@
 			spact(SKILL_SPACT_CURTAIN_OF_SMOKE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_CURTAIN_OF_SMOKE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_CURTAIN_OF_SMOKE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_CURTAIN_OF_SMOKE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_CURTAIN_OF_SMOKE) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_STEALTH, CHARA_PLAYER) > 29 ) {
@@ -388,7 +388,7 @@
 			spact(SKILL_SPACT_SHADOW_STEP - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_SHADOW_STEP) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_SHADOW_STEP) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_SHADOW_STEP) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_SHADOW_STEP) + ".")
 		}
 	}
 	if ( sorg(SKILL_WEAPON_AXE, CHARA_PLAYER) > 9 ) {
@@ -396,7 +396,7 @@
 			spact(SKILL_SPACT_CUT_TREE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_CUT_TREE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_CUT_TREE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_CUT_TREE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_CUT_TREE) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_FAITH, CHARA_PLAYER) > 9 ) {
@@ -404,7 +404,7 @@
 			spact(SKILL_SPACT_PREACHING - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_PREACHING) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_PREACHING) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_PREACHING) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_PREACHING) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_MAGIC_CAPACITY, CHARA_PLAYER) > 19 ) {
@@ -412,7 +412,7 @@
 			spact(SKILL_SPACT_MAGIC_KISS - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_MAGIC_KISS) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_MAGIC_KISS) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_MAGIC_KISS) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_MAGIC_KISS) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_PER, CHARA_PLAYER) > 59 ) {
@@ -420,7 +420,7 @@
 			spact(SKILL_SPACT_MIRROR - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_MIRROR) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_MIRROR) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_MIRROR) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_MIRROR) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_CHA, CHARA_PLAYER) > 9 ) {
@@ -428,7 +428,7 @@
 			spact(SKILL_SPACT_DIRECTIVE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_DIRECTIVE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_DIRECTIVE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_DIRECTIVE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_DIRECTIVE) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_CHA, CHARA_PLAYER) > 4 ) {
@@ -436,7 +436,7 @@
 			spact(SKILL_SPACT_RUBBING - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_RUBBING) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_RUBBING) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_RUBBING) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_RUBBING) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_CHA, CHARA_PLAYER) > 29 ) {
@@ -444,7 +444,7 @@
 			spact(SKILL_SPACT_CALL_FAMILIAR - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_CALL_FAMILIAR) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_CALL_FAMILIAR) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_CALL_FAMILIAR) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_CALL_FAMILIAR) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_CHA, CHARA_PLAYER) > 49 ) {
@@ -452,7 +452,7 @@
 			spact(SKILL_SPACT_BEWITCH - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_BEWITCH) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_BEWITCH) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_BEWITCH) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_BEWITCH) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_STR, CHARA_PLAYER) > 29 ) {
@@ -460,7 +460,7 @@
 			spact(SKILL_SPACT_SQUEEZE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_SQUEEZE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_SQUEEZE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_SQUEEZE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_SQUEEZE) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_LOCK_PICKING, CHARA_PLAYER) > 59 ) {
@@ -468,7 +468,7 @@
 			spact(SKILL_SPACT_LOCK_BREAK - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_LOCK_BREAK) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_LOCK_BREAK) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_LOCK_BREAK) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_LOCK_BREAK) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_DEX, CHARA_PLAYER) > 29 ) {
@@ -476,7 +476,7 @@
 			spact(SKILL_SPACT_TICKLING_HELL - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_TICKLING_HELL) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_TICKLING_HELL) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_TICKLING_HELL) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_TICKLING_HELL) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_DEX, CHARA_PLAYER) > 39 ) {
@@ -484,7 +484,7 @@
 			spact(SKILL_SPACT_DISTURBANCE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_DISTURBANCE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_DISTURBANCE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_DISTURBANCE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_DISTURBANCE) + ".")
 		}
 	}
 	if ( sorg(SKILL_WEAPON_MARTIAL_ARTS, CHARA_PLAYER) > 99 ) {
@@ -492,7 +492,7 @@
 			spact(SKILL_SPACT_CLEAR_MIND - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_CLEAR_MIND) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_CLEAR_MIND) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_CLEAR_MIND) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_CLEAR_MIND) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_GARDENING, CHARA_PLAYER) >= 30 & trait(TRAIT_NORMAL_SPACT_MISTELTEIN) != 0 ) {
@@ -500,7 +500,7 @@
 			spact(SKILL_SPACT_VIOLENT_GARDEN - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_VIOLENT_GARDEN) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_VIOLENT_GARDEN) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_VIOLENT_GARDEN) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_VIOLENT_GARDEN) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_GARDENING, CHARA_PLAYER) >= 60 & trait(TRAIT_NORMAL_SPACT_MISTELTEIN) != 0 ) {
@@ -508,7 +508,7 @@
 			spact(SKILL_SPACT_AROMAGEDDON - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_AROMAGEDDON) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_AROMAGEDDON) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_AROMAGEDDON) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_AROMAGEDDON) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_CONTROL_MAGIC, CHARA_PLAYER) > 19 & trait(TRAIT_NORMAL_SPACT_EYE_OF_MANA) != 0 ) {
@@ -516,7 +516,7 @@
 			spact(SKILL_SPACT_EYE_OF_ILLUSION - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_EYE_OF_ILLUSION) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_EYE_OF_ILLUSION) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_EYE_OF_ILLUSION) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_EYE_OF_ILLUSION) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_MAG, CHARA_PLAYER) > 59 & trait(TRAIT_NORMAL_SPACT_EYE_OF_MANA) != 0 ) {
@@ -524,7 +524,7 @@
 			spact(SKILL_SPACT_ABYSS_IN_THE_EYE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_ABYSS_IN_THE_EYE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_ABYSS_IN_THE_EYE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_ABYSS_IN_THE_EYE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_ABYSS_IN_THE_EYE) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_GENE_ENGINEER, CHARA_PLAYER) > 19 & trait(TRAIT_NORMAL_SPACT_TOUCH_OF_POISON) != 0 ) {
@@ -532,7 +532,7 @@
 			spact(SKILL_SPACT_HAZARD_RECIPE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_HAZARD_RECIPE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_HAZARD_RECIPE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_HAZARD_RECIPE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_HAZARD_RECIPE) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_GENE_ENGINEER, CHARA_PLAYER) > 39 & trait(TRAIT_NORMAL_SPACT_TOUCH_OF_POISON) != 0 ) {
@@ -540,7 +540,7 @@
 			spact(SKILL_SPACT_ANAPHYLAXIS - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_ANAPHYLAXIS) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_ANAPHYLAXIS) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_ANAPHYLAXIS) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_ANAPHYLAXIS) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_GENE_ENGINEER, CHARA_PLAYER) > 49 & sorg(SKILL_NORMAL_TACTICS, CHARA_PLAYER) > 19 & trait(TRAIT_NORMAL_SPACT_TOUCH_OF_POISON) != 0 ) {
@@ -548,7 +548,7 @@
 			spact(SKILL_SPACT_VENOTRATE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_VENOTRATE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_VENOTRATE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_VENOTRATE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_VENOTRATE) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_CONTROL_MAGIC, CHARA_PLAYER) > 59 ) {
@@ -556,7 +556,7 @@
 			spact(SKILL_SPACT_FORMLESS_FETTER - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_FORMLESS_FETTER) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_FORMLESS_FETTER) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_FORMLESS_FETTER) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_FORMLESS_FETTER) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_CONTROL_MAGIC, CHARA_PLAYER) > 79 ) {
@@ -564,7 +564,7 @@
 			spact(SKILL_SPACT_OVERRAY - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_OVERRAY) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_OVERRAY) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_OVERRAY) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_OVERRAY) + ".")
 		}
 	}
 	if ( sorg(SKILL_WEAPON_MARTIAL_ARTS, CHARA_PLAYER) > 19 ) {
@@ -572,7 +572,7 @@
 			spact(SKILL_SPACT_BODY_BLOW - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_BODY_BLOW) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_BODY_BLOW) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_BODY_BLOW) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_BODY_BLOW) + ".")
 		}
 	}
 	if ( sorg(SKILL_WEAPON_MARTIAL_ARTS, CHARA_PLAYER) > 39 ) {
@@ -580,7 +580,7 @@
 			spact(SKILL_SPACT_ATTRIBUTE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_ATTRIBUTE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_ATTRIBUTE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_ATTRIBUTE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_ATTRIBUTE) + ".")
 		}
 	}
 	if ( sorg(SKILL_WEAPON_MARTIAL_ARTS, CHARA_PLAYER) > 29 ) {
@@ -588,7 +588,7 @@
 			spact(SKILL_SPACT_EXPLOSIVE_FIST - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_EXPLOSIVE_FIST) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_EXPLOSIVE_FIST) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_EXPLOSIVE_FIST) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_EXPLOSIVE_FIST) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_WIL, CHARA_PLAYER) > 39 ) {
@@ -596,7 +596,7 @@
 			spact(SKILL_SPACT_PRESSURE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_PRESSURE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_PRESSURE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_PRESSURE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_PRESSURE) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_ALCHEMY, CHARA_PLAYER) > 29 ) {
@@ -604,7 +604,7 @@
 			spact(SKILL_SPACT_DUPLICANE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_DUPLICANE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_DUPLICANE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_DUPLICANE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_DUPLICANE) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_ALCHEMY, CHARA_PLAYER) > 19 & (trait(TRAIT_NORMAL_SPACT_TOUCH_OF_SLEEP) != 0 | trait(TRAIT_NORMAL_SPACT_TOUCH_OF_POISON) != 0) ) {
@@ -612,7 +612,7 @@
 			spact(SKILL_SPACT_RESOLUTION_HAND - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_RESOLUTION_HAND) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_RESOLUTION_HAND) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_RESOLUTION_HAND) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_RESOLUTION_HAND) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_CONTROL_MAGIC, CHARA_PLAYER) > 39 & trait(TRAIT_NORMAL_SPACT_TOUCH_OF_SLEEP) != 0 ) {
@@ -620,7 +620,7 @@
 			spact(SKILL_SPACT_GROUP_HYPNOSIS - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_GROUP_HYPNOSIS) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_GROUP_HYPNOSIS) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_GROUP_HYPNOSIS) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_GROUP_HYPNOSIS) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_ALCHEMY, CHARA_PLAYER) > 39 & sorg(SKILL_NORMAL_CONTROL_MAGIC, CHARA_PLAYER) > 29 ) {
@@ -628,7 +628,7 @@
 			spact(SKILL_SPACT_LIQUID_MANIPULATION - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_LIQUID_MANIPULATION) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_LIQUID_MANIPULATION) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_LIQUID_MANIPULATION) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_LIQUID_MANIPULATION) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_ALCHEMY, CHARA_PLAYER) > 59 ) {
@@ -636,7 +636,7 @@
 			spact(SKILL_SPACT_ALCHEMICAL_RAIN - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_ALCHEMICAL_RAIN) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_ALCHEMICAL_RAIN) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_ALCHEMICAL_RAIN) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_ALCHEMICAL_RAIN) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_PERFORMER, CHARA_PLAYER) > 29 ) {
@@ -644,7 +644,7 @@
 			spact(SKILL_SPACT_ENSEMBLE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_ENSEMBLE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_ENSEMBLE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_ENSEMBLE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_ENSEMBLE) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_FISHING, CHARA_PLAYER) > 29 ) {
@@ -652,7 +652,7 @@
 			spact(SKILL_SPACT_DIMENSION_FISHING - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_DIMENSION_FISHING) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_DIMENSION_FISHING) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_DIMENSION_FISHING) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_DIMENSION_FISHING) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_LER, CHARA_PLAYER) > 39 ) {
@@ -660,7 +660,7 @@
 			spact(SKILL_SPACT_READING_PARTY - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_READING_PARTY) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_READING_PARTY) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_READING_PARTY) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_READING_PARTY) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_INVESTING, CHARA_PLAYER) > 49 ) {
@@ -668,7 +668,7 @@
 			spact(SKILL_SPACT_GOLDEN_STORM - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_GOLDEN_STORM) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_GOLDEN_STORM) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_GOLDEN_STORM) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_GOLDEN_STORM) + ".")
 		}
 	}
 	if ( sorg(SKILL_ACTIVE_RIDING, CHARA_PLAYER) > 79 ) {
@@ -676,7 +676,7 @@
 			spact(SKILL_SPACT_HYPER_DASH - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_HYPER_DASH) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_HYPER_DASH) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_HYPER_DASH) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_HYPER_DASH) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_LIGHT_ARMOR, CHARA_PLAYER) > 34 & gdata(GDATA_FLAG_MAIN) >= 200 ) {
@@ -684,7 +684,7 @@
 			spact(SKILL_SPACT_EMERGENCY_EVASION - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_EMERGENCY_EVASION) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_EMERGENCY_EVASION) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_EMERGENCY_EVASION) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_EMERGENCY_EVASION) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_MEDIUM_ARMOR, CHARA_PLAYER) > 34 & gdata(GDATA_FLAG_MAIN) >= 200 ) {
@@ -692,7 +692,7 @@
 			spact(SKILL_SPACT_MAGIC_EQUIP - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_MAGIC_EQUIP) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_MAGIC_EQUIP) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_MAGIC_EQUIP) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_MAGIC_EQUIP) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_HEAVY_ARMOR, CHARA_PLAYER) > 34 & gdata(GDATA_FLAG_MAIN) >= 200 ) {
@@ -700,7 +700,7 @@
 			spact(SKILL_SPACT_SUPER_ARMOR - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_SUPER_ARMOR) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_SUPER_ARMOR) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_SUPER_ARMOR) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_SUPER_ARMOR) + ".")
 		}
 	}
 	if ( sorg(SKILL_NORMAL_SHIELD, CHARA_PLAYER) >= 34 & trait(TRAIT_NORMAL_OTHER_SHIELD_BASH) != 0 ) {
@@ -708,7 +708,7 @@
 			spact(SKILL_SPACT_SHIELD_PARRY - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_SHIELD_PARRY) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_SHIELD_PARRY) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_SHIELD_PARRY) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_SHIELD_PARRY) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_WIL, CHARA_PLAYER) >= 40 & trait(TRAIT_NORMAL_OTHER_GENTLE_FACE) != 0 ) {
@@ -716,7 +716,7 @@
 			spact(SKILL_SPACT_SMILE_FIELD - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_SMILE_FIELD) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_SMILE_FIELD) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_SMILE_FIELD) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_SMILE_FIELD) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_WIL, CHARA_PLAYER) >= 80 & trait(TRAIT_NORMAL_OTHER_GENTLE_FACE) != 0 ) {
@@ -724,7 +724,7 @@
 			spact(SKILL_SPACT_COWERING_SMILE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_COWERING_SMILE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_COWERING_SMILE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_COWERING_SMILE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_COWERING_SMILE) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_CON, CHARA_PLAYER) >= 60 & trait(TRAIT_NORMAL_SPACT_GRAVITY_ACCEL) != 0 ) {
@@ -732,7 +732,7 @@
 			spact(SKILL_SPACT_GRAVITY_SPHERE - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_GRAVITY_SPHERE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_GRAVITY_SPHERE) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_GRAVITY_SPHERE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_GRAVITY_SPHERE) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_CON, CHARA_PLAYER) >= 100 & trait(TRAIT_NORMAL_SPACT_GRAVITY_ACCEL) != 0 ) {
@@ -740,7 +740,7 @@
 			spact(SKILL_SPACT_GIGA_GRAVITATION - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_GIGA_GRAVITATION) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_GIGA_GRAVITATION) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_GIGA_GRAVITATION) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_GIGA_GRAVITATION) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_CON, CHARA_PLAYER) >= 30 & trait(TRAIT_NORMAL_SPACT_FIRE_BREATH) != 0 ) {
@@ -748,7 +748,7 @@
 			spact(SKILL_SPACT_VARIABLE_BREATH - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_VARIABLE_BREATH) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_VARIABLE_BREATH) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_VARIABLE_BREATH) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_VARIABLE_BREATH) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_CON, CHARA_PLAYER) >= 60 & sorg(SKILL_ATTR_MAG, CHARA_PLAYER) >= 60 & trait(TRAIT_NORMAL_SPACT_FIRE_BREATH) != 0 ) {
@@ -756,7 +756,7 @@
 			spact(SKILL_SPACT_MP_BREATH - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_MP_BREATH) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_MP_BREATH) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_MP_BREATH) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_MP_BREATH) + ".")
 		}
 	}
 	if ( sorg(SKILL_ATTR_CON, CHARA_PLAYER) >= 80 & sorg(SKILL_NORMAL_CONTROL_MAGIC, CHARA_PLAYER) >= 40 & trait(TRAIT_NORMAL_SPACT_FIRE_BREATH) != 0 ) {
@@ -764,7 +764,7 @@
 			spact(SKILL_SPACT_EXTERMINATION_BREATH - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_EXTERMINATION_BREATH) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_EXTERMINATION_BREATH) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_EXTERMINATION_BREATH) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_EXTERMINATION_BREATH) + ".")
 		}
 	}
 	return
@@ -1675,47 +1675,47 @@
 		if ( strsize == 0 ) {
 			break
 		}
-		if ( s == "È†≠" ) {
+		if ( s == "ì™" ) {
 			cdata(p, rc) = 1 * 10000
 			p++
 			continue
 		}
-		if ( s == "È¶ñ" ) {
+		if ( s == "éÒ" ) {
 			cdata(p, rc) = 2 * 10000
 			p++
 			continue
 		}
-		if ( s == "ËÉå" ) {
+		if ( s == "îw" ) {
 			cdata(p, rc) = 3 * 10000
 			p++
 			continue
 		}
-		if ( s == "‰Ωì" ) {
+		if ( s == "ëÃ" ) {
 			cdata(p, rc) = 4 * 10000
 			p++
 			continue
 		}
-		if ( s == "Êâã" ) {
+		if ( s == "éË" ) {
 			cdata(p, rc) = 5 * 10000
 			p++
 			continue
 		}
-		if ( s == "Êåá" ) {
+		if ( s == "éw" ) {
 			cdata(p, rc) = 6 * 10000
 			p++
 			continue
 		}
-		if ( s == "ËÖï" ) {
+		if ( s == "òr" ) {
 			cdata(p, rc) = 7 * 10000
 			p++
 			continue
 		}
-		if ( s == "ËÖ∞" ) {
+		if ( s == "çò" ) {
 			cdata(p, rc) = 8 * 10000
 			p++
 			continue
 		}
-		if ( s == "Ë∂≥" ) {
+		if ( s == "ë´" ) {
 			cdata(p, rc) = 9 * 10000
 			p++
 			continue
@@ -1881,13 +1881,13 @@
 				placefail = 0
 				if ( chipm(CHIPM_ATTRIB, map(x, y, 0)) & CHIPM_ATTRIB_CANT_PASS ) {
 					map(x, y, 0) = tile_tunnel
-					txt lang(name(rc) + "„ÅØÂ£Å„ÇíÁ†¥Â£ä„Åó„ÅüÔºÅ", name(rc) + " crush" + _s(rc, 1) + " the wall!")
+					txt lang(name(rc) + "ÇÕï«ÇîjâÛÇµÇΩÅI", name(rc) + " crush" + _s(rc, 1) + " the wall!")
 				}
 				if ( map(x, y, 6) != 0 ) {
 					cell_featread x, y
 					if ( feat(1) == CELL_FEATURE_DOOR_CLOSED ) {
 						cell_featset x, y, 0, 0, 0, 0
-						txt lang(name(rc) + "„ÅØÊââ„ÇíÁ†¥Â£ä„Åó„ÅüÔºÅ", name(rc) + " crush" + _s(rc, 1) + " the door!")
+						txt lang(name(rc) + "ÇÕî‡ÇîjâÛÇµÇΩÅI", name(rc) + " crush" + _s(rc, 1) + " the door!")
 					}
 				}
 			}
@@ -1896,13 +1896,13 @@
 	if ( placefail == 1 ) {
 		if ( rc < MAX_CHARA_FOLLOWER ) {
 			cdata(CDATA_EXIST, rc) = CHAR_STATE_SUSPEND
-			txt lang(name(rc) + "„Å®„ÅØ„Åê„Çå„Åü„ÄÇ", name(rc) + " loses " + his(rc) + " way.")
+			txt lang(name(rc) + "Ç∆ÇÕÇÆÇÍÇΩÅB", name(rc) + " loses " + his(rc) + " way.")
 			if ( cdata(CDATA_IN_TAGTEAM, rc) != 0 ) {
 				cdata(CDATA_EXIST, cdata(CDATA_TAGTEAM_PARTNER, rc)) = CHAR_STATE_SUSPEND
 			}
 		}
 		else {
-			txt lang(name(rc) + "„ÅØ‰Ωï„Åã„Å´ÊΩ∞„Åï„Çå„Å¶ÊÅØÁµ∂„Åà„Åü„ÄÇ", name(rc) + " is killed.")
+			txt lang(name(rc) + "ÇÕâΩÇ©Ç…í◊Ç≥ÇÍÇƒëßê‚Ç¶ÇΩÅB", name(rc) + " is killed.")
 			cdata(CDATA_EXIST, rc) = CHAR_STATE_DEAD
 		}
 		if ( cdata(CDATA_ROLE, rc) != ROLE_NONE ) {
@@ -2176,7 +2176,7 @@
 		gosub *db_creature
 	}
 	if ( cmshade ) {
-		cdatan(CDATAN_NAME, rc) = lang("„Ç∑„Çß„Ç§„Éâ", "shade")
+		cdatan(CDATAN_NAME, rc) = lang("ÉVÉFÉCÉh", "shade")
 		cdata(CDATA_PIC, rc) = xy2pic(16, 8)
 	}
 	if ( cdata(CDATA_ID, rc) != CREATURE_ID_FLOWER_CORAL ) {
@@ -2191,11 +2191,11 @@
 
 *chara_fix
 	if ( fixlv == FIX_QUALITY_MIRACLE ) {
-		cdatan(CDATAN_NAME, rc) = lang("„Äé", "<") + cdatan(CDATAN_NAME, rc) + lang("„Äè", ">")
+		cdatan(CDATAN_NAME, rc) = lang("Åw", "<") + cdatan(CDATAN_NAME, rc) + lang("Åx", ">")
 		cdata(CDATA_LEVEL, rc) = cdata(CDATA_LEVEL, rc) * 10 / 8
 	}
 	if ( fixlv == FIX_QUALITY_GODLY ) {
-		cdatan(CDATAN_NAME, rc) = lang("„Ää", "{") + cdatan(CDATAN_NAME, rc) + lang("„Äã", "}")
+		cdatan(CDATAN_NAME, rc) = lang("Ås", "{") + cdatan(CDATAN_NAME, rc) + lang("Åt", "}")
 		cdata(CDATA_LEVEL, rc) = cdata(CDATA_LEVEL, rc) * 10 / 6
 	}
 	return
@@ -2488,8 +2488,8 @@
 		cbitmod CHARA_BIT_EXCLUSIVE_SKILL_CHARGE, rc, 1
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_WEREWOLF & mdata(MDATA_TYPE) == MAP_TYPE_TOWN ) {
-		evname = lang("Â∏ÇÊ∞ë", "citizen")
-		evold = lang("‰∫∫Áãº", "werewolf")
+		evname = lang("ésñØ", "citizen")
+		evold = lang("êlòT", "werewolf")
 		if ( strmid(cdatan(CDATAN_NAME, rc), 0, strlen(evold)) == evold ) {
 			cdatan(CDATAN_NAME, rc) = evname + strmid(cdatan(CDATAN_NAME, rc), strlen(evold), strlen(cdatan(CDATAN_NAME, rc)) - strlen(evold))
 		}
@@ -2536,8 +2536,8 @@
 		}
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_WEREWOLF_DETECTIVE & mdata(MDATA_TYPE) == MAP_TYPE_TOWN ) {
-		evname = lang("Êé¢ÂÅµ", "detective")
-		evold = lang("‰∫∫ÁãºÊé¢ÂÅµ", "werewolf detective")
+		evname = lang("íTí„", "detective")
+		evold = lang("êlòTíTí„", "werewolf detective")
 		if ( strmid(cdatan(CDATAN_NAME, rc), 0, strlen(evold)) == evold ) {
 			cdatan(CDATAN_NAME, rc) = evname + strmid(cdatan(CDATAN_NAME, rc), strlen(evold), strlen(cdatan(CDATAN_NAME, rc)) - strlen(evold))
 		}
@@ -2547,8 +2547,8 @@
 		cdata(CDATA_PIC, rc) = xy2pic(22, 23)
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_FOX_SPIRIT & mdata(MDATA_TYPE) == MAP_TYPE_TOWN ) {
-		evname = lang("Â∏ÇÊ∞ë", "citizen")
-		evold = lang("Â¶ñÁãê", "fox")
+		evname = lang("ésñØ", "citizen")
+		evold = lang("ódåœ", "fox")
 		if ( strmid(cdatan(CDATAN_NAME, rc), 0, strlen(evold)) == evold ) {
 			cdatan(CDATAN_NAME, rc) = evname + strmid(cdatan(CDATAN_NAME, rc), strlen(evold), strlen(cdatan(CDATAN_NAME, rc)) - strlen(evold))
 		}
@@ -2585,8 +2585,8 @@
 		}
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_SUNBARARIAN & mdata(MDATA_TYPE) == MAP_TYPE_TOWN ) {
-		evname = lang("Â∏ÇÊ∞ë", "citizen")
-		evold = lang("„Çπ„É≥„Éê„É©„É™„Ç¢Êòü‰∫∫", "sunbararian")
+		evname = lang("ésñØ", "citizen")
+		evold = lang("ÉXÉìÉoÉâÉäÉAêØêl", "sunbararian")
 		if ( strmid(cdatan(CDATAN_NAME, rc), 0, strlen(evold)) == evold ) {
 			cdatan(CDATAN_NAME, rc) = evname + strmid(cdatan(CDATAN_NAME, rc), strlen(evold), strlen(cdatan(CDATAN_NAME, rc)) - strlen(evold))
 		}
@@ -2623,70 +2623,70 @@
 		}
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_ENTHUMESIS | cdata(CDATA_ID, rc) == CREATURE_ID_MIKRAANESIS ) {
-		cdatan(CDATAN_NEWSEX, rc) = lang("‰∏°ÊÄßÂÖ∑Êúâ", "hermaphrodite")
+		cdatan(CDATAN_NEWSEX, rc) = lang("óºê´ãÔóL", "hermaphrodite")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_MILOS_OF_THE_FORGOTTEN_WORLD | cdata(CDATA_ID, rc) == CREATURE_ID_CARLA_OF_THE_FORGOTTEN_WORLD ) {
-		cdatan(CDATAN_CUSTOM_RACE, rc) = lang("„Ç®„É´„Ç∑„Ç¢„ÅÆÊ∞ë", "elsia")
+		cdatan(CDATAN_CUSTOM_RACE, rc) = lang("ÉGÉãÉVÉAÇÃñØ", "elsia")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_LOYTER_THE_CRIMSON_OF_DOLE | cdata(CDATA_ID, rc) == CREATURE_ID_NANCY_THE_WANDERLUST | cdata(CDATA_ID, rc) == CREATURE_ID_MANSON_THE_CAREFUL_ADVENTURER | cdata(CDATA_ID, rc) == CREATURE_ID_CRAY_THE_CURIOUS_ADVENTURER ) {
-		cdatan(CDATAN_CUSTOM_RACE, rc) = lang("„Éâ„Éº„É´", "dole")
+		cdatan(CDATAN_CUSTOM_RACE, rc) = lang("ÉhÅ[Éã", "dole")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_CARTER_THE_SKILLED_FOOT ) {
 		cdata(CDATA_MELEE_STYLE, rc) = 2
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_RIANNA_THE_DAYDREAMER ) {
-		cdatan(CDATAN_FAKE_CLASS, rc) = lang("‰∏á‰∫ãÂ±ã", "handyman")
+		cdatan(CDATAN_FAKE_CLASS, rc) = lang("ñúéñâÆ", "handyman")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_GRASS_DANCER | cdata(CDATA_ID, rc) == CREATURE_ID_NECRO_DANCER ) {
-		cdatan(CDATAN_FAKE_CLASS, rc) = lang("„ÉÄ„É≥„Çµ„Éº", "dancer")
+		cdatan(CDATAN_FAKE_CLASS, rc) = lang("É_ÉìÉTÅ[", "dancer")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_KARAVIKA ) {
-		cdatan(CDATAN_FAKE_CLASS, rc) = lang("„Ç¢„Éº„ÉÜ„Ç£„Çπ„Éà", "performer")
+		cdatan(CDATAN_FAKE_CLASS, rc) = lang("ÉAÅ[ÉeÉBÉXÉg", "performer")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_AIKAGE_THE_SHINOBI_MASK | cdata(CDATA_ID, rc) == CREATURE_ID_RED_NINJA | cdata(CDATA_ID, rc) == CREATURE_ID_EILA_THE_FUGITIVE_KUNOICHI | cdata(CDATA_ID, rc) == CREATURE_ID_GETUEI_THE_NINJA_MASTER | cdata(CDATA_ID, rc) == CREATURE_ID_NIN_NINZIN | cdata(CDATA_ID, rc) == CREATURE_ID_FASHIONABLE_KUNOICHI ) {
-		cdatan(CDATAN_FAKE_CLASS, rc) = lang("ÂøçËÄÖ", "ninja")
+		cdatan(CDATAN_FAKE_CLASS, rc) = lang("îEé“", "ninja")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_ASSASSIN_LIZARD | cdata(CDATA_ID, rc) == CREATURE_ID_BUTTERSPY | cdata(CDATA_ID, rc) == CREATURE_ID_HELLSTLING | cdata(CDATA_ID, rc) == CREATURE_ID_ZANAN_ASSASSIN | cdata(CDATA_ID, rc) == CREATURE_ID_ALSAPIA_THE_MURDERER_MASK ) {
-		cdatan(CDATAN_FAKE_CLASS, rc) = lang("ÊöóÊÆ∫ËÄÖ", "assassin")
+		cdatan(CDATAN_FAKE_CLASS, rc) = lang("à√éEé“", "assassin")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_WANGNIN ) {
-		cdatan(CDATAN_FAKE_CLASS, rc) = lang("È¢®Ê∞¥Â∏´", "geomancer")
+		cdatan(CDATAN_FAKE_CLASS, rc) = lang("ïóêÖét", "geomancer")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_NEW_CITIZEN ) {
-		cdatan(CDATAN_FAKE_CLASS, rc) = lang("ÂÖÉÂøçËÄÖ", "tourist")
+		cdatan(CDATAN_FAKE_CLASS, rc) = lang("å≥îEé“", "tourist")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_IRMA_THE_INDOMITABLE_SMITH | cdata(CDATA_ID, rc) == CREATURE_ID_THALIA_THE_STAR_VIEWER | cdata(CDATA_ID, rc) == CREATURE_ID_DAIN_THE_ELDER_OF_HILL | cdata(CDATA_ID, rc) == CREATURE_ID_ALCHEMIST_NAPLUS ) {
-		cdatan(CDATAN_FAKE_CLASS, rc) = lang("„ÇØ„É™„Ç®„Ç§„Çø„Éº", "creator")
+		cdatan(CDATAN_FAKE_CLASS, rc) = lang("ÉNÉäÉGÉCÉ^Å[", "creator")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_AMURDAD ) {
-		cdatan(CDATAN_FAKE_CLASS, rc) = lang("ÁÆ°ÁêÜËÄÖ", "warden")
+		cdatan(CDATAN_FAKE_CLASS, rc) = lang("ä«óùé“", "warden")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_TEACHER | cdata(CDATA_ID, rc) == CREATURE_ID_NAZUNA_THE_INSTRUCTOR | cdata(CDATA_ID, rc) == CREATURE_ID_MURDER_KNIGHT | cdata(CDATA_ID, rc) == CREATURE_ID_GOOSE | cdata(CDATA_ID, rc) == CREATURE_ID_BELPHAT_THE_COSMIC_SWORD ) {
-		cdatan(CDATAN_FAKE_CLASS, rc) = lang("Ââ£Â£´", "fencer")
+		cdatan(CDATAN_FAKE_CLASS, rc) = lang("åïém", "fencer")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_MARY_THE_INSECT_MASTER | cdata(CDATA_ID, rc) == CREATURE_ID_ALICE_THE_BIG_ANT | cdata(CDATA_ID, rc) == CREATURE_ID_ERYSTIA_THE_SCHOLAR_OF_HISTORY ) {
-		cdatan(CDATAN_FAKE_CLASS, rc) = lang("Â≠¶ËÄÖ", "scholar")
+		cdatan(CDATAN_FAKE_CLASS, rc) = lang("äwé“", "scholar")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_SHOPKEEPER_CROW | cdata(CDATA_ID, rc) == CREATURE_ID_YACATECT | cdata(CDATA_ID, rc) == CREATURE_ID_HYPER_YACATECT | cdata(CDATA_ID, rc) == CREATURE_ID_LEND_THE_TAKER | cdata(CDATA_ID, rc) == CREATURE_ID_BANKRUPT_GUO | cdata(CDATA_ID, rc) == CREATURE_ID_SHOPKEEPER | cdata(CDATA_ID, rc) == CREATURE_ID_SHOPKEEPER2 | cdata(CDATA_ID, rc) == CREATURE_ID_MANYTIA_THE_ADVENTURE_MERCHANT ) {
-		cdatan(CDATAN_FAKE_CLASS, rc) = lang("ÂïÜ‰∫∫", "merchant")
+		cdatan(CDATAN_FAKE_CLASS, rc) = lang("è§êl", "merchant")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_LEAD_DEVELOPER_DR_GAVELA | cdata(CDATA_ID, rc) == CREATURE_ID_ICOLLE_THE_BIOLOGIST | cdata(CDATA_ID, rc) == CREATURE_ID_STRANGE_SCIENTIST | cdata(CDATA_ID, rc) == CREATURE_ID_MAD_SCIENTIST ) {
-		cdatan(CDATAN_FAKE_CLASS, rc) = lang("ÂçöÂ£´", "doctor")
+		cdatan(CDATAN_FAKE_CLASS, rc) = lang("îéém", "doctor")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_MINER ) {
-		cdatan(CDATAN_FAKE_CLASS, rc) = lang("Âä¥ÂÉçËÄÖ", "worker")
+		cdatan(CDATAN_FAKE_CLASS, rc) = lang("òJì≠é“", "worker")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_FISHERMAN ) {
-		cdatan(CDATAN_FAKE_CLASS, rc) = lang("ÊºÅÂ∏´", "fisherman")
+		cdatan(CDATAN_FAKE_CLASS, rc) = lang("ãôét", "fisherman")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_LUNE_THE_MAID_CHIEF | cdata(CDATA_ID, rc) == CREATURE_ID_MAIDSANN | cdata(CDATA_ID, rc) == CREATURE_ID_MAID | (cdata(CDATA_ID, rc) >= CREATURE_ID_PERFORMAID_BLOODRESS & cdata(CDATA_ID, rc) <= CREATURE_ID_PERFORMAID_BITCHIACK) ) {
-		cdatan(CDATAN_FAKE_CLASS, rc) = lang("‰ΩøÁî®‰∫∫", "employee")
+		cdatan(CDATAN_FAKE_CLASS, rc) = lang("égópêl", "employee")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_SHENA_THE_DRAW ) {
-		cdatan(CDATAN_FAKE_CLASS, rc) = lang("Áµ¶‰ªï", "waitress")
+		cdatan(CDATAN_FAKE_CLASS, rc) = lang("ããéd", "waitress")
 	}
 	if ( cdata(CDATA_ID, rc) == CREATURE_ID_STERSHA_THE_QUEEN_OF_PALMIA | cdata(CDATA_ID, rc) == CREATURE_ID_XABI_THE_KING_OF_PALMIA | cdata(CDATA_ID, rc) == CREATURE_ID_TUWEN_THE_MASTER_OF_THE_PYRAMID ) {
-		cdatan(CDATAN_FAKE_CLASS, rc) = lang("Âêõ‰∏ª", "monarch")
+		cdatan(CDATAN_FAKE_CLASS, rc) = lang("åNéÂ", "monarch")
 	}
 	cm = 0
 	return
@@ -2754,7 +2754,7 @@
 	cdata(CDATA_AREA, rc) = AREA_NONE
 	snd SOUNDLIST_PRAY1
 	txtef COLOR_YELLOW
-	txt cnven(cdatan(CDATAN_NAME, rc)) + lang("„ÅåÁèæ„Çå„ÅüÔºÅ", " " + have(rc) + " been resurrected!")
+	txt cnven(cdatan(CDATAN_NAME, rc)) + lang("Ç™åªÇÍÇΩÅI", " " + have(rc) + " been resurrected!")
 	return
 
 *resurrect
@@ -2856,7 +2856,7 @@
 		cmRace	="elea"
 		cmClass	="warrior"
 		cmName	="Noa"
-		cmAka	="„Éá„Éô„É≠„ÉÉ„Éë„Éº"
+		cmAka	="ÉfÉxÉçÉbÉpÅ["
 		repeat 8
 		cmStats(cnt)=18*1000000
 		loop
@@ -2895,7 +2895,7 @@
 		pos 0, 0
 		gcopy 4, 0, 0, windoww, windowh
 		gmode 2
-		s = lang("„Åì„Çå‰ª•‰∏ä„ÅØÂÜíÈô∫ËÄÖ„Çí‰øùÂ≠ò„Åß„Åç„Å™„ÅÑ„ÄÇ", "Save slots are full. You have to delete some of your adventurers.")
+		s = lang("Ç±ÇÍà»è„ÇÕñ`åØé“Çï€ë∂Ç≈Ç´Ç»Ç¢ÅB", "Save slots are full. You have to delete some of your adventurers.")
 		gosub *screen_drawMsg2
 		redraw 1
 *cm_init_WHILE1
@@ -2919,7 +2919,7 @@
 	pos 0, 0
 	gcopy 4, 0, 0, windoww, windowh
 	gmode 2
-	s = lang("„Åæ„Åö„ÅØÂêõ„ÅÆÈÄö„ÇäÂêç„ÇíÊïô„Åà„Å¶„Åè„Çå„Çã„Åã„ÅÑ„ÄÇ", "Choose your Alias.")
+	s = lang("Ç‹Ç∏ÇÕåNÇÃí ÇËñºÇã≥Ç¶ÇƒÇ≠ÇÍÇÈÇ©Ç¢ÅB", "Choose your Alias.")
 	gosub *screen_drawMsg2
 	font lang(cfg_font1, cfg_font2), 13 - en * 2, 1
 	pos 20, windowh - 20
@@ -2936,7 +2936,7 @@
 *cm_aka_WHILE1
 	redraw 0
 	if ( cs != cs_bk ) {
-		s = lang("Áï∞Âêç„ÅÆÈÅ∏Êäû", "Alias Selection"), strhint3b
+		s = lang("àŸñºÇÃëIë", "Alias Selection"), strhint3b
 		display_window (windoww - 400) / 2 + inf_screenx, winposy(458, 1) + 20, 400, 458
 		cmbg++
 		x = ww / 3 * 2
@@ -2945,7 +2945,7 @@
 		pos wx + ww / 2, wy + wh / 2
 		grotate 2, cmbg / 4 \ 4 * 180, cmbg / 4 / 4 \ 2 * 300, 0, x, y
 		gmode 2
-		display_topic lang("Áï∞Âêç„ÅÆÂÄôË£ú", "Alias List"), wx + 28, wy + 30
+		display_topic lang("àŸñºÇÃåÛï‚", "Alias List"), wx + 28, wy + 30
 		font lang(cfg_font1, cfg_font2), 14 - en * 2, 0
 		color 0, 0, 0
 		repeat 17
@@ -2960,7 +2960,7 @@
 				}
 			}
 			if ( cnt == 0 ) {
-				listn(0, cnt) = lang("„É™„É≠„Éº„É´", "Reroll")
+				listn(0, cnt) = lang("ÉäÉçÅ[Éã", "Reroll")
 			}
 			pos wx + 38, wy + 66 + cnt * 19 - 2
 			gcopy 3, cnt * 24 + 72, 30, 24, 18
@@ -3019,7 +3019,7 @@
 	pos 0, 0
 	gcopy 4, 0, 0, windoww, windowh
 	gmode 2
-	s = lang("Âêõ„ÅÆÁµåÊ≠¥„ÇíÊïô„Åà„Å¶„Åè„Çå„Çã„Åã„Å™„ÄÇÂÜÖÁ∑í„Å´„Åó„Å¶„ÇÇ„ÅÑ„ÅÑ„Åë„Çå„Å©„ÄÇ", "Mind telling me your history? It's fine if you want to keep it a secret though.")
+	s = lang("åNÇÃåoóÇã≥Ç¶ÇƒÇ≠ÇÍÇÈÇ©Ç»ÅBì‡èèÇ…ÇµÇƒÇ‡Ç¢Ç¢ÇØÇÍÇ«ÅB", "Mind telling me your history? It's fine if you want to keep it a secret though.")
 	gosub *screen_drawMsg2
 	font lang(cfg_font1, cfg_font2), 13 - en * 2, 1
 	pos 20, windowh - 20
@@ -3031,24 +3031,24 @@
 	}
 	listmax = 0
 	list(0, 0) = 0
-	listn(0, 0) = lang("Ê±∫ÂÆö„Åô„Çã", "Proceed")
+	listn(0, 0) = lang("åàíËÇ∑ÇÈ", "Proceed")
 	listmax++
 	list(0, 1) = 0
-	listn(0, 1) = lang("ÂÜÖÁ∑í„Å´„Åô„Çã", "Keep it secret")
+	listn(0, 1) = lang("ì‡èèÇ…Ç∑ÇÈ", "Keep it secret")
 	listmax++
 	list(0, 2) = 0
-	listn(0, 2) = lang("ÂÖ®„É™„É≠„Éº„É´", "Reroll all")
+	listn(0, 2) = lang("ëSÉäÉçÅ[Éã", "Reroll all")
 	listmax++
 	list(0, 3) = 0
-	listn(0, 3) = lang("ÂâçÂçä„É™„É≠„Éº„É´", "Reroll first half")
+	listn(0, 3) = lang("ëOîºÉäÉçÅ[Éã", "Reroll first half")
 	listmax++
 	list(0, 4) = 0
-	listn(0, 4) = lang("ÂæåÂçä„É™„É≠„Éº„É´", "Reroll second half")
+	listn(0, 4) = lang("å„îºÉäÉçÅ[Éã", "Reroll second half")
 	listmax++
 	windowshadow = 1
 *cm_past_loop
 	redraw 0
-	s = lang("ÁµåÊ≠¥„ÅÆ„É≠„Éº„É´", "Background Reroll"), strhint3b
+	s = lang("åoóÇÃÉçÅ[Éã", "Background Reroll"), strhint3b
 	display_window (windoww - 360) / 2 + inf_screenx, winposy(352, 1) - 20, 360, 352
 	x = 150
 	y = 240
@@ -3081,7 +3081,7 @@
 		pos wx + 75, wy + 200 + 4 * 15
 		mes s
 	}
-	display_topic lang("ÁµåÊ≠¥", "Background"), wx + 28, wy + 30
+	display_topic lang("åoó", "Background"), wx + 28, wy + 30
 	color 0, 0, 0
 	repeat 5
 		key_list(cnt) = key_select(cnt)
@@ -3164,7 +3164,7 @@
 	pos 0, 0
 	gcopy 4, 0, 0, windoww, windowh
 	gmode 2
-	s = lang("Á®ÆÊóè„Å´„Çà„Å£„Å¶„ÅØË£ÖÂÇôÁÆáÊâÄ„Å´Âà∂Èôê„Åå„ÅÇ„Å£„Åü„Çä„Åô„Çã„Åã„ÇâÊ≥®ÊÑè„Å†„Çà„ÄÇ", "Welcome traveler, I've been looking for you.")
+	s = lang("éÌë∞Ç…ÇÊÇ¡ÇƒÇÕëïîıâ”èäÇ…êßå¿Ç™Ç†Ç¡ÇΩÇËÇ∑ÇÈÇ©ÇÁíçà”ÇæÇÊÅB", "Welcome traveler, I've been looking for you.")
 	gosub *screen_drawMsg2
 	font lang(cfg_font1, cfg_font2), 13 - en * 2, 1
 	pos 20, windowh - 20
@@ -3198,7 +3198,7 @@
 *cm_race_loop
 	redraw 0
 	if ( cs != cs_bk ) {
-		s = lang("Á®ÆÊóè„ÅÆÈÅ∏Êäû", "Race Selection"), strhint3b
+		s = lang("éÌë∞ÇÃëIë", "Race Selection"), strhint3b
 		display_window (windoww - 680) / 2 + inf_screenx, winposy(500, 1) + 20, 680, 500
 		cmbg++
 		x = ww / 5 * 2
@@ -3207,8 +3207,8 @@
 		pos wx + ww / 4, wy + wh / 2
 		grotate 2, cmbg / 4 \ 4 * 180, cmbg / 4 / 4 \ 2 * 300, 0, x, y
 		gmode 2
-		display_topic lang("ÈÅ∏Êäû„Åß„Åç„ÇãÁ®ÆÊóè", "Race"), wx + 28, wy + 30
-		display_topic lang("Á®ÆÊóè„ÅÆË™¨Êòé", "Detail"), wx + 188, wy + 30
+		display_topic lang("ëIëÇ≈Ç´ÇÈéÌë∞", "Race"), wx + 28, wy + 30
+		display_topic lang("éÌë∞ÇÃê‡ñæ", "Detail"), wx + 188, wy + 30
 		font lang(cfg_font1, cfg_font2), 14 - en * 2, 0
 		color 0, 0, 0
 		repeat pagesize
@@ -3287,10 +3287,10 @@
 	pos 0, 0
 	gcopy 4, 0, 0, windoww, windowh
 	gmode 2
-	s = lang("Á®ÆÊóèÂêç„ÇíÂ§âÊõ¥„Åô„ÇãÔºü", "Will you change name of race?")
+	s = lang("éÌë∞ñºÇïœçXÇ∑ÇÈÅH", "Will you change name of race?")
 	gosub *screen_drawMsg2
-	promptAdd lang("„ÅØ„ÅÑ", "Yes"), "a"
-	promptAdd lang("„ÅÑ„ÅÑ„Åà", "No"), "b"
+	promptAdd lang("ÇÕÇ¢", "Yes"), "a"
+	promptAdd lang("Ç¢Ç¢Ç¶", "No"), "b"
 	val = promptx, 240, 160, 1
 	gosub *prompt_key
 	snd SOUNDLIST_OK1
@@ -3313,7 +3313,7 @@
 	pos 0, 0
 	gcopy 4, 0, 0, windoww, windowh
 	gmode 2
-	s = lang("Êñ∞„Åó„ÅÑÁ®ÆÊóè„ÅØÔºü", "What's a new name of race?")
+	s = lang("êVÇµÇ¢éÌë∞ÇÕÅH", "What's a new name of race?")
 	gosub *screen_drawMsg2
 	font lang(cfg_font1, cfg_font2), 13 - en * 2, 1
 	pos 20, windowh - 20
@@ -3341,7 +3341,7 @@
 	pos 0, 0
 	gcopy 4, 0, 0, windoww, windowh
 	gmode 2
-	s = lang("ÊÄßÂà•„Å´„Çà„ÇãËÉΩÂäõ„ÅÆÈÅï„ÅÑ„ÅØ„Å™„ÅÑ„ÄÇ", "What's your gender?")
+	s = lang("ê´ï Ç…ÇÊÇÈî\óÕÇÃà·Ç¢ÇÕÇ»Ç¢ÅB", "What's your gender?")
 	gosub *screen_drawMsg2
 	font lang(cfg_font1, cfg_font2), 13 - en * 2, 1
 	pos 20, windowh - 20
@@ -3354,7 +3354,7 @@
 	windowshadow = 1
 *cm_sex_WHILE1
 	redraw 0
-	s = lang("ÊÄßÂà•„ÅÆÈÅ∏Êäû", "Gender Selection"), strhint3b
+	s = lang("ê´ï ÇÃëIë", "Gender Selection"), strhint3b
 	display_window (windoww - 370) / 2 + inf_screenx, winposy(168, 1) - 20, 370, 268
 	x = ww / 2
 	y = wh - 60
@@ -3362,13 +3362,13 @@
 	pos wx + ww / 2, wy + wh / 2
 	grotate 2, 0, 0, 0, x, y
 	gmode 2
-	display_topic lang("ÊÄßÂà•„ÅÆÂÄôË£ú", "Gender"), wx + 28, wy + 30
+	display_topic lang("ê´ï ÇÃåÛï‚", "Gender"), wx + 28, wy + 30
 	listn(0, 0) = cnven(strmale)
 	listn(0, 1) = cnven(strfemale)
-	listn(0, 2) = cnven(lang("Ëá™Áß∞Áî∑ÊÄß", "male?"))
-	listn(0, 3) = cnven(lang("Ëá™Áß∞Â•≥ÊÄß", "female?"))
-	listn(0, 4) = cnven(lang("‰∏°ÊÄßÂÖ∑Êúâ", "hermaphrodite"))
-	listn(0, 5) = cnven(lang("ÊÄßÂà•‰∏çÊòé", "unknown"))
+	listn(0, 2) = cnven(lang("é©èÃíjê´", "male?"))
+	listn(0, 3) = cnven(lang("é©èÃèóê´", "female?"))
+	listn(0, 4) = cnven(lang("óºê´ãÔóL", "hermaphrodite"))
+	listn(0, 5) = cnven(lang("ê´ï ïsñæ", "unknown"))
 	font lang(cfg_font1, cfg_font2), 14 - en * 2, 0
 	repeat 6
 		key_list(cnt) = key_select(cnt)
@@ -3394,22 +3394,22 @@
 	}
 	if ( key == key_select(2) ) {
 		cmsex = SEX_FEMALE
-		zisyousex = lang("Ëá™Áß∞Áî∑ÊÄß", "male?")
+		zisyousex = lang("é©èÃíjê´", "male?")
 		goto *cm_sex_WEND1
 	}
 	if ( key == key_select(3) ) {
 		cmsex = SEX_MALE
-		zisyousex = lang("Ëá™Áß∞Â•≥ÊÄß", "female?")
+		zisyousex = lang("é©èÃèóê´", "female?")
 		goto *cm_sex_WEND1
 	}
 	if ( key == key_select(4) ) {
 		cmsex = SEX_FEMALE
-		zisyousex = lang("‰∏°ÊÄßÂÖ∑Êúâ", "hermaphrodite")
+		zisyousex = lang("óºê´ãÔóL", "hermaphrodite")
 		goto *cm_sex_WEND1
 	}
 	if ( key == key_select(5) ) {
 		cmsex = SEX_MALE
-        zisyousex = lang("ÊÄßÂà•‰∏çÊòé", "unknown")
+        zisyousex = lang("ê´ï ïsñæ", "unknown")
  		goto *cm_sex_WEND1
 	}
 	if ( key == key_cancel ) {
@@ -3437,10 +3437,10 @@
 	pos 0, 0
 	gcopy 4, 0, 0, windoww, windowh
 	gmode 2
-	s = lang("ÊÄßÂà•Âêç„ÇíÂ§âÊõ¥„Åô„ÇãÔºü", "Will you change name of gender?")
+	s = lang("ê´ï ñºÇïœçXÇ∑ÇÈÅH", "Will you change name of gender?")
 	gosub *screen_drawMsg2
-	promptAdd lang("„ÅØ„ÅÑ", "Yes"), "a"
-	promptAdd lang("„ÅÑ„ÅÑ„Åà", "No"), "b"
+	promptAdd lang("ÇÕÇ¢", "Yes"), "a"
+	promptAdd lang("Ç¢Ç¢Ç¶", "No"), "b"
 	val = promptx, 240, 160, 1
 	gosub *prompt_key
 	snd SOUNDLIST_OK1
@@ -3462,7 +3462,7 @@
 	pos 0, 0
 	gcopy 4, 0, 0, windoww, windowh
 	gmode 2
-	s = lang("Êñ∞„Åó„ÅÑÊÄßÂà•„ÅØÔºü", "What's a new name of gender?")
+	s = lang("êVÇµÇ¢ê´ï ÇÕÅH", "What's a new name of gender?")
 	gosub *screen_drawMsg2
 	font lang(cfg_font1, cfg_font2), 13 - en * 2, 1
 	pos 20, windowh - 20
@@ -3491,7 +3491,7 @@
 	pos 0, 0
 	gcopy 4, 0, 0, windoww, windowh
 	gmode 2
-	s = lang("ËÅ∑Ê•≠„ÇÑÁ®ÆÊóè„ÅØ„ÄÅÂàùÊúü„ÅÆËÉΩÂäõ„Å†„Åë„Åß„Å™„Åè„ÄÅÊàêÈï∑„ÅÆÊñπÂêëÊÄß„Å´ÂΩ±Èüø„Åô„Çã„Çì„Å†„ÄÇ", "Your class and race determine growth rate of your skills and attributes.")
+	s = lang("êEã∆Ç‚éÌë∞ÇÕÅAèâä˙ÇÃî\óÕÇæÇØÇ≈Ç»Ç≠ÅAê¨í∑ÇÃï˚å¸ê´Ç…âeãøÇ∑ÇÈÇÒÇæÅB", "Your class and race determine growth rate of your skills and attributes.")
 	gosub *screen_drawMsg2
 	font lang(cfg_font1, cfg_font2), 13 - en * 2, 1
 	pos 20, windowh - 20
@@ -3513,7 +3513,7 @@
 *cm_class_WHILE1
 	if ( cs != cs_bk ) {
 		redraw 0
-		s = lang("ËÅ∑Ê•≠„ÅÆÈÅ∏Êäû", "Class Selection"), strhint3b
+		s = lang("êEã∆ÇÃëIë", "Class Selection"), strhint3b
 		display_window (windoww - 680) / 2 + inf_screenx, winposy(500, 1) + 20, 680, 500
 		cmbg++
 		x = ww / 5 * 2
@@ -3522,8 +3522,8 @@
 		pos wx + ww / 4, wy + wh / 2
 		grotate 2, cmbg / 4 \ 4 * 180, cmbg / 4 / 4 \ 2 * 300, 0, x, y
 		gmode 2
-		display_topic lang("ÈÅ∏Êäû„Åß„Åç„ÇãËÅ∑Ê•≠", "Class"), wx + 28, wy + 30
-		display_topic lang("ËÅ∑Ê•≠„ÅÆË™¨Êòé", "Detail"), wx + 188, wy + 30
+		display_topic lang("ëIëÇ≈Ç´ÇÈêEã∆", "Class"), wx + 28, wy + 30
+		display_topic lang("êEã∆ÇÃê‡ñæ", "Detail"), wx + 188, wy + 30
 		font lang(cfg_font1, cfg_font2), 14 - en * 2, 0
 		color 0, 0, 0
 		repeat listmax
@@ -3590,10 +3590,10 @@
 	pos 0, 0
 	gcopy 4, 0, 0, windoww, windowh
 	gmode 2
-	s = lang("ËÅ∑Ê•≠Âêç„ÇíÂ§âÊõ¥„Åô„ÇãÔºü", "Will you change name of class?")
+	s = lang("êEã∆ñºÇïœçXÇ∑ÇÈÅH", "Will you change name of class?")
 	gosub *screen_drawMsg2
-	promptAdd lang("„ÅØ„ÅÑ", "Yes"), "a"
-	promptAdd lang("„ÅÑ„ÅÑ„Åà", "No"), "b"
+	promptAdd lang("ÇÕÇ¢", "Yes"), "a"
+	promptAdd lang("Ç¢Ç¢Ç¶", "No"), "b"
 	val = promptx, 240, 160, 1
 	gosub *prompt_key
 	snd SOUNDLIST_OK1
@@ -3617,7 +3617,7 @@
 	pos 0, 0
 	gcopy 4, 0, 0, windoww, windowh
 	gmode 2
-	s = lang("Êñ∞„Åó„ÅÑËÅ∑Ê•≠„ÅØÔºü", "What's a new name of class?")
+	s = lang("êVÇµÇ¢êEã∆ÇÕÅH", "What's a new name of class?")
 	gosub *screen_drawMsg2
 	font lang(cfg_font1, cfg_font2), 13 - en * 2, 1
 	pos 20, windowh - 20
@@ -3645,7 +3645,7 @@
 	pos 0, 0
 	gcopy 4, 0, 0, windoww, windowh
 	gmode 2
-	s = lang("Âêõ„ÅÆÁâπÁ≠Ü„Åô„Åπ„ÅçÊâçËÉΩ„Çí1„Å§„ÄÅÊïô„Åà„Å¶„Åª„Åó„ÅÑ„Å™„ÄÇÂç∞„Åå„Å§„ÅÑ„Å¶„ÅÑ„Çã„ÅÆ„ÅØÁ®ÆÊóè„ÉªËÅ∑Ê•≠„Å®Ë¢´„Å£„Å¶„ÅÑ„Çã„ÇÇ„ÅÆ„Å†„Å≠„ÄÇ", "I want you to tell me one of your notable skills. The ones with a mark overlap with your class or race.")
+	s = lang("åNÇÃì¡ïMÇ∑Ç◊Ç´çÀî\Ç1Ç¬ÅAã≥Ç¶ÇƒÇŸÇµÇ¢Ç»ÅBàÛÇ™Ç¬Ç¢ÇƒÇ¢ÇÈÇÃÇÕéÌë∞ÅEêEã∆Ç∆îÌÇ¡ÇƒÇ¢ÇÈÇ‡ÇÃÇæÇÀÅB", "I want you to tell me one of your notable skills. The ones with a mark overlap with your class or race.")
 	gosub *screen_drawMsg2
 	font lang(cfg_font1, cfg_font2), 13 - en * 2, 1
 	pos 20, windowh - 20
@@ -3686,7 +3686,7 @@
 	pos 0, 0
 	gcopy 4, 0, 0, windoww, windowh
 	gmode 2
-	s = lang("Ê≠ª„Å´„Åü„Åè„Å™„ÅÑ„Å™„Çâ„ÄÅ„ÅÇ„ÇãÁ®ãÂ∫¶„ÅÆËÉΩÂäõ„ÅØÂøÖË¶Å„Å†„Å≠„ÄÇ", "You should prepare well, if you want to survive long enough in Irva.")
+	s = lang("éÄÇ…ÇΩÇ≠Ç»Ç¢Ç»ÇÁÅAÇ†ÇÈíˆìxÇÃî\óÕÇÕïKóvÇæÇÀÅB", "You should prepare well, if you want to survive long enough in Irva.")
 	gosub *screen_drawMsg2
 	font lang(cfg_font1, cfg_font2), 13 - en * 2, 1
 	pos 20, windowh - 20
@@ -3712,10 +3712,10 @@
 	loop
 	listmax = 0
 	list(0, 0) = 0
-	listn(0, 0) = lang("Ê±∫ÂÆö„Åô„Çã", "Proceed")
+	listn(0, 0) = lang("åàíËÇ∑ÇÈ", "Proceed")
 	listmax++
 	list(0, 1) = 0
-	listn(0, 1) = lang("„É™„É≠„Éº„É´", "Reroll")
+	listn(0, 1) = lang("ÉäÉçÅ[Éã", "Reroll")
 	listmax++
 	repeat MAX_SKILL_ATTR_BASIC, STARTING_SKILL_ATTR
 		chatList cmstats(cnt - STARTING_SKILL_ATTR), skillname(cnt)
@@ -3723,7 +3723,7 @@
 	windowshadow = 1
 *cm_stats_WHILE1
 	redraw 0
-	s = lang("ËÉΩÂäõ„ÅÆ„É≠„Éº„É´", "Attribute Reroll"), strhint3b
+	s = lang("î\óÕÇÃÉçÅ[Éã", "Attribute Reroll"), strhint3b
 	display_window (windoww - 360) / 2 + inf_screenx, winposy(352, 1) - 20, 360, 352
 	x = 150
 	y = 240
@@ -3731,14 +3731,14 @@
 	pos wx + 85, wy + wh / 2
 	grotate 2, 0, 0, 0, x, y
 	gmode 2
-	display_topic lang("ËÉΩÂäõ", "Attributes"), wx + 28, wy + 30
+	display_topic lang("î\óÕ", "Attributes"), wx + 28, wy + 30
 	color 0, 0, 0
 	font lang(cfg_font1, cfg_font2), 12 + sizefix - en * 2, 0
 	pos wx + 175, wy + 52
-	mes lang("„É≠„ÉÉ„ÇØ„Åï„Çå„ÅüËÉΩÂäõ„ÅØ\nÂ§âÂåñ„Åó„Åæ„Åõ„Çì", "Locked items will\nnot change.")
+	mes lang("ÉçÉbÉNÇ≥ÇÍÇΩî\óÕÇÕ\nïœâªÇµÇ‹ÇπÇÒ", "Locked items will\nnot change.")
 	font lang(cfg_font1, cfg_font2), 13 - en * 2, 1
 	pos wx + 180, wy + 84
-	mes lang("ÊÆã„Çä„É≠„ÉÉ„ÇØ: ", "Locks left: ") + cmlock(8)
+	mes lang("écÇËÉçÉbÉN: ", "Locks left: ") + cmlock(8)
 	repeat 10
 		key_list(cnt) = key_select(cnt)
 		keyrange = cnt + 1
@@ -3816,7 +3816,7 @@
 	pos 0, 0
 	gcopy 4, 0, 0, windoww, windowh
 	gmode 2
-	s = lang("„Éï„Ç£„Éº„Éà„Å®„ÅØ„ÄÅÂêõ„ÅÆÊåÅ„Å£„Å¶„ÅÑ„ÇãÊúâÁõä„Å™ÁâπÂæ¥„Å†„ÄÇ3„Å§„Åæ„ÅßÈÅ∏„Åπ„Çã„Çà„ÄÇ", "Choose your feats wisely.")
+	s = lang("ÉtÉBÅ[ÉgÇ∆ÇÕÅAåNÇÃéùÇ¡ÇƒÇ¢ÇÈóLâvÇ»ì¡í•ÇæÅB3Ç¬Ç‹Ç≈ëIÇ◊ÇÈÇÊÅB", "Choose your feats wisely.")
 	gosub *screen_drawMsg2
 	font lang(cfg_font1, cfg_font2), 13 - en * 2, 1
 	pos 20, windowh - 20
@@ -3842,7 +3842,7 @@
 	pos 0, 0
 	gcopy 4, 0, 0, windoww, windowh
 	gmode 2
-	s = lang("Âêõ„ÅÆË¶ã„ÅüÁõÆ„ÇíÁü•„Å£„Å¶„Åä„Åç„Åü„ÅÑ„Å™„ÄÇ„Åæ„ÅÇ„ÄÅÂæå„Åã„Çâ„ÅÑ„Å§„Åß„ÇÇÂ§â„Åà„Çâ„Çå„Çã„Åë„Å©„Å≠„ÄÇ", "What do you look like? Don't worry, you can change it later.")
+	s = lang("åNÇÃå©ÇΩñ⁄ÇímÇ¡ÇƒÇ®Ç´ÇΩÇ¢Ç»ÅBÇ‹Ç†ÅAå„Ç©ÇÁÇ¢Ç¬Ç≈Ç‡ïœÇ¶ÇÁÇÍÇÈÇØÇ«ÇÀÅB", "What do you look like? Don't worry, you can change it later.")
 	gosub *screen_drawMsg2
 	font lang(cfg_font1, cfg_font2), 13 - en * 2, 1
 	pos 20, windowh - 20
@@ -3888,11 +3888,11 @@
 
 *cm_gamemode
 	redraw 0
-	s = lang("„É¢„Éº„Éâ„ÅÆÈÅ∏Êäû", "Balance Selection"), strhint3b
+	s = lang("ÉÇÅ[ÉhÇÃëIë", "Balance Selection"), strhint3b
 	display_window (windoww - 680) / 2 + inf_screenx, winposy(500, 1) + 20, 680, 500
-	display_topic lang("„É¢„Éº„Éâ„ÅÆÂÄôË£ú", "Mode"), wx + 28, wy + 30
-	display_topic lang("ÂêÑ„É¢„Éº„Éâ„ÅÆË™¨Êòé", "Detail"), wx + 178, wy + 30
-	s = lang("„ÅÇ„Åà„Å¶Èô∫„Åó„ÅÑÈÅì„ÇíË°å„Åè„ÅÆ„ÇÇÂêõ„ÅÆËá™Áî±„Å†„ÄÇ", "You can choose any way.")
+	display_topic lang("ÉÇÅ[ÉhÇÃåÛï‚", "Mode"), wx + 28, wy + 30
+	display_topic lang("äeÉÇÅ[ÉhÇÃê‡ñæ", "Detail"), wx + 178, wy + 30
+	s = lang("Ç†Ç¶ÇƒåØÇµÇ¢ìπÇçsÇ≠ÇÃÇ‡åNÇÃé©óRÇæÅB", "You can choose any way.")
 	gosub *screen_drawMsg2
 	listn(0, 0) = lang("Essential", "Essential")
 	listn(0, 1) = lang("Loss", "Loss")
@@ -3910,96 +3910,96 @@
 	loop
 	font lang(cfg_font1, cfg_font2), 13 - en * 2, 0
 	if ( listn(0, cs) == listn(0, 0) ) {
-		s = lang("‚òÖEssential„É¢„Éº„Éâ„ÅØ„Åì„ÅÆ„ÇΩ„Éï„Éà„ÅÆÊú¨Ë≥™ÁöÑ„Å™„É¢„Éº„Éâ„Åß„ÄÅ", "Essential is the primary mode of the game, which all other modes")
+		s = lang("ÅöEssentialÉÇÅ[ÉhÇÕÇ±ÇÃÉ\ÉtÉgÇÃñ{éøìIÇ»ÉÇÅ[ÉhÇ≈ÅA", "Essential is the primary mode of the game, which all other modes")
 		pos wx + 165, wy + 66
 		mes s
-		s = lang("‰ªñ„ÅÆ„Ç≤„Éº„É†„É¢„Éº„Éâ„ÅØÂÖ®„Å¶„Åì„Çå„Åå„Éô„Éº„Çπ„Å´„Å™„Å£„Å¶„ÅÑ„Åæ„Åô„ÄÇ", "are based on. Balances changes are constantly made based on this mode")
+		s = lang("ëºÇÃÉQÅ[ÉÄÉÇÅ[ÉhÇÕëSÇƒÇ±ÇÍÇ™ÉxÅ[ÉXÇ…Ç»Ç¡ÇƒÇ¢Ç‹Ç∑ÅB", "are based on. Balances changes are constantly made based on this mode")
 		pos wx + 165, wy + 81
 		mes s
-		s = lang("„Ç∑„Çπ„ÉÜ„É†Èù¢„ÅÆÁ©¥„ÇíÂüã„ÇÅÂêåÊ†ºË¶ÅÁ¥†„ÅÆÂ∑Æ„ÇíÁ∏Æ„ÇÅ„ÇãÊñπÂêë„ÅßË™øÊï¥„ÅåÂ∏∏„Å´Ë°å„Çè„Çå„Å¶„Åä„Çä„ÄÅ", "in order to bring various gameplay elements in line with each other.")
+		s = lang("ÉVÉXÉeÉÄñ ÇÃåäÇñÑÇﬂìØäióvëfÇÃç∑ÇèkÇﬂÇÈï˚å¸Ç≈í≤êÆÇ™èÌÇ…çsÇÌÇÍÇƒÇ®ÇËÅA", "in order to bring various gameplay elements in line with each other.")
 		pos wx + 165, wy + 96
 		mes s
-		s = lang("„Éê„É©„É≥„ÇπÂ§âÂãï„ÅåÂ§ö„ÅÑÂèçÈù¢„ÄÅ„É≠„Éº„É´„Éó„É¨„Ç§„Å®„ÅÇ„ÇãÁ®ãÂ∫¶„ÅÆÂÆüÁõä„Çí‰∏°Á´ã„Åó„Åü„ÅÑ‰∫∫„ÄÅ", "Despite balance changes, this mode is good for those who wish to")
+		s = lang("ÉoÉâÉìÉXïœìÆÇ™ëΩÇ¢îΩñ ÅAÉçÅ[ÉãÉvÉåÉCÇ∆Ç†ÇÈíˆìxÇÃé¿âvÇóºóßÇµÇΩÇ¢êlÅA", "Despite balance changes, this mode is good for those who wish to")
 		pos wx + 165, wy + 111
 		mes s
-		s = lang("ËÇ≤Êàê„Å´Âäõ„ÇíÂÖ•„Çå„Åü„ÅÑ‰∫∫„Å´„Åä„Åô„Åô„ÇÅ„Åß„Åô„ÄÇ", "roleplay while having a challenge and a sense of achievement.")
+		s = lang("àÁê¨Ç…óÕÇì¸ÇÍÇΩÇ¢êlÇ…Ç®Ç∑Ç∑ÇﬂÇ≈Ç∑ÅB", "roleplay while having a challenge and a sense of achievement.")
 		pos wx + 165, wy + 126
 		mes s
 	}
 	if ( listn(0, cs) == listn(0, 1) ) {
-		s = lang("‚òÖLoss„É¢„Éº„Éâ„ÅØ„Éá„Éº„ÇøÂñ™Â§±„ÅÆÂç±Èô∫ÊÄß„ÅåÈùûÂ∏∏„Å´È´ò„ÅÑ„É¢„Éº„Éâ„Åß„Åô„ÄÇ", "Loss mode is a mode in which chance of data loss is very high.")
+		s = lang("ÅöLossÉÇÅ[ÉhÇÕÉfÅ[É^ëré∏ÇÃäÎåØê´Ç™îÒèÌÇ…çÇÇ¢ÉÇÅ[ÉhÇ≈Ç∑ÅB", "Loss mode is a mode in which chance of data loss is very high.")
 		pos wx + 165, wy + 66
 		mes s
-		s = lang("‰∏ÄÂ∫¶Ê≠ª„Å≠„Å∞„ÄÅÈÄô„ÅÑ‰∏ä„Åå„Çã„Åì„Å®„ÅØ„Åß„Åç„Åö„Åù„Åì„ÅßÁµÇ‰∫Ü„ÄÇ", "In loss mode, player death is permanent, and the save data")
+		s = lang("àÍìxéÄÇÀÇŒÅAîáÇ¢è„Ç™ÇÈÇ±Ç∆ÇÕÇ≈Ç´Ç∏ÇªÇ±Ç≈èIóπÅB", "In loss mode, player death is permanent, and the save data")
 		pos wx + 165, wy + 81
 		mes s
-		s = lang("„Åù„ÅÆ„Çª„Éº„Éñ„Éá„Éº„Çø„ÇíË™≠„ÅøËæº„ÇÅ„Å™„Åè„Å™„Çã„ÅÆ„ÅåÁâπÂæ¥„Åß„Åô„ÄÇ", "will no longer be available. Exiting without using the save and")
+		s = lang("ÇªÇÃÉZÅ[ÉuÉfÅ[É^Çì«Ç›çûÇﬂÇ»Ç≠Ç»ÇÈÇÃÇ™ì¡í•Ç≈Ç∑ÅB", "will no longer be available. Exiting without using the save and")
 		pos wx + 165, wy + 96
 		mes s
-		s = lang("„Åï„Çâ„Å´Esc„Ç≠„Éº„ÅãS„Åß„ÅÆ„Çª„Éº„Éñ„ÅßÁµÇ‰∫Ü„Åó„Å™„ÅÑ„Å®„É≠„Éº„ÉâÊôÇ„Å´„Éö„Éä„É´„ÉÜ„Ç£„Åå„ÅÇ„Çä„Åæ„Åô„ÄÇ", "exit option from the ESC menu will result in a penalty at load time.")
+		s = lang("Ç≥ÇÁÇ…EscÉLÅ[Ç©SÇ≈ÇÃÉZÅ[ÉuÇ≈èIóπÇµÇ»Ç¢Ç∆ÉçÅ[ÉhéûÇ…ÉyÉiÉãÉeÉBÇ™Ç†ÇËÇ‹Ç∑ÅB", "exit option from the ESC menu will result in a penalty at load time.")
 		pos wx + 165, wy + 111
 		mes s
-		s = lang("„É≠„Éº„Ç∞„É©„Ç§„ÇØÊú¨Ê†ºÊ¥æ„ÅÆ‰∫∫‰ª•Â§ñ„Å´„ÅØ„Åä„Åô„Åô„ÇÅ„Åß„Åç„Åæ„Åõ„Çì„ÄÇ", "This mode is for those who want the authentic roguelike experience.")
+		s = lang("ÉçÅ[ÉOÉâÉCÉNñ{äiîhÇÃêlà»äOÇ…ÇÕÇ®Ç∑Ç∑ÇﬂÇ≈Ç´Ç‹ÇπÇÒÅB", "This mode is for those who want the authentic roguelike experience.")
 		pos wx + 165, wy + 126
 		mes s
 	}
 	if ( listn(0, cs) == listn(0, 2) ) {
-		s = lang("‚òÖOverdose„É¢„Éº„Éâ„ÅØÂü∫Êú¨ÈÉ®ÂàÜ„ÅØEssential„Åù„ÅÆ„Åæ„Åæ„Å´„ÄÅÂæó„Çâ„Çå„Çã", "Overdose is almost the same as Essential, but all experience gains")
+		s = lang("ÅöOverdoseÉÇÅ[ÉhÇÕäÓñ{ïîï™ÇÕEssentialÇªÇÃÇ‹Ç‹Ç…ÅAìæÇÁÇÍÇÈ", "Overdose is almost the same as Essential, but all experience gains")
 		pos wx + 165, wy + 66
 		mes s
-		s = lang("ËÉΩÂäõÁµåÈ®ìÂÄ§„ÄÅ„Çπ„Ç≠„É´ÁµåÈ®ìÂÄ§„ÄÅÈ≠îÊ≥ïÁµåÈ®ìÂÄ§„ÅåÂ§ßÂπÖÂ¢óÂä†„Åô„ÇãË∂Ö‰ΩéÈõ£Â∫¶„É¢„Éº„Éâ„Åß„Åô„ÄÇ", "(skill, magic, level) can be increased. The default is 3x, and")
+		s = lang("î\óÕåoå±ílÅAÉXÉLÉãåoå±ílÅAñÇñ@åoå±ílÇ™ëÂïùëùâ¡Ç∑ÇÈí¥í·ìÔìxÉÇÅ[ÉhÇ≈Ç∑ÅB", "(skill, magic, level) can be increased. The default is 3x, and")
 		pos wx + 165, wy + 81
 		mes s
-		s = lang("„Éá„Éï„Ç©„É´„Éà„ÅÆÂ¢óÂä†ÂÄçÁéá„ÅØ3ÂÄç„Åß„Åô„Åå„ÄÅ„Å®„ÅÇ„ÇãÂ†¥ÊâÄ„ÅßÊúÄÂ§ß30ÂÄç„Å´„Åæ„ÅßÂ§âÊõ¥ÂèØËÉΩ„ÄÇ", "it can be changed up to 30x at a certain place. In other words,")
+		s = lang("ÉfÉtÉHÉãÉgÇÃëùâ¡î{ó¶ÇÕ3î{Ç≈Ç∑Ç™ÅAÇ∆Ç†ÇÈèÍèäÇ≈ç≈ëÂ30î{Ç…Ç‹Ç≈ïœçXâ¬î\ÅB", "it can be changed up to 30x at a certain place. In other words,")
 		pos wx + 165, wy + 96
 		mes s
-		s = lang("„Åò„Å£„Åè„ÇäÊ•Ω„Åó„Åæ„Åö„Å´„Åï„Å£„Åï„Å®„ÇØ„É™„Ç¢„Åó„Åü„ÅÑ„ÄÅ„Å®„Å´„Åã„ÅèÊ•Ω„Çí„Åó„Åü„ÅÑ„Å™„Å©„ÄÅ", "it's easy mode. This mode is best for those who just want to take it easy")
+		s = lang("Ç∂Ç¡Ç≠ÇËäyÇµÇ‹Ç∏Ç…Ç≥Ç¡Ç≥Ç∆ÉNÉäÉAÇµÇΩÇ¢ÅAÇ∆Ç…Ç©Ç≠äyÇÇµÇΩÇ¢Ç»Ç«ÅA", "it's easy mode. This mode is best for those who just want to take it easy")
 		pos wx + 165, wy + 111
 		mes s
-		s = lang("È£Ω„Åç„ÅåÊó©„Åè„Å™„Çã„Åì„Å®„ÇíÂïèÈ°å„Å®„Åó„Å™„ÅÑ‰∫∫„Å´„ÅÆ„Åø„ÄÅ„Åä„Åô„Åô„ÇÅ„Åß„Åô„ÄÇ", "and clear the game, or those who quickly get bored. Be warned that after")
+		s = lang("ñOÇ´Ç™ëÅÇ≠Ç»ÇÈÇ±Ç∆Çñ‚ëËÇ∆ÇµÇ»Ç¢êlÇ…ÇÃÇ›ÅAÇ®Ç∑Ç∑ÇﬂÇ≈Ç∑ÅB", "and clear the game, or those who quickly get bored. Be warned that after")
 		pos wx + 165, wy + 126
 		mes s
-		s = lang("„Åì„ÅÆÊàêÈï∑ÈÄüÂ∫¶„Å´ÊÖ£„Çå„Çã„Å®‰ªñ„Åß„ÅØÊ∫ÄË∂≥„Åß„Åç„Å™„Åè„Å™„ÇãÊÅê„Çå„Åå„ÅÇ„Çä„Åæ„Åô„ÄÇ", "getting used to the experience rate in Overdose, it may be hard to go")
+		s = lang("Ç±ÇÃê¨í∑ë¨ìxÇ…äµÇÍÇÈÇ∆ëºÇ≈ÇÕñûë´Ç≈Ç´Ç»Ç≠Ç»ÇÈã∞ÇÍÇ™Ç†ÇËÇ‹Ç∑ÅB", "getting used to the experience rate in Overdose, it may be hard to go")
 		pos wx + 165, wy + 141
 		mes s
-		s = lang("ÈÅ∫‰ºùÂ≠ê„ÇíÊÆã„Åô„Åì„Å®(„Ç¢„Ç§„ÉÜ„É†ÂºïÁ∂ô„Åé2ÈÄ±ÁõÆ)„Åå„Åß„Åç„Åö„ÄÅ„Çπ„Ç≥„Ç¢„ÇÇ0„Å´„Å™„Çä„Åæ„Åô„ÄÇ", "back to another mode. Final score will be 0, and genes are disabled.")
+		s = lang("à‚ì`éqÇécÇ∑Ç±Ç∆(ÉAÉCÉeÉÄà¯åpÇ¨2èTñ⁄)Ç™Ç≈Ç´Ç∏ÅAÉXÉRÉAÇ‡0Ç…Ç»ÇËÇ‹Ç∑ÅB", "back to another mode. Final score will be 0, and genes are disabled.")
 		pos wx + 165, wy + 155
 		mes s
 	}
 	if ( listn(0, cs) == listn(0, 3) ) {
-		s = lang("‚òÖNatural„É¢„Éº„Éâ„ÅØÂü∫Êú¨ÈÉ®ÂàÜ„ÅØEssential„Åß„Åô„Åå„ÄÅ", "Natural is identical to Essential mode, except that exiting without")
+		s = lang("ÅöNaturalÉÇÅ[ÉhÇÕäÓñ{ïîï™ÇÕEssentialÇ≈Ç∑Ç™ÅA", "Natural is identical to Essential mode, except that exiting without")
 		pos wx + 165, wy + 66
 		mes s
-		s = lang("Esc„Ç≠„Éº„ÅãS„Åß„ÅÆ„Çª„Éº„Éñ„ÅßÁµÇ‰∫Ü„Åó„Å™„ÅÑ„Å®„É≠„Éº„ÉâÊôÇ„Å´„Éö„Éä„É´„ÉÜ„Ç£„Åå„ÅÇ„Çä„Åæ„Åô„ÄÇ", "using the save and exit option from the ESC menu will result in a")
+		s = lang("EscÉLÅ[Ç©SÇ≈ÇÃÉZÅ[ÉuÇ≈èIóπÇµÇ»Ç¢Ç∆ÉçÅ[ÉhéûÇ…ÉyÉiÉãÉeÉBÇ™Ç†ÇËÇ‹Ç∑ÅB", "using the save and exit option from the ESC menu will result in a")
 		pos wx + 165, wy + 81
 		mes s
-		s = lang("„Åù„Çå‰ª•Â§ñ„ÅÆÁÇπ„Åß„ÅØEssential„Å®‰Ωï„ÇÇÂ§â„Çè„Çä„Åæ„Åõ„Çì„ÄÇ", "penalty at load time. This is the only difference. Recommended for")
+		s = lang("ÇªÇÍà»äOÇÃì_Ç≈ÇÕEssentialÇ∆âΩÇ‡ïœÇÌÇËÇ‹ÇπÇÒÅB", "penalty at load time. This is the only difference. Recommended for")
 		pos wx + 165, wy + 96
 		mes s
-		s = lang("ÊÇ™„ÅÑÁµêÊûú„ÅåÂá∫„Å¶„ÇÇ„ÇÑ„ÇäÁõ¥„Åó„Çí„Åõ„Åö„Åù„ÅÆ„Åæ„ÅæÂèó„ÅëÊ≠¢„ÇÅ„Çâ„Çå„Çã‰∫∫„ÄÅ", "those who want a moderate difficulty and who can accept the results")
+		s = lang("à´Ç¢åãâ Ç™èoÇƒÇ‡Ç‚ÇËíºÇµÇÇπÇ∏ÇªÇÃÇ‹Ç‹éÛÇØé~ÇﬂÇÁÇÍÇÈêlÅA", "those who want a moderate difficulty and who can accept the results")
 		pos wx + 165, wy + 111
 		mes s
-		s = lang("ÈÅ©Â∫¶„Å™Èõ£„Åó„Åï„ÇíÊ±Ç„ÇÅ„Çã‰∫∫„Å´„Åä„Åô„Åô„ÇÅ„Åß„Åô„ÄÇ", "of less than ideal outcomes.")
+		s = lang("ìKìxÇ»ìÔÇµÇ≥ÇãÅÇﬂÇÈêlÇ…Ç®Ç∑Ç∑ÇﬂÇ≈Ç∑ÅB", "of less than ideal outcomes.")
 		pos wx + 165, wy + 126
 		mes s
 	}
 	if ( listn(0, cs) == listn(0, 4) ) {
-		s = lang("‚òÖAbnormal„É¢„Éº„Éâ„ÅØÊ≠ª‰∫°ÊôÇ„ÅÆ„Éö„Éä„É´„ÉÜ„Ç£„ÅÆÂ¢óÂä†„ÇÑ„Çª„Éº„Éñ„É≠„Éº„Éâ„ÅÆÂà∂Èôê„ÄÅ", "Abnormal mode increases the penalty for death and places a restriction")
+		s = lang("ÅöAbnormalÉÇÅ[ÉhÇÕéÄñSéûÇÃÉyÉiÉãÉeÉBÇÃëùâ¡Ç‚ÉZÅ[ÉuÉçÅ[ÉhÇÃêßå¿ÅA", "Abnormal mode increases the penalty for death and places a restriction")
 		pos wx + 165, wy + 66
 		mes s
-		s = lang("„Åù„ÅÆ‰ªñ„Åï„Åæ„Åñ„Åæ„Å™Âç±Èô∫Ë¶ÅÁ¥†„ÅåÂ¢ó„Åà„Å¶„ÅÑ„ÇãÁï∞Â∏∏„Å™„É¢„Éº„Éâ„Åß„Åô„ÄÇÂú∞ÈÅì„Å™Á©ç„ÅøÈáç„Å≠„ÇÑ", "on loading. There are also various other additional dangerous elements")
+		s = lang("ÇªÇÃëºÇ≥Ç‹Ç¥Ç‹Ç»äÎåØóvëfÇ™ëùÇ¶ÇƒÇ¢ÇÈàŸèÌÇ»ÉÇÅ[ÉhÇ≈Ç∑ÅBínìπÇ»êœÇ›èdÇÀÇ‚", "on loading. There are also various other additional dangerous elements")
 		pos wx + 165, wy + 81
 		mes s
-		s = lang("ÊÖéÈáç„Å™„Éó„É¨„Ç§„É≥„Ç∞„ÇíÊ•Ω„Åó„ÇÅ„Çã‰∫∫„ÄÅ„ÇÇ„Åó„Åè„ÅØË≤¥ÈáçÂìÅ„ÇíÂ§±„ÅÜ„Çπ„É™„É´„ÇÑ„Ç∑„Éß„ÉÉ„ÇØ„Åô„Çâ", "added in Abnormal mode. This mode is best for those strange people who")
+		s = lang("êTèdÇ»ÉvÉåÉCÉìÉOÇäyÇµÇﬂÇÈêlÅAÇ‡ÇµÇ≠ÇÕãMèdïiÇé∏Ç§ÉXÉäÉãÇ‚ÉVÉáÉbÉNÇ∑ÇÁ", "added in Abnormal mode. This mode is best for those strange people who")
 		pos wx + 165, wy + 96
 		mes s
-		s = lang("Ê•Ω„Åó„ÇÅ„ÇãÂ§âÊÖã„Å™‰∫∫„Å´„Åä„Åô„Åô„ÇÅ„Åß„Åô„ÄÇÁâπ„Å´„É°„É™„ÉÉ„Éà„ÅØ„ÅÇ„Çä„Åæ„Åõ„Çì„Åå„ÄÅ", "enjoy careful, steady progress, and who like the thrill of the chance")
+		s = lang("äyÇµÇﬂÇÈïœë‘Ç»êlÇ…Ç®Ç∑Ç∑ÇﬂÇ≈Ç∑ÅBì¡Ç…ÉÅÉäÉbÉgÇÕÇ†ÇËÇ‹ÇπÇÒÇ™ÅA", "enjoy careful, steady progress, and who like the thrill of the chance")
 		pos wx + 165, wy + 111
 		mes s
-		s = lang("„ÇØ„É™„Ç¢ÊôÇ„ÅÆ„Çπ„Ç≥„Ç¢„Åå20ÂÄç„Å´„Å™„Çä„Åæ„Åô„ÄÇ", "of losing their valuables. There are no special bonuses, but the final")
+		s = lang("ÉNÉäÉAéûÇÃÉXÉRÉAÇ™20î{Ç…Ç»ÇËÇ‹Ç∑ÅB", "of losing their valuables. There are no special bonuses, but the final")
 		pos wx + 165, wy + 126
 		mes s
-		s = lang("Esc„Ç≠„Éº„ÅãS„Åß„ÅÆ„Çª„Éº„Éñ„ÅßÁµÇ‰∫Ü„Åó„Å™„ÅÑ„Å®„É≠„Éº„ÉâÊôÇ„Å´„Éö„Éä„É´„ÉÜ„Ç£„ÅÇ„Çä„ÄÇ", "score will be multiplied by 20. Exiting without using the save and exit")
+		s = lang("EscÉLÅ[Ç©SÇ≈ÇÃÉZÅ[ÉuÇ≈èIóπÇµÇ»Ç¢Ç∆ÉçÅ[ÉhéûÇ…ÉyÉiÉãÉeÉBÇ†ÇËÅB", "score will be multiplied by 20. Exiting without using the save and exit")
 		pos wx + 165, wy + 141
 		mes s
 		if ( en ) {
@@ -4009,31 +4009,31 @@
 		}
 	}
 	if ( listn(0, cs) == listn(0, 5) ) {
-		s = lang("‚òÖPurge„É¢„Éº„Éâ„ÅØ„Éê„É©„É≥„ÇπË™øÊï¥„Åã„ÇâÂàá„ÇäÈõ¢„Åï„Çå„Åü„Ç≤„Éº„É†„É¢„Éº„Éâ„Åß„Åô„ÄÇ", "Purge is an unbalanced game mode.")
+		s = lang("ÅöPurgeÉÇÅ[ÉhÇÕÉoÉâÉìÉXí≤êÆÇ©ÇÁêÿÇËó£Ç≥ÇÍÇΩÉQÅ[ÉÄÉÇÅ[ÉhÇ≈Ç∑ÅB", "Purge is an unbalanced game mode.")
 		pos wx + 165, wy + 66
 		mes s
-		s = lang("ÈÅ∫‰ºùÂ≠ê„ÇíÊÆã„Åô„Åì„Å®(„Ç¢„Ç§„ÉÜ„É†ÂºïÁ∂ô„Åé2ÈÄ±ÁõÆ)„Åå„Åß„Åç„Åö„ÄÅ„Çπ„Ç≥„Ç¢„ÇÇ0„Å´„Å™„Çä„Åæ„Åô„ÄÇ", "- Can not make genes and your score is always 0.")
+		s = lang("à‚ì`éqÇécÇ∑Ç±Ç∆(ÉAÉCÉeÉÄà¯åpÇ¨2èTñ⁄)Ç™Ç≈Ç´Ç∏ÅAÉXÉRÉAÇ‡0Ç…Ç»ÇËÇ‹Ç∑ÅB", "- Can not make genes and your score is always 0.")
 		pos wx + 165, wy + 81
 		mes s
-		s = lang("„ÄåÈÉΩÂêà„ÅÆ„ÅÑ„ÅÑÁµêÊûú„ÅåÂá∫„Çã„Åæ„Åß„Å≤„Åü„Åô„Çâ„ÇÑ„ÇäÁõ¥„Åô‰ΩúÊ•≠„Åì„Åù„ÅåÊ•Ω„Åó„ÅÑ„Äç", "- Reloading with F2 for save-scumming. Auto-save disabled.")
+		s = lang("ÅuìsçáÇÃÇ¢Ç¢åãâ Ç™èoÇÈÇ‹Ç≈Ç–ÇΩÇ∑ÇÁÇ‚ÇËíºÇ∑çÏã∆Ç±ÇªÇ™äyÇµÇ¢Åv", "- Reloading with F2 for save-scumming. Auto-save disabled.")
 		pos wx + 165, wy + 96
 		mes s
-		s = lang("„Äå„Ç≤„Éº„É†„Å®„ÅØÊîæÁΩÆ„ÅßËá™Âãï„Ç´„É≥„Çπ„Éà„Åô„Çã„Åè„Çâ„ÅÑÊ•Ω„Å™„Åª„ÅÜ„ÅåÊ≤°ÂÖ•„Åß„Åç„Çã„ÇÇ„ÅÆ„Äç", "- AFK leveling as in idle games.")
+		s = lang("ÅuÉQÅ[ÉÄÇ∆ÇÕï˙íuÇ≈é©ìÆÉJÉìÉXÉgÇ∑ÇÈÇ≠ÇÁÇ¢äyÇ»ÇŸÇ§Ç™ñvì¸Ç≈Ç´ÇÈÇ‡ÇÃÅv", "- AFK leveling as in idle games.")
 		pos wx + 165, wy + 111
 		mes s
-		s = lang("„Äå„Éê„É©„É≥„Çπ„Éñ„É¨„Ç§„Ç´„Éº„Å´„Çà„Å£„Å¶‰ªñ„ÅÆË¶ÅÁ¥†„Åå„Ç¥„ÉüÂêåÁÑ∂„Å´„Å™„Å£„Å¶„ÅÑ„Å¶„ÇÇ„ÄÅ", "- Insta-kill things with purge-mode exclusive actions.")
+		s = lang("ÅuÉoÉâÉìÉXÉuÉåÉCÉJÅ[Ç…ÇÊÇ¡ÇƒëºÇÃóvëfÇ™ÉSÉ~ìØëRÇ…Ç»Ç¡ÇƒÇ¢ÇƒÇ‡ÅA", "- Insta-kill things with purge-mode exclusive actions.")
 		pos wx + 165, wy + 126
 		mes s
-		s = lang("„Ç™„Éï„É©„Ç§„É≥„Ç≤„Éº„É†„Å™„Çâ„Åù„ÅÆ„Åæ„Åæ„Å´„Åó„Å¶„Åä„Åè„Åπ„Åç„Äç", "- Extra bonus points and starting gold.")
+		s = lang("ÉIÉtÉâÉCÉìÉQÅ[ÉÄÇ»ÇÁÇªÇÃÇ‹Ç‹Ç…ÇµÇƒÇ®Ç≠Ç◊Ç´Åv", "- Extra bonus points and starting gold.")
 		pos wx + 165, wy + 141
 		mes s
-		s = lang("„Äå„ÇÄ„Åó„Çç„Éê„É©„É≥„Çπ„Éñ„É¨„Ç§„Ç´„Éº„Åå„ÅÇ„Å£„Å¶‰Ωø„ÅÜ„Åã„Å©„ÅÜ„Åã„ÅØÈÅ∏„Å∞„Åõ„Çã„ÅÆ„ÅåÁêÜÊÉ≥„Äç", "- Rare loot trigger always on.")
+		s = lang("ÅuÇﬁÇµÇÎÉoÉâÉìÉXÉuÉåÉCÉJÅ[Ç™Ç†Ç¡ÇƒégÇ§Ç©Ç«Ç§Ç©ÇÕëIÇŒÇπÇÈÇÃÇ™óùëzÅv", "- Rare loot trigger always on.")
 		pos wx + 165, wy + 156
 		mes s
-		s = lang("„ÄåÂº∑Êïµ„Å®„ÅÆÊ≠ªÈóò„Å™„Çì„Å¶Ê•Ω„Åó„Åè„Å™„ÅÑ„ÄÇ„Çπ„Éà„É¨„Çπ„Éï„É™„Éº„Å´Ëπ¥Êï£„Çâ„ÅôÊà¶Èóò„ÅåËá≥È´ò„Äç", "- Potential and experience changes.")
+		s = lang("Åuã≠ìGÇ∆ÇÃéÄì¨Ç»ÇÒÇƒäyÇµÇ≠Ç»Ç¢ÅBÉXÉgÉåÉXÉtÉäÅ[Ç…èRéUÇÁÇ∑êÌì¨Ç™éäçÇÅv", "- Potential and experience changes.")
 		pos wx + 165, wy + 171
 		mes s
-		s = lang("„Å®„ÅÑ„Å£„Åü‰æ°ÂÄ§Ë¶≥„ÅÆ‰∫∫„ÅØ„ÄÅÁµ∂ÂØæ„Å´„Åì„ÅÆ„É¢„Éº„Éâ‰ª•Â§ñ„ÇíÈÅ∏„Å∞„Å™„ÅÑ„Åß„Åè„Å†„Åï„ÅÑ„ÄÇ", "- NPCs take 999999 damage when vomiting with negative satiety.")
+		s = lang("Ç∆Ç¢Ç¡ÇΩâøíläœÇÃêlÇÕÅAê‚ëŒÇ…Ç±ÇÃÉÇÅ[Éhà»äOÇëIÇŒÇ»Ç¢Ç≈Ç≠ÇæÇ≥Ç¢ÅB", "- NPCs take 999999 damage when vomiting with negative satiety.")
 		pos wx + 165, wy + 186
 		mes s
 	}
@@ -4087,7 +4087,7 @@
 	pos 0, 0
 	gcopy 4, 0, 0, windoww, windowh
 	gmode 2
-	s = lang("Ê±∫ÂÆöÔΩ∑ÔΩ∞„ÇíÊäº„Åô„Åì„Å®„Åß„ÄÅÂπ¥ÈΩ¢„Éª‰ΩìÊ†º„Çí„É™„É≠„Éº„É´„Åß„Åç„Çã„ÄÇ", "Hit the enter key to reroll your background.")
+	s = lang("åàíË∑∞ÇâüÇ∑Ç±Ç∆Ç≈ÅAîNóÓÅEëÃäiÇÉäÉçÅ[ÉãÇ≈Ç´ÇÈÅB", "Hit the enter key to reroll your background.")
 	gosub *screen_drawMsg2
 	del_chara 0
 	dbidn = cmrace
@@ -4103,8 +4103,8 @@
 	if ( cmzisyou != "" ) {
 		cdatan(CDATAN_FAKE_CLASS, rc) = cmzisyou
 	}
-	if ( zisyousex == lang("ÊÄßÂà•‰∏çÊòé", "unknown") ) {
-		cdatan(CDATAN_NEWSEX, rc) = lang("„Å™„Åó", "none")
+	if ( zisyousex == lang("ê´ï ïsñæ", "unknown") ) {
+		cdatan(CDATAN_NEWSEX, rc) = lang("Ç»Çµ", "none")
 	}
     else {
 		cdatan(CDATAN_NEWSEX, rc) = zisyousex
@@ -4139,11 +4139,11 @@
 	gcopy 0, 0, 100, windoww, windowh - 100
 	gsel 0
 	gosub *cm_bg
-	s = lang("Ê∫ÄË∂≥„Åß„Åç„Åü„Åã„Å™Ôºü", "Are you satisfied now?")
+	s = lang("ñûë´Ç≈Ç´ÇΩÇ©Ç»ÅH", "Are you satisfied now?")
 	gosub *screen_drawMsg2
-	promptAdd lang("„ÅØ„ÅÑ", "Yes"), "a"
-	promptAdd lang("„ÅÑ„ÅÑ„Åà", "No"), "b"
-	promptAdd lang("ÊúÄÂàù„Åã„Çâ", "Restart"), "c"
+	promptAdd lang("ÇÕÇ¢", "Yes"), "a"
+	promptAdd lang("Ç¢Ç¢Ç¶", "No"), "b"
+	promptAdd lang("ç≈èâÇ©ÇÁ", "Restart"), "c"
 	val = promptx, 240, 160, 1
 	gosub *prompt_key
 	snd SOUNDLIST_OK1
@@ -4161,7 +4161,7 @@
 	pos 0, 100
 	gcopy 2, 0, 0, windoww, windowh - 100
 	gmode 2
-	s = lang("ÊúÄÂæå„ÅÆË≥™Âïè„Å†„ÄÇÂêõ„ÅÆÂêçÂâç„ÅØÔºü", "Last question. What's your name?")
+	s = lang("ç≈å„ÇÃéøñ‚ÇæÅBåNÇÃñºëOÇÕÅH", "Last question. What's your name?")
 	gosub *screen_drawMsg2
 *cm_name_loop
 	val = (windoww - 230) / 2 + inf_screenx, winposy(120), 10, 0, 0
@@ -4190,7 +4190,7 @@
 		gcopy 2, 0, 0, windoww, windowh - 100
 		gmode 2
 		msgconfirm = 1
-		s = lang("„ÅÇ„ÅÑ„Å´„Åè„ÄÅ„Åù„ÅÆÂêçÂâç„ÅÆÂÜíÈô∫ËÄÖ„ÅØ„Åô„Åß„Å´Â≠òÂú®„Åô„Çã„ÄÇ", "Sorry, but the name is already taken.")
+		s = lang("Ç†Ç¢Ç…Ç≠ÅAÇªÇÃñºëOÇÃñ`åØé“ÇÕÇ∑Ç≈Ç…ë∂ç›Ç∑ÇÈÅB", "Sorry, but the name is already taken.")
 		gosub *screen_drawMsg2
 		goto *cm_name_loop
 	}
@@ -4222,12 +4222,12 @@
 			spact(SKILL_SPACT_WIN - STARTING_SKILL_SPACT) = 1
 			txtmore
 			txtef COLOR_YELLOW
-			txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_WIN) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_WIN) + ".")
+			txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_WIN) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_WIN) + ".")
 			if ( spact(SKILL_SPACT_PURGE - STARTING_SKILL_SPACT) == 0 ) {
 				spact(SKILL_SPACT_PURGE - STARTING_SKILL_SPACT) = 1
 				txtmore
 				txtef COLOR_YELLOW
-				txt lang("„ÅÇ„Å™„Åü„ÅØ„Äå" + skillname(SKILL_SPACT_PURGE) + "„Äç„ÅÆËÉΩÂäõ„ÇíÂæó„Åü„ÄÇ", "You have learned a new ability, " + skillname(SKILL_SPACT_PURGE) + ".")
+				txt lang("Ç†Ç»ÇΩÇÕÅu" + skillname(SKILL_SPACT_PURGE) + "ÅvÇÃî\óÕÇìæÇΩÅB", "You have learned a new ability, " + skillname(SKILL_SPACT_PURGE) + ".")
 			}
 		}
 	}
@@ -4269,7 +4269,7 @@
 		pos wx + 350, wy - chipc(CHIPC_HEIGHT, ref1) + 60
 		gcopy 5, 0, 960, inf_tiles, chipc(CHIPC_HEIGHT, ref1)
 		pos wx + 460, wy + 38
-		mes lang("Á®ÆÊóè: ", "Race: ") + cmrace(1)
+		mes lang("éÌë∞: ", "Race: ") + cmrace(1)
 	}
 	else {
 		gmode 4, chipc(CHIPC_WIDTH, ref1), chipc(CHIPC_HEIGHT, ref1), 40
@@ -4293,10 +4293,10 @@
 	font lang(cfg_font1, cfg_font2), 14 - en * 2, 0
 	tx = wx + 200
 	ty = wy + 166
-	display_topic lang("ËÉΩÂäõ„Éú„Éº„Éä„Çπ", "Attribute Bonus"), tx, ty
+	display_topic lang("î\óÕÉ{Å[ÉiÉX", "Attribute Bonus"), tx, ty
 	ty += 34
 	font lang(cfg_font1, cfg_font2), 14 - en * 2, 0
-	s = lang("ÁöÜÁÑ°", "None"), lang("ÊúÄÈ´ò", "Best"), lang("ÁêÜÊÉ≥ÁöÑ", "Great"), lang("È´ò„ÅÑ", "Good"), lang("„ÇÑ„ÇÑÈ´ò„ÅÑ", "Not bad"), lang("ÊôÆÈÄö", "Normal"), lang("Â∞ë„Åó", "Little"), lang("ÂæÆ„ÄÖ", "Slight")
+	s = lang("äFñ≥", "None"), lang("ç≈çÇ", "Best"), lang("óùëzìI", "Great"), lang("çÇÇ¢", "Good"), lang("Ç‚Ç‚çÇÇ¢", "Not bad"), lang("ïÅí ", "Normal"), lang("è≠Çµ", "Little"), lang("î˜ÅX", "Slight")
 	locvar_cm_refer_scale_attr = 0, 3, 5, 7, 9, 11, 13
 	locvar_cm_refer_scale_spd = 0, 25, 50, 75, 100, 125, 150
 	locvar_cm_refer_scale_spdadd = 0, 3, 6, 9, 12, 15, 18
@@ -4408,19 +4408,19 @@
 	ty = wy + 250
 	if ( val == 0 ) { ; Races
 		ty += 16 ; Extra row for life/mana
-		display_topic lang("Áç≤ÂæóÈÉ®‰Ωç", "Body Parts"), tx, ty
+		display_topic lang("älìæïîà ", "Body Parts"), tx, ty
 		ty += 34
 		font lang(cfg_font1, cfg_font2), 14 - en * 2, 0
 		pos tx + 32, ty
 		mes bodyparts2string()
 		ty += 18
 	}
-	display_topic lang("Áç≤ÂæóÊäÄËÉΩ", "Trained Skill"), tx, ty
+	display_topic lang("älìæãZî\", "Trained Skill"), tx, ty
 	ty += 34
 	font lang(cfg_font1, cfg_font2), 14 - en * 2, 0
 	color 0, 0, 0
 	r = 0
-	s = lang("Ê≠¶Âô®„ÅÆÂ∞ÇÈñÄ  ", "Proficient in ")
+	s = lang("ïêäÌÇÃêÍñÂ  ", "Proficient in ")
 	repeat STARTING_SKILL_NORMAL - STARTING_SKILL_WEAPON, STARTING_SKILL_WEAPON
 		if ( sorg(cnt, CHARA_PLAYER) != 0 ) {
 			if ( r != 0 ) {

@@ -19,7 +19,7 @@ if instr(s,0,%1)!-1{	%c\
 	:promptl(0,1)=strno,"n","1"\
 	:promptmax=2:val=promptx,%3,%1,%2:gosub *prompt_key
 
-#define global promptOk(%1=200,%2=1,%3=prompty) promptl(0,0)=lang("ã‚ªãƒƒã‚±ãƒ¼","Ok"),"y","0"\
+#define global promptOk(%1=200,%2=1,%3=prompty) promptl(0,0)=lang("ƒIƒbƒP[","Ok"),"y","0"\
 	:promptmax=1:val=promptx,%3,%1,%2:gosub *prompt_key
 
 #define global promptAdd(%1,%2="null",%3=promptmax) promptl(0,promptmax)=%1,%2,""+%3:promptmax++
@@ -59,7 +59,7 @@ if instr(s,0,%1)!-1{	%c\
 		return
 	}
 	neterror locvar_netload_estr
-	dialog lang("ã‚¨ãƒ©ãƒ¼:", "Error:") + locvar_netload_estr
+	dialog lang("ƒGƒ‰[:", "Error:") + locvar_netload_estr
 	return
 
 /********** ANNA CUSTOM - BEGINNING **********/
@@ -222,14 +222,14 @@ if instr(s,0,%1)!-1{	%c\
 
 *rank_init
 	sdim rankn, 30, 11, 9
-	rankn(0, 0) = lang("ã‚¢ãƒªãƒ¼ãƒŠã®ãƒãƒ£ãƒ³ãƒ”ã‚ªãƒ³", "Arena champion"), lang("ã‚¢ãƒªãƒ¼ãƒŠã®è¶…ã‚¨ãƒªãƒ¼ãƒˆé—˜å£«", "Super elite gladiator"), lang("ã‚¢ãƒªãƒ¼ãƒŠã®ã‚¹ã‚¿ãƒ¼é—˜å£«", "Star gladiator"), lang("ã‚¢ãƒªãƒ¼ãƒŠã®ã‚¨ãƒªãƒ¼ãƒˆé—˜å£«", "Elite gladiator"), lang("ã‚¢ãƒªãƒ¼ãƒŠã®ç†Ÿç·´é—˜å£«", "Veteran gladiator"), lang("ã‚¢ãƒªãƒ¼ãƒŠã®ä¸­å …é—˜å£«", "Popular gladiator"), lang("ã‚¢ãƒªãƒ¼ãƒŠã®æœŸå¾…ã®æ˜Ÿ", "New hope"), lang("ã‚¢ãƒªãƒ¼ãƒŠã®ãƒ€ãƒ¼ã‚¯ãƒ›ãƒ¼ã‚¹", "Darkhorse"), lang("ã‚¢ãƒªãƒ¼ãƒŠã®ä¸‹ç´šé—˜å£«", "Low class fighter"), lang("ã‚¢ãƒªãƒ¼ãƒŠã®ç„¡åã®é—˜å£«", "Unknown fighter"), lang("ã‚¢ãƒªãƒ¼ãƒŠ", "Arena")
-	rankn(0, 1) = lang("å…¨ã¦ã®ãƒšãƒƒãƒˆã®ç‹", "King of tamer"), lang("è¶…ã‚¨ãƒªãƒ¼ãƒˆãƒšãƒƒãƒˆä½¿ã„", "Super elite tamer"), lang("ãƒšãƒƒãƒˆã®ç‹å­", "Prince of animals"), lang("ãƒšãƒƒãƒˆã®æ†§ã‚Œã®çš„", "Chief of animals"), lang("ãƒšãƒƒãƒˆä½¿ã„ã®ã‚¨ãƒªãƒ¼ãƒˆ", "Elite tamer"), lang("åã®çŸ¥ã‚ŒãŸãƒšãƒƒãƒˆä½¿ã„", "Notorious tamer"), lang("ãƒšãƒƒãƒˆã®æ¯", "New hope"), lang("ãªã‹ãªã‹ã®ãƒšãƒƒãƒˆä½¿ã„", "Average tamer"), lang("é§†ã‘å‡ºã—ã®ãƒšãƒƒãƒˆä½¿ã„", "Petty tamer"), lang("ç„¡åã®ãƒšãƒƒãƒˆä½¿ã„", "Unknown tamer"), lang("ãƒšãƒƒãƒˆã‚¢ãƒªãƒ¼ãƒŠ", "Pet Arena")
-	rankn(0, 2) = lang("ãƒãƒ•ã‚£ã‚¢ã‚’çµ±ã¹ã‚‹è€…", "King of Nefia"), lang("è¿·å®®ã®è¦‡è€…", "Champion of labyrinth"), lang("ãƒ€ãƒ³ã‚¸ãƒ§ãƒ³ã®ä¸»", "Dungeon master"), lang("é«˜åãªæ¢æ¤œè€…", "Famous adventurer"), lang("å­ä¾›é”ã®æ†§ã‚Œã®çš„", "Children's star"), lang("ãƒ€ãƒ³ã‚¸ãƒ§ãƒ³æ¡ˆå†…äºº", "Guide of Nefia"), lang("åã®çŸ¥ã‚ŒãŸéºè·¡è’ã‚‰ã—", "Notorious tomb robber"), lang("æ¢æ¤œè€…", "Tomb robber"), lang("ã¡ã‚“ã‘ãªéºè·¡è’ã‚‰ã—", "Famous tourist"), lang("è¦³å…‰å®¢", "Tourist"), lang("ã‚¯ãƒ­ãƒ¼ãƒ©ãƒ¼", "Crawler")
-	rankn(0, 3) = lang("ãƒ†ã‚£ãƒªã‚¹æœ€å¤§ã®åšç‰©é¤¨", "Tyris' greatest museum"), lang("è¶…æœ‰åãªåšç‰©é¤¨", "Royal museum"), lang("å¤§äººæ°—ã®åšç‰©é¤¨", "Great museum"), lang("æœ‰åãªåšç‰©é¤¨", "Top museum"), lang("æ¥å®¢ã®çµ¶ãˆãªã„åšç‰©é¤¨", "Great museum"), lang("ã¡ã‚‡ã£ã¨äººæ°—ã®ã‚ã‚‹åšç‰©é¤¨", "Good museum"), lang("åã®çŸ¥ã‚ŒãŸåšç‰©é¤¨", "Average museum"), lang("ã¾ã‚ã¾ã‚ã®åšç‰©é¤¨", "Small museum"), lang("æ¥å®¢ã®å°‘ãªã„åšç‰©é¤¨", "Unknown museum"), lang("ç„¡åã®åšç‰©é¤¨", "Unknown Ruin"), lang("åšç‰©é¤¨", "Museum")
-	rankn(0, 4) = lang("ã‚¤ãƒ«ãƒ´ã‚¡ã®æ¥½åœ’", "Heaven of Tyris"), lang("è¶…ã‚»ãƒ¬ãƒ–ãªå®¶", "Royal mansion"), lang("ä¸–ç•Œæœ‰æ•°ã®å®¶", "Celebrity mansion"), lang("ã¨ã¦ã‚‚ä½ã¿ãŸããªã‚‹å®¶", "Dream mansion"), lang("ä¸»å©¦ã®æ†§ã‚Œã®å®¶", "Cozy mansion"), lang("ã¡ã‚‡ã£ã¨äººç›®ã‚’ã²ãå®¶", "Attractive house"), lang("ã¾ã‚ã¾ã‚ã®å®¶", "Average house"), lang("å°‘ã—ã¿ã™ã¼ã‚‰ã—ã„å®¶", "Poor house"), lang("è²§å›°ã«ã‚ãˆãå®¶", "Peasant's shack"), lang("ä¹é£Ÿã®å®¶", "Beggar's shack"), lang("ãƒ›ãƒ¼ãƒ ", "Home")
-	rankn(0, 5) = lang("ã‚¤ãƒ«ãƒ´ã‚¡æœ€å¤§ã®åº—", "Tyris' greatest mall"), lang("ç‹æ§˜ãŒæ¥ã‚‹åº—", "Royal mall"), lang("å¤§ç¹ç››ã—ã¦ã„ã‚‹åº—", "Prosperous mall"), lang("ã‚»ãƒ¬ãƒ–ãŒæ¥ã‚‹åº—", "Celebrity shop"), lang("æ¥å®¢ã®çµ¶ãˆãªã„åº—", "Prosperous shop"), lang("ãƒãƒ€ãƒ ã®æ¥ã‚‹åº—", "Popular shop"), lang("ãƒªãƒ”ãƒ¼ã‚¿ãƒ¼ã®ã„ã‚‹åº—", "Average shop"), lang("äººãŒå¢—ãˆã¦ããŸå£²åº—", "Small shop"), lang("ã»ã¨ã‚“ã©å£²ã‚Œãªã„å£²åº—", "Souvenir shop"), lang("ç„¡åã®å£²åº—", "Unknown shop"), lang("åº—", "Shop")
-	rankn(0, 6) = lang("ãƒœã‚¹", "Boss"), lang("ç‹æ§˜ã®ã‚¢ãƒ‰ãƒã‚¤ã‚¶ãƒ¼", "King's advisor"), lang("ã‚¨ãƒªãƒ¼ãƒˆã‚³ãƒ³ã‚µãƒ«ã‚¿ãƒ¼", "Elite consultant"), lang("ã”æ„è¦‹ç•ª", "Famous consultant"), lang("æœ‰æ¨©è€…ã®é‘‘", "Model voter"), lang("ãƒãƒ€ãƒ å¥½ã¿ã®æœ‰æ¨©è€…", "Nice voter"), lang("åã®çŸ¥ã‚ŒãŸæœ‰æ¨©è€…", "Infamous voter"), lang("æ™®é€šã®æœ‰æ¨©è€…", "Average voter"), lang("ç„¡é–¢å¿ƒãªæœ‰æ¨©è€…", "Indifferent voter"), lang("ãã‚Šãã‚Šæœ‰æ¨©è€…", "Almost voter"), lang("ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£", "Community")
-	rankn(0, 8) = lang("æ¬¡ä»£ã‚®ãƒ«ãƒ‰ãƒã‚¹ã‚¿ãƒ¼", "Next master"), lang("ã‚®ãƒ«ãƒ‰ãƒã‚¹ã‚¿ãƒ¼ã®å³è…•", "Master"), lang("ã‚®ãƒ«ãƒ‰ã®é‡å½¹", "Adept"), lang("ã‚®ãƒ«ãƒ‰ã®é‡å½¹å€™è£œ", "Expert"), lang("ã‚¢ãƒ€ãƒ—ãƒˆ", "Journeyman"), lang("ã‚¨ã‚­ã‚¹ãƒ‘ãƒ¼ãƒˆ", "Senior"), lang("ã‚¸ãƒ£ãƒ¼ãƒ‹ãƒ¼ãƒãƒ³", "Apprentice"), lang("ã‚®ãƒ«ãƒ‰ã®æ­£å¼ãƒ¡ãƒ³ãƒãƒ¼", "Official member"), lang("ã‚®ãƒ«ãƒ‰ã®ãƒ¡ãƒ³ãƒãƒ¼å€™è£œ", "Candidate"), lang("è¦‹ç¿’ã„", "Thug"), lang("ã‚®ãƒ«ãƒ‰", "Guild")
+	rankn(0, 0) = lang("ƒAƒŠ[ƒi‚Ìƒ`ƒƒƒ“ƒsƒIƒ“", "Arena champion"), lang("ƒAƒŠ[ƒi‚Ì’´ƒGƒŠ[ƒg“¬m", "Super elite gladiator"), lang("ƒAƒŠ[ƒi‚ÌƒXƒ^[“¬m", "Star gladiator"), lang("ƒAƒŠ[ƒi‚ÌƒGƒŠ[ƒg“¬m", "Elite gladiator"), lang("ƒAƒŠ[ƒi‚Ìn—û“¬m", "Veteran gladiator"), lang("ƒAƒŠ[ƒi‚Ì’†Œ˜“¬m", "Popular gladiator"), lang("ƒAƒŠ[ƒi‚ÌŠú‘Ò‚Ì¯", "New hope"), lang("ƒAƒŠ[ƒi‚Ìƒ_[ƒNƒz[ƒX", "Darkhorse"), lang("ƒAƒŠ[ƒi‚Ì‰º‹‰“¬m", "Low class fighter"), lang("ƒAƒŠ[ƒi‚Ì–³–¼‚Ì“¬m", "Unknown fighter"), lang("ƒAƒŠ[ƒi", "Arena")
+	rankn(0, 1) = lang("‘S‚Ä‚Ìƒyƒbƒg‚Ì‰¤", "King of tamer"), lang("’´ƒGƒŠ[ƒgƒyƒbƒgg‚¢", "Super elite tamer"), lang("ƒyƒbƒg‚Ì‰¤q", "Prince of animals"), lang("ƒyƒbƒg‚Ì“²‚ê‚Ì“I", "Chief of animals"), lang("ƒyƒbƒgg‚¢‚ÌƒGƒŠ[ƒg", "Elite tamer"), lang("–¼‚Ì’m‚ê‚½ƒyƒbƒgg‚¢", "Notorious tamer"), lang("ƒyƒbƒg‚Ì•ê", "New hope"), lang("‚È‚©‚È‚©‚Ìƒyƒbƒgg‚¢", "Average tamer"), lang("‹ì‚¯o‚µ‚Ìƒyƒbƒgg‚¢", "Petty tamer"), lang("–³–¼‚Ìƒyƒbƒgg‚¢", "Unknown tamer"), lang("ƒyƒbƒgƒAƒŠ[ƒi", "Pet Arena")
+	rankn(0, 2) = lang("ƒlƒtƒBƒA‚ğ“‚×‚éÒ", "King of Nefia"), lang("–À‹{‚Ì”eÒ", "Champion of labyrinth"), lang("ƒ_ƒ“ƒWƒ‡ƒ“‚Ìå", "Dungeon master"), lang("‚–¼‚È’TŒŸÒ", "Famous adventurer"), lang("q‹Ÿ’B‚Ì“²‚ê‚Ì“I", "Children's star"), lang("ƒ_ƒ“ƒWƒ‡ƒ“ˆÄ“àl", "Guide of Nefia"), lang("–¼‚Ì’m‚ê‚½ˆâÕr‚ç‚µ", "Notorious tomb robber"), lang("’TŒŸÒ", "Tomb robber"), lang("‚¿‚ñ‚¯‚ÈˆâÕr‚ç‚µ", "Famous tourist"), lang("ŠÏŒõ‹q", "Tourist"), lang("ƒNƒ[ƒ‰[", "Crawler")
+	rankn(0, 3) = lang("ƒeƒBƒŠƒXÅ‘å‚Ì”•¨ŠÙ", "Tyris' greatest museum"), lang("’´—L–¼‚È”•¨ŠÙ", "Royal museum"), lang("‘ål‹C‚Ì”•¨ŠÙ", "Great museum"), lang("—L–¼‚È”•¨ŠÙ", "Top museum"), lang("—ˆ‹q‚Ìâ‚¦‚È‚¢”•¨ŠÙ", "Great museum"), lang("‚¿‚å‚Á‚Æl‹C‚Ì‚ ‚é”•¨ŠÙ", "Good museum"), lang("–¼‚Ì’m‚ê‚½”•¨ŠÙ", "Average museum"), lang("‚Ü‚ ‚Ü‚ ‚Ì”•¨ŠÙ", "Small museum"), lang("—ˆ‹q‚Ì­‚È‚¢”•¨ŠÙ", "Unknown museum"), lang("–³–¼‚Ì”•¨ŠÙ", "Unknown Ruin"), lang("”•¨ŠÙ", "Museum")
+	rankn(0, 4) = lang("ƒCƒ‹ƒ”ƒ@‚ÌŠy‰€", "Heaven of Tyris"), lang("’´ƒZƒŒƒu‚È‰Æ", "Royal mansion"), lang("¢ŠE—L”‚Ì‰Æ", "Celebrity mansion"), lang("‚Æ‚Ä‚àZ‚İ‚½‚­‚È‚é‰Æ", "Dream mansion"), lang("å•w‚Ì“²‚ê‚Ì‰Æ", "Cozy mansion"), lang("‚¿‚å‚Á‚Æl–Ú‚ğ‚Ğ‚­‰Æ", "Attractive house"), lang("‚Ü‚ ‚Ü‚ ‚Ì‰Æ", "Average house"), lang("­‚µ‚İ‚·‚Ú‚ç‚µ‚¢‰Æ", "Poor house"), lang("•n¢‚É‚ ‚¦‚®‰Æ", "Peasant's shack"), lang("ŒîH‚Ì‰Æ", "Beggar's shack"), lang("ƒz[ƒ€", "Home")
+	rankn(0, 5) = lang("ƒCƒ‹ƒ”ƒ@Å‘å‚Ì“X", "Tyris' greatest mall"), lang("‰¤—l‚ª—ˆ‚é“X", "Royal mall"), lang("‘å”É·‚µ‚Ä‚¢‚é“X", "Prosperous mall"), lang("ƒZƒŒƒu‚ª—ˆ‚é“X", "Celebrity shop"), lang("—ˆ‹q‚Ìâ‚¦‚È‚¢“X", "Prosperous shop"), lang("ƒ}ƒ_ƒ€‚Ì—ˆ‚é“X", "Popular shop"), lang("ƒŠƒs[ƒ^[‚Ì‚¢‚é“X", "Average shop"), lang("l‚ª‘‚¦‚Ä‚«‚½”„“X", "Small shop"), lang("‚Ù‚Æ‚ñ‚Ç”„‚ê‚È‚¢”„“X", "Souvenir shop"), lang("–³–¼‚Ì”„“X", "Unknown shop"), lang("“X", "Shop")
+	rankn(0, 6) = lang("ƒ{ƒX", "Boss"), lang("‰¤—l‚ÌƒAƒhƒoƒCƒU[", "King's advisor"), lang("ƒGƒŠ[ƒgƒRƒ“ƒTƒ‹ƒ^[", "Elite consultant"), lang("‚²ˆÓŒ©”Ô", "Famous consultant"), lang("—LŒ Ò‚ÌŠÓ", "Model voter"), lang("ƒ}ƒ_ƒ€D‚İ‚Ì—LŒ Ò", "Nice voter"), lang("–¼‚Ì’m‚ê‚½—LŒ Ò", "Infamous voter"), lang("•’Ê‚Ì—LŒ Ò", "Average voter"), lang("–³ŠÖS‚È—LŒ Ò", "Indifferent voter"), lang("‚¬‚è‚¬‚è—LŒ Ò", "Almost voter"), lang("ƒRƒ~ƒ…ƒjƒeƒB", "Community")
+	rankn(0, 8) = lang("Ÿ‘ãƒMƒ‹ƒhƒ}ƒXƒ^[", "Next master"), lang("ƒMƒ‹ƒhƒ}ƒXƒ^[‚Ì‰E˜r", "Master"), lang("ƒMƒ‹ƒh‚Ìd–ğ", "Adept"), lang("ƒMƒ‹ƒh‚Ìd–ğŒó•â", "Expert"), lang("ƒAƒ_ƒvƒg", "Journeyman"), lang("ƒGƒLƒXƒp[ƒg", "Senior"), lang("ƒWƒƒ[ƒj[ƒ}ƒ“", "Apprentice"), lang("ƒMƒ‹ƒh‚Ì³®ƒƒ“ƒo[", "Official member"), lang("ƒMƒ‹ƒh‚Ìƒƒ“ƒo[Œó•â", "Candidate"), lang("Œ©K‚¢", "Thug"), lang("ƒMƒ‹ƒh", "Guild")
 	dim ranknorma, 9
 	ranknorma(0) = 20
 	ranknorma(1) = 60
@@ -238,26 +238,26 @@ if instr(s,0,%1)!-1{	%c\
 	return
 
 #defcfunc guildname
-	locvar_guildname_s = lang("ãªã—", "None")
+	locvar_guildname_s = lang("‚È‚µ", "None")
 	if ( gdata(GDATA_FLAG_GUILD_MAGE) != 0 ) {
-		locvar_guildname_s = lang("é­”è¡“å£«ã‚®ãƒ«ãƒ‰", "Mages Guild")
+		locvar_guildname_s = lang("–‚pmƒMƒ‹ƒh", "Mages Guild")
 	}
 	if ( gdata(GDATA_FLAG_GUILD_FIGHTER) != 0 ) {
-		locvar_guildname_s = lang("æˆ¦å£«ã‚®ãƒ«ãƒ‰", "Fighters Guild")
+		locvar_guildname_s = lang("ímƒMƒ‹ƒh", "Fighters Guild")
 	}
 	if ( gdata(GDATA_FLAG_GUILD_THIEF) != 0 ) {
-		locvar_guildname_s = lang("ç›—è³Šã‚®ãƒ«ãƒ‰", "Thieves Guild")
+		locvar_guildname_s = lang("“‘¯ƒMƒ‹ƒh", "Thieves Guild")
 	}
 	return locvar_guildname_s
 
 *politics_init
 	sdim popostname, 20, 7
-	popostname(1) = lang("å¸‚é•·", "mayor")
-	popostname(2) = lang("æ‘é•·", "chief")
-	popostname(3) = lang("å¸ç¥­", "priest")
-	popostname(4) = lang("å®ˆè¡›é•·", "guard master")
-	popostname(5) = lang("å¾´ç¨å®˜", "tax master")
-	popostname(6) = lang("å»ºè¨­ä¸»ä»»", "head architect")
+	popostname(1) = lang("s’·", "mayor")
+	popostname(2) = lang("‘º’·", "chief")
+	popostname(3) = lang("iÕ", "priest")
+	popostname(4) = lang("ç‰q’·", "guard master")
+	popostname(5) = lang("’¥ÅŠ¯", "tax master")
+	popostname(6) = lang("Œšİå”C", "head architect")
 	dim pochart, 10, 10, 10
 	pochart(0, 0, 0) = 2
 	pochart(0, 1, 0) = 3, 4
@@ -275,12 +275,12 @@ if instr(s,0,%1)!-1{	%c\
 	bdref(0, 4) = 3, 2500
 	bdref(0, 5) = 4, 2500
 	bdref(0, 6) = 5, 2500
-	bdrefn(1) = lang("ç‚­é‰±", "Mine")
-	bdrefn(2) = lang("ç•‘", "Field")
-	bdrefn(3) = lang("ã‚¢ãƒˆãƒªã‚¨", "Art Atelier")
-	bdrefn(4) = lang("å¯ºé™¢", "Temple")
-	bdrefn(5) = lang("ç›—è³Šã®éš ã‚Œå®¶", "Smuggler's Hideout")
-	bdrefn(6) = lang("ç¯å°", "Light House")
+	bdrefn(1) = lang("’Yz", "Mine")
+	bdrefn(2) = lang("”¨", "Field")
+	bdrefn(3) = lang("ƒAƒgƒŠƒG", "Art Atelier")
+	bdrefn(4) = lang("›‰@", "Temple")
+	bdrefn(5) = lang("“‘¯‚Ì‰B‚ê‰Æ", "Smuggler's Hideout")
+	bdrefn(6) = lang("“”‘ä", "Light House")
 	return
 
 #include "buff.hsp"
@@ -369,7 +369,7 @@ if instr(s,0,%1)!-1{	%c\
 	if ( locvar_getunid_f == 0 ) {
 		cdata(CDATA_PIC, getunid_charid) = COLOR_DEFAULT * COLOR_TINT_MULT + 1
 		cdata(CDATA_USERNPC_ID, getunid_charid) = usernpcmax
-		cdatan(CDATAN_NAME, getunid_charid) = lang("æ®‹ã‚Šã‚«ã‚¹", "a garbage")
+		cdatan(CDATAN_NAME, getunid_charid) = lang("c‚èƒJƒX", "a garbage")
 	}
 	return locvar_getunid_f
 
@@ -872,7 +872,7 @@ if instr(s,0,%1)!-1{	%c\
 				p2@txtfunc += p@txtfunc
 				if ( p2@txtfunc > talk_conv_arg2 ) {
 					m@txtfunc = strmid(msgtemp@txtfunc, p2@txtfunc, 2)
-					if ( m@txtfunc == "ã€‚" | m@txtfunc == "ã€" | m@txtfunc == "ã€" | m@txtfunc == "ã€" | m@txtfunc == "ï¼" | m@txtfunc == "ï¼Ÿ" | m@txtfunc == "â€¦" ) {
+					if ( m@txtfunc == "B" | m@txtfunc == "A" | m@txtfunc == "v" | m@txtfunc == "x" | m@txtfunc == "I" | m@txtfunc == "H" | m@txtfunc == "c" ) {
 						p2@txtfunc += 2
 					}
 					talk_conv_arg1 += strmid(msgtemp@txtfunc, 0, p2@txtfunc) + "\n"
@@ -922,7 +922,7 @@ if instr(s,0,%1)!-1{	%c\
 
 #deffunc msg_write var msg_write_arg1
 	repeat 1
-		mp@txtfunc = instr(msg_write_arg1, 0, "â™ª")
+		mp@txtfunc = instr(msg_write_arg1, 0, "ô")
 		if ( mp@txtfunc != (-1) ) {
 			mark@txtfunc = int(strmid(msg_write_arg1, mp@txtfunc + 2, 1))
 			if ( jp ) {
@@ -1112,7 +1112,7 @@ if instr(s,0,%1)!-1{	%c\
 		msgdup = 0
 	}
 	if ( jp ) {
-		if ( instr(msgtemp, 0, "ã€Œ") != (-1) ) {
+		if ( instr(msgtemp, 0, "u") != (-1) ) {
 			if ( tcolfix@txtfunc == 0 ) {
 				tcol@txtfunc = 210, 250, 160
 			}
@@ -1143,7 +1143,7 @@ if instr(s,0,%1)!-1{	%c\
 							break
 						}
 						m@txtfunc = strmid(msgtemp, p2@txtfunc, 2)
-						if ( m@txtfunc != "ã€‚" & m@txtfunc != "ã€" & m@txtfunc != "ã€" & m@txtfunc != "ã€" & m@txtfunc != "ï¼" & m@txtfunc != "ï¼Ÿ" & m@txtfunc != "â€¦" ) {
+						if ( m@txtfunc != "B" & m@txtfunc != "A" & m@txtfunc != "v" & m@txtfunc != "x" & m@txtfunc != "I" & m@txtfunc != "H" & m@txtfunc != "c" ) {
 							break
 						}
 					}
@@ -1210,13 +1210,13 @@ if instr(s,0,%1)!-1{	%c\
 		if ( gdata(GDATA_TEMPORARY_FLAGS) == 7777 ) {
 			return cdatan(CDATAN_NAME, CHARA_PLAYER)
 		}
-		return lang("ã‚ãªãŸ", "you")
+		return lang("‚ ‚È‚½", "you")
 	}
 	if ( synccheck(name_arg1, -1) == 0 ) {
-		return lang("ä½•ã‹", "something")
+		return lang("‰½‚©", "something")
 	}
 	if ( cdata(CDATA_CONDITION_BLIND, CHARA_PLAYER) != 0 | (cbit(CHARA_BIT_INVISIBLE, name_arg1) == 1 & cbit(CHARA_BIT_SEE_INVISIBLE, CHARA_PLAYER) == 0 & cdata(CDATA_CONDITION_WET, name_arg1) == 0) ) {
-		return lang("ä½•ã‹", "something")
+		return lang("‰½‚©", "something")
 	}
 	if ( en ) {
 		locvar_name_s = strmid(cdatan(CDATAN_NAME, name_arg1), 0, 1)
@@ -1234,18 +1234,18 @@ if instr(s,0,%1)!-1{	%c\
 		return ""
 	}
 	if ( synccheck(aln_charid, -1) == 0 ) {
-		return "ãã‚Œã¯"
+		return "‚»‚ê‚Í"
 	}
-	return "" + cdatan(CDATAN_NAME, aln_charid) + "ã¯"
+	return "" + cdatan(CDATAN_NAME, aln_charid) + "‚Í"
 
 #defcfunc npcn int npcn_charid
 	if ( npcn_charid == CHARA_PLAYER ) {
 		return ""
 	}
 	if ( synccheck(npcn_charid, -1) == 0 ) {
-		return "ãã‚Œã¯"
+		return "‚»‚ê‚Í"
 	}
-	return "" + cdatan(CDATAN_NAME, npcn_charid) + "ã¯"
+	return "" + cdatan(CDATAN_NAME, npcn_charid) + "‚Í"
 
 #defcfunc _s int _s_charid, int _s_arg2
 	if ( _s_charid < CHARA_PLAYER | _s_charid >= MAX_CHARA_TOTAL ) {
@@ -1319,23 +1319,23 @@ if instr(s,0,%1)!-1{	%c\
 
 #defcfunc he int he_charid, int he_arg2
 	if ( he_arg2 ) {
-		if ( cdatan(CDATAN_NEWSEX, he_charid) == lang("ç”·æ€§", "male") | cdatan(CDATAN_NEWSEX, he_charid) == lang("ãªã—", "none") ) {
-			return lang("å½¼", "he")
+		if ( cdatan(CDATAN_NEWSEX, he_charid) == lang("’j«", "male") | cdatan(CDATAN_NEWSEX, he_charid) == lang("‚È‚µ", "none") ) {
+			return lang("”Ş", "he")
 		}
-		if ( cdatan(CDATAN_NEWSEX, he_charid) == lang("è‡ªç§°ç”·æ€§", "male?") | cdatan(CDATAN_NEWSEX, he_charid) == lang("è‡ªç§°ç”·æ€§", "trans-male") ) {
-			return lang("å½¼ï¼Ÿ", "he?")
+		if ( cdatan(CDATAN_NEWSEX, he_charid) == lang("©Ì’j«", "male?") | cdatan(CDATAN_NEWSEX, he_charid) == lang("©Ì’j«", "trans-male") ) {
+			return lang("”ŞH", "he?")
 		}
-		if ( cdatan(CDATAN_NEWSEX, he_charid) == lang("å¥³æ€§", "female") | cdatan(CDATAN_NEWSEX, he_charid) == lang("ä¸¡æ€§å…·æœ‰", "hermaphrodite") ) {
-			return lang("å½¼å¥³", "she")
+		if ( cdatan(CDATAN_NEWSEX, he_charid) == lang("—«", "female") | cdatan(CDATAN_NEWSEX, he_charid) == lang("—¼«‹ï—L", "hermaphrodite") ) {
+			return lang("”Ş—", "she")
 		}
-		if ( cdatan(CDATAN_NEWSEX, he_charid) == lang("è‡ªç§°å¥³æ€§", "female?") | cdatan(CDATAN_NEWSEX, he_charid) == lang("è‡ªç§°å¥³æ€§", "trans-female") ) {
-			return lang("å½¼å¥³ï¼Ÿ", "she?")
+		if ( cdatan(CDATAN_NEWSEX, he_charid) == lang("©Ì—«", "female?") | cdatan(CDATAN_NEWSEX, he_charid) == lang("©Ì—«", "trans-female") ) {
+			return lang("”Ş—H", "she?")
 		}
 		if ( cdata(CDATA_SEX, he_charid) == 0 ) {
-			return lang("å½¼", "he")
+			return lang("”Ş", "he")
 		}
 		else {
-			return lang("å½¼å¥³", "she")
+			return lang("”Ş—", "she")
 		}
 	}
 	if ( he_charid < CHARA_PLAYER | he_charid >= MAX_CHARA_TOTAL ) {
@@ -1391,24 +1391,24 @@ if instr(s,0,%1)!-1{	%c\
 	his3_entity_sexadv = cdatan(CDATAN_NEWSEX, his3_EntityID)
 
 	switch his3_entity_sexadv
-		case "ç”·æ€§"
+		case "’j«"
 		case "male"
-		case "ãªã—"
+		case "‚È‚µ"
 		case "none"
 			return "his"
 			swbreak
-		case "å¥³æ€§"
+		case "—«"
 		case "female"
-		case "ä¸¡æ€§å…·æœ‰"
+		case "—¼«‹ï—L"
 		case "hermaphrodite"
 			return "her"
 			swbreak
-		case "è‡ªç§°ç”·æ€§"
+		case "©Ì’j«"
 		case "male?"
 		case "trans-male"
 			return "his?"
 			swbreak
-		case "è‡ªç§°å¥³æ€§"
+		case "©Ì—«"
 		case "female?"
 		case "trans-female"
 			return "her?"
@@ -1428,24 +1428,24 @@ if instr(s,0,%1)!-1{	%c\
 	him2_entity_sexadv = cdatan(CDATAN_NEWSEX, him2_EntityID)
 
 	switch him2_entity_sexadv
-		case "ç”·æ€§"
+		case "’j«"
 		case "male"
-		case "ãªã—"
+		case "‚È‚µ"
 		case "none"
 			return "him"
 			swbreak
-		case "å¥³æ€§"
+		case "—«"
 		case "female"
-		case "ä¸¡æ€§å…·æœ‰"
+		case "—¼«‹ï—L"
 		case "hermaphrodite"
 			return "her"
 			swbreak
-		case "è‡ªç§°ç”·æ€§"
+		case "©Ì’j«"
 		case "male?"
 		case "trans-male"
 			return "him?"
 			swbreak
-		case "è‡ªç§°å¥³æ€§"
+		case "©Ì—«"
 		case "female?"
 		case "trans-female"
 			return "her?"
@@ -1465,25 +1465,25 @@ if instr(s,0,%1)!-1{	%c\
 #defcfunc his int his_charid, int his_arg2
 	if ( his_arg2 ) {
 		if ( his_charid == CHARA_PLAYER ) {
-			return lang("ã‚ãªãŸã®", "your")
+			return lang("‚ ‚È‚½‚Ì", "your")
 		}
-		if ( cdatan(CDATAN_NEWSEX, his_charid) == lang("ç”·æ€§", "male") | cdatan(CDATAN_NEWSEX, his_charid) == lang("ãªã—", "none") ) {
-			return lang("å½¼ã®", "his")
+		if ( cdatan(CDATAN_NEWSEX, his_charid) == lang("’j«", "male") | cdatan(CDATAN_NEWSEX, his_charid) == lang("‚È‚µ", "none") ) {
+			return lang("”Ş‚Ì", "his")
 		}
-		if ( cdatan(CDATAN_NEWSEX, his_charid) == lang("è‡ªç§°ç”·æ€§", "male?") | cdatan(CDATAN_NEWSEX, his_charid) == lang("è‡ªç§°ç”·æ€§", "trans-male") ) {
-			return lang("å½¼ï¼Ÿã®", "his?")
+		if ( cdatan(CDATAN_NEWSEX, his_charid) == lang("©Ì’j«", "male?") | cdatan(CDATAN_NEWSEX, his_charid) == lang("©Ì’j«", "trans-male") ) {
+			return lang("”ŞH‚Ì", "his?")
 		}
-		if ( cdatan(CDATAN_NEWSEX, his_charid) == lang("å¥³æ€§", "female") | cdatan(CDATAN_NEWSEX, his_charid) == lang("ä¸¡æ€§å…·æœ‰", "hermaphrodite") ) {
-			return lang("å½¼å¥³ã®", "her")
+		if ( cdatan(CDATAN_NEWSEX, his_charid) == lang("—«", "female") | cdatan(CDATAN_NEWSEX, his_charid) == lang("—¼«‹ï—L", "hermaphrodite") ) {
+			return lang("”Ş—‚Ì", "her")
 		}
-		if ( cdatan(CDATAN_NEWSEX, his_charid) == lang("è‡ªç§°ç”·æ€§", "female?") | cdatan(CDATAN_NEWSEX, his_charid) == lang("è‡ªç§°å¥³æ€§", "trans-female") ) {
-			return lang("å½¼å¥³ï¼Ÿã®", "her?")
+		if ( cdatan(CDATAN_NEWSEX, his_charid) == lang("©Ì’j«", "female?") | cdatan(CDATAN_NEWSEX, his_charid) == lang("©Ì—«", "trans-female") ) {
+			return lang("”Ş—H‚Ì", "her?")
 		}
 		if ( cdata(CDATA_SEX, his_charid) == SEX_MALE ) {
-			return lang("å½¼ã®", "his")
+			return lang("”Ş‚Ì", "his")
 		}
 		else {
-			return lang("å½¼å¥³ã®", "her")
+			return lang("”Ş—‚Ì", "her")
 		}
 	}
 	if ( his_charid < CHARA_PLAYER | his_charid >= MAX_CHARA_TOTAL ) {
@@ -1502,23 +1502,23 @@ if instr(s,0,%1)!-1{	%c\
 
 #defcfunc him int him_charid, int him_arg2
 	if ( him_arg2 ) {
-		if ( cdatan(CDATAN_NEWSEX, him_charid) == lang("ç”·æ€§", "male") | cdatan(CDATAN_NEWSEX, him_charid) == lang("ãªã—", "none") ) {
-			return lang("å½¼", "he")
+		if ( cdatan(CDATAN_NEWSEX, him_charid) == lang("’j«", "male") | cdatan(CDATAN_NEWSEX, him_charid) == lang("‚È‚µ", "none") ) {
+			return lang("”Ş", "he")
 		}
-		if ( cdatan(CDATAN_NEWSEX, him_charid) == lang("è‡ªç§°ç”·æ€§", "male?") | cdatan(CDATAN_NEWSEX, him_charid) == lang("è‡ªç§°ç”·æ€§", "trans-male") ) {
-			return lang("å½¼ï¼Ÿ", "he?")
+		if ( cdatan(CDATAN_NEWSEX, him_charid) == lang("©Ì’j«", "male?") | cdatan(CDATAN_NEWSEX, him_charid) == lang("©Ì’j«", "trans-male") ) {
+			return lang("”ŞH", "he?")
 		}
-		if ( cdatan(CDATAN_NEWSEX, him_charid) == lang("å¥³æ€§", "female") | cdatan(CDATAN_NEWSEX, him_charid) == lang("ä¸¡æ€§å…·æœ‰", "hermaphrodite") ) {
-			return lang("å½¼å¥³", "she")
+		if ( cdatan(CDATAN_NEWSEX, him_charid) == lang("—«", "female") | cdatan(CDATAN_NEWSEX, him_charid) == lang("—¼«‹ï—L", "hermaphrodite") ) {
+			return lang("”Ş—", "she")
 		}
-		if ( cdatan(CDATAN_NEWSEX, him_charid) == lang("è‡ªç§°å¥³æ€§", "female?") | cdatan(CDATAN_NEWSEX, him_charid) == lang("è‡ªç§°å¥³æ€§", "trans-female") ) {
-			return lang("å½¼å¥³ï¼Ÿ", "she?")
+		if ( cdatan(CDATAN_NEWSEX, him_charid) == lang("©Ì—«", "female?") | cdatan(CDATAN_NEWSEX, him_charid) == lang("©Ì—«", "trans-female") ) {
+			return lang("”Ş—H", "she?")
 		}
 		if ( cdata(CDATA_SEX, him_charid) == 0 ) {
-			return lang("å½¼", "him")
+			return lang("”Ş", "him")
 		}
 		else {
-			return lang("å½¼å¥³", "her")
+			return lang("”Ş—", "her")
 		}
 	}
 	if ( him_charid < CHARA_PLAYER | him_charid >= MAX_CHARA_TOTAL ) {
@@ -1581,8 +1581,8 @@ if instr(s,0,%1)!-1{	%c\
 		}
 	}
     else {
-		if ( cdatan(CDATAN_NEWSEX, gendername_charid) == lang("ãªã—", "none") ) {
-			return lang("æ€§åˆ¥ä¸æ˜", "unknown")
+		if ( cdatan(CDATAN_NEWSEX, gendername_charid) == lang("‚È‚µ", "none") ) {
+			return lang("«•Ê•s–¾", "unknown")
 		}
     	else {
 			return cdatan(CDATAN_NEWSEX, gendername_charid)
@@ -1725,17 +1725,17 @@ if instr(s,0,%1)!-1{	%c\
 		locvar_cnvdate_p -= 24 * 30 * 12
 	}
 	locvar_cnvdate_year = locvar_cnvdate_p / 24 / 30 / 12
-	locvar_cnvdate_s = "" + locvar_cnvdate_year + lang("å¹´", " ") + locvar_cnvdate_month + lang("æœˆ", "/") + locvar_cnvdate_day + lang("æ—¥", " ")
+	locvar_cnvdate_s = "" + locvar_cnvdate_year + lang("”N", " ") + locvar_cnvdate_month + lang("Œ", "/") + locvar_cnvdate_day + lang("“ú", " ")
 	if ( cnvdate_arg2 == 1 ) {
-		locvar_cnvdate_s += "" + locvar_cnvdate_hour + lang("æ™‚", "h")
+		locvar_cnvdate_s += "" + locvar_cnvdate_hour + lang("", "h")
 	}
    	if ( cnvdate_arg2 == 2 ) {
-   		locvar_cnvdate_s = "" + locvar_cnvdate_month + lang("æœˆ", "/") + locvar_cnvdate_day + lang("æ—¥", " ") + locvar_cnvdate_hour + lang("æ™‚", "h")
+   		locvar_cnvdate_s = "" + locvar_cnvdate_month + lang("Œ", "/") + locvar_cnvdate_day + lang("“ú", " ") + locvar_cnvdate_hour + lang("", "h")
    	}
 	return locvar_cnvdate_s
 
 #defcfunc cnvplaytime int cnvplaytime_arg1
-	return "" + cnvplaytime_arg1 / 60 / 60 + lang("æ™‚é–“", ":") + cnvplaytime_arg1 / 60 \ 60 + lang("åˆ†", ":") + cnvplaytime_arg1 \ 60 + lang("ç§’", " Sec")
+	return "" + cnvplaytime_arg1 / 60 / 60 + lang("ŠÔ", ":") + cnvplaytime_arg1 / 60 \ 60 + lang("•ª", ":") + cnvplaytime_arg1 \ 60 + lang("•b", " Sec")
 
 #defcfunc roundmargin int roundmargin_arg1, int roundmargin_arg2
 	if ( roundmargin_arg1 > roundmargin_arg2 ) {
@@ -2061,8 +2061,8 @@ if instr(s,0,%1)!-1{	%c\
 	repeat inf_maxlog - 2
 		noteadd ""
 	loop
-	noteadd lang("â– ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒ­ã‚°", "<Message Log>")
-	noteadd lang("éå»ã®20è¡Œåˆ†ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒè¡¨ç¤ºã•ã‚Œã¾ã™ã€‚", "Past 20 message lines are logged.")
+	noteadd lang("¡ƒƒbƒZ[ƒWƒƒO", "<Message Log>")
+	noteadd lang("‰ß‹‚Ì20s•ª‚ÌƒƒbƒZ[ƒW‚ª•\¦‚³‚ê‚Ü‚·B", "Past 20 message lines are logged.")
 	fmode = 10
 	gosub *game_ctrlFile
 	tc = CHARA_PLAYER
@@ -2166,47 +2166,47 @@ if instr(s,0,%1)!-1{	%c\
     sdim ErrorMsg, 2, 42
 
     ErrorMsg(0, 0) = "",                                            ""
-    ErrorMsg(0, 1) = "ã‚·ã‚¹ãƒ†ãƒ ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸ",                "Unknown system error"
-    ErrorMsg(0, 2) = "æ–‡æ³•ãŒé–“é•ã£ã¦ã„ã¾ã™",                        "Syntax error"
-    ErrorMsg(0, 3) = "ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®å€¤ãŒç•°å¸¸ã§ã™",                    "Illegal function call"
-    ErrorMsg(0, 4) = "è¨ˆç®—å¼ã§ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸ",                "Wrong expression"
-    ErrorMsg(0, 5) = "ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®çœç•¥ã¯ã§ãã¾ã›ã‚“",                "Default parameter not allowed"
-    ErrorMsg(0, 6) = "ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®å‹ãŒé•ã„ã¾ã™",                    "Type mismatch"
-    ErrorMsg(0, 7) = "é…åˆ—ã®è¦ç´ ãŒç„¡åŠ¹ã§ã™",                        "Array overflow"
-    ErrorMsg(0, 8) = "æœ‰åŠ¹ãªãƒ©ãƒ™ãƒ«ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“",            "Not a label object"
-    ErrorMsg(0, 9) = "ã‚µãƒ–ãƒ«ãƒ¼ãƒãƒ³ã‚„ãƒ«ãƒ¼ãƒ—ã®ãƒã‚¹ãƒˆãŒæ·±ã™ãã¾ã™",    "Too many nesting"
-    ErrorMsg(0, 10) = "ã‚µãƒ–ãƒ«ãƒ¼ãƒãƒ³å¤–ã®returnã¯ç„¡åŠ¹ã§ã™",           "Return without gosub"
-    ErrorMsg(0, 11) = "repeatå¤–ã§ã®loopã¯ç„¡åŠ¹ã§ã™",                 "Loop without repeat"
-    ErrorMsg(0, 12) = "ãƒ•ã‚¡ã‚¤ãƒ«ãŒè¦‹ã¤ã‹ã‚‰ãªã„ã‹ç„¡åŠ¹ãªåå‰ã§ã™",     "File I/O error"
-    ErrorMsg(0, 13) = "ç”»åƒãƒ•ã‚¡ã‚¤ãƒ«ãŒã‚ã‚Šã¾ã›ã‚“",                   "Picture file missing"
-    ErrorMsg(0, 14) = "å¤–éƒ¨ãƒ•ã‚¡ã‚¤ãƒ«å‘¼ã³å‡ºã—ä¸­ã®ã‚¨ãƒ©ãƒ¼ã§ã™",         "External execute error"
-    ErrorMsg(0, 15) = "è¨ˆç®—å¼ã§ã‚«ãƒƒã‚³ã®è¨˜è¿°ãŒé•ã„ã¾ã™",             "Priority error"
-    ErrorMsg(0, 16) = "ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®æ•°ãŒå¤šã™ãã¾ã™",                 "Too many parameters"
-    ErrorMsg(0, 17) = "æ–‡å­—åˆ—å¼ã§æ‰±ãˆã‚‹æ–‡å­—æ•°ã‚’è¶Šãˆã¾ã—ãŸ",         "Temporary buffer overflow"
-    ErrorMsg(0, 18) = "ä»£å…¥ã§ããªã„å¤‰æ•°åã‚’æŒ‡å®šã—ã¦ã„ã¾ã™",         "Wrong valiable name"
-    ErrorMsg(0, 19) = "0ã§é™¤ç®—ã—ã¾ã—ãŸ",                            "Divided by zero"
-    ErrorMsg(0, 20) = "ãƒãƒƒãƒ•ã‚¡ã‚ªãƒ¼ãƒãƒ¼ãƒ•ãƒ­ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸ",       "Buffer Overflow"
-    ErrorMsg(0, 21) = "ã‚µãƒãƒ¼ãƒˆã•ã‚Œãªã„æ©Ÿèƒ½ã‚’é¸æŠã—ã¾ã—ãŸ",         "Unsupported function"
-    ErrorMsg(0, 22) = "è¨ˆç®—å¼ã®ã‚«ãƒƒã‚³ãŒæ·±ã™ãã¾ã™",                 "Expression too complex"
-    ErrorMsg(0, 23) = "å¤‰æ•°åãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“",                 "Variable required"
-    ErrorMsg(0, 24) = "æ•´æ•°ä»¥å¤–ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã™",                 "Integer value required"
-    ErrorMsg(0, 25) = "é…åˆ—ã®è¦ç´ æ›¸å¼ãŒé–“é•ã£ã¦ã„ã¾ã™",             "Bad array expression"
-    ErrorMsg(0, 26) = "ãƒ¡ãƒ¢ãƒªã®ç¢ºä¿ãŒã§ãã¾ã›ã‚“ã§ã—ãŸ",             "Out of memory"
-    ErrorMsg(0, 27) = "ã‚¿ã‚¤ãƒ—ã®åˆæœŸåŒ–ã«å¤±æ•—ã—ã¾ã—ãŸ",               "Type initalization failed"
-    ErrorMsg(0, 28) = "é–¢æ•°ã«å¼•æ•°ãŒè¨­å®šã•ã‚Œã¦ã„ã¾ã›ã‚“",             "No Function parameters"
-    ErrorMsg(0, 29) = "ã‚¹ã‚¿ãƒƒã‚¯é ˜åŸŸã®ã‚ªãƒ¼ãƒãƒ¼ãƒ•ãƒ­ãƒ¼ã§ã™",           "Stack overflow"
-    ErrorMsg(0, 30) = "ç„¡åŠ¹ãªåå‰ãŒãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãƒ¼ã«æŒ‡å®šã•ã‚Œã¦ã„ã¾ã™", "Invalid parameter name"
-    ErrorMsg(0, 31) = "ç•°ãªã‚‹å‹ã‚’æŒã¤é…åˆ—å¤‰æ•°ã«ä»£å…¥ã—ã¾ã—ãŸ",       "Invalid type of array"
-    ErrorMsg(0, 32) = "é–¢æ•°ã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãƒ¼è¨˜è¿°ãŒä¸æ­£ã§ã™",           "Invalid function parameter"
-    ErrorMsg(0, 33) = "ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆæ•°ãŒå¤šã™ãã¾ã™",                 "Too many window objects"
-    ErrorMsg(0, 34) = "é…åˆ—ãƒ»é–¢æ•°ã¨ã—ã¦ä½¿ç”¨ã§ããªã„å‹ã§ã™",         "Invalid Array/Function"
-    ErrorMsg(0, 35) = "ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«å¤‰æ•°ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“",         "Structure required"
-    ErrorMsg(0, 36) = "ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«å¤‰æ•°ã®æŒ‡å®šãŒç„¡åŠ¹ã§ã™",             "Illegal structure call"
-    ErrorMsg(0, 37) = "å¤‰æ•°å‹ã®å¤‰æ›ã«å¤±æ•—ã—ã¾ã—ãŸ",                 "Invalid type of variable"
-    ErrorMsg(0, 38) = "å¤–éƒ¨DLLã®å‘¼ã³å‡ºã—ã«å¤±æ•—ã—ã¾ã—ãŸ",            "DLL call failed"
-    ErrorMsg(0, 39) = "å¤–éƒ¨ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‘¼ã³å‡ºã—ã«å¤±æ•—ã—ã¾ã—ãŸ",   "External COM call failed"
-    ErrorMsg(0, 40) = "é–¢æ•°ã®æˆ»ã‚Šå€¤ãŒè¨­å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚",         "No function result"
-    ErrorMsg(0, 41) = "é–¢æ•°ã‚’å‘½ä»¤ã¨ã—ã¦è¨˜è¿°ã—ã¦ã„ã¾ã™ã€‚",           "Invalid syntax for function"
+    ErrorMsg(0, 1) = "ƒVƒXƒeƒ€ƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½",                "Unknown system error"
+    ErrorMsg(0, 2) = "•¶–@‚ªŠÔˆá‚Á‚Ä‚¢‚Ü‚·",                        "Syntax error"
+    ErrorMsg(0, 3) = "ƒpƒ‰ƒ[ƒ^‚Ì’l‚ªˆÙí‚Å‚·",                    "Illegal function call"
+    ErrorMsg(0, 4) = "ŒvZ®‚ÅƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½",                "Wrong expression"
+    ErrorMsg(0, 5) = "ƒpƒ‰ƒ[ƒ^‚ÌÈ—ª‚Í‚Å‚«‚Ü‚¹‚ñ",                "Default parameter not allowed"
+    ErrorMsg(0, 6) = "ƒpƒ‰ƒ[ƒ^‚ÌŒ^‚ªˆá‚¢‚Ü‚·",                    "Type mismatch"
+    ErrorMsg(0, 7) = "”z—ñ‚Ì—v‘f‚ª–³Œø‚Å‚·",                        "Array overflow"
+    ErrorMsg(0, 8) = "—LŒø‚Èƒ‰ƒxƒ‹‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ",            "Not a label object"
+    ErrorMsg(0, 9) = "ƒTƒuƒ‹[ƒ`ƒ“‚âƒ‹[ƒv‚ÌƒlƒXƒg‚ª[‚·‚¬‚Ü‚·",    "Too many nesting"
+    ErrorMsg(0, 10) = "ƒTƒuƒ‹[ƒ`ƒ“ŠO‚Ìreturn‚Í–³Œø‚Å‚·",           "Return without gosub"
+    ErrorMsg(0, 11) = "repeatŠO‚Å‚Ìloop‚Í–³Œø‚Å‚·",                 "Loop without repeat"
+    ErrorMsg(0, 12) = "ƒtƒ@ƒCƒ‹‚ªŒ©‚Â‚©‚ç‚È‚¢‚©–³Œø‚È–¼‘O‚Å‚·",     "File I/O error"
+    ErrorMsg(0, 13) = "‰æ‘œƒtƒ@ƒCƒ‹‚ª‚ ‚è‚Ü‚¹‚ñ",                   "Picture file missing"
+    ErrorMsg(0, 14) = "ŠO•”ƒtƒ@ƒCƒ‹ŒÄ‚Ño‚µ’†‚ÌƒGƒ‰[‚Å‚·",         "External execute error"
+    ErrorMsg(0, 15) = "ŒvZ®‚ÅƒJƒbƒR‚Ì‹Lq‚ªˆá‚¢‚Ü‚·",             "Priority error"
+    ErrorMsg(0, 16) = "ƒpƒ‰ƒ[ƒ^‚Ì”‚ª‘½‚·‚¬‚Ü‚·",                 "Too many parameters"
+    ErrorMsg(0, 17) = "•¶š—ñ®‚Åˆµ‚¦‚é•¶š”‚ğ‰z‚¦‚Ü‚µ‚½",         "Temporary buffer overflow"
+    ErrorMsg(0, 18) = "‘ã“ü‚Å‚«‚È‚¢•Ï”–¼‚ğw’è‚µ‚Ä‚¢‚Ü‚·",         "Wrong valiable name"
+    ErrorMsg(0, 19) = "0‚ÅœZ‚µ‚Ü‚µ‚½",                            "Divided by zero"
+    ErrorMsg(0, 20) = "ƒoƒbƒtƒ@ƒI[ƒo[ƒtƒ[‚ª”­¶‚µ‚Ü‚µ‚½",       "Buffer Overflow"
+    ErrorMsg(0, 21) = "ƒTƒ|[ƒg‚³‚ê‚È‚¢‹@”\‚ğ‘I‘ğ‚µ‚Ü‚µ‚½",         "Unsupported function"
+    ErrorMsg(0, 22) = "ŒvZ®‚ÌƒJƒbƒR‚ª[‚·‚¬‚Ü‚·",                 "Expression too complex"
+    ErrorMsg(0, 23) = "•Ï”–¼‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ",                 "Variable required"
+    ErrorMsg(0, 24) = "®”ˆÈŠO‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚·",                 "Integer value required"
+    ErrorMsg(0, 25) = "”z—ñ‚Ì—v‘f‘®‚ªŠÔˆá‚Á‚Ä‚¢‚Ü‚·",             "Bad array expression"
+    ErrorMsg(0, 26) = "ƒƒ‚ƒŠ‚ÌŠm•Û‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½",             "Out of memory"
+    ErrorMsg(0, 27) = "ƒ^ƒCƒv‚Ì‰Šú‰»‚É¸”s‚µ‚Ü‚µ‚½",               "Type initalization failed"
+    ErrorMsg(0, 28) = "ŠÖ”‚Éˆø”‚ªİ’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ",             "No Function parameters"
+    ErrorMsg(0, 29) = "ƒXƒ^ƒbƒN—Ìˆæ‚ÌƒI[ƒo[ƒtƒ[‚Å‚·",           "Stack overflow"
+    ErrorMsg(0, 30) = "–³Œø‚È–¼‘O‚ªƒpƒ‰ƒ[ƒ^[‚Éw’è‚³‚ê‚Ä‚¢‚Ü‚·", "Invalid parameter name"
+    ErrorMsg(0, 31) = "ˆÙ‚È‚éŒ^‚ğ‚Â”z—ñ•Ï”‚É‘ã“ü‚µ‚Ü‚µ‚½",       "Invalid type of array"
+    ErrorMsg(0, 32) = "ŠÖ”‚Ìƒpƒ‰ƒ[ƒ^[‹Lq‚ª•s³‚Å‚·",           "Invalid function parameter"
+    ErrorMsg(0, 33) = "ƒIƒuƒWƒFƒNƒg”‚ª‘½‚·‚¬‚Ü‚·",                 "Too many window objects"
+    ErrorMsg(0, 34) = "”z—ñEŠÖ”‚Æ‚µ‚Äg—p‚Å‚«‚È‚¢Œ^‚Å‚·",         "Invalid Array/Function"
+    ErrorMsg(0, 35) = "ƒ‚ƒWƒ…[ƒ‹•Ï”‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ",         "Structure required"
+    ErrorMsg(0, 36) = "ƒ‚ƒWƒ…[ƒ‹•Ï”‚Ìw’è‚ª–³Œø‚Å‚·",             "Illegal structure call"
+    ErrorMsg(0, 37) = "•Ï”Œ^‚Ì•ÏŠ·‚É¸”s‚µ‚Ü‚µ‚½",                 "Invalid type of variable"
+    ErrorMsg(0, 38) = "ŠO•”DLL‚ÌŒÄ‚Ño‚µ‚É¸”s‚µ‚Ü‚µ‚½",            "DLL call failed"
+    ErrorMsg(0, 39) = "ŠO•”ƒIƒuƒWƒFƒNƒg‚ÌŒÄ‚Ño‚µ‚É¸”s‚µ‚Ü‚µ‚½",   "External COM call failed"
+    ErrorMsg(0, 40) = "ŠÖ”‚Ì–ß‚è’l‚ªİ’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB",         "No function result"
+    ErrorMsg(0, 41) = "ŠÖ”‚ğ–½—ß‚Æ‚µ‚Ä‹Lq‚µ‚Ä‚¢‚Ü‚·B",           "Invalid syntax for function"
 
     return
 
@@ -2362,7 +2362,7 @@ if instr(s,0,%1)!-1{	%c\
 	if ( rc >= MAX_CHARA_TOTAL ) {
 		buf += "* rc is above max\n"
 	}
-	buf += lang("\n\nã©ã®ã‚ˆã†ãªã“ã¨ã‚’ã—ã¦ã‚¨ãƒ©ãƒ¼ãŒå‡ºãŸã®ã‹ã€å†ç¾æ€§ã®æœ‰ç„¡ã€çŠ¶æ³ã®ã‚ã‹ã‚‹ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã‚·ãƒ§ãƒƒãƒˆã€æœ¬å®¶é–‹ç™ºç‰ˆã¨ã®æ¯”è¼ƒçµæœãªã©ã®æƒ…å ±ã‚’ç¢ºèªãƒ»æ•´ç†ã—ã¦ãã ã•ã„ã€‚ãã®ã†ãˆã§Elonaæ¿ã®é–‹ç™ºã‚¹ãƒ¬ã«ãƒã‚°å ±å‘Šç”¨ãƒ†ãƒ³ãƒ—ãƒ¬ã«æ²¿ã£ã¦å ±å‘Šã—ã¦é ‚ã‘ã‚‹ã¨ã€åŸå› ã®ç‰¹å®šãŒã§ãã¦åŠ©ã‹ã‚Šã¾ã™ã€‚èµ·ããŸã“ã¨ã‚’ç°¡æ½”ã«è¿°ã¹ã‚‹ã€ã‚¨ãƒ©ãƒ¼æ–‡ã®ã¿ã‚’å ±å‘Šã™ã‚‹ã€ç¨‹åº¦ã§ã¯è§£æ±ºã™ã‚‹è¦‹è¾¼ã¿ã¯ã»ã¨ã‚“ã©ã‚ã‚Šã¾ã›ã‚“ã€‚", "\n\nPlease check and organize the information as to what kind of thing you were doing when the error occurred, if it is reproducible, screenshot showing the problem, comparison of the results from the vanilla version. In addition, if you can use the bug reporting template on the Elona board development thread, it would help identify the cause and will be saved for reference. There is little chance it will be solved if you provide very little information or just the error code.")
+	buf += lang("\n\n‚Ç‚Ì‚æ‚¤‚È‚±‚Æ‚ğ‚µ‚ÄƒGƒ‰[‚ªo‚½‚Ì‚©AÄŒ»«‚Ì—L–³Aó‹µ‚Ì‚í‚©‚éƒXƒNƒŠ[ƒ“ƒVƒ‡ƒbƒgA–{‰ÆŠJ”­”Å‚Æ‚Ì”äŠrŒ‹‰Ê‚È‚Ç‚Ìî•ñ‚ğŠm”FE®—‚µ‚Ä‚­‚¾‚³‚¢B‚»‚Ì‚¤‚¦‚ÅElona”Â‚ÌŠJ”­ƒXƒŒ‚ÉƒoƒO•ñ—pƒeƒ“ƒvƒŒ‚É‰ˆ‚Á‚Ä•ñ‚µ‚Ä’¸‚¯‚é‚ÆAŒ´ˆö‚Ì“Á’è‚ª‚Å‚«‚Ä•‚©‚è‚Ü‚·B‹N‚«‚½‚±‚Æ‚ğŠÈŒ‰‚Éq‚×‚éAƒGƒ‰[•¶‚Ì‚İ‚ğ•ñ‚·‚éA’ö“x‚Å‚Í‰ğŒˆ‚·‚éŒ©‚İ‚Í‚Ù‚Æ‚ñ‚Ç‚ ‚è‚Ü‚¹‚ñB", "\n\nPlease check and organize the information as to what kind of thing you were doing when the error occurred, if it is reproducible, screenshot showing the problem, comparison of the results from the vanilla version. In addition, if you can use the bug reporting template on the Elona board development thread, it would help identify the cause and will be saved for reference. There is little chance it will be solved if you provide very little information or just the error code.")
 	notesel buf
 	notesave exedir + "error.txt"
 	exec exedir + "error.txt", 16

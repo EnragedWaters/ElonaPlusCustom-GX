@@ -1,18 +1,18 @@
-// HIGHDPI ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
+// HIGHDPI ƒ‚ƒWƒ…[ƒ‹
 // by natade
 // license NYSL
 //
-// è§£èª¬
-//  é«˜DPIã®ãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ã§ã‚‚ã€è‡ªå‹•ã‚¹ã‚±ãƒ¼ãƒªãƒ³ã‚°ã•ã‚Œãšã«è¡¨ç¤ºã§ãã‚‹ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã§ã™ã€‚
-//  å†…éƒ¨ã‚’è¦‹ã‚‹ã¨ã‚ã‹ã‚‹ã¨ãŠã‚Šã€æ—¢å­˜ã®å‘½ä»¤ã‚’ç½®ãæ›ãˆã¦ã€ä½ç½®ã€ã‚µã‚¤ã‚ºã®è£œæ­£ã‚’ã—ã¦ã„ã¾ã™ã€‚
-//  å…¨ã¦ã®ã€å‘½ä»¤ã‚’ç½®ãæ›ãˆã¦ã„ã‚‹ã‚ã‘ã§ã¯ãªã„ã®ã§ã€å¿…è¦ã«å¿œã˜ã¦å¢—ã‚„ã—ã¦ãã ã•ã„ã€‚ï¼ˆé©å½“ï¼‰
+// ‰ğà
+//  ‚DPI‚ÌƒfƒBƒXƒvƒŒƒC‚Å‚àA©“®ƒXƒP[ƒŠƒ“ƒO‚³‚ê‚¸‚É•\¦‚Å‚«‚éƒ‚ƒWƒ…[ƒ‹‚Å‚·B
+//  “à•”‚ğŒ©‚é‚Æ‚í‚©‚é‚Æ‚¨‚èAŠù‘¶‚Ì–½—ß‚ğ’u‚«Š·‚¦‚ÄAˆÊ’uAƒTƒCƒY‚Ì•â³‚ğ‚µ‚Ä‚¢‚Ü‚·B
+//  ‘S‚Ä‚ÌA–½—ß‚ğ’u‚«Š·‚¦‚Ä‚¢‚é‚í‚¯‚Å‚Í‚È‚¢‚Ì‚ÅA•K—v‚É‰‚¶‚Ä‘‚â‚µ‚Ä‚­‚¾‚³‚¢Bi“K“–j
 // 
-// ä½¿ã„æ–¹
-//  å‡ºæ¥ã‚‹é™ã‚Šæœ€åˆã«ã€includeã—ã¦ãã ã•ã„ã€‚
-//  include ã™ã‚‹ã¨ã€é«˜DPIãŒæœ‰åŠ¹åŒ–ã•ã‚Œã¾ã™ã€‚
-//  èµ·å‹•æ™‚ã«æœ€åˆã«è¡¨ç¤ºã•ã‚Œã‚‹ã€Œscreen 0ã€ã‚‚ã€å¿…ãšscreenå‘½ä»¤ã§æ”¹ã‚ã¦åˆæœŸåŒ–ã—ã¦ãã ã•ã„ã€‚
-//  ãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ã®è¨­å®šã‹ã‚‰ã€ã€Œæ‹¡å¤§ç¸®å°ã¨ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆã€ã§ã€Œ100%ã€ã‹ã‚‰å¤‰æ›´ã—ã€
-//  ã‚µã‚¤ãƒ³ã‚¢ã‚¦ãƒˆã€ã‚µã‚¤ãƒ³ã‚¤ãƒ³ã§è¡¨ç¤ºã®ãƒ†ã‚¹ãƒˆãŒã§ãã¾ã™ã€‚
+// g‚¢•û
+//  o—ˆ‚éŒÀ‚èÅ‰‚ÉAinclude‚µ‚Ä‚­‚¾‚³‚¢B
+//  include ‚·‚é‚ÆA‚DPI‚ª—LŒø‰»‚³‚ê‚Ü‚·B
+//  ‹N“®‚ÉÅ‰‚É•\¦‚³‚ê‚éuscreen 0v‚àA•K‚¸screen–½—ß‚Å‰ü‚ß‚Ä‰Šú‰»‚µ‚Ä‚­‚¾‚³‚¢B
+//  ƒfƒBƒXƒvƒŒƒC‚Ìİ’è‚©‚çAuŠg‘åk¬‚ÆƒŒƒCƒAƒEƒgv‚Åu100%v‚©‚ç•ÏX‚µA
+//  ƒTƒCƒ“ƒAƒEƒgAƒTƒCƒ“ƒCƒ“‚Å•\¦‚ÌƒeƒXƒg‚ª‚Å‚«‚Ü‚·B
 
 #ifndef HIGHDPI_Initialize
 
@@ -35,9 +35,9 @@
 	dim tOSVERSIONINFO, 37
 	tOSVERSIONINFO.0 = 148
 	HIGHDPI_STAT = HIGHDPI_GetVersionEx(varptr(tOSVERSIONINFO))
-	// (å°‘ã—è’ã„åˆ¤å®šæ–¹æ³•ã ãŒãƒ»ãƒ»ãƒ»)
+	// (­‚µr‚¢”»’è•û–@‚¾‚ªEEE)
 	if(tOSVERSIONINFO.1 >= 6) {
-		// Vista ä»¥ä¸Š
+		// Vista ˆÈã
 		HIGHDPI_STAT = HIGHDPI_SetProcessDPIAware()
 	}
 	return
@@ -88,8 +88,8 @@
 #define global mousey HIGHDPI_Y_INV(mousey@HSP)
 
 #defcfunc HIGHDPI_sizeof var soVar, local HSPCTX, local PVALptr, local PVAL, local sizeofval
-	// kz3ã•ã‚“ã®bufsizeé–¢æ•°ã‚’å‚è€ƒ
-	// http://hspwiki.tm.land.to/ å°ãƒ¯ã‚¶/ãƒã‚¤ãƒ³ã‚¿ã‚’ä½¿ã£ã¦ã®ã‚ã‚Œã“ã‚Œ
+	// kz3‚³‚ñ‚ÌbufsizeŠÖ”‚ğQl
+	// http://hspwiki.tm.land.to/ ¬ƒƒU/ƒ|ƒCƒ“ƒ^‚ğg‚Á‚Ä‚Ì‚ ‚ê‚±‚ê
 	mref HSPCTX,68
 	dupptr PVALptr,HSPCTX(207),4,4
 	dupptr PVAL,PVALptr,48,4
@@ -325,11 +325,11 @@
 	lhdFontName	= fontname
 	_p1 = HIGHDPI_Y(p1)
 	_p2 = p2
-	mref BMSCR, 67 // ãƒ•ã‚©ãƒ³ãƒˆåã‚’å–å¾—
+	mref BMSCR, 67 // ƒtƒHƒ“ƒg–¼‚ğæ“¾
 	sdim lfFaceName, 64
 	dupptr lfFaceName, varptr(BMSCR.56), 32, vartype("str")
 	if(fontname == HIGHDPI_DEF_STR) : lhdFontName = lfFaceName
-	if(p1 == HIGHDPI_DEF) : _p1 = HIGHDPI_Y(12) // lfHeight = BMSCR.32 ã§ç¾åœ¨è¨­å®šä¸­ã®ãƒ•ã‚©ãƒ³ãƒˆã‚µã‚¤ã‚º
+	if(p1 == HIGHDPI_DEF) : _p1 = HIGHDPI_Y(12) // lfHeight = BMSCR.32 ‚ÅŒ»İİ’è’†‚ÌƒtƒHƒ“ƒgƒTƒCƒY
 	if(p2 == HIGHDPI_DEF) : _p2 = 0
 	if ( HIGHDPI_SMOOTH_MODE ) {
 		_p2 |= font_antialias
@@ -364,7 +364,7 @@
 	_p2 = HIGHDPI_X(p2)
 	_p3 = HIGHDPI_Y(p3)
 	_p4 = p4
-	mref BMSCR, 67 // objsize æƒ…å ±ã‚’å–å¾—
+	mref BMSCR, 67 // objsize î•ñ‚ğæ“¾
 	_ox = BMSCR.29
 	_oy = BMSCR.30
 	if(p2 == HIGHDPI_DEF) : _p2 = _ox
@@ -391,7 +391,7 @@
 	_p3 = HIGHDPI_Y(p3)
 	_p4 = p4
 	_p5 = p5
-	mref BMSCR, 67 // objsize æƒ…å ±ã‚’å–å¾—
+	mref BMSCR, 67 // objsize î•ñ‚ğæ“¾
 	_ox = BMSCR.29
 	_oy = BMSCR.30
 	if(p2 == HIGHDPI_DEF) : _p2 = _ox
@@ -456,7 +456,7 @@
 	_p3 = HIGHDPI_Y(p3)
 	_p4 = HIGHDPI_X(p4)
 	_p5 = HIGHDPI_Y(p5)
-	mref BMSCR, 67 // gmode æƒ…å ±ã‚’å–å¾—
+	mref BMSCR, 67 // gmode î•ñ‚ğæ“¾
 	_gx = BMSCR.33
 	_gy = BMSCR.34
 	if(p1 == HIGHDPI_DEF) : _p1 = 0
@@ -483,7 +483,7 @@
 	_p6 = HIGHDPI_X(p6)
 	_p7 = HIGHDPI_Y(p7)
 	_p8 = _p8
-	mref BMSCR, 67 // gmode æƒ…å ±ã‚’å–å¾—
+	mref BMSCR, 67 // gmode î•ñ‚ğæ“¾
 	_gx = BMSCR.33
 	_gy = BMSCR.34
 	_gw = BMSCR.1
@@ -513,7 +513,7 @@
 	_p4 = p4
 	_p5 = HIGHDPI_X(p5)
 	_p6 = HIGHDPI_Y(p6)
-	mref BMSCR, 67 // gmode æƒ…å ±ã‚’å–å¾—
+	mref BMSCR, 67 // gmode î•ñ‚ğæ“¾
 	_gx = BMSCR.33
 	_gy = BMSCR.34
 	if(p1 == HIGHDPI_DEF) : _p1 = 0
@@ -539,7 +539,7 @@
 	_p4 = p4
 	_p5 = HIGHDPI_X(p5)
 	_p6 = HIGHDPI_Y(p6)
-	mref BMSCR, 67 // gmode æƒ…å ±ã‚’å–å¾—
+	mref BMSCR, 67 // gmode î•ñ‚ğæ“¾
 	_gx = BMSCR.33
 	_gy = BMSCR.34
 	_gw = BMSCR.1
@@ -563,7 +563,7 @@
 	local BMSCR, local _gw, local _gh
 	_p1 = HIGHDPI_X(p1)
 	_p2 = HIGHDPI_Y(p2)
-	mref BMSCR, 67 // gmode æƒ…å ±ã‚’å–å¾—
+	mref BMSCR, 67 // gmode î•ñ‚ğæ“¾
 	_gw = BMSCR.1
 	_gh = BMSCR.2
 	if(p1 == HIGHDPI_DEF) : _p1 = _gw
@@ -581,7 +581,7 @@
 	local BMSCR, local _gbuf, local _gw, local _gh
 	_p1 = p1
 	_p2 = p2
-	mref BMSCR, 67 // gmode æƒ…å ±ã‚’å–å¾—
+	mref BMSCR, 67 // gmode î•ñ‚ğæ“¾
 	_gbuf = BMSCR.18
 	if(p1 == HIGHDPI_DEF) : _p1 = _p1
 	if(p2 == HIGHDPI_DEF) : _p2 = 0
@@ -589,7 +589,7 @@
 		// buffer will be reinitialized with actual image size,
 		// so we need to reallocate the buffer at scaled size
 		picload@HSP _p1, _p2
-		mref BMSCR, 67 // gmode æƒ…å ±ã‚’å–å¾—
+		mref BMSCR, 67 // gmode î•ñ‚ğæ“¾
 		_gbuf = BMSCR.18 // get current buffer
 		_gw = BMSCR.1 // get image dimensions
 		_gh = BMSCR.2
@@ -599,7 +599,7 @@
 	} else {
 		buffer@HSP 100000 // scratch buffer for copying image
 		picload@HSP _p1, 0
-		mref BMSCR, 67 // gmode æƒ…å ±ã‚’å–å¾—
+		mref BMSCR, 67 // gmode î•ñ‚ğæ“¾
 		_gw = BMSCR.1 // get image dimensions
 		_gh = BMSCR.2
 		gsel@HSP _gbuf
@@ -621,7 +621,7 @@
 	_p4 = HIGHDPI_Y(p4)
 	_p5 = p5
 	_p6 = p6
-	mref BMSCR, 67 // objsize æƒ…å ±ã‚’å–å¾—
+	mref BMSCR, 67 // objsize î•ñ‚ğæ“¾
 	_ox = BMSCR.29
 	_oy = BMSCR.30
 	if(p1 == HIGHDPI_DEF) : _p1 = 0
@@ -650,9 +650,9 @@
 #deffunc HIGHDPI_setScreenDefaultFont local BMSCR, local lfHeight
 	mref BMSCR, 67
 	lfHeight = BMSCR.32
-	font "ï¼­ï¼³ ã‚´ã‚·ãƒƒã‚¯", lfHeight
-	// screenä½œæˆæ™‚ã®ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã¯ã€ŒFixedSysã€ã«ãªã£ã¦ã„ã‚‹ãŒã€
-	// ãƒ•ã‚©ãƒ³ãƒˆã®ã‚µã‚¤ã‚ºãŒç”¨æ„ã•ã‚Œã¦ã„ãªã„ãŸã‚ã€Œï¼­ï¼³ ã‚´ã‚·ãƒƒã‚¯ã€ã¨ã™ã‚‹
+	font "‚l‚r ƒSƒVƒbƒN", lfHeight
+	// screenì¬‚ÌƒfƒtƒHƒ‹ƒg‚ÍuFixedSysv‚É‚È‚Á‚Ä‚¢‚é‚ªA
+	// ƒtƒHƒ“ƒg‚ÌƒTƒCƒY‚ª—pˆÓ‚³‚ê‚Ä‚¢‚È‚¢‚½‚ßu‚l‚r ƒSƒVƒbƒNv‚Æ‚·‚é
 	return
 
 #uselib "winmm.dll"

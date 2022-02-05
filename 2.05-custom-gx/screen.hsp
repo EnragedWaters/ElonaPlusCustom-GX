@@ -1004,7 +1004,7 @@
 	mes "" + gdata(GDATA_YEAR) + "/" + gdata(GDATA_MONTH) + "/" + gdata(GDATA_DAY)
 	if ( gdata(GDATA_AREA) == AREA_AMUR_CAGE & gdata(GDATA_LEVEL) >= 20 ) {
 		pos inf_clockw + 6, inf_clocky + 35
-		bmes lang("Ëµ§„ÅÑÈõ®", "Blood"), 235, 35, 35
+		bmes lang("ê‘Ç¢âJ", "Blood"), 235, 35, 35
 	}
 	else {
 		pos inf_clockw + 6, inf_clocky + 35
@@ -1016,7 +1016,7 @@
 		bmes "*debug*", 235, 235, 235
 		pos inf_clockw + 6, inf_clocky + 65
 		color 0, 0, 0
-		bmes "loop" + looplev + "„ÄÅsub" + sublev + " ", 235, 235, 235
+		bmes "loop" + looplev + "ÅAsub" + sublev + " ", 235, 235, 235
 	}
 	pos inf_clockw + 80, inf_clocky + 17
 	if ( gdata(GDATA_FLAG_DESTINY_LETTERS) < 7 ) {
@@ -1040,7 +1040,7 @@
 		pos inf_clockw + 6, inf_clocky + 50
 		color 0, 0, 0
 		if ( jp ) {
-			bmes "<Ê∑∑Ê≤å„ÅÆÁß©Â∫è>", 235, 5, 155
+			bmes "<ç¨ì◊ÇÃíÅèò>", 235, 5, 155
 		}
 		if ( en ) {
 			bmes "<Order of Chaos>", 235, 5, 155
@@ -1050,7 +1050,7 @@
 		pos inf_clockw + 6, inf_clocky + 50
 		color 0, 0, 0
 		if ( jp ) {
-			bmes "<ÁµÇÊú´„ÅÆÁ©∫>", 235, 235, 235
+			bmes "<èIññÇÃãÛ>", 235, 235, 235
 		}
 		if ( en ) {
 			bmes "<Doomsday sky>", 235, 235, 235
@@ -1060,7 +1060,7 @@
 		pos inf_clockw + 6, inf_clocky + 50
 		color 0, 0, 0
 		if ( jp ) {
-			bmes "[ÈõªÁ£ÅÁçÑ]", 235, 235, 5
+			bmes "[ìdé•çñ]", 235, 235, 5
 		}
 		if ( en ) {
 			bmes "[E-Mag Cage]", 235, 235, 5
@@ -1070,7 +1070,7 @@
 		pos inf_clockw + 6, inf_clocky + 50
 		color 0, 0, 0
 		if ( jp ) {
-			bmes "[Âº¶Ëë¨‰∏ñÁïå]", 235, 235, 235
+			bmes "[å∑ëíê¢äE]", 235, 235, 235
 		}
 		if ( en ) {
 			bmes "[Wire World]", 235, 235, 235
@@ -1080,7 +1080,7 @@
 		pos inf_clockw + 6, inf_clocky + 50
 		color 0, 0, 0
 		if ( jp ) {
-			bmes "[Êö¥Ëôê„ÅÆÂ∫≠Âúí]", 5, 235, 5
+			bmes "[ñ\ãsÇÃíÎâÄ]", 5, 235, 5
 		}
 		if ( en ) {
 			bmes "[Violent Garden]", 5, 235, 5
@@ -1090,7 +1090,7 @@
 		pos inf_clockw + 6, inf_clocky + 50
 		color 0, 0, 0
 		if ( jp ) {
-			bmes "[„É≠„ÉÉ„ÇØ„É©„ÉÉ„Ç∑„É•]", 235, 135, 5
+			bmes "[ÉçÉbÉNÉâÉbÉVÉÖ]", 235, 135, 5
 		}
 		if ( en ) {
 			bmes "[Rocrush]", 235, 135, 5
@@ -1104,7 +1104,7 @@
 		if ( jp ) {
 			pos inf_clockw + 380, inf_clocky + 37
 			color 0, 0, 0
-			bmes "ESC„Ç≠„Éº„ÅßÊ£ÑÊ®©„Åß„Åç„Çã", 235, 235, 235
+			bmes "ESCÉLÅ[Ç≈ä¸å†Ç≈Ç´ÇÈ", 235, 235, 235
 		}
 		else {
 			pos inf_clockw + 380, inf_clocky + 37
@@ -1119,7 +1119,7 @@
 		if ( jp ) {
 			pos inf_clockw + 380, inf_clocky + 37
 			color 0, 0, 0
-			bmes "Á¢∫Ë™ç" + paraa + "„ÄÅ" + parab + "„ÄÅ" + parac + "„ÄÇ", 235, 235, 235
+			bmes "ämîF" + paraa + "ÅA" + parab + "ÅA" + parac + "ÅB", 235, 235, 235
 		}
 	}
 	if ( gdata(GDATA_AREA) == AREA_AMUR_CAGE ) {
@@ -1131,7 +1131,7 @@
 				soulimit--
 				if ( soulimit == 0 ) {
 					gdata(GDATA_FLAG_SUB_AMURDAD) += 9
-					txt lang("„Éç„Éò„É´„Çø„Éº„Éâ„ÄåÈñì„Å´Âêà„Çè„Å™„Åã„Å£„Åü‚Ä¶„ÄÇÊïëÊ∏à„Åô„Çã„Åπ„ÅçÈ≠Ç„ÅØ„ÇÇ„ÅÜÂä©„Åã„Çâ„Å™„ÅÑ‚Ä¶„ÄÇÂêõ„Å†„Åë„Åß„ÇÇÈÄÉ„Åí„Å¶‚Ä¶„Äç", "Amurdad: " + cnvtalk("We couldn't make it in time... The souls that needed to be saved can no longer be saved.... Escape with your life... I can't lose you either..."))
+					txt lang("ÉlÉwÉãÉ^Å[ÉhÅuä‘Ç…çáÇÌÇ»Ç©Ç¡ÇΩÅcÅBã~çœÇ∑ÇÈÇ◊Ç´ç∞ÇÕÇ‡Ç§èïÇ©ÇÁÇ»Ç¢ÅcÅBåNÇæÇØÇ≈Ç‡ì¶Ç∞ÇƒÅcÅv", "Amurdad: " + cnvtalk("We couldn't make it in time... The souls that needed to be saved can no longer be saved.... Escape with your life... I can't lose you either..."))
 				}
 			}
 		}
@@ -1145,24 +1145,24 @@
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_1)++
 		pos inf_clockw + 80, inf_clocky + 50
 		color 0, 0, 0
-		bmes lang("„Çº„Éº„É†„Äå„Åï„ÅÅ„ÄÅÁ•û„Å®„ÅÆÊà¶„ÅÑ„ÇíË¶ã„Åõ„Å¶„ÇÇ„Çâ„Åä„ÅÜÔºÅÁßÅ„ÅÆÁü•ÁöÑÊé¢Ê±ÇÂøÉ„ÇíÊ∫Ä„Åü„Åó„Å¶„Åè„ÇåÔºÅ„Äç", "Zeome laughs, " + cnvtalk("Show me the battle of the gods! Satisfy my intellectual curiosity!")), 235, 235, 35
+		bmes lang("É[Å[ÉÄÅuÇ≥ÇüÅAê_Ç∆ÇÃêÌÇ¢Çå©ÇπÇƒÇ‡ÇÁÇ®Ç§ÅIéÑÇÃímìIíTãÅêSÇñûÇΩÇµÇƒÇ≠ÇÍÅIÅv", "Zeome laughs, " + cnvtalk("Show me the battle of the gods! Satisfy my intellectual curiosity!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 200 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 400 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_1)++
 		if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 200 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 300 ) {
 			pos inf_clockw + 80, inf_clocky + 50
 			color 0, 0, 0
-			bmes lang("„Ç®„É™„Çπ„ÉÜ„Ç¢„Äå„Å©„ÅÜ„Åã„ÄÅ„Ç§„É´„É¥„Ç°„ÅÆÊ≠¥Âè≤„ÇíÂÆà„Å£„Å¶‚Ä¶ÔºÅ„Äç", "Erystia prays, " + cnvtalk("Please protect the history of Irva!")), 235, 235, 35
+			bmes lang("ÉGÉäÉXÉeÉAÅuÇ«Ç§Ç©ÅAÉCÉãÉîÉ@ÇÃóéjÇéÁÇ¡ÇƒÅcÅIÅv", "Erystia prays, " + cnvtalk("Please protect the history of Irva!")), 235, 235, 35
 		}
 		if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 250 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 350 ) {
 			pos inf_clockw + 30, inf_clocky + 65
 			color 0, 0, 0
-			bmes lang("„Ç¨„Éô„É©„ÄåÊ≠ª„Å¨„Å™„Çà" + cdatan(CDATAN_NAME, CHARA_PLAYER) + "‚Ä¶„ÇÇ„ÅÜ‰ø∫„Å´„ÅÇ„Çì„Å™ÊÄù„ÅÑ„Çí„Åï„Åõ„Å™„ÅÑ„Åß„Åè„Çå„Äç", "Gavela mutters, " + cnvtalk("Don't die, " + cdatan(CDATAN_NAME, CHARA_PLAYER) + "! I don't want any more tragedies...")), 235, 235, 35
+			bmes lang("ÉKÉxÉâÅuéÄÇ Ç»ÇÊ" + cdatan(CDATAN_NAME, CHARA_PLAYER) + "ÅcÇ‡Ç§â¥Ç…Ç†ÇÒÇ»évÇ¢ÇÇ≥ÇπÇ»Ç¢Ç≈Ç≠ÇÍÅv", "Gavela mutters, " + cnvtalk("Don't die, " + cdatan(CDATAN_NAME, CHARA_PLAYER) + "! I don't want any more tragedies...")), 235, 235, 35
 		}
 		if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 300 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 400 ) {
 			pos inf_clockw + 80, inf_clocky + 80
 			color 0, 0, 0
-			bmes lang("„ÇΩ„Éî„Ç¢„Éº„Äå„Ç¢„Ç´„Ç∑„ÉÉ„ÇØ„Éç„ÉÉ„Éà„ÉØ„Éº„ÇØ„Å´ÂÖâ„ÅåÊµÅ„ÇåËæº„Çì„Åß„ÅÑ„Çã‚Ä¶Ôºü„Äç", "Sophia wonders, " + cnvtalk("Light is flowing into the Akashic Network...?")), 235, 235, 35
+			bmes lang("É\ÉsÉAÅ[ÅuÉAÉJÉVÉbÉNÉlÉbÉgÉèÅ[ÉNÇ…åıÇ™ó¨ÇÍçûÇÒÇ≈Ç¢ÇÈÅcÅHÅv", "Sophia wonders, " + cnvtalk("Light is flowing into the Akashic Network...?")), 235, 235, 35
 		}
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 500 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 700 ) {
@@ -1170,71 +1170,71 @@
 		if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 500 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 600 ) {
 			pos inf_clockw + 80, inf_clocky + 50
 			color 0, 0, 0
-			bmes lang("„Éé„É´„É≥„ÄåÂêõ„ÅÆÊóÖ„ÅØ‚Ä¶„Åì„Çì„Å™„Å®„Åì„Çç„ÅßÁµÇ„Çè„Å£„Å°„ÇÉ„ÅÑ„Åë„Å™„ÅÑ„Äç", "Norne mutters, " + cnvtalk("Your journey... shouldn't end here...")), 235, 235, 35
+			bmes lang("ÉmÉãÉìÅuåNÇÃó∑ÇÕÅcÇ±ÇÒÇ»Ç∆Ç±ÇÎÇ≈èIÇÌÇ¡ÇøÇ·Ç¢ÇØÇ»Ç¢Åv", "Norne mutters, " + cnvtalk("Your journey... shouldn't end here...")), 235, 235, 35
 		}
 		if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 550 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 650 ) {
 			pos inf_clockw + 30, inf_clocky + 65
 			color 0, 0, 0
-			bmes lang("„É¥„Çß„Çª„É´„ÄåÂ∏åÊúõ„ÅØ„Åæ„Å†„ÅÇ„Çã„ÅØ„Åö„Å†„Äç", "Vessel says, " + cnvtalk("There should still be hope.")), 235, 235, 35
+			bmes lang("ÉîÉFÉZÉãÅuäÛñ]ÇÕÇ‹ÇæÇ†ÇÈÇÕÇ∏ÇæÅv", "Vessel says, " + cnvtalk("There should still be hope.")), 235, 235, 35
 		}
 		if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 600 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 700 ) {
 			pos inf_clockw + 80, inf_clocky + 80
 			color 0, 0, 0
-			bmes lang("„Ç™„É´„Éï„Çß„ÄåÁßÅ„ÅåÊ±∫Êà¶Âõ†Â≠ê„Å®„Åó„Å¶Ëá≥„Çâ„Å™„Åã„Å£„Åü„Å∞„Åã„Çä„Å´„ÄÅÂæå‰ªª„Åå„Åì„ÅÆ„Çà„ÅÜ„Å™‚Ä¶„Äç", "Orphe apologizes, " + cnvtalk("Because of my failure, my junior is suffering...")), 235, 235, 35
+			bmes lang("ÉIÉãÉtÉFÅuéÑÇ™åàêÌàˆéqÇ∆ÇµÇƒéäÇÁÇ»Ç©Ç¡ÇΩÇŒÇ©ÇËÇ…ÅAå„îCÇ™Ç±ÇÃÇÊÇ§Ç»ÅcÅv", "Orphe apologizes, " + cnvtalk("Because of my failure, my junior is suffering...")), 235, 235, 35
 		}
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 850 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 900 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_1)++
 		pos inf_clockw + 80, inf_clocky + 50
 		color 0, 0, 0
-		bmes lang("„Ç®„Éò„Ç´„Éà„É´„ÄåÊ≠ª„Å™„Å´„ÇÉ„ÅÑ„ÅßÔºÅÊ≠ª„Å™„Å´„ÇÉ„ÅÑ„Å£„Å¶Á¥ÑÊùü„Åó„Å¶ÔºÅ„Åó„Å¶ÔºÅ„Äç", "Ehekatl shouts, " + cnvtalk("Don't die! Promise you don't die!")), 235, 235, 35
+		bmes lang("ÉGÉwÉJÉgÉãÅuéÄÇ»Ç…Ç·Ç¢Ç≈ÅIéÄÇ»Ç…Ç·Ç¢Ç¡ÇƒñÒë©ÇµÇƒÅIÇµÇƒÅIÅv", "Ehekatl shouts, " + cnvtalk("Don't die! Promise you don't die!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 900 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 1400 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_1)++
 		if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 900 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 1000 ) {
 			pos inf_clockw + 80, inf_clocky + 50
 			color 0, 0, 0
-			bmes lang("„Ç§„ÉÑ„Éë„É≠„Éà„É´„ÄåÈ°ò„ÅÑ„ÅÆÂäõ„Åå„ÄÅÂõûÂªä„Å®Êù•ÂÖâ„ÅÆÁâô„ÇíÈÄö„Åò„Å¶ÈõÜ„ÅÑ„Å§„Å§„ÅÇ„Çã„ÅÆ„Åã‚Ä¶Ôºü„Äç", "Itzpalt mutters, " + cnvtalk("Is the light of wishes gathering to Origin of Light?")), 235, 235, 35
+			bmes lang("ÉCÉcÉpÉçÉgÉãÅuäËÇ¢ÇÃóÕÇ™ÅAâÒòLÇ∆óàåıÇÃâÂÇí Ç∂ÇƒèWÇ¢Ç¬Ç¬Ç†ÇÈÇÃÇ©ÅcÅHÅv", "Itzpalt mutters, " + cnvtalk("Is the light of wishes gathering to Origin of Light?")), 235, 235, 35
 		}
 		if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 950 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 1050 ) {
 			pos inf_clockw + 30, inf_clocky + 65
 			color 0, 0, 0
-			bmes lang("„É§„Ç´„ÉÜ„ÇØ„Éà„Äå„Çà„Å£„Åó„ÇÉÔºÅ„Ç¶„ÉÅ„Çâ„ÅÆÊÆã„Çä„ÅÆÁ•ûÂäõ„ÇÇ„Åæ„Å®„ÇÅ„Å¶ÊäïË≥á„Åó„Åü„Çã„Å£ÔºÅ„Äç", "Yacatect says, " + cnvtalk("OK! OK! We will also invest the remaining power in you!")), 235, 235, 35
+			bmes lang("ÉÑÉJÉeÉNÉgÅuÇÊÇ¡ÇµÇ·ÅIÉEÉ`ÇÁÇÃécÇËÇÃê_óÕÇ‡Ç‹Ç∆ÇﬂÇƒìäéëÇµÇΩÇÈÇ¡ÅIÅv", "Yacatect says, " + cnvtalk("OK! OK! We will also invest the remaining power in you!")), 235, 235, 35
 		}
 		if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 1000 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 1100 ) {
 			pos inf_clockw + 80, inf_clocky + 80
 			color 0, 0, 0
-			bmes lang("„Ç™„Éë„Éº„Éà„Çπ„Äå„Éï„Éè„Éè„Éè„Éè„ÉÉ„Éï„Éè„ÉºÔºÅÔºÅÔºÅ„Äç", "Opatos laughs, " + cnvtalk("Muwahahahahahaha!")), 235, 235, 35
+			bmes lang("ÉIÉpÅ[ÉgÉXÅuÉtÉnÉnÉnÉnÉbÉtÉnÅ[ÅIÅIÅIÅv", "Opatos laughs, " + cnvtalk("Muwahahahahahaha!")), 235, 235, 35
 		}
 		if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 1050 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 1150 ) {
 			pos inf_clockw + 80, inf_clocky + 50
 			color 0, 0, 0
-			bmes lang("„É´„É´„Ç¶„Ç£„ÄåÊà¶„ÅÑ„Å™„Åï„ÅÑ„ÄÅÂ≠êÁå´„Å°„ÇÉ„Çì„ÄÇ‰ªä„Åì„ÅùÁßÅ„ÅÆÂΩπ„Å´Á´ã„Å§ÊôÇ„Çà„Äç", "Lulwy sneers, " + cnvtalk("Fight, kitty. Now is the time to help me.")), 235, 235, 35
+			bmes lang("ÉãÉãÉEÉBÅuêÌÇ¢Ç»Ç≥Ç¢ÅAéqîLÇøÇ·ÇÒÅBç°Ç±ÇªéÑÇÃñÇ…óßÇ¬éûÇÊÅv", "Lulwy sneers, " + cnvtalk("Fight, kitty. Now is the time to help me.")), 235, 235, 35
 		}
 		if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 1100 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 1200 ) {
 			pos inf_clockw + 30, inf_clocky + 65
 			color 0, 0, 0
-			bmes lang("„ÇØ„Éü„É≠„Éü„Äå‚Ä¶Â§ß‰∏àÂ§´‚Ä¶„Å†„Çà„Å≠Ôºü„Äç", "Kumiromi worries, " + cnvtalk("Are you...okay..?")), 235, 235, 35
+			bmes lang("ÉNÉ~ÉçÉ~ÅuÅcëÂè‰ïvÅcÇæÇÊÇÀÅHÅv", "Kumiromi worries, " + cnvtalk("Are you...okay..?")), 235, 235, 35
 		}
 		if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 1150 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 1250 ) {
 			pos inf_clockw + 80, inf_clocky + 80
 			color 0, 0, 0
-			bmes lang("„Éû„Éã„ÄåÈï∑Âºï„Åã„Åõ„Çã„Å™„ÄÇ„ÅäÂâç„ÅÆË∫´‰Ωì„ÅØÊó¢„Å´ÈôêÁïå„ÇíË∂Ö„Åà„Å¶„ÅÑ„Çã„Äç", "Mani warns., " + cnvtalk("Hurry. Your body is already over the limit.")), 235, 235, 35
+			bmes lang("É}ÉjÅuí∑à¯Ç©ÇπÇÈÇ»ÅBÇ®ëOÇÃêgëÃÇÕä˘Ç…å¿äEÇí¥Ç¶ÇƒÇ¢ÇÈÅv", "Mani warns., " + cnvtalk("Hurry. Your body is already over the limit.")), 235, 235, 35
 		}
 		if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 1200 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 1300 ) {
 			pos inf_clockw + 80, inf_clocky + 50
 			color 0, 0, 0
-			bmes lang("„Ç∏„É•„Ç¢„Äå„Éê„Ç´ÔºÅ„Åì„Çå„ÅßÊ≠ª„Çì„Å†„Çä„Åó„Åü„ÇâË®±„Åï„Å™„ÅÑ„Çì„Å†„Åã„Çâ‚Ä¶ÔºÅ„Äç", "Jure cries, " + cnvtalk("Stupid! If you die then I will not forgive you...!")), 235, 235, 35
+			bmes lang("ÉWÉÖÉAÅuÉoÉJÅIÇ±ÇÍÇ≈éÄÇÒÇæÇËÇµÇΩÇÁãñÇ≥Ç»Ç¢ÇÒÇæÇ©ÇÁÅcÅIÅv", "Jure cries, " + cnvtalk("Stupid! If you die then I will not forgive you...!")), 235, 235, 35
 		}
 		if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 1250 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 1350 ) {
 			pos inf_clockw + 30, inf_clocky + 65
 			color 0, 0, 0
-			bmes lang("„Éü„ÇØ„É©„Éç„Ç∑„Çπ„Äå„Äå„Äå„Ç¢„Ç´„Ç∑„ÉÉ„ÇØ„Éç„ÉÉ„Éà„ÉØ„Éº„ÇØ„Åå„Åì„ÅÆ„Çà„ÅÜ„Å´Âãï‰Ωú„Åô„Çã„Å®„ÅØÊÉ≥ÂÆöÂ§ñ„Å†„Å≠‚Ä¶„Äç„Äç„Äç", "Mikraanesis says, " + cnvtalk("Akashic Network is unexpected to work this way.")), 235, 235, 35
+			bmes lang("É~ÉNÉâÉlÉVÉXÅuÅuÅuÉAÉJÉVÉbÉNÉlÉbÉgÉèÅ[ÉNÇ™Ç±ÇÃÇÊÇ§Ç…ìÆçÏÇ∑ÇÈÇ∆ÇÕëzíËäOÇæÇÀÅcÅvÅvÅv", "Mikraanesis says, " + cnvtalk("Akashic Network is unexpected to work this way.")), 235, 235, 35
 		}
 		if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 1300 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 1400 ) {
 			pos inf_clockw + 80, inf_clocky + 80
 			color 0, 0, 0
-			bmes lang("„ÉÜ„Çπ„Ç´„Éà„É™„Éù„Ç´„ÄåÊàë„ÅÆÈ≠Ç„ÇÇ„Åì„Åì„Å´„ÅÇ„Çã„ÄÇÂÖ±„Å´Êà¶„ÅÜ„Åû„ÄÅ" + cdatan(CDATAN_NAME, CHARA_PLAYER) + "ÔºÅ„Äç", "Tezcatlipoca cheers, " + cnvtalk("My soul is also here. I will fight together!")), 235, 235, 35
+			bmes lang("ÉeÉXÉJÉgÉäÉ|ÉJÅuâ‰ÇÃç∞Ç‡Ç±Ç±Ç…Ç†ÇÈÅBã§Ç…êÌÇ§ÇºÅA" + cdatan(CDATAN_NAME, CHARA_PLAYER) + "ÅIÅv", "Tezcatlipoca cheers, " + cnvtalk("My soul is also here. I will fight together!")), 235, 235, 35
 		}
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 1500 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 1650 ) {
@@ -1242,355 +1242,355 @@
 		if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 1500 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 1600 ) {
 			pos inf_clockw + 80, inf_clocky + 50
 			color 0, 0, 0
-			bmes lang("„É©„Éº„Éç„Ç§„É¨„Äå„ÅÑ„Åë„Å™„ÅÑ„ÄÇ„Åì„ÅÆ„Åæ„Åæ„Åß„ÅØ‚Ä¶ÊâãÈÅÖ„Çå„Å´„Å™„Å£„Å¶„Åó„Åæ„ÅÜ„Çè‚Ä¶ÔºÅ„Äç", "Larneire cries, " + cnvtalk("No...before it is too late...!")), 235, 235, 35
+			bmes lang("ÉâÅ[ÉlÉCÉåÅuÇ¢ÇØÇ»Ç¢ÅBÇ±ÇÃÇ‹Ç‹Ç≈ÇÕÅcéËíxÇÍÇ…Ç»Ç¡ÇƒÇµÇ‹Ç§ÇÌÅcÅIÅv", "Larneire cries, " + cnvtalk("No...before it is too late...!")), 235, 235, 35
 		}
 		if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) >= 1550 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_1) < 1650 ) {
 			pos inf_clockw + 30, inf_clocky + 65
 			color 0, 0, 0
-			bmes lang("„É≠„Éü„Ç¢„Çπ„Äå„Åæ„Å†„Åæ„Å†„ÄÅ„Åì„Çå„Åã„Çâ„Å†„Çç„ÅÜÔºÅÔºü„Äç", "Lomias encourages, " + cnvtalk("It hasn't even started yet... hasn't it!?")), 235, 235, 35
+			bmes lang("ÉçÉ~ÉAÉXÅuÇ‹ÇæÇ‹ÇæÅAÇ±ÇÍÇ©ÇÁÇæÇÎÇ§ÅIÅHÅv", "Lomias encourages, " + cnvtalk("It hasn't even started yet... hasn't it!?")), 235, 235, 35
 		}
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 100 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 190 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç∑„Éä„Ç¢„Äå„Åì„ÅÆÁå´ËõáÈáéÈÉé„ÅåÁîü„ÅøÂá∫„Åô‰∏çÂπ∏„Çí„ÄÅ„Ç¢„Çø„Ç∑„ÅØË™ç„ÇÅ„Å™„ÅÑ„ÅÆ„Éã„É£ÔºÅ„Äç", "Sinaha growls, " + cnvtalk("I don't approve of the misery this cat-snake creates meow!")), 235, 235, 35
+		bmes lang("ÉVÉiÉAÅuÇ±ÇÃîLé÷ñÏòYÇ™ê∂Ç›èoÇ∑ïsçKÇÅAÉAÉ^ÉVÇÕîFÇﬂÇ»Ç¢ÇÃÉjÉÉÅIÅv", "Sinaha growls, " + cnvtalk("I don't approve of the misery this cat-snake creates meow!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 200 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 290 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„É©„Ç∑„Ç®„É´„ÄåÂ§±Êïó„Åó„Åü„Çâ„Åä‰ªïÁΩÆ„Åç„Çà„Äç", "Arasiel laughs, " + cnvtalk("I will punish you if you fail!")), 235, 235, 35
+		bmes lang("ÉâÉVÉGÉãÅué∏îsÇµÇΩÇÁÇ®édíuÇ´ÇÊÅv", "Arasiel laughs, " + cnvtalk("I will punish you if you fail!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 300 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 390 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Éç„Éò„É´„Çø„Éº„Éâ„Äå‰ªä„Åì„Åù„ÄÅÊòü„ÅÆÂÖâ„ÅÆÁ•ùÁ¶è„Çí‚Ä¶„Äç", "Amurdad prays, " + cnvtalk("May you have the blessing of the Starlight...")), 235, 235, 35
+		bmes lang("ÉlÉwÉãÉ^Å[ÉhÅuç°Ç±ÇªÅAêØÇÃåıÇÃèjïüÇÅcÅv", "Amurdad prays, " + cnvtalk("May you have the blessing of the Starlight...")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 400 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 490 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç¶„É™„Ç´„Ç∞„Ç¢„É´„Äå„Éï„Éè„ÉèÔºÅÊ†πÊÄßË¶ã„Åõ„Å™ÔºÅ„Äç", "Urcaguary laughs, " + cnvtalk("Muwahaha! Show your guts!")), 235, 235, 35
+		bmes lang("ÉEÉäÉJÉOÉAÉãÅuÉtÉnÉnÅIç™ê´å©ÇπÇ»ÅIÅv", "Urcaguary laughs, " + cnvtalk("Muwahaha! Show your guts!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 500 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 590 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç´„É©„É¥„Ç£„Ç´„Äå„Ç§„Çß„Éº„Ç§ÔºÅÊÑõ„Åó„Å¶„Çã„Åú„Éô„Ç§„Éô„ÉºÔºÅ„Äç", "Karavika shouts, " + cnvtalk("Yeahhhhh! I love you, baby!!")), 235, 235, 35
+		bmes lang("ÉJÉâÉîÉBÉJÅuÉCÉFÅ[ÉCÅIà§ÇµÇƒÇÈÇ∫ÉxÉCÉxÅ[ÅIÅv", "Karavika shouts, " + cnvtalk("Yeahhhhh! I love you, baby!!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 600 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 690 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç¨„É´„Ç∏„Ç®„É†„ÄåË≤¥Âêõ„ÅÆÊà¶„ÅÑ„ÅØÂã≤Á´†„ÇÇ„ÅÆ„Å†„Äç", "Garziem praises, " + cnvtalk("I want to give your battle a medal!")), 235, 235, 35
+		bmes lang("ÉKÉãÉWÉGÉÄÅuãMåNÇÃêÌÇ¢ÇÕåMèÕÇ‡ÇÃÇæÅv", "Garziem praises, " + cnvtalk("I want to give your battle a medal!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 700 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 790 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„É≠„É¥„Ç£„Éà„ÄåÂêõ„ÅØÂ§ßÂã¢„ÅÆÊÉ≥„ÅÑ„Å´ÂÆà„Çâ„Çå„Å¶„ÅÑ„Çã„ÅÆ„Åß„Åô„Å≠‚Ä¶„Äç", "Rovid nods, " + cnvtalk("You are protected by many wishes...")), 235, 235, 35
+		bmes lang("ÉçÉîÉBÉgÅuåNÇÕëÂê®ÇÃëzÇ¢Ç…éÁÇÁÇÍÇƒÇ¢ÇÈÇÃÇ≈Ç∑ÇÀÅcÅv", "Rovid nods, " + cnvtalk("You are protected by many wishes...")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 2000 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 2090 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Éü„Ç∑„Çß„Çπ„ÄåÂÜíÈô∫ËÄÖ„Åï„Çì„ÄÅ„ÅäÈ°ò„ÅÑ„Å†„Åã„Çâ„ÄÅË≤†„Åë„Å™„ÅÑ„Åß„Äç", "Miches prays, " + cnvtalk("I beg of you adventurer, don't lose...")), 235, 235, 35
+		bmes lang("É~ÉVÉFÉXÅuñ`åØé“Ç≥ÇÒÅAÇ®äËÇ¢ÇæÇ©ÇÁÅAïâÇØÇ»Ç¢Ç≈Åv", "Miches prays, " + cnvtalk("I beg of you adventurer, don't lose...")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 2100 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 2190 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç∑„Éº„Éä„Äå„ÅäÂÆ¢„Åï„Åæ„ÄÅÂ§ß‰∏àÂ§´„Åß„Åô„ÅãÔºüÔºÅ„Äç", "Shena panics, " + cnvtalk("Ahhh! Are you alright sir?")), 235, 235, 35
+		bmes lang("ÉVÅ[ÉiÅuÇ®ãqÇ≥Ç‹ÅAëÂè‰ïvÇ≈Ç∑Ç©ÅHÅIÅv", "Shena panics, " + cnvtalk("Ahhh! Are you alright sir?")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 2200 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 2290 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„É≠„Ç§„Çø„Éº„Äå„Åä„ÅÑ„ÄÇ„Åì„ÅÆËÑ≥Ë£è„Å´ÊµÅ„Çå„Å¶„Åè„ÇãÊÇ™Â§¢„ÇíÊó©„ÅèÁµÇ„Çè„Çâ„Åõ„Çç„Äç", "Loyter orders " + cnvtalk("Hey you! End the nightmare that runs through my brain early!")), 235, 235, 35
+		bmes lang("ÉçÉCÉ^Å[ÅuÇ®Ç¢ÅBÇ±ÇÃî]ó†Ç…ó¨ÇÍÇƒÇ≠ÇÈà´ñ≤ÇëÅÇ≠èIÇÌÇÁÇπÇÎÅv", "Loyter orders " + cnvtalk("Hey you! End the nightmare that runs through my brain early!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 2300 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 2390 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Éë„Ç®„É´„ÄåÊÇ™„ÅÑÁ•ûÊßò„Å™„Çì„Å¶„ÅÑ„Çâ„Å™„ÅÑÔºÅ„Äç", "Pael cries, " + cnvtalk("I don't need a bad god!")), 235, 235, 35
+		bmes lang("ÉpÉGÉãÅuà´Ç¢ê_ólÇ»ÇÒÇƒÇ¢ÇÁÇ»Ç¢ÅIÅv", "Pael cries, " + cnvtalk("I don't need a bad god!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 2400 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 2490 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„É©„Éï„Ç°„Ç®„É≠„ÄåË≤†„Åë„Çã„Çì„Åò„ÇÉ„Å™„ÅÑ„Åû„ÄÇ„ÅäÂâç„Åï„Çì„Åã„ÇâË≤∞„Å£„ÅüÂ´Å„ÅåÊÇ≤„Åó„ÇÄ„Åã„Çâ„Å™„Äç", "Raphael worries, " + cnvtalk("The wife I got from you seems to cry...")), 235, 235, 35
+		bmes lang("ÉâÉtÉ@ÉGÉçÅuïâÇØÇÈÇÒÇ∂Ç·Ç»Ç¢ÇºÅBÇ®ëOÇ≥ÇÒÇ©ÇÁñ·Ç¡ÇΩâ≈Ç™îﬂÇµÇﬁÇ©ÇÁÇ»Åv", "Raphael worries, " + cnvtalk("The wife I got from you seems to cry...")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 2500 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 2590 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„É™„É™„Ç¢„É≥„Äå‰ªä„ÄÅ„Éù„Éî„Éº„Å®„ÅÑ„Å£„Åó„Çá„Å´ÂÜíÈô∫ËÄÖ„Åï„Çì„ÇíÂøúÊè¥„Åó„Å¶„ÅÑ„Çã„ÅÆÔºÅ„Äç", "Rilian encourages, " + cnvtalk("I support adventurer with Poppy!")), 235, 235, 35
+		bmes lang("ÉäÉäÉAÉìÅuç°ÅAÉ|ÉsÅ[Ç∆Ç¢Ç¡ÇµÇÂÇ…ñ`åØé“Ç≥ÇÒÇâûâáÇµÇƒÇ¢ÇÈÇÃÅIÅv", "Rilian encourages, " + cnvtalk("I support adventurer with Poppy!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 2600 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 2690 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Çø„É†„Äå„Åì„Çì„Å™Áå´È°î„ÅÆÊÄ™Áâ©„Å®Êà¶„Å£„Å¶„Åè„Çå„Å¶„ÅÑ„Åü„Çì„Åß„Åô„Å≠‚Ä¶„Äç", "Tam moans, " + cnvtalk("You were fighting a cat-faced monster like this!?")), 235, 235, 35
+		bmes lang("É^ÉÄÅuÇ±ÇÒÇ»îLäÁÇÃâˆï®Ç∆êÌÇ¡ÇƒÇ≠ÇÍÇƒÇ¢ÇΩÇÒÇ≈Ç∑ÇÀÅcÅv", "Tam moans, " + cnvtalk("You were fighting a cat-faced monster like this!?")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 2700 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 2790 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„ÇÆ„É´„Éê„Éº„Éà„Äå„Åä„Åä„ÄÅÂãáËÄÖ„ÇàÔºÅË´¶„ÇÅ„Å™„ÅÑ„Åß„Åè„ÇåÔºÅ„Éï„Éè„Éè„Éè„Ç¢ÔºÅ„Äç", "Gilbert laughs, " + cnvtalk("Ah, the bravest of the brave! Don't give up! Muwahaha!")), 235, 235, 35
+		bmes lang("ÉMÉãÉoÅ[ÉgÅuÇ®Ç®ÅAóEé“ÇÊÅIí˙ÇﬂÇ»Ç¢Ç≈Ç≠ÇÍÅIÉtÉnÉnÉnÉAÅIÅv", "Gilbert laughs, " + cnvtalk("Ah, the bravest of the brave! Don't give up! Muwahaha!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 2800 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 2890 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç¢„Ç§„É≥„ÇØ„ÄåÁßÅ„Å´„ÅØ„Åß„Åç„Å™„ÅÑ„Åì„Å®„ÇÇ„ÄÅ„ÅÇ„Å™„Åü„Å™„Çâ„Åç„Å£„Å®„Åß„Åç„Çã„ÅØ„Åö„Åß„ÅôÔºÅ„Äç", "Ainc encourages, " + cnvtalk("You can do things I can't do!")), 235, 235, 35
+		bmes lang("ÉAÉCÉìÉNÅuéÑÇ…ÇÕÇ≈Ç´Ç»Ç¢Ç±Ç∆Ç‡ÅAÇ†Ç»ÇΩÇ»ÇÁÇ´Ç¡Ç∆Ç≈Ç´ÇÈÇÕÇ∏Ç≈Ç∑ÅIÅv", "Ainc encourages, " + cnvtalk("You can do things I can't do!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 2900 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 2990 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç¢„Éº„Éé„É´„Éâ„Äå„Å©„ÅÜ„Åã„ÄÅ„Åì„ÅÆÊ≠ªÂú∞„ÇíÂàá„ÇäÊäú„Åë„Å¶ÁîüÈÇÑ„Åó„Å¶„Åè„Å†„Åï„ÅÑÔºÅ„Äç", "Arnord wishes, " + cnvtalk("Please survive this battlefield!")), 235, 235, 35
+		bmes lang("ÉAÅ[ÉmÉãÉhÅuÇ«Ç§Ç©ÅAÇ±ÇÃéÄínÇêÿÇËî≤ÇØÇƒê∂ä“ÇµÇƒÇ≠ÇæÇ≥Ç¢ÅIÅv", "Arnord wishes, " + cnvtalk("Please survive this battlefield!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 3000 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 3090 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Éü„Éº„Ç¢„Äå„Å´„ÇÉ„Çì„ÅìÊ∫¢„Çå„Çã„Åì„ÅÆ‰∏ñÁïå„Çí„ÄúÂÆà„Å£„Å¶„Åª„Åó„ÅÑ„Åß„ÅÇ„Çä„Åæ„Åô„ÅÖÔºÅ„Äç", "Mia prays, " + cnvtalk("Mia want nyou to protect this world full of cats!")), 235, 235, 35
+		bmes lang("É~Å[ÉAÅuÇ…Ç·ÇÒÇ±àÏÇÍÇÈÇ±ÇÃê¢äEÇÅ`éÁÇ¡ÇƒÇŸÇµÇ¢Ç≈Ç†ÇËÇ‹Ç∑Ç£ÅIÅv", "Mia prays, " + cnvtalk("Mia want nyou to protect this world full of cats!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 3100 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 3190 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„É¨„É≥„Éà„É≥„ÄåÂêõ„Å´„ÅØÁîü„Åç„Çã‰æ°ÂÄ§„Åå„ÅÇ„Çã‚Ä¶ÁßÅ„Å®ÈÅï„Å£„Å¶„Äç", "Renton mutters, " + cnvtalk("You are worth living...unlike me...")), 235, 235, 35
+		bmes lang("ÉåÉìÉgÉìÅuåNÇ…ÇÕê∂Ç´ÇÈâøílÇ™Ç†ÇÈÅcéÑÇ∆à·Ç¡ÇƒÅv", "Renton mutters, " + cnvtalk("You are worth living...unlike me...")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 3200 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 3290 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Éû„Éº„ÇØ„Çπ„Äå„Éï„ÉÉ„ÄÇÊ≥•Ê£í„Å´ÂøúÊè¥„Åï„Çå„ÇãÊ∞óÂàÜ„ÅØ„Å©„ÅÜ„Åß„ÅôÔºü„Äç", "Marks laughs, " + cnvtalk("Heh, how do you feel about being supported by a thief?")), 235, 235, 35
+		bmes lang("É}Å[ÉNÉXÅuÉtÉbÅBìDñ_Ç…âûâáÇ≥ÇÍÇÈãCï™ÇÕÇ«Ç§Ç≈Ç∑ÅHÅv", "Marks laughs, " + cnvtalk("Heh, how do you feel about being supported by a thief?")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 3300 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 3390 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Éé„Ç®„É´„Äå„Åù„ÅÑ„Å§„Å´Âãù„Å£„Åü„Çâ„Ç´„Éü„Ç¥„É≠„Ç∑„Åè„Çì„Å£„Å¶Âëº„Çì„Åß„ÅÇ„Åí„Çã„Çè„Äç", "Noel laughs, " + cnvtalk("If you win, I'll call you god-killer!")), 235, 235, 35
+		bmes lang("ÉmÉGÉãÅuÇªÇ¢Ç¬Ç…èüÇ¡ÇΩÇÁÉJÉ~ÉSÉçÉVÇ≠ÇÒÇ¡ÇƒåƒÇÒÇ≈Ç†Ç∞ÇÈÇÌÅv", "Noel laughs, " + cnvtalk("If you win, I'll call you god-killer!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 3400 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 3490 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç§„Ç≥„Éº„É´„Äå„Åä„ÅÜ„Åä„ÅÜ„ÄÅË´¶„ÇÅ„Åü„Çâ„Åù„Åì„ÅßÂÆüÈ®ìÁµÇ‰∫Ü„Åò„ÇÉ„Åû„Äç", "Icolle yells, " + cnvtalk("Oh oh oh! If you give up, the experiment is over!")), 235, 235, 35
+		bmes lang("ÉCÉRÅ[ÉãÅuÇ®Ç§Ç®Ç§ÅAí˙ÇﬂÇΩÇÁÇªÇ±Ç≈é¿å±èIóπÇ∂Ç·ÇºÅv", "Icolle yells, " + cnvtalk("Oh oh oh! If you give up, the experiment is over!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 3500 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 3590 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Éê„É´„Ç∂„ÉÉ„ÇØ„Äå‰∏ñÁïåË¶èÊ®°„ÅÆ„Ç¥„ÉüÈáéÈÉé„ÇíÁâá„Å•„Åë„Å°„Åæ„ÅÑ„Å™ÔºÅ„Äç", "Balzak shouts, " + cnvtalk("Clean up world-class trash!")), 235, 235, 35
+		bmes lang("ÉoÉãÉUÉbÉNÅuê¢äEãKñÕÇÃÉSÉ~ñÏòYÇï–Ç√ÇØÇøÇ‹Ç¢Ç»ÅIÅv", "Balzak shouts, " + cnvtalk("Clean up world-class trash!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 3600 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 3690 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„É¨„É¥„É©„Çπ„Äå„ÅÇ„Å™„Åü„Å™„ÇâÂãù„Å£„Å¶„Åè„Çå„Çã„Å®‰ø°„Åò„Å¶„ÅÑ„Åæ„Åô„Çà„Äç", "Revlus says, " + cnvtalk("I believe you will win!")), 235, 235, 35
+		bmes lang("ÉåÉîÉâÉXÅuÇ†Ç»ÇΩÇ»ÇÁèüÇ¡ÇƒÇ≠ÇÍÇÈÇ∆êMÇ∂ÇƒÇ¢Ç‹Ç∑ÇÊÅv", "Revlus says, " + cnvtalk("I believe you will win!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 3700 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 3790 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Éï„É¨„Ç§„ÄåÁ•û„Å†„Çç„ÅÜ„Å®Èçõ„Åà„Çå„Å∞ÊâìÂÄí„Åß„Åç„Çã„ÄÇ„Åù„ÅÜ„Å†„Çç„ÅÜÔºü„Äç", "Fray laughs, " + cnvtalk("You can kill even god if you train!")), 235, 235, 35
+		bmes lang("ÉtÉåÉCÅuê_ÇæÇÎÇ§Ç∆íbÇ¶ÇÍÇŒë≈ì|Ç≈Ç´ÇÈÅBÇªÇ§ÇæÇÎÇ§ÅHÅv", "Fray laughs, " + cnvtalk("You can kill even god if you train!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 3800 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 3890 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç∑„É≥„ÄåÁîü„Åç„Çç„ÄÇÂëΩ„ÇíÂ•™„Çè„Çå„Çã„Åè„Çâ„ÅÑ„Å™„ÇâÂÖà„Å´Â•™„Åà„Äç", "Sin orders, " + cnvtalk("Survive! Don't lose your life...")), 235, 235, 35
+		bmes lang("ÉVÉìÅuê∂Ç´ÇÎÅBñΩÇíDÇÌÇÍÇÈÇ≠ÇÁÇ¢Ç»ÇÁêÊÇ…íDÇ¶Åv", "Sin orders, " + cnvtalk("Survive! Don't lose your life...")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 4200 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 4290 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç≥„Éç„É™„Éº„Äå„Åä„Å¨„Åó„ÅØ„Çè„Åó„Çâ„ÅÆË™á„Çä„Å†ÔºÅ„Äç", "Conery encourages, " + cnvtalk("You are our pride!")), 235, 235, 35
+		bmes lang("ÉRÉlÉäÅ[ÅuÇ®Ç ÇµÇÕÇÌÇµÇÁÇÃå÷ÇËÇæÅIÅv", "Conery encourages, " + cnvtalk("You are our pride!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 4300 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 4390 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("Ë¨é„ÅÆÁßëÂ≠¶ËÄÖ„Äå„ÅäÈ°ò„ÅÑ„ÄÇ„ÅÇ„ÅÆÂ≠êÈÅî„Å´„ÅØÂ∏åÊúõ„ÅåÂøÖË¶Å„Å™„ÅÆ„Äç", "Strange scientist says, " + cnvtalk("Little sisters need hope...")), 235, 235, 35
+		bmes lang("ì‰ÇÃâ»äwé“ÅuÇ®äËÇ¢ÅBÇ†ÇÃéqíBÇ…ÇÕäÛñ]Ç™ïKóvÇ»ÇÃÅv", "Strange scientist says, " + cnvtalk("Little sisters need hope...")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 4500 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 4590 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("Áä¨„ÅÆ„Åä„Åæ„Çè„Çä„Åï„Çì„Äå„Åì„ÅÆ‰∏ñÁïå„ÅÆ„Åü„ÇÅ„Å´„ÇÇ„ÄÅ„Å©„ÅÜ„Åã„Çà„Çç„Åó„Åè„ÅäÈ°ò„ÅÑ„Å™„ÅÆ„Åß„ÅôÔºÅ„Äç", "Dog cop asks, " + cnvtalk("Good luck for this world!")), 235, 235, 35
+		bmes lang("å¢ÇÃÇ®Ç‹ÇÌÇËÇ≥ÇÒÅuÇ±ÇÃê¢äEÇÃÇΩÇﬂÇ…Ç‡ÅAÇ«Ç§Ç©ÇÊÇÎÇµÇ≠Ç®äËÇ¢Ç»ÇÃÇ≈Ç∑ÅIÅv", "Dog cop asks, " + cnvtalk("Good luck for this world!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 4600 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 4690 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Éü„Éº„É™„Çπ„Äå„ÇÇ„ÅØ„ÇÑËªç„Åß„ÅØÂØæÂá¶„Åß„Åç„Å™„ÅÑ‚Ä¶ÔºÅË≤¥Êñπ„Å´Ë®ó„Åó„Åæ„Åô„Äç", "Milis exclaims, " + cnvtalk("The military is finding themselves in over their heads!! I leave this to you.")), 235, 235, 35
+		bmes lang("É~Å[ÉäÉXÅuÇ‡ÇÕÇ‚åRÇ≈ÇÕëŒèàÇ≈Ç´Ç»Ç¢ÅcÅIãMï˚Ç…ëıÇµÇ‹Ç∑Åv", "Milis exclaims, " + cnvtalk("The military is finding themselves in over their heads!! I leave this to you.")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 4700 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 4790 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç™„Éº„Éì„É´„Äå„Å°„Çá„Å£„ÄÅ„ÅÇ„Çì„Åü„Å™„Çâ„Å™„Çì„Å®„Åã„Åß„Åç„Çã„Å†„ÇçÔºü„Åù„ÅÜË®Ä„Å£„Å¶„Åè„ÇåÔºÅ„Äç", "Orville asks, " + cnvtalk("Hey, you can handle this, can't you? Tell me!")), 235, 235, 35
+		bmes lang("ÉIÅ[ÉrÉãÅuÇøÇÂÇ¡ÅAÇ†ÇÒÇΩÇ»ÇÁÇ»ÇÒÇ∆Ç©Ç≈Ç´ÇÈÇæÇÎÅHÇªÇ§åæÇ¡ÇƒÇ≠ÇÍÅIÅv", "Orville asks, " + cnvtalk("Hey, you can handle this, can't you? Tell me!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 4800 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 4890 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç∂„Éä„Éº„Éâ„Äå„Çà„ÅÜ„ÄÇ‰ø∫Êßò„ÅØ„ÅäÂâç„Çí‰ø°„Åò„Å¶„Çã„ÅúÔºÅ„Äç", "Zernard laughs, " + cnvtalk("Hey. I believe in you, man!")), 235, 235, 35
+		bmes lang("ÉUÉiÅ[ÉhÅuÇÊÇ§ÅBâ¥ólÇÕÇ®ëOÇêMÇ∂ÇƒÇÈÇ∫ÅIÅv", "Zernard laughs, " + cnvtalk("Hey. I believe in you, man!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 4900 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 4990 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("Ë±πÈ†≠„ÅÆÊà¶Â£´„Äå‰ø∫„Å™„Å©„ÅÆÂäõ„Åå‰Ωï„Åã„Å´„Å™„Çã„ÇÇ„ÅÆ„Å™„Çâ„Å∞„ÄÅ„ÅÑ„Åè„Çâ„Åß„ÇÇÂäõ„Å´„Å™„Å£„Å¶„ÇÑ„Çä„Åü„ÅÑ„Å®ÊÄù„ÅÜ„Äç", "The leopard warrior says, " + cnvtalk("If I were able to, I would help in any way I could.")), 235, 235, 35
+		bmes lang("ï^ì™ÇÃêÌémÅuâ¥Ç»Ç«ÇÃóÕÇ™âΩÇ©Ç…Ç»ÇÈÇ‡ÇÃÇ»ÇÁÇŒÅAÇ¢Ç≠ÇÁÇ≈Ç‡óÕÇ…Ç»Ç¡ÇƒÇ‚ÇËÇΩÇ¢Ç∆évÇ§Åv", "The leopard warrior says, " + cnvtalk("If I were able to, I would help in any way I could.")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 5000 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 5090 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„É°„Éï„Ç°„É≥„Äå„Åô„Åæ„Å™„ÅÑÔºÅÂ†±ÈÖ¨„ÅØÂá∫„Åõ„Å™„ÅÑ„ÅåÈ†ëÂºµ„Å£„Å¶„Åª„Åó„ÅÑÔºÅ„Äç", "Mefan apologizes, " + cnvtalk("Apologies! I can't pay you back for this, but do your best!")), 235, 235, 35
+		bmes lang("ÉÅÉtÉ@ÉìÅuÇ∑Ç‹Ç»Ç¢ÅIïÒèVÇÕèoÇπÇ»Ç¢Ç™äÊí£Ç¡ÇƒÇŸÇµÇ¢ÅIÅv", "Mefan apologizes, " + cnvtalk("Apologies! I can't pay you back for this, but do your best!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 5100 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 5190 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„É´„Éº„Éç„Äå„Åî‰∏ª‰∫∫Êßò„ÄÅ„É°„Ç§„Éâ„ÅÆÁöÜ„ÅßÂãùÂà©„ÇíÈ°ò„Å£„Å¶„ÅÑ„Åæ„ÅôÔºÅ„Äç", "Lune cheers, " + cnvtalk("Master, all the maids wish you victory!")), 235, 235, 35
+		bmes lang("ÉãÅ[ÉlÅuÇ≤éÂêlólÅAÉÅÉCÉhÇÃäFÇ≈èüóòÇäËÇ¡ÇƒÇ¢Ç‹Ç∑ÅIÅv", "Lune cheers, " + cnvtalk("Master, all the maids wish you victory!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 5200 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 5290 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Åü„Åë„ÅÆ„Åì„Äå‰∏ñÁïåÂÖ®Âúü„ÅåÁÑº„ÅçÊâï„Çè„Çå„Å°„ÇÉ„Åã„Å™„Çè„Å™„ÅÑ„Åã„Çâ„Å™ÔºÅ„Äç", "Bamboo Sprout laughs, " + cnvtalk("We can't afford to have the whole world burn to the ground!")), 235, 235, 35
+		bmes lang("ÇΩÇØÇÃÇ±Åuê¢äEëSìyÇ™èƒÇ´ï•ÇÌÇÍÇøÇ·Ç©Ç»ÇÌÇ»Ç¢Ç©ÇÁÇ»ÅIÅv", "Bamboo Sprout laughs, " + cnvtalk("We can't afford to have the whole world burn to the ground!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 5300 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 5390 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç´„Ç§„É´„ÄåÁà∂„Åï„Åæ„ÄÅÂÜíÈô∫ËÄÖ„Åï„Çì„ÅÆÁÑ°‰∫ã„Çí‰∏ÄÁ∑í„Å´Á•à„Çç„ÅÜ„Äç", "Kyle prays, " + cnvtalk("Father, let us pray together for the adventurer's safety.")), 235, 235, 35
+		bmes lang("ÉJÉCÉãÅuïÉÇ≥Ç‹ÅAñ`åØé“Ç≥ÇÒÇÃñ≥éñÇàÍèèÇ…ãFÇÎÇ§Åv", "Kyle prays, " + cnvtalk("Father, let us pray together for the adventurer's safety.")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 5400 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 5490 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("Âßâ„Äå„ÅäÂßâ„Å°„ÇÉ„Çì„ÇíÊ≥£„Åã„Åõ„Å™„ÅÑ„Åß„Å≠Ôºü„Äç", "Older sister requests, " + cnvtalk("Don't make my big sister cry, okay?")), 235, 235, 35
+		bmes lang("éoÅuÇ®éoÇøÇ·ÇÒÇãÉÇ©ÇπÇ»Ç¢Ç≈ÇÀÅHÅv", "Older sister requests, " + cnvtalk("Don't make my big sister cry, okay?")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 6400 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 6490 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„É©„Ç§„Ç®„ÄåÂêõ„Åå„ÄÅÂπ≥Á©è„Å™ÁîüÊ¥ª„ÇíÂèñ„ÇäÊàª„Åõ„Åæ„Åô„Çà„ÅÜ„Å´‚Ä¶„Äç", "Eila prays, " + cnvtalk("May you find peace in your life.")), 235, 235, 35
+		bmes lang("ÉâÉCÉGÅuåNÇ™ÅAïΩâ∏Ç»ê∂äàÇéÊÇËñﬂÇπÇ‹Ç∑ÇÊÇ§Ç…ÅcÅv", "Eila prays, " + cnvtalk("May you find peace in your life.")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 6600 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 6690 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç∑„É©„Éè„Äå" + _onii(cdata(CDATA_SEX, CHARA_PLAYER)) + "„Åï„Çì„ÄÅË≤†„Åë„Å™„ÅÑ„ÅßÔºÅ„Äç", "Siraha cries, " + cnvtalk("Don't lose, " + name(CHARA_PLAYER) + "!")), 235, 235, 35
+		bmes lang("ÉVÉâÉnÅu" + _onii(cdata(CDATA_SEX, CHARA_PLAYER)) + "Ç≥ÇÒÅAïâÇØÇ»Ç¢Ç≈ÅIÅv", "Siraha cries, " + cnvtalk("Don't lose, " + name(CHARA_PLAYER) + "!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 7100 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 7190 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Éä„Éó„É©„Çπ„ÄåÁßÅ„ÄÅ„ÅÇ„Å™„Åü„ÅÆÊåÅ„Å§ÂèØËÉΩÊÄß„Çí‰ø°„Åò„Å¶„Çã„Çà„Äç", "Naplus says, " + cnvtalk("I have faith in your potential.")), 235, 235, 35
+		bmes lang("ÉiÉvÉâÉXÅuéÑÅAÇ†Ç»ÇΩÇÃéùÇ¬â¬î\ê´ÇêMÇ∂ÇƒÇÈÇÊÅv", "Naplus says, " + cnvtalk("I have faith in your potential.")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 7300 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 7390 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Éä„Ç∫„Éä„Äå„ÇÇ„Å£„Å®Èçõ„Åà„Å¶„Åä„Åè„Åπ„Åç„Å†„Å£„Åü„Å™„Äç", "Nazuna remarks, " + cnvtalk("I should have trained you even harder.")), 235, 235, 35
+		bmes lang("ÉiÉYÉiÅuÇ‡Ç¡Ç∆íbÇ¶ÇƒÇ®Ç≠Ç◊Ç´ÇæÇ¡ÇΩÇ»Åv", "Nazuna remarks, " + cnvtalk("I should have trained you even harder.")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 7600 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 7690 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç¢„É™„Çπ„ÄåÊ≠ª‰∏≠„ÉãÊ¥ª„Ç¢„É™„ÉÉ„Çπ„Äç", "Alice says, " + cnvtalk("There is life in death, Alice.")), 235, 235, 35
+		bmes lang("ÉAÉäÉXÅuéÄíÜÉjäàÉAÉäÉbÉXÅv", "Alice says, " + cnvtalk("There is life in death, Alice.")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 7700 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 7790 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Éç„Ç§„É≥„Äå„Çà„ÅèÂàÜ„Åã„Çâ„Å™„ÅÑ„Åë„Å©‚Ä¶Ë≤†„Åë„Çã„Çì„Åò„ÇÉ„Å™„ÅÑ„Çè„ÇàÔºÅ„Äç", "Nein cheers, " + cnvtalk("I have no idea what's going on, but... you'd better not lose!")), 235, 235, 35
+		bmes lang("ÉlÉCÉìÅuÇÊÇ≠ï™Ç©ÇÁÇ»Ç¢ÇØÇ«ÅcïâÇØÇÈÇÒÇ∂Ç·Ç»Ç¢ÇÌÇÊÅIÅv", "Nein cheers, " + cnvtalk("I have no idea what's going on, but... you'd better not lose!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 7900 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 7990 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç¨„Éº„Ç∏„É≥„Éâ„Äå„Åì„ÅÆÊòü„Å´„Åì„Çì„Å™ÊÄ™Áâ©„ÅåÊΩú„Çì„Åß„ÅÑ„Åü„Å®„ÅØ‚Ä¶„Äç", "Jin remarks, " + cnvtalk("I had no idea such a monster was lurking on this planet...")), 235, 235, 35
+		bmes lang("ÉKÅ[ÉWÉìÉhÅuÇ±ÇÃêØÇ…Ç±ÇÒÇ»âˆï®Ç™êˆÇÒÇ≈Ç¢ÇΩÇ∆ÇÕÅcÅv", "Jin remarks, " + cnvtalk("I had no idea such a monster was lurking on this planet...")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 8000 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 8090 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç§„É´„Éû„Äå„Å©„Çì„Å™Âäõ„ÇÇ„ÄÅ„Å©„Çì„Å™ÊäÄË°ì„ÇÇ„ÄÅÂÖ®„Å¶„ÅØ‰Ωø„ÅÜËÄÖÊ¨°Á¨¨„Å™„Çì„Åò„ÇÉÔºÅ„Äç", "Irma laughs, " + cnvtalk("It doesn't matter how much power or skill you have - it's all about how you use it!")), 235, 235, 35
+		bmes lang("ÉCÉãÉ}ÅuÇ«ÇÒÇ»óÕÇ‡ÅAÇ«ÇÒÇ»ãZèpÇ‡ÅAëSÇƒÇÕégÇ§é“éüëÊÇ»ÇÒÇ∂Ç·ÅIÅv", "Irma laughs, " + cnvtalk("It doesn't matter how much power or skill you have - it's all about how you use it!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 8100 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 8190 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Çπ„Éî„Éï„Ç°„É´„Äå„Å™„Çì„Å†„ÄÅÂçäÁ´ú„Åò„ÇÉ„Å™„Åè„Å¶ÂçäËõá„Åã‚Ä¶„ÅÇ„Å™„Åü„Å´‰ªª„Åõ„Çã„Å≠„Äç", "Spipha orders, " + cnvtalk("So it's half snake instead of half dragon... I leave this to you.")), 235, 235, 35
+		bmes lang("ÉXÉsÉtÉ@ÉãÅuÇ»ÇÒÇæÅAîºó≥Ç∂Ç·Ç»Ç≠Çƒîºé÷Ç©ÅcÇ†Ç»ÇΩÇ…îCÇπÇÈÇÀÅv", "Spipha orders, " + cnvtalk("So it's half snake instead of half dragon... I leave this to you.")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 8400 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 8490 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Éü„ÉÖ„Ç≠„Äå„Çè„Åó„ÅØ‚Ä¶„Åä„Å¨„Åó„Å´Âãù„Å£„Å¶„Åª„Åó„ÅÑ„Å£ÔºÅ„Äç", "Abyss Princess cheers, " + cnvtalk("I... want you to win!")), 235, 235, 35
+		bmes lang("É~ÉdÉLÅuÇÌÇµÇÕÅcÇ®Ç ÇµÇ…èüÇ¡ÇƒÇŸÇµÇ¢Ç¡ÅIÅv", "Abyss Princess cheers, " + cnvtalk("I... want you to win!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 9100 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 9190 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç®„É¶„É´„ÄåÊ®™„Åß„É¨„Éä„Ç§„ÇÇÂøúÊè¥„Åó„Å¶„ÅÑ„Çã„Çà„Äç", "Regulus says, " + cnvtalk("Renai is cheering for you at my side.")), 235, 235, 35
+		bmes lang("ÉGÉÜÉãÅuâ°Ç≈ÉåÉiÉCÇ‡âûâáÇµÇƒÇ¢ÇÈÇÊÅv", "Regulus says, " + cnvtalk("Renai is cheering for you at my side.")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 9200 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 9290 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„É©„Ç§„Çº„É´„Äå‚Ä¶ÔºÅ„Äç", "Raizel gasps, " + cnvtalk("!!")), 235, 235, 35
+		bmes lang("ÉâÉCÉ[ÉãÅuÅcÅIÅv", "Raizel gasps, " + cnvtalk("!!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 9300 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 9390 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç∑„É•„É©„Ç§„ÉÄ„ÄåÂøò„Çå„Çã„Å™„ÄÅÁîü„Åç„Å¶Â∏∞„Çã„Åæ„Åß„Åå‰ªï‰∫ã„Å†„Äç", "Shuraida states, " + cnvtalk("Don't forget - it's your job to make it out of this alive.")), 235, 235, 35
+		bmes lang("ÉVÉÖÉâÉCÉ_ÅuñYÇÍÇÈÇ»ÅAê∂Ç´ÇƒãAÇÈÇ‹Ç≈Ç™édéñÇæÅv", "Shuraida states, " + cnvtalk("Don't forget - it's your job to make it out of this alive.")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 9400 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 9490 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Éû„É´„Ç´„Äå„Åù„ÅÑ„Å§„Åå‰Ωï„Çí‰ºÅ„Çì„Åß„Çã„ÅÆ„ÅãÁü•„Çâ„Å™„ÅÑ„Åë„Å©„ÄÅ„ÇÑ„Å£„Å°„ÇÉ„ÅàÔºÅ„Äç", "Marka cheers, " + cnvtalk("I don't know what that guy is up to, but get him good!")), 235, 235, 35
+		bmes lang("É}ÉãÉJÅuÇªÇ¢Ç¬Ç™âΩÇäÈÇÒÇ≈ÇÈÇÃÇ©ímÇÁÇ»Ç¢ÇØÇ«ÅAÇ‚Ç¡ÇøÇ·Ç¶ÅIÅv", "Marka cheers, " + cnvtalk("I don't know what that guy is up to, but get him good!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 10500 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 10590 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç∑„Ç∫„É´„Äå„ÅÑ„Å≤„Å≤‚Ä¶Â∞ë„Åó„Å∞„Åã„Çä‰ªãÂÖ•„Åï„Åõ„Å¶„ÇÇ„Çâ„ÅÑ„Åæ„Åô„ÅÆ„Åò„ÇÉ„Äç", "Ssil snickers, " + cnvtalk("Heehee... Looks like I'll have to intervene for a bit.")), 235, 235, 35
+		bmes lang("ÉVÉYÉãÅuÇ¢Ç–Ç–Åcè≠ÇµÇŒÇ©ÇËâÓì¸Ç≥ÇπÇƒÇ‡ÇÁÇ¢Ç‹Ç∑ÇÃÇ∂Ç·Åv", "Ssil snickers, " + cnvtalk("Heehee... Looks like I'll have to intervene for a bit.")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 10900 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 10990 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Éô„É´„Éï„Ç°„Éº„Éà„ÄåÂêõ„ÅØ„ÇØ„É≠„ÇÑ„Çì„Å®ÂÜç‰ºö„Åï„Åõ„Å¶„Åè„Çå„ÅüÊÅ©‰∫∫„Å†ÔºÅÁÑ°‰∫ã„ÇíÁ•à„Å£„Å¶„ÅÑ„ÇãÔºÅ„Äç", "Belphat prays, " + cnvtalk("You're the one who reunited me with Kuro-chan! I hope you'll be okay!")), 235, 235, 35
+		bmes lang("ÉxÉãÉtÉ@Å[ÉgÅuåNÇÕÉNÉçÇ‚ÇÒÇ∆çƒâÔÇ≥ÇπÇƒÇ≠ÇÍÇΩâ∂êlÇæÅIñ≥éñÇãFÇ¡ÇƒÇ¢ÇÈÅIÅv", "Belphat prays, " + cnvtalk("You're the one who reunited me with Kuro-chan! I hope you'll be okay!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 11500 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 11590 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„É©„É≥„Ç´„Éº„Çø„ÄåÊØç‰∏ä‚Ä¶„ÅÇ„ÅÆ‰∫∫„Çí„ÅäÂÆà„Çä„Åè„Å†„Åï„ÅÑ‚Ä¶ÔºÅ„Äç", "Lankata pleads, " + cnvtalk("Mother... please protect this adventurer!")), 235, 235, 35
+		bmes lang("ÉâÉìÉJÅ[É^ÅuïÍè„ÅcÇ†ÇÃêlÇÇ®éÁÇËÇ≠ÇæÇ≥Ç¢ÅcÅIÅv", "Lankata pleads, " + cnvtalk("Mother... please protect this adventurer!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 12600 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 12690 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç´„É©Â§™„Äå„Çº„Éü„Åß„ÇÑ„Å£„Åü„Å®„Åì„Çç„ÇíÊÄù„ÅÑÂá∫„Åó„Å¶ÔºÅ„Äç", "Karata pleads, " + cnvtalk("Remember all of your training back in the seminars!")), 235, 235, 35
+		bmes lang("ÉJÉâëæÅuÉ[É~Ç≈Ç‚Ç¡ÇΩÇ∆Ç±ÇÎÇévÇ¢èoÇµÇƒÅIÅv", "Karata pleads, " + cnvtalk("Remember all of your training back in the seminars!")), 235, 235, 35
 	}
 	if ( gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) >= 13500 & gdata(GDATA_FLAG_CUT_IN_MESSAGE_2) < 13590 ) {
 		gdata(GDATA_FLAG_CUT_IN_MESSAGE_2)++
 		pos inf_clockw + 80, inf_clocky + 95
 		color 0, 0, 0
-		bmes lang("„Ç´„É´„É©„ÄåEtherwind„ÅÆÂõ†Êûú„Åå„ÄÅ„ÅÇ„Å™„Åü„ÅÆÂäõ„Å´„Å™„Çã„Çè„Äç", "Karura reassures, " + cnvtalk("The fate of the Etherwind will give you strength.")), 235, 235, 35
+		bmes lang("ÉJÉãÉâÅuEtherwindÇÃàˆâ Ç™ÅAÇ†Ç»ÇΩÇÃóÕÇ…Ç»ÇÈÇÌÅv", "Karura reassures, " + cnvtalk("The fate of the Etherwind will give you strength.")), 235, 235, 35
  	}
 
 	if ( TweakData(TWEAK_GAMEPLAY_CG_DISABLE_CURTAIN_CALL, TWEAK_CATEGORY_GAMEPLAY) == FALSE ) {
@@ -1598,7 +1598,7 @@
 			if ( jp ) {
 				pos inf_clockw + 380, inf_clocky + 17
 				color 0, 0, 0
-				bmes "Êó©„Åè„Åì„ÅÆÂ†¥„ÇíÈõ¢„Çå„Åü„Åª„ÅÜ„Åå„ÅÑ„ÅÑÊ∞ó„Åå„Åô„Çã‚Ä¶", 235, 35, 35
+				bmes "ëÅÇ≠Ç±ÇÃèÍÇó£ÇÍÇΩÇŸÇ§Ç™Ç¢Ç¢ãCÇ™Ç∑ÇÈÅc", 235, 35, 35
 			}
 			if ( en ) {
 				pos inf_clockw + 380, inf_clocky + 17
@@ -1610,7 +1610,7 @@
 			if ( jp ) {
 				pos inf_clockw + 380, inf_clocky + 17
 				color 0, 0, 0
-				bmes "*„Ç´„Éº„ÉÜ„É≥„Ç≥„Éº„É´*", 235, 35, 35
+				bmes "*ÉJÅ[ÉeÉìÉRÅ[Éã*", 235, 35, 35
 			}
 			if ( en ) {
 				pos inf_clockw + 380, inf_clocky + 17
@@ -5377,14 +5377,14 @@
 
 #defcfunc cnveqweight int cnveqweight_arg1
 	if ( cdata(CDATA_EQUIP_WEIGHT, cnveqweight_arg1) >= 35000 ) {
-		return lang("(ÈáçË£ÖÂÇô)", "(Heavy)")
+		return lang("(èdëïîı)", "(Heavy)")
 	}
 
 	if ( cdata(CDATA_EQUIP_WEIGHT, cnveqweight_arg1) >= 15000 ) {
-		return lang("(‰∏≠Ë£ÖÂÇô)", "(Medium)")
+		return lang("(íÜëïîı)", "(Medium)")
 	}
 
-	return lang("(ËªΩË£ÖÂÇô)", "(Light)")
+	return lang("(åyëïîı)", "(Light)")
 
 #defcfunc calcexpalive int calcexpalive_arg1
 	return calcexpalive_arg1 * 100
@@ -5415,7 +5415,7 @@
 				break
 			}
 			else {
-				txt lang(name(r1) + "„ÅÆË∫´‰Ωì„Åã„ÇâÊñ∞„Åü„Å™" + bodyn(EQUIP_SLOT_NECK) + "„ÅåÁîü„Åà„Å¶„Åç„ÅüÔºÅ", name(r1) + " grow" + _s(r1) + " a new " + bodyn(EQUIP_SLOT_NECK) + "!")
+				txt lang(name(r1) + "ÇÃêgëÃÇ©ÇÁêVÇΩÇ»" + bodyn(EQUIP_SLOT_NECK) + "Ç™ê∂Ç¶ÇƒÇ´ÇΩÅI", name(r1) + " grow" + _s(r1) + " a new " + bodyn(EQUIP_SLOT_NECK) + "!")
 				break
 			}
 		}
@@ -5425,7 +5425,7 @@
 				break
 			}
 			else {
-				txt lang(name(r1) + "„ÅÆË∫´‰Ωì„Åã„ÇâÊñ∞„Åü„Å™" + bodyn(EQUIP_SLOT_BACK) + "„ÅåÁîü„Åà„Å¶„Åç„ÅüÔºÅ", name(r1) + " grow" + _s(r1) + " a new " + bodyn(EQUIP_SLOT_BACK) + "!")
+				txt lang(name(r1) + "ÇÃêgëÃÇ©ÇÁêVÇΩÇ»" + bodyn(EQUIP_SLOT_BACK) + "Ç™ê∂Ç¶ÇƒÇ´ÇΩÅI", name(r1) + " grow" + _s(r1) + " a new " + bodyn(EQUIP_SLOT_BACK) + "!")
 				break
 			}
 		}
@@ -5435,7 +5435,7 @@
 				break
 			}
 			else {
-				txt lang(name(r1) + "„ÅÆË∫´‰Ωì„Åã„ÇâÊñ∞„Åü„Å™" + bodyn(EQUIP_SLOT_HAND) + "„ÅåÁîü„Åà„Å¶„Åç„ÅüÔºÅ", name(r1) + " grow" + _s(r1) + " a new " + bodyn(EQUIP_SLOT_HAND) + "!")
+				txt lang(name(r1) + "ÇÃêgëÃÇ©ÇÁêVÇΩÇ»" + bodyn(EQUIP_SLOT_HAND) + "Ç™ê∂Ç¶ÇƒÇ´ÇΩÅI", name(r1) + " grow" + _s(r1) + " a new " + bodyn(EQUIP_SLOT_HAND) + "!")
 				break
 			}
 		}
@@ -5445,7 +5445,7 @@
 				break
 			}
 			else {
-				txt lang(name(r1) + "„ÅÆË∫´‰Ωì„Åã„ÇâÊñ∞„Åü„Å™" + bodyn(EQUIP_SLOT_RING) + "„ÅåÁîü„Åà„Å¶„Åç„ÅüÔºÅ", name(r1) + " grow" + _s(r1) + " a new " + bodyn(EQUIP_SLOT_RING) + "!")
+				txt lang(name(r1) + "ÇÃêgëÃÇ©ÇÁêVÇΩÇ»" + bodyn(EQUIP_SLOT_RING) + "Ç™ê∂Ç¶ÇƒÇ´ÇΩÅI", name(r1) + " grow" + _s(r1) + " a new " + bodyn(EQUIP_SLOT_RING) + "!")
 				break
 			}
 		}
@@ -5455,7 +5455,7 @@
 				break
 			}
 			else {
-				txt lang(name(r1) + "„ÅÆË∫´‰Ωì„Åã„ÇâÊñ∞„Åü„Å™" + bodyn(EQUIP_SLOT_ARM) + "„ÅåÁîü„Åà„Å¶„Åç„ÅüÔºÅ", name(r1) + " grow" + _s(r1) + " a new " + bodyn(EQUIP_SLOT_ARM) + "!")
+				txt lang(name(r1) + "ÇÃêgëÃÇ©ÇÁêVÇΩÇ»" + bodyn(EQUIP_SLOT_ARM) + "Ç™ê∂Ç¶ÇƒÇ´ÇΩÅI", name(r1) + " grow" + _s(r1) + " a new " + bodyn(EQUIP_SLOT_ARM) + "!")
 				break
 			}
 		}
@@ -5465,7 +5465,7 @@
 				break
 			}
 			else {
-				txt lang(name(r1) + "„ÅÆË∫´‰Ωì„Åã„ÇâÊñ∞„Åü„Å™" + bodyn(EQUIP_SLOT_WAIST) + "„ÅåÁîü„Åà„Å¶„Åç„ÅüÔºÅ", name(r1) + " grow" + _s(r1) + " a new " + bodyn(EQUIP_SLOT_WAIST) + "!")
+				txt lang(name(r1) + "ÇÃêgëÃÇ©ÇÁêVÇΩÇ»" + bodyn(EQUIP_SLOT_WAIST) + "Ç™ê∂Ç¶ÇƒÇ´ÇΩÅI", name(r1) + " grow" + _s(r1) + " a new " + bodyn(EQUIP_SLOT_WAIST) + "!")
 				break
 			}
 		}
@@ -5475,7 +5475,7 @@
 				break
 			}
 			else {
-				txt lang(name(r1) + "„ÅÆË∫´‰Ωì„Åã„ÇâÊñ∞„Åü„Å™" + bodyn(EQUIP_SLOT_LEG) + "„ÅåÁîü„Åà„Å¶„Åç„ÅüÔºÅ", name(r1) + " grow" + _s(r1) + " a new " + bodyn(EQUIP_SLOT_LEG) + "!")
+				txt lang(name(r1) + "ÇÃêgëÃÇ©ÇÁêVÇΩÇ»" + bodyn(EQUIP_SLOT_LEG) + "Ç™ê∂Ç¶ÇƒÇ´ÇΩÅI", name(r1) + " grow" + _s(r1) + " a new " + bodyn(EQUIP_SLOT_LEG) + "!")
 				break
 			}
 		}
@@ -5485,7 +5485,7 @@
 				break
 			}
 			else {
-				txt lang(name(r1) + "„ÅÆË∫´‰Ωì„Åã„ÇâÊñ∞„Åü„Å™" + bodyn(EQUIP_SLOT_HEAD) + "„ÅåÁîü„Åà„Å¶„Åç„ÅüÔºÅ", name(r1) + " grow" + _s(r1) + " a new " + bodyn(EQUIP_SLOT_HEAD) + "!")
+				txt lang(name(r1) + "ÇÃêgëÃÇ©ÇÁêVÇΩÇ»" + bodyn(EQUIP_SLOT_HEAD) + "Ç™ê∂Ç¶ÇƒÇ´ÇΩÅI", name(r1) + " grow" + _s(r1) + " a new " + bodyn(EQUIP_SLOT_HEAD) + "!")
 				break
 			}
 		}
@@ -5505,10 +5505,10 @@
 			if ( r2 == 0 ) {
 				txtef COLOR_GREEN
 				if ( r1 == CHARA_PLAYER ) {
-					txt lang(name(r1) + "„ÅØ„É¨„Éô„É´" + cdata(CDATA_LEVEL, r1) + "„Å´„Å™„Å£„ÅüÔºÅ", name(r1) + " have gained a level.")
+					txt lang(name(r1) + "ÇÕÉåÉxÉã" + cdata(CDATA_LEVEL, r1) + "Ç…Ç»Ç¡ÇΩÅI", name(r1) + " have gained a level.")
 				}
 				else {
-					txt lang(name(r1) + "„ÅØÊàêÈï∑„Åó„Åü„ÄÇ", name(r1) + " " + have(r1) + " grown up.")
+					txt lang(name(r1) + "ÇÕê¨í∑ÇµÇΩÅB", name(r1) + " " + have(r1) + " grown up.")
 				}
 			}
 		}
@@ -5538,7 +5538,7 @@
 				if ( gdata(GDATA_FLAG_GAME_MODE) != 2 & gdata(GDATA_FLAG_GAME_MODE) != 5 ) {
 					snd SOUNDLIST_CHIME
 					txtef COLOR_RED
-					txt lang("Ê≥®ÊÑèÔºÅ„Çπ„Éö„É´„Éú„Éº„Éä„Çπ„ÅØ100‰ª•‰∏ä„ÅÇ„Çã„Å®Êñ∞„Åü„Å´Áç≤Âæó„Åß„Åç„Å™„ÅÑ„ÄÇ", "Caution! While the spell bonus is 100 or more, you cannot get new.")
+					txt lang("íçà”ÅIÉXÉyÉãÉ{Å[ÉiÉXÇÕ100à»è„Ç†ÇÈÇ∆êVÇΩÇ…älìæÇ≈Ç´Ç»Ç¢ÅB", "Caution! While the spell bonus is 100 or more, you cannot get new.")
 				}
 			}
 
@@ -6445,7 +6445,7 @@
 		}
 	}
 	if ( develop ) {
-		txt lang("[ÂëΩ‰∏≠Âäõ" + tohit + "][ÂõûÈÅøÂäõ" + evade + "]", "[HIT" + tohit + "][EVA" + evade + "]")
+		txt lang("[ñΩíÜóÕ" + tohit + "][âÒîóÕ" + evade + "]", "[HIT" + tohit + "][EVA" + evade + "]")
 	}
 	if ( (cdata(CDATA_CRIT_CHANCE, cc) * 4 + 10) * (handryoute + 10) / 10 * ((cr + 10) / 10) > (rnd(400) + rnd(creva + 2) + cdata(CDATA_DEC_ENEMY_CRIT_CHANCE, tc) * 2) * (extraattack + 1) * ((cdata(CDATA_CONDITION_JIU_JITSU, tc) * 2 + 8) / 10) ) {
 		critical = 1
@@ -6499,7 +6499,7 @@
 	}
 	evade = evade * 3 / 2
 	if ( gdata(GDATA_FLAG_DATA_SCAN_CHARA_INDEX) != 0 ) {
-		txt lang("[ÂëΩ‰∏≠Âäõ" + tohit + "][ÂõûÈÅøÂäõ" + evade + "]", "[HIT" + tohit + "][EVA" + evade + "]")
+		txt lang("[ñΩíÜóÕ" + tohit + "][âÒîóÕ" + evade + "]", "[HIT" + tohit + "][EVA" + evade + "]")
 	}
 	if ( rnd(tohit) > rnd(evade) ) {
 		return 1
@@ -6750,7 +6750,7 @@
 			}
 			if ( synccheck(cc, -1) ) {
 				txtef COLOR_RED
-				txt lang(name(cc) + "„ÅÆÊ∏æË∫´„ÅÆ‰∏ÄÊíÉ„ÅåÁÇ∏Ë£Ç„Åó„Åü„ÄÇ", name(cc) + " attacked with full power.")
+				txt lang(name(cc) + "ÇÃü”êgÇÃàÍåÇÇ™‡yóÙÇµÇΩÅB", name(cc) + " attacked with full power.")
 				txtmore
 			}
 			if ( encharge == 100 ) {
@@ -6776,7 +6776,7 @@
 				pierce = 100
 				if ( synccheck(cc, -1) ) {
 					txtef COLOR_YELLOW
-					txt lang(name(cc) + "„ÅØËÖï„Çí„Å≠„Åò„ÇäÈã≠„ÅÑÁ™Å„Åç„ÇíÊîæ„Å£„Åü„ÄÇ", "\"Drill Sword!\" " + name(cc) + " twist" + _s(cc) + " " + his(cc) + " arm and deliver" + _s(cc) + " a piercing blow.")
+					txt lang(name(cc) + "ÇÕòrÇÇÀÇ∂ÇËâsÇ¢ìÀÇ´Çï˙Ç¡ÇΩÅB", "\"Drill Sword!\" " + name(cc) + " twist" + _s(cc) + " " + his(cc) + " arm and deliver" + _s(cc) + " a piercing blow.")
 					gdata(GDATA_PIERCING_BONUS) = 3
 					txtmore
 				}
@@ -6786,7 +6786,7 @@
 			pierce = 100
 			if ( synccheck(cc, -1) ) {
 				txtef COLOR_YELLOW
-				txt lang(" *„Ç∑„É£„Ç≠„Éº„É≥* ", " *vorpal* ")
+				txt lang(" *ÉVÉÉÉLÅ[Éì* ", " *vorpal* ")
 				gdata(GDATA_PIERCING_BONUS) = 3
 				txtmore
 			}
@@ -6809,7 +6809,7 @@
 			pierce = 100
 			if ( synccheck(cc, -1) ) {
 				txtef COLOR_YELLOW
-				txt lang(" *„Ç∫„Éê„Ç∑„É•„ÉÉ* ", " *vorpal* ")
+				txt lang(" *ÉYÉoÉVÉÖÉb* ", " *vorpal* ")
 				gdata(GDATA_PIERCING_BONUS) = 1
 				txtmore
 			}
@@ -6910,18 +6910,18 @@
 #deffunc cnvbonus int cnvbonus_arg1, int cnvbonus_arg2
 	if ( cnvbonus_arg1 >= 50 & cnvbonus_arg1 < 61 ) {
 		if ( cnvbonus_arg2 > 0 ) {
-			buff += lang("„ÄÄ„ÄÄ" + skillname(cnvbonus_arg1) + "ËÄêÊÄß„Å´ <green>„ÇØ„É©„Çπ" + cnvbonus_arg2 / 50 + "<col>(" + cnvbonus_arg2 + ") „ÅÆ„Éú„Éº„Éä„Çπ\n", skillname(cnvbonus_arg1) + " resist <green> Class " + cnvbonus_arg2 / 50 + "<col>(" + cnvbonus_arg2 + ") bonus\n")
+			buff += lang("Å@Å@" + skillname(cnvbonus_arg1) + "ëœê´Ç… <green>ÉNÉâÉX" + cnvbonus_arg2 / 50 + "<col>(" + cnvbonus_arg2 + ") ÇÃÉ{Å[ÉiÉX\n", skillname(cnvbonus_arg1) + " resist <green> Class " + cnvbonus_arg2 / 50 + "<col>(" + cnvbonus_arg2 + ") bonus\n")
 		}
 		if ( cnvbonus_arg2 < 0 ) {
-			buff += lang("„ÄÄ„ÄÄ" + skillname(cnvbonus_arg1) + "ËÄêÊÄß„Å´ <red>„ÇØ„É©„Çπ" + cnvbonus_arg2 / 50 + "<col>(" + cnvbonus_arg2 + ") „ÅÆ„Éû„Ç§„Éä„Çπ‰øÆÊ≠£\n", skillname(cnvbonus_arg1) + " resist <red> Class " + cnvbonus_arg2 / 50 + "<col>(" + cnvbonus_arg2 + ") penalty\n")
+			buff += lang("Å@Å@" + skillname(cnvbonus_arg1) + "ëœê´Ç… <red>ÉNÉâÉX" + cnvbonus_arg2 / 50 + "<col>(" + cnvbonus_arg2 + ") ÇÃÉ}ÉCÉiÉXèCê≥\n", skillname(cnvbonus_arg1) + " resist <red> Class " + cnvbonus_arg2 / 50 + "<col>(" + cnvbonus_arg2 + ") penalty\n")
 		}
 	}
 	else {
 		if ( cnvbonus_arg2 > 0 ) {
-			buff += lang("„ÄÄ„ÄÄ" + skillname(cnvbonus_arg1) + "„Å´ <green>+" + cnvbonus_arg2 + "<col> „ÅÆ„Éú„Éº„Éä„Çπ\n", skillname(cnvbonus_arg1) + " <green> +" + cnvbonus_arg2 + "<col> bonus\n")
+			buff += lang("Å@Å@" + skillname(cnvbonus_arg1) + "Ç… <green>+" + cnvbonus_arg2 + "<col> ÇÃÉ{Å[ÉiÉX\n", skillname(cnvbonus_arg1) + " <green> +" + cnvbonus_arg2 + "<col> bonus\n")
 		}
 		if ( cnvbonus_arg2 < 0 ) {
-			buff += lang("„ÄÄ„ÄÄ" + skillname(cnvbonus_arg1) + "„Å´ <red>" + cnvbonus_arg2 + "<col> „ÅÆ„Éû„Ç§„Éä„Çπ‰øÆÊ≠£\n", skillname(cnvbonus_arg1) + " <red> " + cnvbonus_arg2 + "<col> penalty\n")
+			buff += lang("Å@Å@" + skillname(cnvbonus_arg1) + "Ç… <red>" + cnvbonus_arg2 + "<col> ÇÃÉ}ÉCÉiÉXèCê≥\n", skillname(cnvbonus_arg1) + " <red> " + cnvbonus_arg2 + "<col> penalty\n")
 		}
 	}
 	return

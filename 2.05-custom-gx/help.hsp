@@ -13,38 +13,38 @@
 	}
 	if ( page == 0 ) {
 		setCom "", "aaa"
-		setCom lang("ãƒ˜ãƒ«ãƒ—", "Help"), key_help
-		setCom lang("ãƒ­ã‚°", "Log"), key_msglog
-		setCom lang("ã‚·ãƒ¼ãƒˆ", "Chara"), key_charainfo
+		setCom lang("ƒwƒ‹ƒv", "Help"), key_help
+		setCom lang("ƒƒO", "Log"), key_msglog
+		setCom lang("ƒV[ƒg", "Chara"), key_charainfo
 		setCom "", "aaa"
-		setCom lang("æ—¥èªŒ", "Journal"), key_journal
+		setCom lang("“ú", "Journal"), key_journal
 		setCom "", "aaa"
 		setCom "", "aaa"
 		setCom "", "aaa"
 	}
 	if ( page == 1 ) {
 		setCom "", "aaa"
-		setCom lang("è£…å‚™", "Wear"), key_wear
-		setCom lang("ä¼‘æ¯", "Rest"), key_rest
-		setCom lang("é­”æ³•", "Spell"), key_cast
+		setCom lang("‘•”õ", "Wear"), key_wear
+		setCom lang("‹x‘§", "Rest"), key_rest
+		setCom lang("–‚–@", "Spell"), key_cast
 		setCom "", "aaa"
-		setCom lang("æŠ€èƒ½", "Skill"), key_skill
-		setCom lang("åºƒæŠ€èƒ½", "W Skill"), key_wipe
-		setCom lang("æ˜ã‚‹", "Dig"), key_dig
+		setCom lang("‹Z”\", "Skill"), key_skill
+		setCom lang("L‹Z”\", "W Skill"), key_wipe
+		setCom lang("Œ@‚é", "Dig"), key_dig
 		setCom "", "aaa"
 	}
 	if ( page == 2 ) {
 		setCom "", "aaa"
-		setCom lang("ç¥ˆã‚‹", "Pray"), key_pray
-		setCom lang("è£…å¡«", "Ammo"), key_ammo
-		setCom lang("å¹²æ¸‰", "Interact"), key_interact
+		setCom lang("‹F‚é", "Pray"), key_pray
+		setCom lang("‘•“U", "Ammo"), key_ammo
+		setCom lang("Š±Â", "Interact"), key_interact
 		setCom "", "aaa"
-		setCom lang("ä½“å½“ã‚Š", "Bash"), key_bash
-		setCom lang("å°„æ’ƒ", "Fire"), key_fire
-		setCom lang("ï½½ï¾€ï½¯ï½¸", "Stack"), key_itemstack
+		setCom lang("‘Ì“–‚è", "Bash"), key_bash
+		setCom lang("ËŒ‚", "Fire"), key_fire
+		setCom lang("½À¯¸", "Stack"), key_itemstack
 		setCom "", "aaa"
 	}
-	s = lang("æƒ…å ±", "Info"), lang("è¡Œå‹•", "Action"), lang("ç‰¹æ®Š", "Etc"), "null"
+	s = lang("î•ñ", "Info"), lang("s“®", "Action"), lang("“Áê", "Etc"), "null"
 	p = page - 1
 	if ( p == (-1) ) {
 		p = 3
@@ -64,7 +64,7 @@
 	ty = windowh - 255
 	x = 25, 50, 50, 100, 100, 100, 150, 150, 175
 	y = 50, 15, 85, 0, 50, 100, 15, 85, 50
-	s = lang("â—‹ã‚³ãƒãƒ³ãƒ‰", "*Command")
+	s = lang("›ƒRƒ}ƒ“ƒh", "*Command")
 	gmode 2
 	repeat 9
 		p = cnt
@@ -213,7 +213,7 @@
 		font lang(cfg_font1, cfg_font2), 16 - en * 2, 1
 		pos wx + 142, wy + 13
 		color 80, 60, 50
-		bmes lang("- ãƒãƒ«ãƒ³ã®å†’é™ºã‚¬ã‚¤ãƒ‰ -", "- Norne's travel guide -"), 255, 245, 235
+		bmes lang("- ƒmƒ‹ƒ“‚Ì–`Œ¯ƒKƒCƒh -", "- Norne's travel guide -"), 255, 245, 235
 		tx = wx + 120
 		ty = wy + 55
 		font lang(cfg_font1, cfg_font2), 15 - en * 2, 0
@@ -289,7 +289,7 @@
 	notesel buff
 	noteload exedir + "data\\" + lang("manual_JP.txt", "manual_ENG.txt")
 	list(0, 0) = 0
-	listn(0, 0) = lang("ã‚­ãƒ¼ã®ä¸€è¦§", "Key List")
+	listn(0, 0) = lang("ƒL[‚Ìˆê——", "Key List")
 	listmax++
 	repeat noteinfo(0)
 		noteget q, cnt
@@ -311,7 +311,7 @@
 	else {
 		display_window (windoww - 780) / 2 + inf_screenx, winposy(496) - 24, 780, 496
 	}
-	display_topic lang("é …ç›®", "Topic"), wx + 34, wy + 36
+	display_topic lang("€–Ú", "Topic"), wx + 34, wy + 36
 	if ( mode == MODELIST_CHARA_CREATION ) {
 		p = 2
 	}
@@ -338,13 +338,13 @@
 	if ( cs_bk2 == 0 & page_bk == 0 ) {
 		x = wx + 188
 		y = wy + 6
-		display_topic lang("ã‚¢ã‚¤ãƒ†ãƒ ã«é–¢ã™ã‚‹ã‚­ãƒ¼", "Item Keys"), x + 18, y + 30
-		display_topic lang("è¡Œå‹•ã«é–¢ã™ã‚‹ã‚­ãƒ¼", "Action Keys"), x + 18, y + 142
-		display_topic lang("æƒ…å ±ã«é–¢ã™ã‚‹ã‚­ãƒ¼", "Information Keys"), x + 18, y + 256
-		display_topic lang("ãã®ä»–ã®ã‚­ãƒ¼", "Other Keys"), x + 18, y + 328
+		display_topic lang("ƒAƒCƒeƒ€‚ÉŠÖ‚·‚éƒL[", "Item Keys"), x + 18, y + 30
+		display_topic lang("s“®‚ÉŠÖ‚·‚éƒL[", "Action Keys"), x + 18, y + 142
+		display_topic lang("î•ñ‚ÉŠÖ‚·‚éƒL[", "Information Keys"), x + 18, y + 256
+		display_topic lang("‚»‚Ì‘¼‚ÌƒL[", "Other Keys"), x + 18, y + 328
 		color 0, 0, 0
-		s = "ã‚¢ã‚¤ãƒ†ãƒ ã‚’å–ã‚‹(get)", key_get, "ã‚¢ã‚¤ãƒ†ãƒ ã‚’ç½®ã(drop)", key_drop, "ã‚¢ã‚¤ãƒ†ãƒ ã‚’èª¿ã¹ã‚‹(examine)", key_inventory, "ã‚¢ã‚¤ãƒ†ãƒ ã‚¹ã‚¿ãƒƒã‚¯(itemstack)", key_itemstack, "é£Ÿã¹ã‚‹(eat)", key_eat
-		s(10) = "é£²ã‚€(quaff)", key_drink, "èª­ã‚€(read)", key_read, "æŒ¯ã‚‹(zap)", key_zap, "é“å…·ã‚’ä½¿ã†(tool)", key_use, "èª¿åˆ(blend)", key_dip, "æŠ•ã’ã‚‹(throw)", key_throw, "è£…å¡«(ammo)", key_ammo, "è£…å‚™ã™ã‚‹(wear,wield)", key_wear
+		s = "ƒAƒCƒeƒ€‚ğæ‚é(get)", key_get, "ƒAƒCƒeƒ€‚ğ’u‚­(drop)", key_drop, "ƒAƒCƒeƒ€‚ğ’²‚×‚é(examine)", key_inventory, "ƒAƒCƒeƒ€ƒXƒ^ƒbƒN(itemstack)", key_itemstack, "H‚×‚é(eat)", key_eat
+		s(10) = "ˆù‚Ş(quaff)", key_drink, "“Ç‚Ş(read)", key_read, "U‚é(zap)", key_zap, "“¹‹ï‚ğg‚¤(tool)", key_use, "’²‡(blend)", key_dip, "“Š‚°‚é(throw)", key_throw, "‘•“U(ammo)", key_ammo, "‘•”õ‚·‚é(wear,wield)", key_wear
 		gosub *convertHelp
 		repeat 13
 			if ( cnt < 12 ) {
@@ -364,8 +364,8 @@
 				mes s(cnt * 2 + 1)
 			}
 		loop
-		s = "å‘¨å›²ã‚’èª¿ã¹ã‚‹(search)", key_search, "é­”æ³•ã‚’å”±ãˆã‚‹(cast)", key_cast, "å¹²æ¸‰ã™ã‚‹(interact)", key_interact, "éšæ®µã‚’é™ã‚Šã‚‹,å…¥ã‚‹(go down)", key_godown, "éšæ®µã‚’æ˜‡ã‚‹(go up)", key_goup
-		s(10) = "ãã®å ´ã§å¾…æ©Ÿ(wait)", key_wait, "ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã‚’æŒ‡å®š(target)", key_target, "å°„æ’ƒã™ã‚‹(fire)", key_fire, "èƒ½åŠ›ã‚’ä½¿ã†(apply)", key_skill, "åºƒåŸŸèƒ½åŠ›ã‚’ä½¿ã†(Wide apply)", key_wipe, "ä½“å½“ãŸã‚Šã™ã‚‹(bash)", key_bash, "ç©´ã‚’æ˜ã‚‹(dig)", key_dig, "éµã‚’é–‹ã‘ã‚‹(open)", key_open, "", ""
+		s = "üˆÍ‚ğ’²‚×‚é(search)", key_search, "–‚–@‚ğ¥‚¦‚é(cast)", key_cast, "Š±Â‚·‚é(interact)", key_interact, "ŠK’i‚ğ~‚è‚é,“ü‚é(go down)", key_godown, "ŠK’i‚ğ¸‚é(go up)", key_goup
+		s(10) = "‚»‚Ìê‚Å‘Ò‹@(wait)", key_wait, "ƒ^[ƒQƒbƒg‚ğw’è(target)", key_target, "ËŒ‚‚·‚é(fire)", key_fire, "”\—Í‚ğg‚¤(apply)", key_skill, "Lˆæ”\—Í‚ğg‚¤(Wide apply)", key_wipe, "‘Ì“–‚½‚è‚·‚é(bash)", key_bash, "ŒŠ‚ğŒ@‚é(dig)", key_dig, "Œ®‚ğŠJ‚¯‚é(open)", key_open, "", ""
 		gosub *convertHelp
 		repeat 13
 			if ( cnt < 12 ) {
@@ -385,8 +385,8 @@
 				mes s(cnt * 2 + 1)
 			}
 		loop
-		s = "èƒ½åŠ›ãƒ»ã‚¹ã‚­ãƒ«æƒ…å ±(chara)", key_charainfo, "å†’é™ºæ—¥èªŒã‚’è¡¨ç¤º(journal)", key_journal, "ãƒ˜ãƒ«ãƒ—ã‚’è¡¨ç¤º(help)", key_help, "ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒ­ã‚°ã‚’è¡¨ç¤º(log)", key_msglog
-		s(8) = "ãƒãƒ†ãƒªã‚¢ãƒ«è¡¨ç¤º(material)", key_material, "ç‰¹å¾´ã®è¡¨ç¤º(feat)", key_trait
+		s = "”\—ÍEƒXƒLƒ‹î•ñ(chara)", key_charainfo, "–`Œ¯“ú‚ğ•\¦(journal)", key_journal, "ƒwƒ‹ƒv‚ğ•\¦(help)", key_help, "ƒƒbƒZ[ƒWƒƒO‚ğ•\¦(log)", key_msglog
+		s(8) = "ƒ}ƒeƒŠƒAƒ‹•\¦(material)", key_material, "“Á’¥‚Ì•\¦(feat)", key_trait
 		gosub *convertHelp
 		repeat 6
 			font lang(cfg_font1, cfg_font2), 13 - en * 2, 0
@@ -396,7 +396,7 @@
 			pos x + 248 + cnt / 3 * 290, y + 283 + cnt \ 3 * 14
 			mes s(cnt * 2 + 1)
 		loop
-		s = "ã‚»ãƒ¼ãƒ–ã—ã¦çµ‚äº†(save)", key_save, "ç¥ã«ç¥ˆã‚‹(pray)", key_pray, "ç¥ã«æ§ã’ã‚‹(offer)", key_offer, "ãƒ‰ã‚¢ã‚’é–‰ã‚ã‚‹(close)", key_close, "ä¸ãˆã‚‹(give)", key_give, "", "", ""
+		s = "ƒZ[ƒu‚µ‚ÄI—¹(save)", key_save, "_‚É‹F‚é(pray)", key_pray, "_‚É•ù‚°‚é(offer)", key_offer, "ƒhƒA‚ğ•Â‚ß‚é(close)", key_close, "—^‚¦‚é(give)", key_give, "", "", ""
 		gosub *convertHelp
 		repeat 6
 			font lang(cfg_font1, cfg_font2), 13 - en * 2, 0
@@ -408,7 +408,7 @@
 		loop
 		font lang(cfg_font1, cfg_font2), 13 - en * 2, 0
 		pos x + 38, y + 408
-		mes lang("F8 ãƒãƒƒãƒ—ã®ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆ  F9 ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹éè¡¨ç¤º  F11 ã‚­ãƒ£ãƒ©æƒ…å ±ã®å‡ºåŠ›\nF12 ã‚³ãƒ³ã‚½ãƒ¼ãƒ«ã®è¡¨ç¤º", "F8 Export map  F9 Hide interface  F11 Export chara sheet\nF12 Console")
+		mes lang("F8 ƒ}ƒbƒv‚ÌƒGƒNƒXƒ|[ƒg  F9 ƒCƒ“ƒ^ƒtƒF[ƒX”ñ•\¦  F11 ƒLƒƒƒ‰î•ñ‚Ìo—Í\nF12 ƒRƒ“ƒ\[ƒ‹‚Ì•\¦", "F8 Export map  F9 Hide interface  F11 Export chara sheet\nF12 Console")
 	}
 	else {
 		s(1) = listn(0, pagesize * page_bk + cs_bk2)
@@ -486,7 +486,7 @@
 	wx = (windoww - ww) / 2 + inf_screenx
 	wy = winposy(wh)
 	windowanime wx, wy, ww, wh, 10, 4
-	s = lang("ä½•ã‹ã‚­ãƒ¼ã‚’æŠ¼ã™ã¨é–‰ã˜ã‚‹", "Hit any key to close")
+	s = lang("‰½‚©ƒL[‚ğ‰Ÿ‚·‚Æ•Â‚¶‚é", "Hit any key to close")
 	showscroll wx, wy, ww, wh
 	net_read
 	buff = ""
@@ -587,7 +587,7 @@
 	ww = windoww - inf_msgx + 6
 	wh = (inf_maxlog - 3) * inf_msgspace, 1, -1
 	snd SOUNDLIST_LOG
-	showtitle lang("éå»ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸", "Log"), lang("ä½•ã‹ã‚­ãƒ¼ã‚’æŠ¼ã™ã¨é–‰ã˜ã‚‹", "Hit any key to close"), 236, 1
+	showtitle lang("‰ß‹‚ÌƒƒbƒZ[ƒW", "Log"), lang("‰½‚©ƒL[‚ğ‰Ÿ‚·‚Æ•Â‚¶‚é", "Hit any key to close"), 236, 1
 	drawmenu 2
 	windowanimecorner wx, wy, ww, wh, 8, 4
 	if ( cfg_exlog ) {
@@ -649,10 +649,10 @@
 			picload exedir + "\\graphic\\g" + (cnt + 1) + ".bmp", 1
 		loop
 		gsel 0
-		s = lang("éå»ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸", "Log"), lang("ä½•ã‹ã‚­ãƒ¼ã‚’æŠ¼ã™ã¨é–‰ã˜ã‚‹", "Hit any key to close")
+		s = lang("‰ß‹‚ÌƒƒbƒZ[ƒW", "Log"), lang("‰½‚©ƒL[‚ğ‰Ÿ‚·‚Æ•Â‚¶‚é", "Hit any key to close")
 		x = windoww - 90
 		display_window (windoww - x) / 2 + inf_screenx, winposy(432), x, 432
-		display_topic lang("ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒ­ã‚°ã®å†…å®¹", "Message"), wx + 28, wy + 30
+		display_topic lang("ƒƒbƒZ[ƒWƒƒO‚Ì“à—e", "Message"), wx + 28, wy + 30
 		cmbg++
 		x = ww / 5 * 2
 		y = wh - 80
@@ -751,7 +751,7 @@
 		}
 	loop
 	redraw 0
-	txt lang("ã©ã®ã‚·ãƒ¼ãƒ³ã‚’å†ç”Ÿã™ã‚‹ï¼Ÿ", "Which scene do you want to replay?")
+	txt lang("‚Ç‚ÌƒV[ƒ“‚ğÄ¶‚·‚éH", "Which scene do you want to replay?")
 *com_story_loop_pgchk
 	redraw 0
 	page_check
@@ -785,7 +785,7 @@
 	font lang(cfg_font1, cfg_font2), 12 - en * 2, 0
 	color 0, 0, 0
 	pos wx + 390, wy + 50
-	mes lang("ã‚¢ãƒ³ãƒ­ãƒƒã‚¯ã•ã‚ŒãŸã‚·ãƒ¼ãƒ³ã‚’å†ç”Ÿã§ãã¾ã™ã€‚\nã‚·ãƒ¼ãƒ³Noã¯é€£ç¶šã—ã¦ã„ã¾ã›ã‚“ã€‚", "You can play the unlocked scenes.")
+	mes lang("ƒAƒ“ƒƒbƒN‚³‚ê‚½ƒV[ƒ“‚ğÄ¶‚Å‚«‚Ü‚·B\nƒV[ƒ“No‚Í˜A‘±‚µ‚Ä‚¢‚Ü‚¹‚ñB", "You can play the unlocked scenes.")
 	font lang(cfg_font1, cfg_font2), 14 - en * 2, 0
 	cs_listbk
 	repeat pagesize
@@ -794,7 +794,7 @@
 			break
 		}
 		i = list(0, p)
-		cs_list lang("ã‚·ãƒ¼ãƒ³ No.", "Scene No. ") + i, wx + 424, wy + 91 + cnt * 22 - 1, 19
+		cs_list lang("ƒV[ƒ“ No.", "Scene No. ") + i, wx + 424, wy + 91 + cnt * 22 - 1, 19
 	loop
 	font lang(cfg_font1, cfg_font2), 12 - en * 2, 1
 	color 0, 0, 0
@@ -824,7 +824,7 @@
 		screenupdate = -1
 		gosub *screen_refreshFull
 		txtnew
-		txt lang("ã‚·ãƒ¼ãƒ³ã®å†ç”Ÿã‚’çµ‚ãˆãŸã€‚", "The scene has been played.")
+		txt lang("ƒV[ƒ“‚ÌÄ¶‚ğI‚¦‚½B", "The scene has been played.")
 		goto *com_story
 	}
 	page_change *com_story_loop_pgchk, SOUNDLIST_CARD1

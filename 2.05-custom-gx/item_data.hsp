@@ -190,7 +190,7 @@
 	encammoref(0, ENCHANT_AMMO_PIERCING) = 15, 30, 2
 	encammoref(0, ENCHANT_AMMO_TIME_STOP) = 2, 5, 25
 	encammoref(0, ENCHANT_AMMO_BURST) = 2, 5, 15
-	ammoname = lang("ÈÄ£Â∞ÑÂºæ", "rapid ammo"), lang("ÁÇ∏Ë£ÇÂºæ", "explosive ammo"), lang("Ë≤´ÈÄöÂºæ", "piercing ammo"), lang("È≠îÂºæ", "magic ammo"), lang("ÊôÇÊ≠¢Âºæ", "time stop ammo"), lang("„Éê„Éº„Çπ„Éà", "burst ammo")
+	ammoname = lang("òAéÀíe", "rapid ammo"), lang("‡yóÙíe", "explosive ammo"), lang("ä—í íe", "piercing ammo"), lang("ñÇíe", "magic ammo"), lang("éûé~íe", "time stop ammo"), lang("ÉoÅ[ÉXÉg", "burst ammo")
 	// level, value%, rarity, filter types
 	encref(0, ENCHANT_RANDOM_TELEPORT) = -1, 50, 75, FILTER_NOTHING
 	encref(0, ENCHANT_SUCK_BLOOD) = -1, 50, 100, FILTER_NOTHING
@@ -343,9 +343,9 @@
 			rtval = 2
 			if ( val(1) / 50 + 1 < 0 ) {
 				rtval = 9
-				s = lang("" + skillname(sid) + "„Çí" + abs(val(1) / 50 + 1) + "‰∏ã„Åí„Çã", "decreases your " + skillname(sid) + " by " + abs(val(1) / 50 + 1) + ".")
+				s = lang("" + skillname(sid) + "Ç" + abs(val(1) / 50 + 1) + "â∫Ç∞ÇÈ", "decreases your " + skillname(sid) + " by " + abs(val(1) / 50 + 1) + ".")
 				if ( val(3) == FILTER_ITEM_FOOD ) {
-					s = lang("" + skillname(sid) + "„ÇíÊ∏õË°∞„Åï„Åõ„ÇãÊØíÁ¥†„ÇíÂê´„Çì„Åß„ÅÑ„Çã", "has toxins that deteriorate your " + skillname(sid) + ".") + " ["
+					s = lang("" + skillname(sid) + "Çå∏êäÇ≥ÇπÇÈì≈ëfÇä‹ÇÒÇ≈Ç¢ÇÈ", "has toxins that deteriorate your " + skillname(sid) + ".") + " ["
 					putenclv val(1) / 50
 					s += "]"
 
@@ -373,9 +373,9 @@
                 }
 			}
 			else {
-				s = lang("" + skillname(sid) + "„Çí" + abs(val(1) / 50 + 1) + "‰∏ä„Åí„Çã", "increases your " + skillname(sid) + " by " + abs(val(1) / 50 + 1) + ".")
+				s = lang("" + skillname(sid) + "Ç" + abs(val(1) / 50 + 1) + "è„Ç∞ÇÈ", "increases your " + skillname(sid) + " by " + abs(val(1) / 50 + 1) + ".")
 				if ( val(3) == FILTER_ITEM_FOOD ) {
-					s = lang("" + skillname(sid) + "„ÇíÂ¢óÂº∑„Åï„Åõ„ÇãÊ†ÑÈ§ä„Çí„ÇÇ„Å£„Å¶„ÅÑ„Çã", "has essential nutrients to enhance your " + skillname(sid) + ".") + " ["
+					s = lang("" + skillname(sid) + "Çëùã≠Ç≥ÇπÇÈâhó{ÇÇ‡Ç¡ÇƒÇ¢ÇÈ", "has essential nutrients to enhance your " + skillname(sid) + ".") + " ["
 					putenclv val(1) / 50
 					s += "]"
 
@@ -407,12 +407,12 @@
 			rtval = 2
 			if ( val(1) / 50 + 1 < 0 ) {
 				rtval = 9
-				s = lang("" + skillname(sid) + "„ÇíÊ∂àËÄó„Åï„Åõ„ÇãÊØíÁ¥†„ÇíÂê´„Çì„Åß„ÅÑ„Çã", "has toxins which hurt your " + skillname(sid) + ".") + " ["
+				s = lang("" + skillname(sid) + "Çè¡ñ’Ç≥ÇπÇÈì≈ëfÇä‹ÇÒÇ≈Ç¢ÇÈ", "has toxins which hurt your " + skillname(sid) + ".") + " ["
 				putenclv val(1) / 50
 				s += "]"
 			}
 			else {
-				s = lang("" + skillname(sid) + "„ÇíÂõûÂæ©„Åï„Åõ„ÇãÊ†ÑÈ§ä„Çí„ÇÇ„Å£„Å¶„ÅÑ„Çã", "has essential nutrients to heal your " + skillname(sid) + ".") + " ["
+				s = lang("" + skillname(sid) + "ÇâÒïúÇ≥ÇπÇÈâhó{ÇÇ‡Ç¡ÇƒÇ¢ÇÈ", "has essential nutrients to heal your " + skillname(sid) + ".") + " ["
 				putenclv val(1) / 50
 				s += "]"
 			}
@@ -432,12 +432,12 @@
 			i = val(1) / 2 / 50
 			if ( val(1) / 2 < 0 ) {
 				rtval = 9
-				s = lang("" + skillname(sid) + "„Å∏„ÅÆËÄêÊÄß„ÇíÂº±Âåñ„Åô„Çã", "weakens your resistance to " + skillname(sid) + ".")
+				s = lang("" + skillname(sid) + "Ç÷ÇÃëœê´Çé„âªÇ∑ÇÈ", "weakens your resistance to " + skillname(sid) + ".")
 			}
 			else {
 				s = skillencdesc(sid)
 				if ( s == "" ) {
-					s = lang("" + skillname(sid) + "„Å∏„ÅÆËÄêÊÄß„ÇíÊéà„Åë„Çã", "grants you resistance to " + skillname(sid) + ".")
+					s = lang("" + skillname(sid) + "Ç÷ÇÃëœê´ÇéˆÇØÇÈ", "grants you resistance to " + skillname(sid) + ".")
 				}
 			}
 			s += " ["
@@ -459,18 +459,18 @@
 			i = val(1) / 50 + 1
 			if ( val(1) / 50 + 1 < 0 ) {
 				rtval = 9
-				s = lang("" + skillname(sid) + "„ÅÆÊäÄËÉΩ„Çí‰∏ã„Åí„Çã", "decreases your " + skillname(sid) + " skill.")
+				s = lang("" + skillname(sid) + "ÇÃãZî\Çâ∫Ç∞ÇÈ", "decreases your " + skillname(sid) + " skill.")
 				if ( val(3) == FILTER_ITEM_FOOD ) {
-					s = lang("" + skillname(sid) + "„ÅÆÊäÄË°ì„ÇíÊêç„Å™„ÅÜ", "impairs your " + skillname(sid) + " skill.")
+					s = lang("" + skillname(sid) + "ÇÃãZèpÇëπÇ»Ç§", "impairs your " + skillname(sid) + " skill.")
 				}
 			}
 			else {
 				s = skillencdesc(sid)
 				if ( s == "" ) {
-					s = lang("" + skillname(sid) + "„ÅÆÊäÄËÉΩ„Çí‰∏ä„Åí„Çã", "improves your " + skillname(sid) + " skill.")
+					s = lang("" + skillname(sid) + "ÇÃãZî\Çè„Ç∞ÇÈ", "improves your " + skillname(sid) + " skill.")
 				}
 				if ( val(3) == FILTER_ITEM_FOOD ) {
-					s = lang("" + skillname(sid) + "„ÅÆË¶ãË≠ò„ÇíÊ∑±„ÇÅ„Çã", "deepens your understanding of " + skillname(sid) + ".")
+					s = lang("" + skillname(sid) + "ÇÃå©éØÇê[ÇﬂÇÈ", "deepens your understanding of " + skillname(sid) + ".")
 				}
 			}
 			s += " ["
@@ -489,9 +489,9 @@
 		}
 		if ( val(10) == ENCHANT_SUSTAIN ) {
 			rtval = 8
-			s = lang(skillname(sid) + "„ÇíÂº±‰ΩìÂåñ„Åã„ÇâÂÆà„Çã", "protects " + skillname(sid) + " from weakening.")
+			s = lang(skillname(sid) + "Çé„ëÃâªÇ©ÇÁéÁÇÈ", "protects " + skillname(sid) + " from weakening.")
 			if ( val(3) == FILTER_ITEM_FOOD ) {
-				s = lang("" + skillname(sid) + "„ÅÆÊàêÈï∑„ÇíÂä©„Åë„ÇãÊ†ÑÈ§ä„Çí„ÇÇ„Å£„Å¶„ÅÑ„Çã", "can help you exercise your " + skillname(sid) + " faster.") + " ["
+				s = lang("" + skillname(sid) + "ÇÃê¨í∑ÇèïÇØÇÈâhó{ÇÇ‡Ç¡ÇƒÇ¢ÇÈ", "can help you exercise your " + skillname(sid) + " faster.") + " ["
 				putenclv val(1) / 50
 				s += "]"
 
@@ -523,7 +523,7 @@
 			i = val(1) / 2 / 50
 			s = skillencdesc(sid)
 			if ( s == "" ) {
-				s = lang("" + skillname(sid) + "Â±ûÊÄß„ÅÆËøΩÂä†„ÉÄ„É°„Éº„Ç∏„Çí‰∏é„Åà„Çã", "deals " + skillname(sid) + " damage.")
+				s = lang("" + skillname(sid) + "ëÆê´ÇÃí«â¡É_ÉÅÅ[ÉWÇó^Ç¶ÇÈ", "deals " + skillname(sid) + " damage.")
 			}
 			s += " ["
 			putenclv i
@@ -543,7 +543,7 @@
 			rtval = 4
 			i = val(1) / 50
 			sid = encprocref(0, sid)
-			s = lang("" + skillname(sid) + "„ÇíÁô∫Âãï„Åô„Çã", "invokes " + skillname(sid) + ".")
+			s = lang("" + skillname(sid) + "Çî≠ìÆÇ∑ÇÈ", "invokes " + skillname(sid) + ".")
 			s += " ["
 			putenclv i
 			s += "]"
@@ -560,8 +560,8 @@
 		}
 		if ( val(10) == ENCHANT_AMMO ) {
 			rtval = 4
-			s = lang("" + ammoname(sid) + "„ÇíË£ÖÂ°´„Åß„Åç„Çã", "can be loaded with " + ammoname(sid) + ".")
-			s += lang(" [ÊúÄÂ§ß", " [Max ") + val(1) / EXT_ENCHANTMENT_AMMO + lang("Áô∫]", "]")
+			s = lang("" + ammoname(sid) + "ÇëïìUÇ≈Ç´ÇÈ", "can be loaded with " + ammoname(sid) + ".")
+			s += lang(" [ç≈ëÂ", " [Max ") + val(1) / EXT_ENCHANTMENT_AMMO + lang("î≠]", "]")
 
 			/********** ANNA CUSTOM - BEGINNING **********/ // Show Enchant Strength With Objet of Heart
 
@@ -579,71 +579,71 @@
 		s = "?????"
 	}
 
-	encDisp ENCHANT_RANDOM_TELEPORT,              9, lang("„É©„É≥„ÉÄ„É†„Å™„ÉÜ„É¨„Éù„Éº„Éà„ÇíÂºï„ÅçËµ∑„Åì„Åô", "causes random teleport."), val(1) / 50
-	encDisp ENCHANT_SUCK_BLOOD,                   9, lang("‰ΩøÁî®ËÄÖ„ÅÆÁîü„ÅçË°Ä„ÇíÂê∏„ÅÜ", "sucks the blood of the wielder."), val(1) / 50
-	encDisp ENCHANT_SUCK_MP,                      9, lang("‰ΩøÁî®ËÄÖ„ÅÆÔº≠Ôº∞„ÇíÂê∏„ÅÜ", "sucks MP of the wielder."), val(1) / 50
-	encDisp ENCHANT_DISTURB_GROWTH,               9, lang("„ÅÇ„Å™„Åü„ÅÆÊàêÈï∑„ÇíÂ¶®„Åí„Çã", "disturbs your growth."), val(1) / 50
-	encDisp ENCHANT_ATTRACT_MONSTER,              9, lang("È≠îÁâ©„ÇíÂëº„Å≥ÂØÑ„Åõ„Çã", "attracts monsters."), val(1) / 50
-	encDisp ENCHANT_PREVENT_TELEPORT,             4, lang("„ÉÜ„É¨„Éù„Éº„Éà„ÇíÂ¶®ÂÆ≥„Åô„Çã", "prevents you from teleporting.")
-	encDisp ENCHANT_RES_BLIND,                    4, lang("Áõ≤ÁõÆ„ÇíÁÑ°Âäπ„Å´„Åô„Çã", "negates the effect of blindness.")
-	encDisp ENCHANT_RES_PARALYZE,                 4, lang("È∫ªÁó∫„ÇíÁÑ°Âäπ„Å´„Åô„Çã", "negates the effect of paralysis.")
-	encDisp ENCHANT_RES_CONFUSE,                  4, lang("Ê∑∑‰π±„ÇíÁÑ°Âäπ„Å´„Åô„Çã", "negates the effect of confusion.")
-	encDisp ENCHANT_RES_FEAR,                     4, lang("ÊÅêÊÄñ„ÇíÁÑ°Âäπ„Å´„Åô„Çã", "negates the effect of fear.")
-	encDisp ENCHANT_RES_SLEEP,                    4, lang("Áù°Áú†„ÇíÁÑ°Âäπ„Å´„Åô„Çã", "negates the effect of sleep.")
-	encDisp ENCHANT_RES_POISON,                   4, lang("ÊØí„ÇíÁÑ°Âäπ„Å´„Åô„Çã", "negates the effect of poison.")
-	encDisp ENCHANT_RES_STEAL,                    4, lang("„Ç¢„Ç§„ÉÜ„É†„ÇíÁõó„Åæ„Çå„Å™„Åè„Åô„Çã", "protects you from thieves.")
-	encDisp ENCHANT_EAT_ROTTEN,                   4, lang("ËÖê„Å£„Åü„ÇÇ„ÅÆ„ÇíÈõ£„Å™„ÅèÊ∂àÂåñ„Åï„Åõ„Çã", "allows you to digest rotten food.")
-	encDisp ENCHANT_FAST_TRAVEL,                  4, lang("ÈÄüÂ∫¶„Çí‰∏ä„Åí„ÄÅ„ÉØ„Éº„É´„Éâ„Éû„ÉÉ„Éó„Åß„ÅÆÁßªÂãïÊôÇÈñì„ÇíÁü≠„Åè„Åô„Çã", "speeds up your travel progress."), val(1) / 100
-	encDisp ENCHANT_RES_ETHERWIND,                4, lang("„Ç®„Éº„ÉÜ„É´„ÅÆÈ¢®„Åã„Çâ„ÅÇ„Å™„Åü„Çí‰øùË≠∑„Åô„Çã", "protects you from Etherwind.")
-	encDisp ENCHANT_RES_WEATHER,                  4, lang("Èõ∑Èõ®„Å®Èõ™„Å´„Çà„ÇãË∂≥Ê≠¢„ÇÅ„ÇíÁÑ°Âäπ„Å´„Åô„Çã", "negates the effect of being stranded by bad weather.")
-	encDisp ENCHANT_RES_PREGNANCY,                4, lang("Áï∞Áâ©„ÅÆ‰ΩìÂÜÖ„Å∏„ÅÆ‰æµÂÖ•„ÇíÈò≤„Åê", "prevents aliens from entering your body.")
-	encDisp ENCHANT_FLOAT,                        4, lang("„ÅÇ„Å™„Åü„ÇíÊµÆÈÅä„Åï„Åõ„Çã", "floats you.")
-	encDisp ENCHANT_RES_MUTATION,                 4, lang("„ÅÇ„Å™„Åü„ÇíÂ§âÁï∞„Åã„Çâ‰øùË≠∑„Åô„Çã", "protects you from mutation.")
-	encDisp ENCHANT_ENHANCE_SPELL,                4, lang("È≠îÊ≥ï„ÅÆÂ®ÅÂäõ„ÇíÈ´ò„ÇÅ„Çã", "enhances your spells."), val(1) / 50
-	encDisp ENCHANT_ENHANCE_BREATH,               4, lang("ÊîæÂ∞Ñ„ÅÆÂ®ÅÂäõ„ÇíÈ´ò„ÇÅ„Çã", "enhances your breath."), val(1) / 50
-	encDisp ENCHANT_ROCK_THROWING,                4, lang("ÊäïÁü≥„ÅÆÊÄßËÉΩ„ÇíÈ´ò„ÇÅ„Çã", "enhances your rock throwing.")
-	encDisp ENCHANT_FIRE_AND_COLD,                4, lang("ÁÅ´ÁÇé„Å®ÂÜ∑Ê∞ó„ÅÆË§áÂêàË©†Âî±„ÇíÂèØËÉΩ„Å´„Åô„Çã", "combines fire and cold spells."), val(1) / 50
-	encDisp ENCHANT_MIND_AND_SOUND,               4, lang("ÂπªÊÉë„Å®Èü≥„ÅÆË§áÂêàË©†Âî±„ÇíÂèØËÉΩ„Å´„Åô„Çã", "combines mind and sound spells."), val(1) / 50
-	encDisp ENCHANT_POISON_AND_NERVE,             4, lang("ÊØí„Å®Á•ûÁµå„ÅÆË§áÂêàË©†Âî±„ÇíÂèØËÉΩ„Å´„Åô„Çã", "combines poison and nerve spells."), val(1) / 50
-	encDisp ENCHANT_CHARGING,                     4, lang("„ÉÅ„É£„Éº„Ç∏ÊôÇ„Å´ÊÄßËÉΩ„ÇíÈ´ò„ÇÅ„Çã", "enhances when charging.")
-	encDisp ENCHANT_QUICK_SHOOTING,               4, lang("Êó©ÊíÉ„Å°„ÇíÂèØËÉΩ„Å´„Åô„Çã", "allows quick shooting.")
-	encDisp ENCHANT_SEE_INVISIBLE,                4, lang("ÈÄèÊòé„Å™Â≠òÂú®„ÇíË¶ã„Çã„Åì„Å®„ÇíÂèØËÉΩ„Å´„Åô„Çã", "allows you to see invisible creatures.")
-	encDisp ENCHANT_ABSORB_STAMINA,               4, lang("ÊîªÊíÉÂØæË±°„Åã„Çâ„Çπ„Çø„Éü„Éä„ÇíÂê∏Âèé„Åô„Çã", "absorbs stamina from an enemy."), val(1) / 50
-	encDisp ENCHANT_RAGNAROK,                     4, lang("ÂÖ®„Å¶„ÇíÁµÇÁµê„Åï„Åõ„Çã", "brings an end.")
-	encDisp ENCHANT_ABSORB_MP,                    4, lang("ÊîªÊíÉÂØæË±°„Åã„Çâ„Éû„Éä„ÇíÂê∏Âèé„Åô„Çã", "absorbs MP from an enemy."), val(1) / 50
-	encDisp ENCHANT_PIERCING_CHANCE,              4, lang("ÂÆåÂÖ®Ë≤´ÈÄöÊîªÊíÉÁô∫Âãï„ÅÆÊ©ü‰ºö„ÇíÂ¢ó„ÇÑ„Åô", "gives you a chance to throw an absolute piercing attack."), val(1) / 50
-	encDisp ENCHANT_KALPA_HAND,                   4, lang("ÊôÇ„ÇíÁ∫è„Å£„Å¶„ÅÑ„Çã", "is covered with time.")
-	encDisp ENCHANT_CRIT_CHANCE,                  4, lang("„ÇØ„É™„ÉÜ„Ç£„Ç´„É´„Éí„ÉÉ„Éà„ÅÆÊ©ü‰ºö„ÇíÂ¢ó„ÇÑ„Åô", "increases your chance to deliver critical hits."), val(1) / 50
-	encDisp ENCHANT_EXTRA_MELEE,                  4, lang("ËøΩÂä†ÊâìÊíÉ„ÅÆÊ©ü‰ºö„ÇíÂ¢ó„ÇÑ„Åô", "increases the chance of an extra melee attack."), val(1) / 50
-	encDisp ENCHANT_EXTRA_RANGED,                 4, lang("ËøΩÂä†Â∞ÑÊíÉ„ÅÆÊ©ü‰ºö„ÇíÂ¢ó„ÇÑ„Åô", "increases the chance of an extra ranged attack."), val(1) / 50
-	encDisp ENCHANT_TIME_STOP,                    4, lang("Á®Ä„Å´ÊôÇ„ÇíÊ≠¢„ÇÅ„Çã", "occasionally stops time."), val(1) / 100
-	encDisp ENCHANT_DEC_ENEMY_CRIT_CHANCE,        4, lang("„ÇØ„É™„ÉÜ„Ç£„Ç´„É´„ÇíÂèó„Åë„ÇãÊ©ü‰ºö„ÇíÊ∏õ„Çâ„Åô", "decreases enemy chance to deliver critical hits."), val(1) / 50
-	encDisp ENCHANT_SHOOTING_MECHANISM,           4, lang("ÈÄ£ÂãïÂ∞ÑÊíÉÊ©üÊßã„ÇíÂÇô„Åà„Çã", "provides an interlocking shooting mechanism."), val(1) / 50
-	encDisp ENCHANT_PROXIMITY_ASSIST,             4, lang("ËøëÊé•Ë£úÂä©Ê≠¶Âô®„ÇíÂÇô„Åà„Çã", "provides a proximity assist weapon."), val(1) / 50
-	encDisp ENCHANT_MANA_TO_ATTACK,               4, lang("‰ΩøÁî®ËÄÖ„ÅÆ„Éû„Éä„ÇíÊîªÊíÉÂäõ„Å´Â§â„Åà„Çã", "change mana to attack power.")
-	encDisp ENCHANT_RES_CURSE,                    4, lang("Âë™„ÅÑ„ÅÆË®ÄËëâ„Åã„Çâ‰øùË≠∑„Åô„Çã", "protects you from cursing words."), val(1) / 50
-	encDisp ENCHANT_REWARD_QUALITY,               4, lang("ÊºîÂ•èÂ†±ÈÖ¨„ÅÆÂìÅË≥™„Çí‰∏ä„Åí„Çã", "increases the quality of rewards.")
-	encDisp ENCHANT_RES_PHYSICAL,                 4, lang("Ë¢´„ÇãÁâ©ÁêÜ„ÉÄ„É°„Éº„Ç∏„ÇíËªΩÊ∏õ„Åô„Çã", "decreases physical damage you take."), val(1) / 50
-	encDisp ENCHANT_IMMUNE_DAMAGE,                4, lang("Ë¢´„Çã„ÉÄ„É°„Éº„Ç∏„ÇíÁ®Ä„Å´ÁÑ°Âäπ„Å´„Åô„Çã", "sometimes nullifies the damage you take."), val(1) / 50
-	encDisp ENCHANT_REFLECT_DAMAGE,               4, lang("ÊîªÊíÉ„Åï„Çå„ÅüÊôÇ„ÄÅÁõ∏Êâã„Å´Âàá„ÇäÂÇ∑„ÅÆ„ÉÄ„É°„Éº„Ç∏„Çí‰∏é„Åà„Çã", "deals cut damage to the attacker."), val(1) / 50
-	encDisp ENCHANT_CURE_BLEEDING,                4, lang("Âá∫Ë°Ä„ÇíÊäë„Åà„Çã", "diminishes bleeding.")
-	encDisp ENCHANT_GOD_SIGNALS,                  4, lang("Á•û„ÅåÁô∫„Åô„ÇãÈõªÊ≥¢„Çí„Ç≠„É£„ÉÉ„ÉÅ„Åô„Çã", "catches signals from the gods.")
-	encDisp ENCHANT_BANE_DRAGON,                  4, lang("Á´úÊóè„Å´ÂØæ„Åó„Å¶Âº∑Âäõ„Å™Â®ÅÂäõ„ÇíÁô∫ÊèÆ„Åô„Çã", "inflicts massive damage to dragons."), val(1) / 50
-	encDisp ENCHANT_BANE_UNDEAD,                  4, lang("‰∏çÊ≠ªËÄÖ„Å´ÂØæ„Åó„Å¶Âº∑Âäõ„Å™Â®ÅÂäõ„ÇíÁô∫ÊèÆ„Åô„Çã", "inflicts massive damage to undeads."), val(1) / 50
-	encDisp ENCHANT_BANE_FLYING,                  4, lang("Á©∫‰∏≠„ÅÆÊïµ„Å´ÂØæ„Åó„Å¶Â®ÅÂäõ„ÇíÁô∫ÊèÆ„Åô„Çã", "inflicts massive damage to enemy in flight."), val(1) / 50
-	encDisp ENCHANT_SHOW_RELIGION,                4, lang("‰ªñËÄÖ„ÅÆ‰ø°‰ª∞„ÇíÊòé„Çâ„Åã„Å´„Åô„Çã", "reveals religion.")
-	encDisp ENCHANT_DRUNK_LISTENER,               4, lang("Ê∑±„ÅÑÈü≥Ëâ≤„ÅßËÅ¥Ë°Ü„ÇíÈÖî„Çè„Åô", "makes audience drunk with haunting tones.")
-	encDisp ENCHANT_BANE_GOD,                     4, lang("Á•û„Å´ÂØæ„Åó„Å¶Âº∑Âäõ„Å™Â®ÅÂäõ„ÇíÁô∫ÊèÆ„Åô„Çã", "inflicts massive damage to gods."), val(1) / 50
-	encDisp ENCHANT_REFLECT_MAGIC,                4, lang("È≠îÊ≥ïÊîªÊíÉ„Åï„Çå„ÅüÊôÇ„ÄÅÁõ∏Êâã„Å´„Åù„ÅÆÂ±ûÊÄß„ÅÆ„ÉÄ„É°„Éº„Ç∏„Çí‰∏é„Åà„Çã", "deals magic damage to the magic attacker."), val(1) / 50
-	encDisp ENCHANT_REMOTE_BLOW,                  4, lang("ÈÅ†ÈöîÊâìÊíÉ„ÇíÂèØËÉΩ„Å®„Åô„Çã", "makes it possible to remote blow.")
-	encDisp ENCHANT_POTIOMAN_ROTATION,            4, lang("Âºæ„Å´ÂáÑ„Åæ„Åò„ÅÑÂõûËª¢„Çí„Åã„Åë„Çã", "gives a tremendous rotation to plug.")
-	encDisp ENCHANT_POTIOMAN_POWER,               4, lang("Âü∫Êú¨Â®ÅÂäõ„ÅåÈ´ò„ÅÑ", "has high basic power.")
-	encDisp ENCHANT_POTIOMAN_TWO_SHOTS,           4, lang("‰∫åÁô∫ÂêåÊôÇÁô∫Â∞Ñ„Åß„Åç„Çã", "fires two shots at the same time.")
-	encDisp ENCHANT_POTIOMAN_CONTINUOUS_SHOT,     4, lang("Áµ∂„ÅàÈñì„Å™„ÅèÂ∞ÑÊíÉ„Åß„Åç„Çã", "can shoot continuously.")
-	encDisp ENCHANT_POTIOMAN_PRECISE_SHOT,        4, lang("Á≤æÂØÜ„Å™Â∞ÑÊíÉ„ÇíÂèØËÉΩ„Å´„Åô„Çã", "allows precise shooting.")
-	encDisp ENCHANT_POTIOMAN_CHANGING_TRAJECTORY, 4, lang("Â§âÂπªËá™Âú®„ÅÆÂºæÈÅì„ÅßÁøªÂºÑ„Åô„Çã", "confuses with a changing trajectory.")
-	encDisp ENCHANT_BANE_METAL,                   4, lang("ÁâπÊÆäÈáëÂ±û„Å´„ÇÇÁµ∂Â§ß„Å™Â®ÅÂäõ„ÇíÁô∫ÊèÆ„Åô„Çã", "inflicts massive damage to metals."), val(1) / 50
-	encDisp ENCHANT_DARKNESS_AND_NETHER,          4, lang("ÊöóÈªí„Å®Âú∞ÁçÑ„ÅÆË§áÂêàË©†Âî±„ÇíÂèØËÉΩ„Å´„Åô„Çã", "combine darkness and nether spells."), val(1) / 50
+	encDisp ENCHANT_RANDOM_TELEPORT,              9, lang("ÉâÉìÉ_ÉÄÇ»ÉeÉåÉ|Å[ÉgÇà¯Ç´ãNÇ±Ç∑", "causes random teleport."), val(1) / 50
+	encDisp ENCHANT_SUCK_BLOOD,                   9, lang("égópé“ÇÃê∂Ç´ååÇãzÇ§", "sucks the blood of the wielder."), val(1) / 50
+	encDisp ENCHANT_SUCK_MP,                      9, lang("égópé“ÇÃÇlÇoÇãzÇ§", "sucks MP of the wielder."), val(1) / 50
+	encDisp ENCHANT_DISTURB_GROWTH,               9, lang("Ç†Ç»ÇΩÇÃê¨í∑ÇñWÇ∞ÇÈ", "disturbs your growth."), val(1) / 50
+	encDisp ENCHANT_ATTRACT_MONSTER,              9, lang("ñÇï®ÇåƒÇ—äÒÇπÇÈ", "attracts monsters."), val(1) / 50
+	encDisp ENCHANT_PREVENT_TELEPORT,             4, lang("ÉeÉåÉ|Å[ÉgÇñWäQÇ∑ÇÈ", "prevents you from teleporting.")
+	encDisp ENCHANT_RES_BLIND,                    4, lang("ñ”ñ⁄Çñ≥å¯Ç…Ç∑ÇÈ", "negates the effect of blindness.")
+	encDisp ENCHANT_RES_PARALYZE,                 4, lang("ñÉ·ÉÇñ≥å¯Ç…Ç∑ÇÈ", "negates the effect of paralysis.")
+	encDisp ENCHANT_RES_CONFUSE,                  4, lang("ç¨óêÇñ≥å¯Ç…Ç∑ÇÈ", "negates the effect of confusion.")
+	encDisp ENCHANT_RES_FEAR,                     4, lang("ã∞ï|Çñ≥å¯Ç…Ç∑ÇÈ", "negates the effect of fear.")
+	encDisp ENCHANT_RES_SLEEP,                    4, lang("êáñ∞Çñ≥å¯Ç…Ç∑ÇÈ", "negates the effect of sleep.")
+	encDisp ENCHANT_RES_POISON,                   4, lang("ì≈Çñ≥å¯Ç…Ç∑ÇÈ", "negates the effect of poison.")
+	encDisp ENCHANT_RES_STEAL,                    4, lang("ÉAÉCÉeÉÄÇìêÇ‹ÇÍÇ»Ç≠Ç∑ÇÈ", "protects you from thieves.")
+	encDisp ENCHANT_EAT_ROTTEN,                   4, lang("ïÖÇ¡ÇΩÇ‡ÇÃÇìÔÇ»Ç≠è¡âªÇ≥ÇπÇÈ", "allows you to digest rotten food.")
+	encDisp ENCHANT_FAST_TRAVEL,                  4, lang("ë¨ìxÇè„Ç∞ÅAÉèÅ[ÉãÉhÉ}ÉbÉvÇ≈ÇÃà⁄ìÆéûä‘ÇíZÇ≠Ç∑ÇÈ", "speeds up your travel progress."), val(1) / 100
+	encDisp ENCHANT_RES_ETHERWIND,                4, lang("ÉGÅ[ÉeÉãÇÃïóÇ©ÇÁÇ†Ç»ÇΩÇï€åÏÇ∑ÇÈ", "protects you from Etherwind.")
+	encDisp ENCHANT_RES_WEATHER,                  4, lang("óãâJÇ∆ê·Ç…ÇÊÇÈë´é~ÇﬂÇñ≥å¯Ç…Ç∑ÇÈ", "negates the effect of being stranded by bad weather.")
+	encDisp ENCHANT_RES_PREGNANCY,                4, lang("àŸï®ÇÃëÃì‡Ç÷ÇÃêNì¸ÇñhÇÆ", "prevents aliens from entering your body.")
+	encDisp ENCHANT_FLOAT,                        4, lang("Ç†Ç»ÇΩÇïÇóVÇ≥ÇπÇÈ", "floats you.")
+	encDisp ENCHANT_RES_MUTATION,                 4, lang("Ç†Ç»ÇΩÇïœàŸÇ©ÇÁï€åÏÇ∑ÇÈ", "protects you from mutation.")
+	encDisp ENCHANT_ENHANCE_SPELL,                4, lang("ñÇñ@ÇÃà–óÕÇçÇÇﬂÇÈ", "enhances your spells."), val(1) / 50
+	encDisp ENCHANT_ENHANCE_BREATH,               4, lang("ï˙éÀÇÃà–óÕÇçÇÇﬂÇÈ", "enhances your breath."), val(1) / 50
+	encDisp ENCHANT_ROCK_THROWING,                4, lang("ìäêŒÇÃê´î\ÇçÇÇﬂÇÈ", "enhances your rock throwing.")
+	encDisp ENCHANT_FIRE_AND_COLD,                4, lang("âŒâäÇ∆ó‚ãCÇÃï°çáârè•Çâ¬î\Ç…Ç∑ÇÈ", "combines fire and cold spells."), val(1) / 50
+	encDisp ENCHANT_MIND_AND_SOUND,               4, lang("å∂òfÇ∆âπÇÃï°çáârè•Çâ¬î\Ç…Ç∑ÇÈ", "combines mind and sound spells."), val(1) / 50
+	encDisp ENCHANT_POISON_AND_NERVE,             4, lang("ì≈Ç∆ê_åoÇÃï°çáârè•Çâ¬î\Ç…Ç∑ÇÈ", "combines poison and nerve spells."), val(1) / 50
+	encDisp ENCHANT_CHARGING,                     4, lang("É`ÉÉÅ[ÉWéûÇ…ê´î\ÇçÇÇﬂÇÈ", "enhances when charging.")
+	encDisp ENCHANT_QUICK_SHOOTING,               4, lang("ëÅåÇÇøÇâ¬î\Ç…Ç∑ÇÈ", "allows quick shooting.")
+	encDisp ENCHANT_SEE_INVISIBLE,                4, lang("ìßñæÇ»ë∂ç›Çå©ÇÈÇ±Ç∆Çâ¬î\Ç…Ç∑ÇÈ", "allows you to see invisible creatures.")
+	encDisp ENCHANT_ABSORB_STAMINA,               4, lang("çUåÇëŒè€Ç©ÇÁÉXÉ^É~ÉiÇãzé˚Ç∑ÇÈ", "absorbs stamina from an enemy."), val(1) / 50
+	encDisp ENCHANT_RAGNAROK,                     4, lang("ëSÇƒÇèIåãÇ≥ÇπÇÈ", "brings an end.")
+	encDisp ENCHANT_ABSORB_MP,                    4, lang("çUåÇëŒè€Ç©ÇÁÉ}ÉiÇãzé˚Ç∑ÇÈ", "absorbs MP from an enemy."), val(1) / 50
+	encDisp ENCHANT_PIERCING_CHANCE,              4, lang("äÆëSä—í çUåÇî≠ìÆÇÃã@âÔÇëùÇ‚Ç∑", "gives you a chance to throw an absolute piercing attack."), val(1) / 50
+	encDisp ENCHANT_KALPA_HAND,                   4, lang("éûÇìZÇ¡ÇƒÇ¢ÇÈ", "is covered with time.")
+	encDisp ENCHANT_CRIT_CHANCE,                  4, lang("ÉNÉäÉeÉBÉJÉãÉqÉbÉgÇÃã@âÔÇëùÇ‚Ç∑", "increases your chance to deliver critical hits."), val(1) / 50
+	encDisp ENCHANT_EXTRA_MELEE,                  4, lang("í«â¡ë≈åÇÇÃã@âÔÇëùÇ‚Ç∑", "increases the chance of an extra melee attack."), val(1) / 50
+	encDisp ENCHANT_EXTRA_RANGED,                 4, lang("í«â¡éÀåÇÇÃã@âÔÇëùÇ‚Ç∑", "increases the chance of an extra ranged attack."), val(1) / 50
+	encDisp ENCHANT_TIME_STOP,                    4, lang("ãHÇ…éûÇé~ÇﬂÇÈ", "occasionally stops time."), val(1) / 100
+	encDisp ENCHANT_DEC_ENEMY_CRIT_CHANCE,        4, lang("ÉNÉäÉeÉBÉJÉãÇéÛÇØÇÈã@âÔÇå∏ÇÁÇ∑", "decreases enemy chance to deliver critical hits."), val(1) / 50
+	encDisp ENCHANT_SHOOTING_MECHANISM,           4, lang("òAìÆéÀåÇã@ç\ÇîıÇ¶ÇÈ", "provides an interlocking shooting mechanism."), val(1) / 50
+	encDisp ENCHANT_PROXIMITY_ASSIST,             4, lang("ãﬂê⁄ï‚èïïêäÌÇîıÇ¶ÇÈ", "provides a proximity assist weapon."), val(1) / 50
+	encDisp ENCHANT_MANA_TO_ATTACK,               4, lang("égópé“ÇÃÉ}ÉiÇçUåÇóÕÇ…ïœÇ¶ÇÈ", "change mana to attack power.")
+	encDisp ENCHANT_RES_CURSE,                    4, lang("éÙÇ¢ÇÃåæótÇ©ÇÁï€åÏÇ∑ÇÈ", "protects you from cursing words."), val(1) / 50
+	encDisp ENCHANT_REWARD_QUALITY,               4, lang("ââëtïÒèVÇÃïiéøÇè„Ç∞ÇÈ", "increases the quality of rewards.")
+	encDisp ENCHANT_RES_PHYSICAL,                 4, lang("îÌÇÈï®óùÉ_ÉÅÅ[ÉWÇåyå∏Ç∑ÇÈ", "decreases physical damage you take."), val(1) / 50
+	encDisp ENCHANT_IMMUNE_DAMAGE,                4, lang("îÌÇÈÉ_ÉÅÅ[ÉWÇãHÇ…ñ≥å¯Ç…Ç∑ÇÈ", "sometimes nullifies the damage you take."), val(1) / 50
+	encDisp ENCHANT_REFLECT_DAMAGE,               4, lang("çUåÇÇ≥ÇÍÇΩéûÅAëäéËÇ…êÿÇËèùÇÃÉ_ÉÅÅ[ÉWÇó^Ç¶ÇÈ", "deals cut damage to the attacker."), val(1) / 50
+	encDisp ENCHANT_CURE_BLEEDING,                4, lang("èoååÇó}Ç¶ÇÈ", "diminishes bleeding.")
+	encDisp ENCHANT_GOD_SIGNALS,                  4, lang("ê_Ç™î≠Ç∑ÇÈìdîgÇÉLÉÉÉbÉ`Ç∑ÇÈ", "catches signals from the gods.")
+	encDisp ENCHANT_BANE_DRAGON,                  4, lang("ó≥ë∞Ç…ëŒÇµÇƒã≠óÕÇ»à–óÕÇî≠äˆÇ∑ÇÈ", "inflicts massive damage to dragons."), val(1) / 50
+	encDisp ENCHANT_BANE_UNDEAD,                  4, lang("ïséÄé“Ç…ëŒÇµÇƒã≠óÕÇ»à–óÕÇî≠äˆÇ∑ÇÈ", "inflicts massive damage to undeads."), val(1) / 50
+	encDisp ENCHANT_BANE_FLYING,                  4, lang("ãÛíÜÇÃìGÇ…ëŒÇµÇƒà–óÕÇî≠äˆÇ∑ÇÈ", "inflicts massive damage to enemy in flight."), val(1) / 50
+	encDisp ENCHANT_SHOW_RELIGION,                4, lang("ëºé“ÇÃêMã¬ÇñæÇÁÇ©Ç…Ç∑ÇÈ", "reveals religion.")
+	encDisp ENCHANT_DRUNK_LISTENER,               4, lang("ê[Ç¢âπêFÇ≈íÆèOÇêåÇÌÇ∑", "makes audience drunk with haunting tones.")
+	encDisp ENCHANT_BANE_GOD,                     4, lang("ê_Ç…ëŒÇµÇƒã≠óÕÇ»à–óÕÇî≠äˆÇ∑ÇÈ", "inflicts massive damage to gods."), val(1) / 50
+	encDisp ENCHANT_REFLECT_MAGIC,                4, lang("ñÇñ@çUåÇÇ≥ÇÍÇΩéûÅAëäéËÇ…ÇªÇÃëÆê´ÇÃÉ_ÉÅÅ[ÉWÇó^Ç¶ÇÈ", "deals magic damage to the magic attacker."), val(1) / 50
+	encDisp ENCHANT_REMOTE_BLOW,                  4, lang("âìäuë≈åÇÇâ¬î\Ç∆Ç∑ÇÈ", "makes it possible to remote blow.")
+	encDisp ENCHANT_POTIOMAN_ROTATION,            4, lang("íeÇ…ê¶Ç‹Ç∂Ç¢âÒì]ÇÇ©ÇØÇÈ", "gives a tremendous rotation to plug.")
+	encDisp ENCHANT_POTIOMAN_POWER,               4, lang("äÓñ{à–óÕÇ™çÇÇ¢", "has high basic power.")
+	encDisp ENCHANT_POTIOMAN_TWO_SHOTS,           4, lang("ìÒî≠ìØéûî≠éÀÇ≈Ç´ÇÈ", "fires two shots at the same time.")
+	encDisp ENCHANT_POTIOMAN_CONTINUOUS_SHOT,     4, lang("ê‚Ç¶ä‘Ç»Ç≠éÀåÇÇ≈Ç´ÇÈ", "can shoot continuously.")
+	encDisp ENCHANT_POTIOMAN_PRECISE_SHOT,        4, lang("ê∏ñßÇ»éÀåÇÇâ¬î\Ç…Ç∑ÇÈ", "allows precise shooting.")
+	encDisp ENCHANT_POTIOMAN_CHANGING_TRAJECTORY, 4, lang("ïœå∂é©ç›ÇÃíeìπÇ≈ñ|òMÇ∑ÇÈ", "confuses with a changing trajectory.")
+	encDisp ENCHANT_BANE_METAL,                   4, lang("ì¡éÍã‡ëÆÇ…Ç‡ê‚ëÂÇ»à–óÕÇî≠äˆÇ∑ÇÈ", "inflicts massive damage to metals."), val(1) / 50
+	encDisp ENCHANT_DARKNESS_AND_NETHER,          4, lang("à√çïÇ∆ínçñÇÃï°çáârè•Çâ¬î\Ç…Ç∑ÇÈ", "combine darkness and nether spells."), val(1) / 50
 	return
 
 #defcfunc randomenc int randomenc_arg1
@@ -951,84 +951,84 @@
 	dim egolist, 19
 
 	p = 0
-	egoname(p) = lang("ÁÉàÁÅ´„ÅÆ", "of fire")
+	egoname(p) = lang("óÛâŒÇÃ", "of fire")
 	egoref(0, p) = 1, 3
 	egoenc(0, p) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_FIRE, 120, ENCHANT_ELEMENTAL_DMG * EXT_ENCHANTMENT + SKILL_RES_FIRE, 120
 	p++
-	egoname(p) = lang("ÈùôÂØÇ„ÅÆ", "of silence")
+	egoname(p) = lang("ê√é‚ÇÃ", "of silence")
 	egoref(0, p) = 0, 1
 	egoenc(0, p) = ENCHANT_SKILL * EXT_ENCHANTMENT + SKILL_NORMAL_STEALTH, 100, ENCHANT_PREVENT_TELEPORT, 100
 	p++
-	egoname(p) = lang("Ê∞∑Áµê„ÅÆ", "of cold")
+	egoname(p) = lang("ïXåãÇÃ", "of cold")
 	egoref(0, p) = 1, 3
 	egoenc(0, p) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_COLD, 120, ENCHANT_ELEMENTAL_DMG * EXT_ENCHANTMENT + SKILL_RES_COLD, 120
 	p++
-	egoname(p) = lang("Á®≤Â¶ª„ÅÆ", "of lightning")
+	egoname(p) = lang("àÓç»ÇÃ", "of lightning")
 	egoref(0, p) = 1, 3
 	egoenc(0, p) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_LIGHTNING, 120, ENCHANT_ELEMENTAL_DMG * EXT_ENCHANTMENT + SKILL_RES_LIGHTNING, 120
 	p++
-	egoname(p) = lang("Èò≤Ë°õËÄÖ„ÅÆ", "of defender")
+	egoname(p) = lang("ñhâqé“ÇÃ", "of defender")
 	egoref(0, p) = 3, 10000
 	egoenc(0, p) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_FIRE, 100, ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_COLD, 100, ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_LIGHTNING, 100
 	p++
-	egoname(p) = lang("Áôí„ÅóÊâã„ÅÆ", "of healing")
+	egoname(p) = lang("ñ¸ÇµéËÇÃ", "of healing")
 	egoref(0, p) = 1, 1
 	egoenc(0, p) = ENCHANT_SKILL * EXT_ENCHANTMENT + SKILL_NORMAL_HEALING, 100
 	p++
-	egoname(p) = lang("ËÄêÁõ≤ÁõÆ„ÅÆ", "of resist blind")
+	egoname(p) = lang("ëœñ”ñ⁄ÇÃ", "of resist blind")
 	egoref(0, p) = 1, 1
 	egoenc(0, p) = ENCHANT_RES_BLIND, 100
 	p++
-	egoname(p) = lang("ËÄêÈ∫ªÁó∫„ÅÆ", "of resist paralysis")
+	egoname(p) = lang("ëœñÉ·ÉÇÃ", "of resist paralysis")
 	egoref(0, p) = 1, 1
 	egoenc(0, p) = ENCHANT_RES_PARALYZE, 100
 	p++
-	egoname(p) = lang("ËÄêÊ∑∑‰π±„ÅÆ", "of resist confusion")
+	egoname(p) = lang("ëœç¨óêÇÃ", "of resist confusion")
 	egoref(0, p) = 1, 1
 	egoenc(0, p) = ENCHANT_RES_CONFUSE, 100
 	p++
-	egoname(p) = lang("ËÄêÊÅêÊÄñ„ÅÆ", "of resist fear")
+	egoname(p) = lang("ëœã∞ï|ÇÃ", "of resist fear")
 	egoref(0, p) = 0, 1
 	egoenc(0, p) = ENCHANT_RES_FEAR, 100
 	p++
-	egoname(p) = lang("Áù°Áú†Èò≤Ê≠¢„ÅÆ", "of resist sleep")
+	egoname(p) = lang("êáñ∞ñhé~ÇÃ", "of resist sleep")
 	egoref(0, p) = 0, 1
 	egoenc(0, p) = ENCHANT_RES_SLEEP, 100
 	p++
-	egoname(p) = lang("ÈóáÂ§ú„ÅÆ", "of night")
+	egoname(p) = lang("à≈ñÈÇÃ", "of night")
 	egoref(0, p) = 2, 3
 	egoenc(0, p) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_DARKNESS, 120, ENCHANT_ELEMENTAL_DMG * EXT_ENCHANTMENT + SKILL_RES_DARKNESS, 120
 	p++
-	egoname(p) = lang("Âπª„ÅÆ", "of illusion")
+	egoname(p) = lang("å∂ÇÃ", "of illusion")
 	egoref(0, p) = 2, 3
 	egoenc(0, p) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_MIND, 120, ENCHANT_ELEMENTAL_DMG * EXT_ENCHANTMENT + SKILL_RES_MIND, 120
 	p++
-	egoname(p) = lang("Ë†±ÊØí„ÅÆ", "of Poison")
+	egoname(p) = lang("Â¡ì≈ÇÃ", "of Poison")
 	egoref(0, p) = 2, 3
 	egoenc(0, p) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_POISON, 120, ENCHANT_ELEMENTAL_DMG * EXT_ENCHANTMENT + SKILL_RES_POISON, 120
 	p++
-	egoname(p) = lang("ÂÜ•Â∫ú„ÅÆ", "of hell")
+	egoname(p) = lang("ñªï{ÇÃ", "of hell")
 	egoref(0, p) = 2, 3
 	egoenc(0, p) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_NETHER, 120, ENCHANT_ELEMENTAL_DMG * EXT_ENCHANTMENT + SKILL_RES_NETHER, 120
 	p++
-	egoname(p) = lang("ÊóãÂæã„ÅÆ", "of sound")
+	egoname(p) = lang("ê˘ó•ÇÃ", "of sound")
 	egoref(0, p) = 2, 3
 	egoenc(0, p) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_SOUND, 120, ENCHANT_ELEMENTAL_DMG * EXT_ENCHANTMENT + SKILL_RES_SOUND, 120
 	p++
-	egoname(p) = lang("Á•ûÁµå„ÅÆ", "of nerve")
+	egoname(p) = lang("ê_åoÇÃ", "of nerve")
 	egoref(0, p) = 2, 3
 	egoenc(0, p) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_NERVE, 120, ENCHANT_ELEMENTAL_DMG * EXT_ENCHANTMENT + SKILL_RES_NERVE, 120
 	p++
-	egoname(p) = lang("Ê∑∑Ê≤å„ÅÆ", "of chaos")
+	egoname(p) = lang("ç¨ì◊ÇÃ", "of chaos")
 	egoref(0, p) = 2, 3
 	egoenc(0, p) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_CHAOS, 120, ENCHANT_ELEMENTAL_DMG * EXT_ENCHANTMENT + SKILL_RES_CHAOS, 120
 	p++
-	egoname(p) = lang("È≠î„ÅÆ", "of magic")
+	egoname(p) = lang("ñÇÇÃ", "of magic")
 	egoref(0, p) = 3, 3
 	egoenc(0, p) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_MAGIC, 100, ENCHANT_ELEMENTAL_DMG * EXT_ENCHANTMENT + SKILL_RES_MAGIC, 100
 
-	egominorn(0) = lang("ÂîÑ„ÅÜ", "singing"), lang("Âè¨‰Ωø„ÅÆ", "servant's"), lang("ÂæìËÄÖ„ÅÆ", "follower's"), lang("Âëª„Åè", "howling"), lang("Ëºù„Åè", "glowing")
-	egominorn(5) = lang("Áï∞ÂΩ©„ÅÆ", "conspicuous"), lang("È≠îÂäõ„ÇíÂ∏Ø„Å≥„Åü", "magical"), lang("Èóá„ÇíÁ†ï„Åè", "enchanted"), lang("Âº∑Âäõ„Å™", "mighty"), lang("È†º„Çå„Çã", "trustworthy")
+	egominorn(0) = lang("âSÇ§", "singing"), lang("è¢égÇÃ", "servant's"), lang("è]é“ÇÃ", "follower's"), lang("ôÔÇ≠", "howling"), lang("ãPÇ≠", "glowing")
+	egominorn(5) = lang("àŸç ÇÃ", "conspicuous"), lang("ñÇóÕÇë—Ç—ÇΩ", "magical"), lang("à≈Çç”Ç≠", "enchanted"), lang("ã≠óÕÇ»", "mighty"), lang("óäÇÍÇÈ", "trustworthy")
 	maxegominorn = length(egominorn)
 	return
 
@@ -1186,180 +1186,180 @@
 	dim mtenc, MAX_ITEM_MATERIAL_ENCHANT * 2, ITEM_MATERIAL_MAX
 	dim mtbit, 10, ITEM_MATERIAL_MAX
 
-	mtname(0, ITEM_MATERIAL_SAND) = lang("Á†Ç", "sand"), lang("Â≠ê‰æõ„ÅÆ„Åä„ÇÇ„Å°„ÇÉ„ÅÆ", "toy")
+	mtname(0, ITEM_MATERIAL_SAND) = lang("çª", "sand"), lang("éqãüÇÃÇ®Ç‡ÇøÇ·ÇÃ", "toy")
 	mtref(0, ITEM_MATERIAL_SAND) = 10, 80, -5, -5, -5, -5, 100
 	mtenc(0, ITEM_MATERIAL_SAND) = ENCHANT_NONE
 
-	mtname(0, ITEM_MATERIAL_LEATHER) = lang("Èù©", "leather"), lang("ÂÖ®„Å¶„ÇíÂåÖ„ÇÄ", "mysterious")
+	mtname(0, ITEM_MATERIAL_LEATHER) = lang("äv", "leather"), lang("ëSÇƒÇïÔÇﬁ", "mysterious")
 	mtref(0, ITEM_MATERIAL_LEATHER) = 100, 150, 12, 2, 13, 6, 100, 6
 	mtenc(0, ITEM_MATERIAL_LEATHER) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_SOUND, 25
 
-	mtname(0, ITEM_MATERIAL_SILK) = lang("„Ç∑„É´„ÇØ", "silk"), lang("Áæé„Åó„Åç", "beautiful")
+	mtname(0, ITEM_MATERIAL_SILK) = lang("ÉVÉãÉN", "silk"), lang("î¸ÇµÇ´", "beautiful")
 	mtref(0, ITEM_MATERIAL_SILK) = 40, 190, 9, -2, 10, 2, 100, 5
 	mtenc(0, ITEM_MATERIAL_SILK) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_MIND, 50
 
-	mtname(0, ITEM_MATERIAL_CLOTH) = lang("Â∏É", "cloth"), lang("Ëâ∂„ÇÑ„Åã„Å™„Çã", "charming")
+	mtname(0, ITEM_MATERIAL_CLOTH) = lang("ïz", "cloth"), lang("âêÇ‚Ç©Ç»ÇÈ", "charming")
 	mtref(0, ITEM_MATERIAL_CLOTH) = 20, 30, 6, -5, 7, 2, 100, 10
 	mtenc(0, ITEM_MATERIAL_CLOTH) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_COLD, 25
 
-	mtname(0, ITEM_MATERIAL_SCALE) = lang("È±ó", "scale"), lang("ÈÄÜÈ±ó„Å´Ëß¶„Çå„Åó", "wrath")
+	mtname(0, ITEM_MATERIAL_SCALE) = lang("óÿ", "scale"), lang("ãtóÿÇ…êGÇÍÇµ", "wrath")
 	mtref(0, ITEM_MATERIAL_SCALE) = 180, 250, 14, 6, 12, 11, 120, 10
 	mtenc(0, ITEM_MATERIAL_SCALE) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_FIRE, 50
 
-	mtname(0, ITEM_MATERIAL_GLASS) = lang("Á°ùÂ≠ê", "glass"), lang("ÈÄè„ÅçÈÄö„Çã", "transparent")
+	mtname(0, ITEM_MATERIAL_GLASS) = lang("è…éq", "glass"), lang("ìßÇ´í ÇÈ", "transparent")
 	mtref(0, ITEM_MATERIAL_GLASS) = 180, 150, 19, 0, 17, 0, 100, 4
 	mtenc(0, ITEM_MATERIAL_GLASS) = ENCHANT_ATTRIBUTE * EXT_ENCHANTMENT + SKILL_ATTR_SPD, 150
 	mtbit(0, ITEM_MATERIAL_GLASS) = ITEM_BIT_FIREPROOF
 
-	mtname(0, ITEM_MATERIAL_MITHRIL) = lang("„Éü„Çπ„É™„É´", "mithril"), lang("Âè§„Å™„Çã", "ancient")
+	mtname(0, ITEM_MATERIAL_MITHRIL) = lang("É~ÉXÉäÉã", "mithril"), lang("å√Ç»ÇÈ", "ancient")
 	mtref(0, ITEM_MATERIAL_MITHRIL) = 200, 750, 20, 18, 25, 17, 190, 2
 	mtenc(0, ITEM_MATERIAL_MITHRIL) = ENCHANT_SKILL * EXT_ENCHANTMENT + SKILL_NORMAL_CASTING, 100
 	mtbit(0, ITEM_MATERIAL_MITHRIL) = ITEM_BIT_ACIDPROOF, ITEM_BIT_FIREPROOF
 
-	mtname(0, ITEM_MATERIAL_ETHER) = lang("„Ç®„Éº„ÉÜ„É´", "ether"), lang("Ê∞∏ÈÅ†„Å™„Çã", "eternal")
+	mtname(0, ITEM_MATERIAL_ETHER) = lang("ÉGÅ[ÉeÉã", "ether"), lang("âiâìÇ»ÇÈ", "eternal")
 	mtref(0, ITEM_MATERIAL_ETHER) = 80, 1200, 8, 45, 35, 8, 250, 4
 	mtenc(0, ITEM_MATERIAL_ETHER) = ENCHANT_ATTRIBUTE * EXT_ENCHANTMENT + SKILL_ATTR_SPD, 200
 	mtbit(0, ITEM_MATERIAL_ETHER) = ITEM_BIT_ACIDPROOF, ITEM_BIT_FIREPROOF
 
-	mtname(0, ITEM_MATERIAL_STEEL) = lang("„Çπ„ÉÜ„Ç£„Éº„É´", "steel"), lang("Áî±Á∑í„ÅÇ„Çã", "historic")
+	mtname(0, ITEM_MATERIAL_STEEL) = lang("ÉXÉeÉBÅ[Éã", "steel"), lang("óRèèÇ†ÇÈ", "historic")
 	mtref(0, ITEM_MATERIAL_STEEL) = 270, 280, 12, 13, 8, 18, 140, 0
 	mtenc(0, ITEM_MATERIAL_STEEL) = ENCHANT_ATTRIBUTE * EXT_ENCHANTMENT + SKILL_ATTR_WIL, 100
 	mtbit(0, ITEM_MATERIAL_STEEL) = ITEM_BIT_FIREPROOF
 
-	mtname(0, ITEM_MATERIAL_METAL) = lang("ÈâÑ", "metal"), lang("ÈâÑÂ°ä„Å®Âëº„Å∞„Çå„Çã", "mass")
+	mtname(0, ITEM_MATERIAL_METAL) = lang("ìS", "metal"), lang("ìSâÚÇ∆åƒÇŒÇÍÇÈ", "mass")
 	mtref(0, ITEM_MATERIAL_METAL) = 280, 190, 8, 8, 3, 14, 130, 0
 	mtenc(0, ITEM_MATERIAL_METAL) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_FIRE, 25
 	mtbit(0, ITEM_MATERIAL_METAL) = ITEM_BIT_FIREPROOF
 
-	mtname(0, ITEM_MATERIAL_CRYSTAL) = lang("Ê∞¥Êô∂", "crystal"), lang("Áï∞ÂÖâ„ÇíÊîæ„Å§", "rainbow")
+	mtname(0, ITEM_MATERIAL_CRYSTAL) = lang("êÖèª", "crystal"), lang("àŸåıÇï˙Ç¬", "rainbow")
 	mtref(0, ITEM_MATERIAL_CRYSTAL) = 200, 800, 19, 14, 16, 19, 150, 12
 	mtenc(0, ITEM_MATERIAL_CRYSTAL) = ENCHANT_ATTRIBUTE * EXT_ENCHANTMENT + SKILL_ATTR_MAG, 100
 
-	mtname(0, ITEM_MATERIAL_BRONZE) = lang("„Éñ„É≠„É≥„Ç∫", "bronze"), lang("Ê∞óÈ´ò„Åç", "noble")
+	mtname(0, ITEM_MATERIAL_BRONZE) = lang("ÉuÉçÉìÉY", "bronze"), lang("ãCçÇÇ´", "noble")
 	mtref(0, ITEM_MATERIAL_BRONZE) = 200, 70, 2, 5, 1, 5, 100, 6
 	mtenc(0, ITEM_MATERIAL_BRONZE) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_LIGHTNING, 50
 
-	mtname(0, ITEM_MATERIAL_DIAMOND) = lang("„ÉÄ„Ç§„É§", "diamond"), lang("„ÅÜ„Å§„Çç„ÅÑ„Å™„Åç", "ever lasting")
+	mtname(0, ITEM_MATERIAL_DIAMOND) = lang("É_ÉCÉÑ", "diamond"), lang("Ç§Ç¬ÇÎÇ¢Ç»Ç´", "ever lasting")
 	mtref(0, ITEM_MATERIAL_DIAMOND) = 330, 1100, 19, 27, 13, 31, 220, 0
 	mtenc(0, ITEM_MATERIAL_DIAMOND) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_LIGHTNING, 100
 
-	mtname(0, ITEM_MATERIAL_SPIRIT) = lang("ÈúäÂ∏É", "spirit cloth"), lang("„Åì„ÅÆ‰∏ñ„Å™„Çâ„Åñ„Çã", "amazing")
+	mtname(0, ITEM_MATERIAL_SPIRIT) = lang("óÏïz", "spirit cloth"), lang("Ç±ÇÃê¢Ç»ÇÁÇ¥ÇÈ", "amazing")
 	mtref(0, ITEM_MATERIAL_SPIRIT) = 40, 750, 3, 2, 34, 6, 100, 4
 	mtenc(0, ITEM_MATERIAL_SPIRIT) = ENCHANT_ATTRIBUTE * EXT_ENCHANTMENT + SKILL_ATTR_SPD, 200
 	mtbit(0, ITEM_MATERIAL_SPIRIT) = ITEM_BIT_ACIDPROOF
 
-	mtname(0, ITEM_MATERIAL_RUBYNUS) = lang("„É´„Éì„Éä„Çπ", "rubynus"), lang("Ëµ§„ÅèÊüì„Åæ„Å£„Åü", "crimson")
+	mtname(0, ITEM_MATERIAL_RUBYNUS) = lang("ÉãÉrÉiÉX", "rubynus"), lang("ê‘Ç≠êıÇ‹Ç¡ÇΩ", "crimson")
 	mtref(0, ITEM_MATERIAL_RUBYNUS) = 250, 1000, 38, 18, 31, 24, 190, 3
 	mtenc(0, ITEM_MATERIAL_RUBYNUS) = ENCHANT_ATTRIBUTE * EXT_ENCHANTMENT + SKILL_ATTR_LIFE, 125
 	mtbit(0, ITEM_MATERIAL_RUBYNUS) = ITEM_BIT_ACIDPROOF, ITEM_BIT_FIREPROOF
 
-	mtname(0, ITEM_MATERIAL_PAPER) = lang("Á¥ô", "paper"), lang("„Åµ„Åñ„Åë„Åü", "silly")
+	mtname(0, ITEM_MATERIAL_PAPER) = lang("éÜ", "paper"), lang("Ç”Ç¥ÇØÇΩ", "silly")
 	mtref(0, ITEM_MATERIAL_PAPER) = 10, 20, 15, -10, 12, 0, 100, 0
 	mtenc(0, ITEM_MATERIAL_PAPER) = ENCHANT_SKILL * EXT_ENCHANTMENT + SKILL_NORMAL_EVASION, 100
 
-	mtname(0, ITEM_MATERIAL_DUSK) = lang("ÂÆµÊôí", "dawn cloth"), lang("ÂÆµÈóá„ÇíÁ∫è„ÅÑ„Åó", "dawn")
+	mtname(0, ITEM_MATERIAL_DUSK) = lang("è™éN", "dawn cloth"), lang("è™à≈ÇìZÇ¢Çµ", "dawn")
 	mtref(0, ITEM_MATERIAL_DUSK) = 45, 850, 10, 8, 35, 15, 100, 4
 	mtenc(0, ITEM_MATERIAL_DUSK) = ENCHANT_ATTRIBUTE * EXT_ENCHANTMENT + SKILL_ATTR_MANA, 200
 
-	mtname(0, ITEM_MATERIAL_BONE) = lang("„Éú„Éº„É≥", "bone"), lang("‰∏çÊ≠ª„Å™„Çã", "immortal")
+	mtname(0, ITEM_MATERIAL_BONE) = lang("É{Å[Éì", "bone"), lang("ïséÄÇ»ÇÈ", "immortal")
 	mtref(0, ITEM_MATERIAL_BONE) = 120, 300, 10, 6, 12, 11, 140, 0
 	mtenc(0, ITEM_MATERIAL_BONE) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_NETHER, 100
 	mtbit(0, ITEM_MATERIAL_BONE) = ITEM_BIT_FIREPROOF
 
-	mtname(0, ITEM_MATERIAL_CHAIN) = lang("ÈâÑÈéñ", "chain"), lang("ÈÄ£Èéñ„Åõ„Åó", "spiral")
+	mtname(0, ITEM_MATERIAL_CHAIN) = lang("ìSçΩ", "chain"), lang("òAçΩÇπÇµ", "spiral")
 	mtref(0, ITEM_MATERIAL_CHAIN) = 200, 300, 11, 8, 17, 14, 100, 0
 	mtenc(0, ITEM_MATERIAL_CHAIN) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_DARKNESS, 50
 	mtbit(0, ITEM_MATERIAL_CHAIN) = ITEM_BIT_FIREPROOF
 
-	mtname(0, ITEM_MATERIAL_OBSIDIAN) = lang("„Ç™„Éñ„Ç∑„Éá„Ç£„Ç¢„É≥", "obsidian"), lang("Á•ûÊÆ∫„Åó„ÅÆ", "godbane")
+	mtname(0, ITEM_MATERIAL_OBSIDIAN) = lang("ÉIÉuÉVÉfÉBÉAÉì", "obsidian"), lang("ê_éEÇµÇÃ", "godbane")
 	mtref(0, ITEM_MATERIAL_OBSIDIAN) = 160, 350, 16, 10, 13, 14, 130, 0
 	mtenc(0, ITEM_MATERIAL_OBSIDIAN) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_CHAOS, 100
 
-	mtname(0, ITEM_MATERIAL_MICA) = lang("„Éü„Ç´", "mica"), lang("ÂÑö„Åç", "ephemeral")
+	mtname(0, ITEM_MATERIAL_MICA) = lang("É~ÉJ", "mica"), lang("ôRÇ´", "ephemeral")
 	mtref(0, ITEM_MATERIAL_MICA) = 40, 150, 10, -2, 12, 0, 100, 0
 	mtenc(0, ITEM_MATERIAL_MICA) = ENCHANT_ATTRIBUTE * EXT_ENCHANTMENT + SKILL_ATTR_LUC, 100
 
-	mtname(0, ITEM_MATERIAL_PEARL) = lang("ÁúüÁè†", "pearl"), lang("Èóá„ÇíÁÖß„Çâ„Åô", "shining")
+	mtname(0, ITEM_MATERIAL_PEARL) = lang("ê^éÏ", "pearl"), lang("à≈Çè∆ÇÁÇ∑", "shining")
 	mtref(0, ITEM_MATERIAL_PEARL) = 240, 400, 18, 6, 18, 12, 140, 10
 	mtenc(0, ITEM_MATERIAL_PEARL) = ENCHANT_ATTRIBUTE * EXT_ENCHANTMENT + SKILL_ATTR_PER, 100
 
-	mtname(0, ITEM_MATERIAL_EMERALD) = lang("„Ç®„É°„É©„É´„Éâ", "emerald"), lang("Â•áË∑°„ÇíÂëº„Å∂", "miracle")
+	mtname(0, ITEM_MATERIAL_EMERALD) = lang("ÉGÉÅÉâÉãÉh", "emerald"), lang("äÔê’ÇåƒÇ‘", "miracle")
 	mtref(0, ITEM_MATERIAL_EMERALD) = 240, 1050, 22, 23, 18, 28, 190, 2
 	mtenc(0, ITEM_MATERIAL_EMERALD) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_NERVE, 100
 
-	mtname(0, ITEM_MATERIAL_DRAGON) = lang("Á´úÈ±ó", "dragon scale"), lang("Á´ú„ÇíÁµ±„Åπ„Åó", "dragonbane")
+	mtname(0, ITEM_MATERIAL_DRAGON) = lang("ó≥óÿ", "dragon scale"), lang("ó≥ÇìùÇ◊Çµ", "dragonbane")
 	mtref(0, ITEM_MATERIAL_DRAGON) = 220, 800, 26, 27, 29, 26, 190, 2
 	mtenc(0, ITEM_MATERIAL_DRAGON) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_FIRE, 50, 2 * EXT_ENCHANTMENT + SKILL_RES_COLD, 50
 	mtbit(0, ITEM_MATERIAL_DRAGON) = ITEM_BIT_ACIDPROOF, ITEM_BIT_FIREPROOF
 
-	mtname(0, ITEM_MATERIAL_SILVER) = lang("„Ç∑„É´„Éê„Éº", "silver"), lang("Èóá„ÇíÁ†ï„Åè", "dreadbane")
+	mtname(0, ITEM_MATERIAL_SILVER) = lang("ÉVÉãÉoÅ[", "silver"), lang("à≈Çç”Ç≠", "dreadbane")
 	mtref(0, ITEM_MATERIAL_SILVER) = 230, 250, 10, 7, 7, 11, 130, 0
 	mtenc(0, ITEM_MATERIAL_SILVER) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_DARKNESS, 50
 	mtbit(0, ITEM_MATERIAL_SILVER) = ITEM_BIT_FIREPROOF
 
-	mtname(0, ITEM_MATERIAL_PLATINUM) = lang("ÁôΩÈäÄ", "platinum"), lang("ÂÖâ„ÇíÁ∫è„ÅÑ„Åó", "brilliant")
+	mtname(0, ITEM_MATERIAL_PLATINUM) = lang("îíã‚", "platinum"), lang("åıÇìZÇ¢Çµ", "brilliant")
 	mtref(0, ITEM_MATERIAL_PLATINUM) = 260, 350, 16, 11, 14, 17, 140, 0
 	mtenc(0, ITEM_MATERIAL_PLATINUM) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_DARKNESS, 100
 	mtbit(0, ITEM_MATERIAL_PLATINUM) = ITEM_BIT_FIREPROOF
 
-	mtname(0, ITEM_MATERIAL_ZYLON) = lang("„Ç∂„Ç§„É≠„É≥", "zylon"), lang("Áï∞ÂõΩ„Åã„Çâ„ÇÇ„Åü„Çâ„Åï„Çå„Åó", "foreign")
+	mtname(0, ITEM_MATERIAL_ZYLON) = lang("ÉUÉCÉçÉì", "zylon"), lang("àŸçëÇ©ÇÁÇ‡ÇΩÇÁÇ≥ÇÍÇµ", "foreign")
 	mtref(0, ITEM_MATERIAL_ZYLON) = 50, 500, 5, 4, 21, 16, 100, 4
 	mtenc(0, ITEM_MATERIAL_ZYLON) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_NETHER, 50
 
-	mtname(0, ITEM_MATERIAL_GRIFFON) = lang("ÁøºÈ≥•È±ó", "griffon scale"), lang("Áøº„ÇíÊäò„Çâ„Çå„Åó", "fallen")
+	mtname(0, ITEM_MATERIAL_GRIFFON) = lang("óÉíπóÿ", "griffon scale"), lang("óÉÇê‹ÇÁÇÍÇµ", "fallen")
 	mtref(0, ITEM_MATERIAL_GRIFFON) = 70, 1000, 16, 17, 32, 24, 120, 2
 	mtenc(0, ITEM_MATERIAL_GRIFFON) = ENCHANT_SKILL * EXT_ENCHANTMENT + SKILL_NORMAL_EVASION, 100
 
-	mtname(0, ITEM_MATERIAL_TITANIUM) = lang("„ÉÅ„Çø„É≥", "titanium"), lang("Ëâ≤Ë§™„Åõ„Å¨", "fadeless")
+	mtname(0, ITEM_MATERIAL_TITANIUM) = lang("É`É^Éì", "titanium"), lang("êFÂÚÇπÇ ", "fadeless")
 	mtref(0, ITEM_MATERIAL_TITANIUM) = 200, 750, 21, 18, 19, 22, 160, 0
 	mtenc(0, ITEM_MATERIAL_TITANIUM) = ENCHANT_ATTRIBUTE * EXT_ENCHANTMENT + SKILL_ATTR_STR, 100
 	mtbit(0, ITEM_MATERIAL_TITANIUM) = ITEM_BIT_FIREPROOF
 
-	mtname(0, ITEM_MATERIAL_CHROME) = lang("„ÇØ„É≠„É†", "chrome"), lang("ÁúüÂÆü„ÇíÊö¥„Åè", "pure")
+	mtname(0, ITEM_MATERIAL_CHROME) = lang("ÉNÉçÉÄ", "chrome"), lang("ê^é¿Çñ\Ç≠", "pure")
 	mtref(0, ITEM_MATERIAL_CHROME) = 320, 500, 15, 17, 12, 22, 150, 0
 	mtenc(0, ITEM_MATERIAL_CHROME) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_POISON, 100
 
-	mtname(0, ITEM_MATERIAL_ADAMANTIUM) = lang("„Ç¢„ÉÄ„Éû„É≥„Çø„Ç§„Éà", "adamantium"), lang("Â§ßÂú∞„ÇíÊè∫„Çã„Åå„Åô", "earth")
+	mtname(0, ITEM_MATERIAL_ADAMANTIUM) = lang("ÉAÉ_É}ÉìÉ^ÉCÉg", "adamantium"), lang("ëÂínÇóhÇÈÇ™Ç∑", "earth")
 	mtref(0, ITEM_MATERIAL_ADAMANTIUM) = 360, 1150, 11, 38, 8, 42, 240, 10
 	mtenc(0, ITEM_MATERIAL_ADAMANTIUM) = ENCHANT_ATTRIBUTE * EXT_ENCHANTMENT + SKILL_ATTR_CON, 100
 	mtbit(0, ITEM_MATERIAL_ADAMANTIUM) = ITEM_BIT_ACIDPROOF, ITEM_BIT_FIREPROOF
 
-	mtname(0, ITEM_MATERIAL_GOLD) = lang("„Ç¥„Éº„É´„Éá„É≥", "gold"), lang("ÈªÑÈáë„Å´Ëºù„Åè", "golden")
+	mtname(0, ITEM_MATERIAL_GOLD) = lang("ÉSÅ[ÉãÉfÉì", "gold"), lang("â©ã‡Ç…ãPÇ≠", "golden")
 	mtref(0, ITEM_MATERIAL_GOLD) = 300, 800, 13, 18, 14, 22, 140, 5
 	mtenc(0, ITEM_MATERIAL_GOLD) = ENCHANT_ATTRIBUTE * EXT_ENCHANTMENT + SKILL_ATTR_STR, 100
 	mtbit(0, ITEM_MATERIAL_GOLD) = ITEM_BIT_FIREPROOF
 
-	mtname(0, ITEM_MATERIAL_CORAL) = lang("ÁèäÁëö", "coral"), lang("Êµ∑„Åã„Çâ„ÇÇ„Åü„Çâ„Åï„Çå„Åó", "ocean")
+	mtname(0, ITEM_MATERIAL_CORAL) = lang("éXåË", "coral"), lang("äCÇ©ÇÁÇ‡ÇΩÇÁÇ≥ÇÍÇµ", "ocean")
 	mtref(0, ITEM_MATERIAL_CORAL) = 180, 240, 7, 2, 10, 7, 120, 5
 	mtenc(0, ITEM_MATERIAL_CORAL) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_LIGHTNING, 100
 
-	mtname(0, ITEM_MATERIAL_IRON) = lang("Èâõ", "iron"), lang("Èáç„Åç", "heavy")
+	mtname(0, ITEM_MATERIAL_IRON) = lang("âî", "iron"), lang("èdÇ´", "heavy")
 	mtref(0, ITEM_MATERIAL_IRON) = 300, 50, 3, 4, -3, 11, 100, 0
 	mtenc(0, ITEM_MATERIAL_IRON) = ENCHANT_RESISTANCE * EXT_ENCHANTMENT + SKILL_RES_POISON, 50
 	mtbit(0, ITEM_MATERIAL_IRON) = ITEM_BIT_ACIDPROOF
 
-	mtname(0, ITEM_MATERIAL_RAW) = lang("Áîü„ÇÇ„ÅÆ", "raw"), lang("È£üÁî®", "candy")
+	mtname(0, ITEM_MATERIAL_RAW) = lang("ê∂Ç‡ÇÃ", "raw"), lang("êHóp", "candy")
 	mtref(0, ITEM_MATERIAL_RAW) = 100, 50, -5, -5, -5, -5, 100, 0
 	mtenc(0, ITEM_MATERIAL_RAW) = ENCHANT_NONE
 
-	mtname(0, ITEM_MATERIAL_BAMBOO) = lang("Á´π", "bamboo"), lang("Ê∏ã„ÅÑ", "tasteful")
+	mtname(0, ITEM_MATERIAL_BAMBOO) = lang("í|", "bamboo"), lang("èaÇ¢", "tasteful")
 	mtref(0, ITEM_MATERIAL_BAMBOO) = 120, 30, 17, 3, 14, 9, 100, 2
 	mtenc(0, ITEM_MATERIAL_BAMBOO) = ENCHANT_SKILL * EXT_ENCHANTMENT + SKILL_NORMAL_MEDITATION, 100
 
-	mtname(0, ITEM_MATERIAL_NANOMACHINE) = lang("„Éä„Éé„Éû„Ç∑„É≥", "nanomachine"), lang("Â§âÂΩ¢„Åô„Çã", "variable")
+	mtname(0, ITEM_MATERIAL_NANOMACHINE) = lang("ÉiÉmÉ}ÉVÉì", "nanomachine"), lang("ïœå`Ç∑ÇÈ", "variable")
 	mtref(0, ITEM_MATERIAL_NANOMACHINE) = 230, 900, 13, 30, 26, 30, 200, 9
 	mtenc(0, ITEM_MATERIAL_NANOMACHINE) = ENCHANT_SKILL * EXT_ENCHANTMENT + SKILL_NORMAL_HEALING, 100
 	mtbit(0, ITEM_MATERIAL_NANOMACHINE) = ITEM_BIT_FIREPROOF
 
-	mtname(0, ITEM_MATERIAL_PLANT_VEGETABLE) = lang("ÈáéËèú", "a vegetable plant")
-	mtname(0, ITEM_MATERIAL_PLANT_FRUIT) = lang("ÊûúÂÆü", "a fruit plant")
-	mtname(0, ITEM_MATERIAL_PLANT_HERB) = lang("„Éè„Éº„Éñ", "an herb plant")
-	mtname(0, ITEM_MATERIAL_PLANT_UNKNOWN) = lang("Ë¨é„ÅÆÁâ©‰Ωì", "an unknown plant")
-	mtname(0, ITEM_MATERIAL_PLANT_ARTIFACT) = lang("„Ç¢„Éº„ÉÜ„Ç£„Éï„Ç°„ÇØ„Éà", "an artifact plant")
-	mtname(0, ITEM_MATERIAL_PLANT_GEM) = lang("ÂÆùÁü≥", "a gem plant")
-	mtname(0, ITEM_MATERIAL_PLANT_MAGIC) = lang("È≠îÊ≥ï„ÅÆÊú®", "a magic plant")
+	mtname(0, ITEM_MATERIAL_PLANT_VEGETABLE) = lang("ñÏçÿ", "a vegetable plant")
+	mtname(0, ITEM_MATERIAL_PLANT_FRUIT) = lang("â é¿", "a fruit plant")
+	mtname(0, ITEM_MATERIAL_PLANT_HERB) = lang("ÉnÅ[Éu", "an herb plant")
+	mtname(0, ITEM_MATERIAL_PLANT_UNKNOWN) = lang("ì‰ÇÃï®ëÃ", "an unknown plant")
+	mtname(0, ITEM_MATERIAL_PLANT_ARTIFACT) = lang("ÉAÅ[ÉeÉBÉtÉ@ÉNÉg", "an artifact plant")
+	mtname(0, ITEM_MATERIAL_PLANT_GEM) = lang("ïÛêŒ", "a gem plant")
+	mtname(0, ITEM_MATERIAL_PLANT_MAGIC) = lang("ñÇñ@ÇÃñÿ", "a magic plant")
 
-	mtname(0, ITEM_MATERIAL_WOOD) = lang("Êú®", "wood"), lang("Âè§„Åç", "old")
+	mtname(0, ITEM_MATERIAL_WOOD) = lang("ñÿ", "wood"), lang("å√Ç´", "old")
 	mtref(0, ITEM_MATERIAL_WOOD) = 150, 80, 14, 7, 20, 13, 120, 6
 	mtenc(0, ITEM_MATERIAL_WOOD) = 2 * 10000 + 54, 100
 
@@ -1615,343 +1615,343 @@
 	p = 0
 	dim fishdata, 10, MAX_FISH
 	sdim fishdatan, 24, MAX_FISH
-	fishdatan(p) = lang("„Éê„Ç∞", "bug")
+	fishdatan(p) = lang("ÉoÉO", "bug")
 	fishdata(FISHDATA_PIC, p) = xy2pic(0, 0), 0, 0, 0, 100, 250, 100, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("ÈáëÈ≠ö", "goldfish")
+	fishdatan(p) = lang("ã‡ãõ", "goldfish")
 	fishdata(FISHDATA_PIC, p) = xy2pic(0, 25), 0, 1000, 2, 100, 200, 180, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("‰∫Ä", "turtle")
+	fishdatan(p) = lang("ãT", "turtle")
 	fishdata(FISHDATA_PIC, p) = xy2pic(1, 25), 0, 250, 4, 100, 250, 450, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Çº„Éã„Çø„Éä„Ç¥", "bitterling")
+	fishdatan(p) = lang("É[ÉjÉ^ÉiÉS", "bitterling")
 	fishdata(FISHDATA_PIC, p) = xy2pic(2, 25), 0, 50, 5, 100, 1500, 2200, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Åä„Åü„Åæ„Åò„ÇÉ„Åè„Åó", "tadpole")
+	fishdatan(p) = lang("Ç®ÇΩÇ‹Ç∂Ç·Ç≠Çµ", "tadpole")
 	fishdata(FISHDATA_PIC, p) = xy2pic(3, 25), 0, 1000, 0, 100, 150, 80, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("Êµ∑Ê∞¥„Éë„É≥„ÉÑ", "swimming trunks")
+	fishdatan(p) = lang("äCêÖÉpÉìÉc", "swimming trunks")
 	fishdata(FISHDATA_PIC, p) = xy2pic(4, 25), 0, 400, 0, 100, 250, 40, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("Â∞èÊ±ö„ÅÑÈï∑Èù¥", "dirty long boots")
+	fishdatan(p) = lang("è¨âòÇ¢í∑åC", "dirty long boots")
 	fishdata(FISHDATA_PIC, p) = xy2pic(5, 25), 0, 100, 0, 100, 250, 25, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Ç≥„Ç§", "carp")
+	fishdatan(p) = lang("ÉRÉC", "carp")
 	fishdata(FISHDATA_PIC, p) = xy2pic(6, 25), 1, 1000, 4, 100, 350, 400, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Ç¶„Éä„ÇÆ", "eel")
+	fishdatan(p) = lang("ÉEÉiÉM", "eel")
 	fishdata(FISHDATA_PIC, p) = xy2pic(7, 25), 1, 800, 6, 100, 300, 750, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Éè„Çº", "goby")
+	fishdatan(p) = lang("ÉnÉ[", "goby")
 	fishdata(FISHDATA_PIC, p) = xy2pic(8, 25), 1, 250, 8, 100, 400, 1250, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Ç≠„É≥„É°„ÉÄ„Ç§", "alfonsino")
+	fishdatan(p) = lang("ÉLÉìÉÅÉ_ÉC", "alfonsino")
 	fishdata(FISHDATA_PIC, p) = xy2pic(9, 25), 1, 50, 12, 100, 350, 3500, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("Á©∫„ÅçÁº∂", "empty can")
+	fishdatan(p) = lang("ãÛÇ´ä ", "empty can")
 	fishdata(FISHDATA_PIC, p) = xy2pic(10, 25), 1, 400, 0, 100, 250, 40, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("Â£ä„Çå„ÅüÊ©üÊ¢∞", "broken machine")
+	fishdatan(p) = lang("âÛÇÍÇΩã@äB", "broken machine")
 	fishdata(FISHDATA_PIC, p) = xy2pic(11, 25), 1, 400, 0, 100, 250, 25, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Ç´„Ç∏„Ç´", "sculpin")
+	fishdatan(p) = lang("ÉJÉWÉJ", "sculpin")
 	fishdata(FISHDATA_PIC, p) = xy2pic(12, 25), 2, 1000, 8, 100, 250, 800, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Çπ„Ç∫„Ç≠", "sea bass")
+	fishdatan(p) = lang("ÉXÉYÉL", "sea bass")
 	fishdata(FISHDATA_PIC, p) = xy2pic(13, 25), 2, 800, 10, 100, 300, 1200, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Ç¶„Éã", "sea urchin")
+	fishdatan(p) = lang("ÉEÉj", "sea urchin")
 	fishdata(FISHDATA_PIC, p) = xy2pic(19, 35), 2, 250, 12, 100, 400, 1800, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Ç∑„É≠„Ç¢„Éû„ÉÄ„Ç§", "red tilefish")
+	fishdatan(p) = lang("ÉVÉçÉAÉ}É_ÉC", "red tilefish")
 	fishdata(FISHDATA_PIC, p) = xy2pic(15, 25), 2, 50, 16, 100, 350, 4500, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("Á©∫„Åç„Éì„É≥", "empty bottle")
+	fishdatan(p) = lang("ãÛÇ´ÉrÉì", "empty bottle")
 	fishdata(FISHDATA_PIC, p) = xy2pic(16, 25), 2, 400, 0, 100, 250, 40, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("Ê±ö„ÅÑÊåáËº™", "dirty ring")
+	fishdatan(p) = lang("âòÇ¢éwó÷", "dirty ring")
 	fishdata(FISHDATA_PIC, p) = xy2pic(17, 25), 2, 400, 0, 100, 250, 325, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Ç≠„É¨„Ç¢„Ç∏", "sword fish")
+	fishdatan(p) = lang("ÉLÉåÉAÉW", "sword fish")
 	fishdata(FISHDATA_PIC, p) = xy2pic(18, 25), 3, 1000, 15, 100, 250, 1500, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Ç¢„É≠„ÉØ„Éä", "moonfish")
+	fishdatan(p) = lang("ÉAÉçÉèÉi", "moonfish")
 	fishdata(FISHDATA_PIC, p) = xy2pic(19, 25), 3, 800, 18, 100, 1300, 1900, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Éè„É™„Éû„Ç∞„É≠", "tuna fish")
+	fishdatan(p) = lang("ÉnÉäÉ}ÉOÉç", "tuna fish")
 	fishdata(FISHDATA_PIC, p) = xy2pic(20, 25), 3, 250, 22, 100, 1400, 2400, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("Âè§‰ª£È≠ö", "ancient fish")
+	fishdatan(p) = lang("å√ë„ãõ", "ancient fish")
 	fishdata(FISHDATA_PIC, p) = xy2pic(21, 25), 3, 50, 28, 100, 1350, 7200, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("Á†¥„Çå„ÅüÂÇò", "broken umbrella")
+	fishdatan(p) = lang("îjÇÍÇΩéP", "broken umbrella")
 	fishdata(FISHDATA_PIC, p) = xy2pic(22, 25), 3, 1000, 0, 100, 250, 40, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Åã„Å§„Çâ", "hairpiece")
+	fishdatan(p) = lang("Ç©Ç¬ÇÁ", "hairpiece")
 	fishdata(FISHDATA_PIC, p) = xy2pic(23, 25), 3, 1000, 0, 100, 250, 425, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Ç´„ÉÑ„Ç™", "bonito")
+	fishdatan(p) = lang("ÉJÉcÉI", "bonito")
 	fishdata(FISHDATA_PIC, p) = xy2pic(24, 25), 4, 1000, 19, 100, 1250, 2200, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Ç¢„É¶", "sweetfish")
+	fishdatan(p) = lang("ÉAÉÜ", "sweetfish")
 	fishdata(FISHDATA_PIC, p) = xy2pic(25, 25), 4, 800, 22, 100, 300, 2600, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Ç∑„Éû„Ç¢„Ç∏", "yellow jack")
+	fishdatan(p) = lang("ÉVÉ}ÉAÉW", "yellow jack")
 	fishdata(FISHDATA_PIC, p) = xy2pic(26, 25), 4, 250, 25, 100, 400, 4500, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Éñ„É©„ÉÉ„ÇØ„Éê„Çπ", "black bass")
+	fishdatan(p) = lang("ÉuÉâÉbÉNÉoÉX", "black bass")
 	fishdata(FISHDATA_PIC, p) = xy2pic(27, 25), 4, 50, 30, 100, 850, 11200, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("Âåó„Åã„Çâ„ÅÆÊºÇÁùÄÁâ©", "ashore from the north")
+	fishdatan(p) = lang("ñkÇ©ÇÁÇÃïYíÖï®", "ashore from the north")
 	fishdata(FISHDATA_PIC, p) = xy2pic(28, 25), 4, 400, 0, 100, 250, 240, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Ç®„É≠Êú¨", "pornographic book")
+	fishdatan(p) = lang("ÉGÉçñ{", "pornographic book")
 	fishdata(FISHDATA_PIC, p) = xy2pic(29, 25), 4, 400, 0, 100, 250, 525, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Çµ„Éê", "mackerel")
+	fishdatan(p) = lang("ÉTÉo", "mackerel")
 	fishdata(FISHDATA_PIC, p) = xy2pic(30, 25), 5, 1000, 25, 100, 350, 3500, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("Â§ßÈ£ü„ÅÑ„Éû„Ç∞„É≠", "big tuna fish")
+	fishdatan(p) = lang("ëÂêHÇ¢É}ÉOÉç", "big tuna fish")
 	fishdata(FISHDATA_PIC, p) = xy2pic(31, 25), 5, 800, 29, 100, 2000, 6400, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Ç≥„Éê„É≥„Ç∂„É°", "remora")
+	fishdatan(p) = lang("ÉRÉoÉìÉUÉÅ", "remora")
 	fishdata(FISHDATA_PIC, p) = xy2pic(32, 25), 5, 250, 33, 100, 800, 9550, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„ÇØ„Ç∏„É©", "whale")
+	fishdatan(p) = lang("ÉNÉWÉâ", "whale")
 	fishdata(FISHDATA_PIC, p) = xy2pic(0, 26), 5, 50, 40, 100, 13500, 25000, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("Á©∫„ÅçÁÆ±", "empty box")
+	fishdatan(p) = lang("ãÛÇ´î†", "empty box")
 	fishdata(FISHDATA_PIC, p) = xy2pic(1, 26), 5, 400, 0, 100, 250, 40, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("Â£ä„Çå„ÅüÊê∫Â∏Ø", "broken cell phone")
+	fishdatan(p) = lang("âÛÇÍÇΩågë—", "broken cell phone")
 	fishdata(FISHDATA_PIC, p) = xy2pic(2, 26), 5, 400, 0, 100, 250, 25, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„É†„Éº„Éî„Éº", "moopy")
+	fishdatan(p) = lang("ÉÄÅ[ÉsÅ[", "moopy")
 	fishdata(FISHDATA_PIC, p) = xy2pic(17, 9), 6, 1000, 3, 100, 380, 200, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Ç´„É©„Ç¶„Ç™", "hollow fish")
+	fishdatan(p) = lang("ÉJÉâÉEÉI", "hollow fish")
 	fishdata(FISHDATA_PIC, p) = xy2pic(21, 9), 6, 800, 9, 100, 240, 300, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„É≠„ÉÉ„ÇØ„Éï„Ç£„ÉÉ„Ç∑„É•", " rock fish")
+	fishdatan(p) = lang("ÉçÉbÉNÉtÉBÉbÉVÉÖ", " rock fish")
 	fishdata(FISHDATA_PIC, p) = xy2pic(14, 9), 6, 250, 13, 100, 960, 1000, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Éû„É≥„Çµ", "yruas")
+	fishdatan(p) = lang("É}ÉìÉT", "yruas")
 	fishdata(FISHDATA_PIC, p) = xy2pic(13, 9), 6, 50, 20, 100, 1150, 3000, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Ç≠„É≥„Éñ„Éä", "buergeri")
+	fishdatan(p) = lang("ÉLÉìÉuÉi", "buergeri")
 	fishdata(FISHDATA_PIC, p) = xy2pic(0, 25), 200, 1000, 2, 100, 200, 180, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("Áü≥‰∫Ä", "pond turtle")
+	fishdatan(p) = lang("êŒãT", "pond turtle")
 	fishdata(FISHDATA_PIC, p) = xy2pic(1, 25), 200, 250, 4, 100, 250, 450, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Éì„ÉØ„Çø„Éä„Ç¥", "longipinnis")
+	fishdatan(p) = lang("ÉrÉèÉ^ÉiÉS", "longipinnis")
 	fishdata(FISHDATA_PIC, p) = xy2pic(2, 25), 200, 50, 5, 100, 1500, 2200, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("ÈáëÁè†ÊùìÂ≠ê", "eartadpole")
+	fishdatan(p) = lang("ã‡éÏé€éq", "eartadpole")
 	fishdata(FISHDATA_PIC, p) = xy2pic(3, 25), 200, 1000, 200, 100, 150, 80, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("Âçä„Ç∫„Éú„É≥", "knickerbockers")
+	fishdatan(p) = lang("îºÉYÉ{Éì", "knickerbockers")
 	fishdata(FISHDATA_PIC, p) = xy2pic(4, 25), 200, 400, 0, 100, 250, 40, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("Á©¥„ÅÇ„Åç„Éñ„Éº„ÉÑ", "tattered boots")
+	fishdatan(p) = lang("åäÇ†Ç´ÉuÅ[Éc", "tattered boots")
 	fishdata(FISHDATA_PIC, p) = xy2pic(5, 25), 200, 100, 0, 100, 250, 25, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Éã„Ç¥„É≠„Éñ„Éä", "grandoculis")
+	fishdatan(p) = lang("ÉjÉSÉçÉuÉi", "grandoculis")
 	fishdata(FISHDATA_PIC, p) = xy2pic(0, 25), 300, 1000, 2, 100, 200, 180, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Çπ„ÉÉ„Éù„É≥", "soft turtle")
+	fishdatan(p) = lang("ÉXÉbÉ|Éì", "soft turtle")
 	fishdata(FISHDATA_PIC, p) = xy2pic(1, 25), 300, 250, 4, 100, 250, 450, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Ç´„Éç„Éí„É©", "rhombeus")
+	fishdatan(p) = lang("ÉJÉlÉqÉâ", "rhombeus")
 	fishdata(FISHDATA_PIC, p) = xy2pic(2, 25), 300, 50, 5, 100, 1500, 2200, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("Âæ°È≠ÇÊùìÂ≠ê", "spiritadpole")
+	fishdatan(p) = lang("å‰ç∞é€éq", "spiritadpole")
 	fishdata(FISHDATA_PIC, p) = xy2pic(3, 25), 300, 1000, 300, 100, 150, 80, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Çπ„Éë„ÉÉ„ÉÑ", "leggings")
+	fishdatan(p) = lang("ÉXÉpÉbÉc", "leggings")
 	fishdata(FISHDATA_PIC, p) = xy2pic(4, 25), 300, 400, 0, 100, 250, 40, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Ç´„ÉìËá≠„ÅÑ„Éñ„Éº„ÉÑ", "moldy boots")
+	fishdatan(p) = lang("ÉJÉrèLÇ¢ÉuÅ[Éc", "moldy boots")
 	fishdata(FISHDATA_PIC, p) = xy2pic(5, 25), 300, 100, 0, 100, 250, 25, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Éã„Ç¥„Ç§", "barbus")
+	fishdatan(p) = lang("ÉjÉSÉC", "barbus")
 	fishdata(FISHDATA_PIC, p) = xy2pic(6, 25), 201, 1000, 4, 100, 350, 400, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Éá„É≥„Ç≠„Ç¶„Éä„ÇÆ", "electric eel")
+	fishdatan(p) = lang("ÉfÉìÉLÉEÉiÉM", "electric eel")
 	fishdata(FISHDATA_PIC, p) = xy2pic(7, 25), 201, 800, 6, 100, 300, 750, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Éú„Ç¶„Ç∫„Éè„Çº", "sicy goby")
+	fishdatan(p) = lang("É{ÉEÉYÉnÉ[", "sicy goby")
 	fishdata(FISHDATA_PIC, p) = xy2pic(8, 25), 201, 250, 8, 100, 400, 1250, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Ç≠„É©„É°„ÉÄ„Ç§", "kiralfonsino")
+	fishdatan(p) = lang("ÉLÉâÉÅÉ_ÉC", "kiralfonsino")
 	fishdata(FISHDATA_PIC, p) = xy2pic(9, 25), 201, 50, 12, 100, 350, 3500, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("ÊΩ∞„Çå„ÅüÁº∂", "collapsed can")
+	fishdatan(p) = lang("í◊ÇÍÇΩä ", "collapsed can")
 	fishdata(FISHDATA_PIC, p) = xy2pic(10, 25), 201, 400, 0, 100, 250, 40, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Ç∏„É£„É≥„ÇØ„Éë„Éº„ÉÑ", "junk parts")
+	fishdatan(p) = lang("ÉWÉÉÉìÉNÉpÅ[Éc", "junk parts")
 	fishdata(FISHDATA_PIC, p) = xy2pic(11, 25), 201, 400, 0, 100, 250, 25, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Éû„Ç¥„Ç§", "koi")
+	fishdatan(p) = lang("É}ÉSÉC", "koi")
 	fishdata(FISHDATA_PIC, p) = xy2pic(6, 25), 301, 1000, 4, 100, 350, 400, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„ÇØ„É≠„Ç¶„Éä„ÇÆ", "marbled eel")
+	fishdatan(p) = lang("ÉNÉçÉEÉiÉM", "marbled eel")
 	fishdata(FISHDATA_PIC, p) = xy2pic(7, 25), 301, 800, 6, 100, 300, 750, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Ç¶„É≠„Éè„Çº", "glosso goby")
+	fishdatan(p) = lang("ÉEÉçÉnÉ[", "glosso goby")
 	fishdata(FISHDATA_PIC, p) = xy2pic(8, 25), 301, 250, 8, 100, 400, 1250, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„ÇØ„É≠„É°„ÉÄ„Ç§", "black porgy")
+	fishdatan(p) = lang("ÉNÉçÉÅÉ_ÉC", "black porgy")
 	fishdata(FISHDATA_PIC, p) = xy2pic(9, 25), 301, 50, 12, 100, 350, 3500, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("ËÖêÈ£ü„Åó„ÅüÁº∂", "corrosed can")
+	fishdatan(p) = lang("ïÖêHÇµÇΩä ", "corrosed can")
 	fishdata(FISHDATA_PIC, p) = xy2pic(10, 25), 301, 400, 0, 100, 250, 40, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("ÈåÜ„Å≥„ÅüÊ©üÊ¢∞", "rusted machine")
+	fishdatan(p) = lang("éKÇ—ÇΩã@äB", "rusted machine")
 	fishdata(FISHDATA_PIC, p) = xy2pic(11, 25), 301, 400, 0, 100, 250, 25, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Éè„Éä„Ç´„Ç∏„Ç´", "nozawae sculpin")
+	fishdatan(p) = lang("ÉnÉiÉJÉWÉJ", "nozawae sculpin")
 	fishdata(FISHDATA_PIC, p) = xy2pic(12, 25), 202, 1000, 8, 100, 250, 800, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Éõ„Ç∑„Çπ„Ç∫„Ç≠", "spotted sea bass")
+	fishdatan(p) = lang("ÉzÉVÉXÉYÉL", "spotted sea bass")
 	fishdata(FISHDATA_PIC, p) = xy2pic(13, 25), 202, 800, 10, 100, 300, 1200, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Ç∑„Éû„Ç¶„Éã", "striped sea urchin")
+	fishdatan(p) = lang("ÉVÉ}ÉEÉj", "striped sea urchin")
 	fishdata(FISHDATA_PIC, p) = xy2pic(19, 35), 202, 250, 12, 100, 400, 1800, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Ç≠„Ç¢„Éû„ÉÄ„Ç§", "yellow tilefish")
+	fishdatan(p) = lang("ÉLÉAÉ}É_ÉC", "yellow tilefish")
 	fishdata(FISHDATA_PIC, p) = xy2pic(15, 25), 202, 50, 16, 100, 350, 4500, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Éí„ÉìÂÖ•„Çä„Éì„É≥", "cracked bottle")
+	fishdatan(p) = lang("ÉqÉrì¸ÇËÉrÉì", "cracked bottle")
 	fishdata(FISHDATA_PIC, p) = xy2pic(16, 25), 202, 400, 0, 100, 250, 40, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("Ââ≤„Çå„ÅüÊåáËº™", "broken ring")
+	fishdatan(p) = lang("äÑÇÍÇΩéwó÷", "broken ring")
 	fishdata(FISHDATA_PIC, p) = xy2pic(17, 25), 202, 400, 0, 100, 250, 325, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Ç¢„É¶„Ç´„Ç±", "fourspine sculpin")
+	fishdatan(p) = lang("ÉAÉÜÉJÉP", "fourspine sculpin")
 	fishdata(FISHDATA_PIC, p) = xy2pic(12, 25), 302, 1000, 8, 100, 250, 800, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Éí„É©„Çπ„Ç∫„Ç≠", "blackfin sea bass")
+	fishdatan(p) = lang("ÉqÉâÉXÉYÉL", "blackfin sea bass")
 	fishdata(FISHDATA_PIC, p) = xy2pic(13, 25), 302, 800, 10, 100, 300, 1200, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„ÇØ„É≠„Éí„Ç≤„Ç¶„Éã", "dark sea urchin")
+	fishdatan(p) = lang("ÉNÉçÉqÉQÉEÉj", "dark sea urchin")
 	fishdata(FISHDATA_PIC, p) = xy2pic(19, 35), 302, 250, 12, 100, 400, 1800, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Çπ„Éü„ÉÑ„Ç≠„Ç¢„Éû„ÉÄ„Ç§", "charcoal tilefish")
+	fishdatan(p) = lang("ÉXÉ~ÉcÉLÉAÉ}É_ÉC", "charcoal tilefish")
 	fishdata(FISHDATA_PIC, p) = xy2pic(15, 25), 302, 50, 16, 100, 350, 4500, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("Ê¨†„Åë„Åü„Éì„É≥", "chipped bottle")
+	fishdatan(p) = lang("åáÇØÇΩÉrÉì", "chipped bottle")
 	fishdata(FISHDATA_PIC, p) = xy2pic(16, 25), 302, 400, 0, 100, 250, 40, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("Áé©ÂÖ∑„ÅÆÊåáËº™", "toy ring")
+	fishdatan(p) = lang("äﬂãÔÇÃéwó÷", "toy ring")
 	fishdata(FISHDATA_PIC, p) = xy2pic(17, 25), 302, 400, 0, 100, 250, 325, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Ç´„Ç≠„Ç¢„Ç∏", "write fish")
+	fishdatan(p) = lang("ÉJÉLÉAÉW", "write fish")
 	fishdata(FISHDATA_PIC, p) = xy2pic(18, 25), 203, 1000, 15, 100, 250, 1500, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Éê„É©„É†„É≥„Éá„Ç£", "gulf saratoga")
+	fishdatan(p) = lang("ÉoÉâÉÄÉìÉfÉB", "gulf saratoga")
 	fishdata(FISHDATA_PIC, p) = xy2pic(19, 25), 203, 800, 18, 100, 1300, 1900, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Ç≠„Éè„ÉÄ„Éû„Ç∞„É≠", "yellowfin tuna")
+	fishdatan(p) = lang("ÉLÉnÉ_É}ÉOÉç", "yellowfin tuna")
 	fishdata(FISHDATA_PIC, p) = xy2pic(20, 25), 203, 250, 22, 100, 1400, 2400, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("ÂÑÑÂπ¥È≠ö", "billion year fish")
+	fishdatan(p) = lang("â≠îNãõ", "billion year fish")
 	fishdata(FISHDATA_PIC, p) = xy2pic(21, 25), 203, 50, 28, 100, 1350, 7200, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("ÂÇò„ÅÆÊÆãÈ™∏", "umbrella wreckage")
+	fishdatan(p) = lang("éPÇÃécä[", "umbrella wreckage")
 	fishdata(FISHDATA_PIC, p) = xy2pic(22, 25), 203, 1000, 0, 100, 250, 40, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("Ê±ö„Çå„Åü„Ç¶„Ç£„ÉÉ„Ç∞", "dirty wig")
+	fishdatan(p) = lang("âòÇÍÇΩÉEÉBÉbÉO", "dirty wig")
 	fishdata(FISHDATA_PIC, p) = xy2pic(23, 25), 203, 1000, 0, 100, 250, 425, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Ç´„ÇØ„Ç∑„Ç¢„Ç∏", "hide fish")
+	fishdatan(p) = lang("ÉJÉNÉVÉAÉW", "hide fish")
 	fishdata(FISHDATA_PIC, p) = xy2pic(18, 25), 303, 1000, 15, 100, 250, 1500, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Éñ„É©„ÉÉ„ÇØ„Ç¢„É≠„ÉØ„Éä", "black arowana")
+	fishdatan(p) = lang("ÉuÉâÉbÉNÉAÉçÉèÉi", "black arowana")
 	fishdata(FISHDATA_PIC, p) = xy2pic(19, 25), 303, 800, 18, 100, 1300, 1900, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„ÇØ„É≠„Éû„Ç∞„É≠", "bluefin tuna")
+	fishdatan(p) = lang("ÉNÉçÉ}ÉOÉç", "bluefin tuna")
 	fishdata(FISHDATA_PIC, p) = xy2pic(20, 25), 303, 250, 22, 100, 1400, 2400, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("ÂåñÁü≥È≠ö", "fossil fish")
+	fishdatan(p) = lang("âªêŒãõ", "fossil fish")
 	fishdata(FISHDATA_PIC, p) = xy2pic(21, 25), 303, 50, 28, 100, 1350, 7200, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Çæ„É≥„ÉìÂÇò", "zombie umbrella")
+	fishdatan(p) = lang("É]ÉìÉréP", "zombie umbrella")
 	fishdata(FISHDATA_PIC, p) = xy2pic(22, 25), 303, 1000, 0, 100, 250, 40, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Ç´„Éì„ÅÆÁîü„Åà„Åü„É¢„ÉÉ„Éó", "moldy mop")
+	fishdatan(p) = lang("ÉJÉrÇÃê∂Ç¶ÇΩÉÇÉbÉv", "moldy mop")
 	fishdata(FISHDATA_PIC, p) = xy2pic(23, 25), 303, 1000, 0, 100, 250, 425, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Éè„Ç¨„ÉÑ„Ç™", "striped bonito")
+	fishdatan(p) = lang("ÉnÉKÉcÉI", "striped bonito")
 	fishdata(FISHDATA_PIC, p) = xy2pic(24, 25), 204, 1000, 19, 100, 1250, 2200, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„ÉØ„Ç´„Çµ„ÇÆ", "wakasagi")
+	fishdatan(p) = lang("ÉèÉJÉTÉM", "wakasagi")
 	fishdata(FISHDATA_PIC, p) = xy2pic(25, 25), 204, 800, 22, 100, 300, 2600, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Ç≥„Ç¨„Éç„Ç¢„Ç∏", "spotted trevally")
+	fishdatan(p) = lang("ÉRÉKÉlÉAÉW", "spotted trevally")
 	fishdata(FISHDATA_PIC, p) = xy2pic(26, 25), 204, 250, 25, 100, 400, 4500, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Çµ„É≥„Éï„Ç£„ÉÉ„Ç∑„É•", "centrarchidae")
+	fishdatan(p) = lang("ÉTÉìÉtÉBÉbÉVÉÖ", "centrarchidae")
 	fishdata(FISHDATA_PIC, p) = xy2pic(27, 25), 204, 50, 30, 100, 850, 11200, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("ÁêÉÂΩ¢„Éñ„Ç§", "spherical buoy")
+	fishdatan(p) = lang("ãÖå`ÉuÉC", "spherical buoy")
 	fishdata(FISHDATA_PIC, p) = xy2pic(28, 25), 204, 400, 0, 100, 250, 240, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Ç¢„ÉÄ„É´„ÉàÈõëË™å", "adult magazine")
+	fishdatan(p) = lang("ÉAÉ_ÉãÉgéGéè", "adult magazine")
 	fishdata(FISHDATA_PIC, p) = xy2pic(29, 25), 204, 400, 0, 100, 250, 525, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Éû„Éä„Ç¨„ÉÑ„Ç™", "mana bonito")
+	fishdatan(p) = lang("É}ÉiÉKÉcÉI", "mana bonito")
 	fishdata(FISHDATA_PIC, p) = xy2pic(24, 25), 304, 1000, 19, 100, 1250, 2200, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Ç∑„Ç∑„É£„É¢", "shishamo")
+	fishdatan(p) = lang("ÉVÉVÉÉÉÇ", "shishamo")
 	fishdata(FISHDATA_PIC, p) = xy2pic(25, 25), 304, 800, 22, 100, 300, 2600, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„ÇØ„É≠„Éí„É©„Ç¢„Ç∏", "black trevally")
+	fishdatan(p) = lang("ÉNÉçÉqÉâÉAÉW", "black trevally")
 	fishdata(FISHDATA_PIC, p) = xy2pic(26, 25), 304, 250, 25, 100, 400, 4500, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Éñ„É©„ÉÉ„ÇØ„Çµ„É≥„Éê„Çπ", "black sun bass")
+	fishdatan(p) = lang("ÉuÉâÉbÉNÉTÉìÉoÉX", "black sun bass")
 	fishdata(FISHDATA_PIC, p) = xy2pic(27, 25), 304, 50, 30, 100, 850, 11200, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("Áµ°„Åæ„Å£„ÅüÁéâ", "entangled ball")
+	fishdatan(p) = lang("óçÇ‹Ç¡ÇΩã ", "entangled ball")
 	fishdata(FISHDATA_PIC, p) = xy2pic(28, 25), 304, 400, 0, 100, 250, 240, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Ç®„É≠Âêå‰∫∫", "erotic doujin")
+	fishdatan(p) = lang("ÉGÉçìØêl", "erotic doujin")
 	fishdata(FISHDATA_PIC, p) = xy2pic(29, 25), 304, 400, 0, 100, 250, 525, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Éã„Ç∏„Éß„Ç¶„Çµ„Éê", "lined mackerel")
+	fishdatan(p) = lang("ÉjÉWÉáÉEÉTÉo", "lined mackerel")
 	fishdata(FISHDATA_PIC, p) = xy2pic(30, 25), 205, 1000, 25, 100, 350, 3500, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("‰∫∫È£ü„ÅÑ„Éû„Ç∞„É≠", "biting tuna fish")
+	fishdatan(p) = lang("êlêHÇ¢É}ÉOÉç", "biting tuna fish")
 	fishdata(FISHDATA_PIC, p) = xy2pic(31, 25), 205, 800, 29, 100, 2000, 6400, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Éä„Ç¨„Ç≥„Éê„É≥", "shark sucker")
+	fishdatan(p) = lang("ÉiÉKÉRÉoÉì", "shark sucker")
 	fishdata(FISHDATA_PIC, p) = xy2pic(32, 25), 205, 250, 33, 100, 800, 9550, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„Éã„Çø„É™„ÇØ„Ç∏„É©", "tropical whale")
+	fishdatan(p) = lang("ÉjÉ^ÉäÉNÉWÉâ", "tropical whale")
 	fishdata(FISHDATA_PIC, p) = xy2pic(0, 26), 205, 50, 40, 100, 13500, 25000, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("ÂÇ∑„Çì„Å†Êú®ÁÆ±", "damaged box")
+	fishdatan(p) = lang("èùÇÒÇæñÿî†", "damaged box")
 	fishdata(FISHDATA_PIC, p) = xy2pic(1, 26), 205, 400, 0, 100, 250, 40, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("Âè§‰ª£„ÅÆÁ´ØÊú´", "ancient device")
+	fishdatan(p) = lang("å√ë„ÇÃí[ññ", "ancient device")
 	fishdata(FISHDATA_PIC, p) = xy2pic(2, 26), 205, 400, 0, 100, 250, 25, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Ç¥„Éû„Çµ„Éê", "black mackerel")
+	fishdatan(p) = lang("ÉSÉ}ÉTÉo", "black mackerel")
 	fishdata(FISHDATA_PIC, p) = xy2pic(30, 25), 305, 1000, 25, 100, 350, 3500, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("ÂÖ±È£ü„ÅÑ„Éû„Ç∞„É≠", "boring tuna fish")
+	fishdatan(p) = lang("ã§êHÇ¢É}ÉOÉç", "boring tuna fish")
 	fishdata(FISHDATA_PIC, p) = xy2pic(31, 25), 305, 800, 29, 100, 2000, 6400, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„ÇØ„É≠„Ç≥„Éê„É≥", "spearfish remora")
+	fishdatan(p) = lang("ÉNÉçÉRÉoÉì", "spearfish remora")
 	fishdata(FISHDATA_PIC, p) = xy2pic(32, 25), 305, 250, 33, 100, 800, 9550, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("„ÇØ„É≠„Éä„Ç¨„Çπ„ÇØ„Ç∏„É©", "fin whale")
+	fishdatan(p) = lang("ÉNÉçÉiÉKÉXÉNÉWÉâ", "fin whale")
 	fishdata(FISHDATA_PIC, p) = xy2pic(0, 26), 305, 50, 40, 100, 13500, 25000, ITEM_ID_FISH
 	p++
-	fishdatan(p) = lang("ÁÑ¶„Åí„Åü„Ç≥„É≥„ÉÜ„Éä", "burnt container")
+	fishdatan(p) = lang("è≈Ç∞ÇΩÉRÉìÉeÉi", "burnt container")
 	fishdata(FISHDATA_PIC, p) = xy2pic(1, 26), 305, 400, 0, 100, 250, 40, ITEM_ID_FISH_JUNK
 	p++
-	fishdatan(p) = lang("„Ç¨„É©„Ç±„Éº", "feature phone")
+	fishdatan(p) = lang("ÉKÉâÉPÅ[", "feature phone")
 	fishdata(FISHDATA_PIC, p) = xy2pic(2, 26), 305, 400, 0, 100, 250, 25, ITEM_ID_FISH_JUNK
 	p++
 	return
