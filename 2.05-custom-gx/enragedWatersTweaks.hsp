@@ -1,0 +1,30 @@
+// CUSTOM TWEAKS BY ENRAGED WATERS//
+//Idea is to keep tweaks in seperate .hsp for personal use/updating game
+//Not idea for gitHub but the logic is all there so creating a gitHub branch is straight forward
+
+
+//cc = CHARA_PLAYER // cc = Current player
+//tc = target Character //      tc = map(tlocx, tlocy, 1) - 1       <-  is usual declaration
+//cdata(CDATA_GOLD, CHARA_PLAYER) // For Obtaining cdata on line 3552 in mod.hsp such as position, sex, and hunger.
+//if ( sdata(SKILL_NORMAL_NEGOTIATION, cc) // For obtaining skill levels such as casting level. Found on line 190 in mod.hsp
+//efp is power effectiveness      efp = calcspellpower(efid, cc)
+
+*increasedShopStockTweak //Line 222891 in chat.hsp
+    //Raises hard cap on shop rank to 250
+    //Then adds 1 additional item per 10 levels of player negotiation
+    //Can't do charisma because Gem buff would allow wizards to get literally an extra 50+ items
+    if (cdata(CDATA_ROLE, tc) != ROLE_SHOP_STOKE | cdata(CDATA_ROLE, tc) != ROLE_SHOP_MIROK){ //These guys are static
+        p = 200 + cdata(CDATA_ROLE_SHOP_LEVEL, tc) * 2 / 3 // p=40+... default
+        if ( p > 250 ) {
+            p = 250
+        }
+        p += (sdata(SKILL_NORMAL_NEGOTIATION, CHARA_PLAYER)/10)
+        if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_MOYER ) {
+            p /= 2 //Moyor in Noyel goes from 1/4 to 1/2
+        }
+    }
+return
+
+*wizardSpellTweak //Line 22606 in proc.hsp
+    efp = 100000
+return

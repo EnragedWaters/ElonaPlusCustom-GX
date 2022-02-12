@@ -283,6 +283,7 @@
 	#include "help.hsp"
 
 	#include "lua.hsp"
+	#include "enragedWatersTweaks.hsp"
 
 #ifdef CUSTOM_GX_MOCK
 	#include "mock_lib.hsp"

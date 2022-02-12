@@ -22888,6 +22888,7 @@
 	if ( p > 120 ) {
 		p = 120
 	}
+	*increasedShopStockTweak //EnragedWaters
 	if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_BLACKMARKET ) {
 		p = 7 + limit(cdata(CDATA_ROLE_SHOP_LEVEL, tc) / 7, 1, 30)
 	}
@@ -22918,6 +22919,7 @@
 			cdata(CDATA_FAME, tc) = 0
 		}
 	}
+	gosub *increasedShopStockTweak //EnragedWaters
 	repeat p
 		flt calcobjlv(cdata(CDATA_ROLE_SHOP_LEVEL, tc)), calcfixlv(FIX_QUALITY_GOOD)
 		dbid = 0
