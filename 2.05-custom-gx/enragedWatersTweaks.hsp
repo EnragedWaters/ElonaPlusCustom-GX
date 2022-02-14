@@ -33,6 +33,48 @@
     //efp = 100000
 	return
 
+*houseServantsTweak
+
+	return
+
+#deffunc removeSpellOverCastTweak //Line 5558 in proc.hsp
+	//Remove spell over cast tweak
+	return TRUE
+
+*petArenaTweak //Line 18763 in chat.hsp
+	petArenaMatchLimit = 100 // Vanilla=3
+	return
+
+*questColorChangeTweak //Line 3036 in command.hsp
+	//This changes quest description color to green if you own the item already
+	// Tweak -> Checks to see if player owns required quest item->If so, changes quest text color for easy turn-in
+	if(qdata(QDATA_EXIST, rq) == QUEST_TYPE_SUPPLY | qdata(QDATA_EXIST, rq) == QUEST_TYPE_COLLECT | qdata(QDATA_EXIST, rq) == QUEST_TYPE_COOK){ 
+		repeat invrange, invhead //This repeat should be it's own function with parameters since this is duplicated from chat.hsp
+			if ( inv(INV_ITEM_NUM, cnt) == 0 ) {
+				continue
+			}
+			if ( ibit(ITEM_BIT_NO_DROP, cnt) ) {
+				continue
+			}
+			if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_COOK ) {
+				color 0, 25, 200
+				if ( refitem(inv(INV_ITEM_ID, cnt), DBSPEC_TYPE) == FILTER_ITEM_FOOD ) {
+					if ( inv(INV_ITEM_PARAM1, cnt) / 1000 == qdata(QDATA_PARAM1, rq) ) {
+						if ( inv(INV_ITEM_PARAM2, cnt) == qdata(QDATA_PARAM2, rq) ) {
+							color 25, 150, 25 //Food required for quest found
+							break
+						}
+					}
+				}
+			}
+			if ( inv(INV_ITEM_ID, cnt) == qdata(QDATA_DEST_ITEM, rq) ) {
+				color 25, 150, 25 //Item required for quest found
+				break
+			}
+		loop 
+	}
+	return
+
 //=====Magnet Spell======
 *db_item_SPELLBOOK_MAGNET
     if ( 20 > objlv ) {
@@ -135,8 +177,8 @@
 			}
 			else {
 				description(0) = "The magnet spell book - pull all items to you!"
-				description(1) = "The magnet spell book - pull all items to you!"
-				description(3) = "The magnet spell book - pull all items to you!"
+				description(1) = ""
+				description(3) = ""
 			}
 			return
 		}
@@ -149,7 +191,7 @@
 	ialphanameref(ITEM_ID_SPELLBOOK_OF_MAGNET) = ""
 	iorgweight(ITEM_ID_SPELLBOOK_OF_MAGNET) = 380
 	if ( jp ) {
-		ioriginalnameref(ITEM_ID_SPELLBOOK_OF_MAGNET) = "jp magnet spellbook"
+		ioriginalnameref(ITEM_ID_SPELLBOOK_OF_MAGNET) = ""
 	}
 	else {
 		ioriginalnameref(ITEM_ID_SPELLBOOK_OF_MAGNET) = "magnet"
