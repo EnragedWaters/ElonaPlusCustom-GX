@@ -4448,7 +4448,7 @@
 		if ( fishdata(FISHDATA_PIC, cnt) == 0 ) {
 			continue
 		}
-		i = limit(inv(INV_ITEM_FISHING_BAIT, ci) + (rnd(5) == 0) - (rnd(5) == 0), 0, 5)
+		i = limit(inv(INV_ITEM_FISHING_BAIT, ci) + (rnd(5) == 0) - (rnd(5) == 0), 0, 3) //Fish/Item chosen. 0,5 to 0,3 - no junk?
 		if ( gdata(GDATA_WORLD) == AREA_AIMWELL ) {
 			i = 6
 		}
@@ -4458,7 +4458,7 @@
 		if ( gdata(GDATA_WORLD) == AREA_LOST_YLVA ) {
 			i += 300
 		}
-		if ( fishdata(FISHDATA_LEVEL, cnt) != i ) {
+		if ( fishdata(FISHDATA_LEVEL, cnt) != i ) { //So i is the fish/junk chosen. And it skips over everything NOT i
 			continue
 		}
 		dblist(0, dbmax) = cnt, fishdata(FISHDATA_RARE, cnt) + dbsum
@@ -4567,7 +4567,7 @@
 			fishstat = 1
 			gosub *choose_fish
 		}
-		if ( fishstat == 1 ) {
+		if ( fishstat == 1 ) { //Stage 1
 			if ( rnd(2) == 0 ) {
 				repeat 4 + rnd(4)
 					redraw 0
@@ -4587,7 +4587,7 @@
 				fishanime = 0
 			}
 		}
-		if ( fishstat == 2 ) {
+		if ( fishstat == 2 ) { //Stage 2
 			fishanime = 2
 			snd SOUNDLIST_WATER2
 			cdata(CDATA_EMO_ICON, CHARA_PLAYER) = 20 + 100 * 2
@@ -4606,7 +4606,7 @@
 			}
 			fishanime = 0
 		}
-		if ( fishstat == 3 ) {
+		if ( fishstat == 3 ) { //!!! Something!
 			fishanime = 3
 			repeat 28 + rnd(15)
 				if ( cnt \ 7 == 0 ) {
@@ -4621,14 +4621,14 @@
 				await cfg_wait1 * 2
 			loop
 			if ( fishdata(FISHDATA_POWER, fish) >= rnd(sdata(SKILL_NORMAL_FISHING, CHARA_PLAYER) + 1) ) {
-				fishstat = 0
+				fishstat = 0 //No fish/item because too low level!
 			}
 			else {
 				fishstat = 4
 			}
 			fishanime = 0
 		}
-		if ( fishstat == 4 ) {
+		if ( fishstat == 4 ) { //Item/Fish obtained!
 			fishanime = 4
 			snd SOUNDLIST_FISH_GET
 			repeat 21
@@ -22679,6 +22679,7 @@
 		mode = MODELIST_MAIN
 		goto *effect_end
 	}
+	gosub *magnet_spell_effect //EnragedWaters
 *effect_end
 	ci = efcibk
 	efstatus = 0

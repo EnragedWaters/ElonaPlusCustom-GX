@@ -646,25 +646,25 @@
 	dbmax++
 *db_item_SPELLBOOK_OF_HYDRO_FANG
 	if ( 15 > objlv ) {
-		goto *db_item_DYING_CICADA
+		goto *db_item_SPELLBOOK_MAGNET //*db_item_DYING_CICADA EnragedWaters
 	}
 	if ( fltselect != 0 ) {
-		goto *db_item_DYING_CICADA
+		goto *db_item_SPELLBOOK_MAGNET //*db_item_DYING_CICADA EnragedWaters
 	}
 	if ( flttypemajor != FILTER_NOTHING ) {
 		if ( flttypemajor != FILTER_ITEM_SPELLBOOK ) {
-			goto *db_item_DYING_CICADA
+			goto *db_item_SPELLBOOK_MAGNET //*db_item_DYING_CICADA EnragedWaters
 		}
 	}
 	if ( flttypeminor != FILTER_NOTHING ) {
 		if ( flttypeminor != FILTER_NONE ) {
-			goto *db_item_DYING_CICADA
+			goto *db_item_SPELLBOOK_MAGNET //*db_item_DYING_CICADA EnragedWaters
 		}
 	}
 	if ( filtermax != 0 ) {
 		dbtmp = 1
 		repeat filtermax
-			if ( instr(filter_item(ITEM_ID_SPELLBOOK_OF_HYDRO_FANG), 0, filtern(cnt)) == (-1) ) {
+			if ( instr(filter_item(ITEM_ID_SPELLBOOK_OF_MAGNET), 0, filtern(cnt)) == (-1) ) {
 				dbtmp = 0
 				break
 			}
@@ -674,7 +674,7 @@
 		}
 	}
 	dbsum += 1000000 / (1000 + abs(objlv - 15) * 0) + 1
-	dblist(0, dbmax) = ITEM_ID_SPELLBOOK_OF_HYDRO_FANG, dbsum
+	dblist(0, dbmax) = ITEM_ID_SPELLBOOK_OF_MAGNET, dbsum
 	dbmax++
 *db_item_DYING_CICADA
 	if ( 1 > objlv ) {
@@ -41523,6 +41523,7 @@
 		}
 		return 0
 	}
+	gosub *db_item_SPELLBOOK_MAGNET_STATS //EnragedWaters
 	if ( dbid == ITEM_ID_DYING_CICADA ) {
 		if ( dbmode == DBMODE_SET_STATS | dbmode == DBMODE_SET ) {
 			inv(INV_ITEM_VALUE, ci) = 10
@@ -122827,6 +122828,8 @@
 	rffilter_item(ITEM_ID_SPELLBOOK_OF_SOUND_CANNONBALL) = ""
 	filter_item(ITEM_ID_SPELLBOOK_OF_HYDRO_FANG) = ""
 	rffilter_item(ITEM_ID_SPELLBOOK_OF_HYDRO_FANG) = ""
+	filter_item(ITEM_ID_SPELLBOOK_OF_MAGNET) = ""//EnragedWaters
+	rffilter_item(ITEM_ID_SPELLBOOK_OF_MAGNET) = ""//EnragedWaters
 	filter_item(ITEM_ID_DYING_CICADA) = ""
 	rffilter_item(ITEM_ID_DYING_CICADA) = ""
 	filter_item(ITEM_ID_M01_GARNET) = ""
@@ -125632,6 +125635,7 @@
 	iknownnameref(ITEM_ID_SPELLBOOK_OF_HYDRO_FANG) = _namespellbook(p) + strblank + strspellbook
 	icolref(ITEM_ID_SPELLBOOK_OF_HYDRO_FANG) = _randcolor(p)
 	irandomname(ITEM_ID_SPELLBOOK_OF_HYDRO_FANG) = 1
+	gosub *db_ITEM_ID_SPELLBOOK_OF_MAGNET_MORE_STATS //EnragedWaters
 	ilight(ITEM_ID_DYING_CICADA) = LIGHT_TYPE_NONE
 	ialphanameref(ITEM_ID_DYING_CICADA) = ""
 	iorgweight(ITEM_ID_DYING_CICADA) = 10

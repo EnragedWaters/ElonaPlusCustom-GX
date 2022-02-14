@@ -334,8 +334,9 @@
 #define global	SKILL_SPELL_POISON_MUCUS	489
 #define global	SKILL_SPELL_SOUND_CANNONBALL	490
 #define global	SKILL_SPELL_HYDRO_FANG	491
+#define global  SKILL_SPELL_MAGNET 492 //EnragedWaters
 
-#define global	MAX_SPELL	(SKILL_SPELL_HYDRO_FANG + 1)
+#define global	MAX_SPELL	(SKILL_SPELL_MAGNET + 1) //SKILL_SPELL_HYDRO_FANG + 1 EnragedWaters
 
 // Special actions
 #define global	STARTING_SKILL_SPACT	600
@@ -5721,8 +5722,9 @@
 #define global	ITEM_ID_SPELLBOOK_OF_THUNDER_VORTEX	1247
 #define global	ITEM_ID_SOCKS2	1248
 #define global	ITEM_ID_AURTEHOM	1249
+#define global	ITEM_ID_SPELLBOOK_OF_MAGNET 1250 //EnragedWaters 
 
-#define global	MAX_ITEM_ID	(ITEM_ID_AURTEHOM + 3)
+#define global	MAX_ITEM_ID	(ITEM_ID_SPELLBOOK_OF_MAGNET + 3) //ITEM_ID_AURTEHOM + 3 EnragedWaters
 
 // Creatures
 #define global	CREATURE_ID_BUG	0 // Also doubles as RANDOM

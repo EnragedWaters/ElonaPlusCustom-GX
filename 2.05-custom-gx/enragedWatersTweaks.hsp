@@ -2,6 +2,10 @@
 //Idea is to keep tweaks in seperate .hsp for personal use/updating game
 //Not idea for gitHub but the logic is all there so creating a gitHub branch is straight forward
 
+/* TO DOS
+-Fishing tweak - make it so fishing skill does something past 40
+
+*/
 
 //cc = CHARA_PLAYER // cc = Current player
 //tc = target Character //      tc = map(tlocx, tlocy, 1) - 1       <-  is usual declaration
@@ -14,17 +18,201 @@
     //Then adds 1 additional item per 10 levels of player negotiation
     //Can't do charisma because Gem buff would allow wizards to get literally an extra 50+ items
     if (cdata(CDATA_ROLE, tc) != ROLE_SHOP_STOKE | cdata(CDATA_ROLE, tc) != ROLE_SHOP_MIROK){ //These guys are static
-        p = 200 + cdata(CDATA_ROLE_SHOP_LEVEL, tc) * 2 / 3 // p=40+... default
-        if ( p > 250 ) {
-            p = 250
+        p = 80 + cdata(CDATA_ROLE_SHOP_LEVEL, tc) // p=40+... default
+        if ( p > 400 ) {
+            p = 400
         }
-        p += (sdata(SKILL_NORMAL_NEGOTIATION, CHARA_PLAYER)/10)
+        p += (sdata(SKILL_NORMAL_NEGOTIATION, CHARA_PLAYER)/10) //Add player's negotiation/10
         if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_MOYER ) {
             p /= 2 //Moyor in Noyel goes from 1/4 to 1/2
         }
     }
-return
+	return
 
 *wizardSpellTweak //Line 22606 in proc.hsp
-    efp = 100000
-return
+    //efp = 100000
+	return
+
+//=====Magnet Spell======
+*db_item_SPELLBOOK_MAGNET
+    if ( 20 > objlv ) {
+		goto *db_item_DYING_CICADA //*db_item_DYING_CICADA EnragedWaters
+	}
+	if ( fltselect != 0 ) {
+		goto *db_item_DYING_CICADA
+	}
+	if ( flttypemajor != FILTER_NOTHING ) {
+		if ( flttypemajor != FILTER_ITEM_SPELLBOOK ) {
+			goto *db_item_DYING_CICADA
+		}
+	}
+	if ( flttypeminor != FILTER_NOTHING ) {
+		if ( flttypeminor != FILTER_NONE ) {
+			goto *db_item_DYING_CICADA
+		}
+	}
+	if ( filtermax != 0 ) {
+		dbtmp = 1
+		repeat filtermax
+			if ( instr(filter_item(ITEM_ID_SPELLBOOK_OF_MAGNET), 0, filtern(cnt)) == (-1) ) {
+				dbtmp = 0
+				break
+			}
+		loop
+		if ( dbtmp == 0 ) {
+			goto *db_item_DYING_CICADA
+		}
+	}
+	dbsum += 1000000 / (1000 + abs(objlv - 15) * 0) + 1
+	dblist(0, dbmax) = ITEM_ID_SPELLBOOK_OF_MAGNET, dbsum
+	dbmax++
+	return
+
+
+*db_item_SPELLBOOK_MAGNET_STATS
+    if ( dbid == ITEM_ID_SPELLBOOK_OF_MAGNET ) {
+		if ( dbmode == DBMODE_SET_STATS | dbmode == DBMODE_SET ) {
+			inv(INV_ITEM_VALUE, ci) = 2500
+			inv(INV_ITEM_WEIGHT, ci) = 380
+		}
+		if ( dbmode == DBMODE_SET ) {
+			inv(INV_ITEM_ID, ci) = ITEM_ID_SPELLBOOK_OF_MAGNET
+			inv(INV_ITEM_PIC, ci) = xy2pic(0, 13)
+			reftype = FILTER_ITEM_SPELLBOOK
+			reftypeminor = FILTER_NOTHING
+			inv(INV_ITEM_NUM, ci) = 1
+			fixeditemenc = 0
+			inv(INV_ITEM_IDENTIFY_LEVEL, ci) = 0
+			inv(INV_ITEM_CHARGE, ci) = 5 + rnd(5) - rnd(5)
+			ibitmod ITEM_BIT_CHARGE_ITEM, ci, TRUE
+			return
+		}
+		if ( dbmode == DBMODE_REF ) {
+			ichargelevel = 5
+			infilterref = ""
+			reftype = FILTER_ITEM_SPELLBOOK
+			return
+		}
+		if ( dbmode == DBMODE_REF_SPEC ) {
+			if ( dbspec == DBSPEC_TYPE ) {
+				return 54000
+			}
+			if ( dbspec == DBSPEC_TYPE_MINOR ) {
+				return 99999
+			}
+			if ( dbspec == DBSPEC_VALUE_ORG ) {
+				return 2500
+			}
+			if ( dbspec == DBSPEC_PARAM3_ORG ) {
+				return
+			}
+			if ( dbspec == DBSPEC_CAN_READ ) {
+				return 1
+			}
+			if ( dbspec == DBSPEC_PCC ) {
+				return 0
+			}
+			if ( dbspec == DBSPEC_OBJ_LEVEL ) {
+				return 20
+			}
+			if ( dbspec == DBSPEC_RARE_LEVEL ) {
+				return 1000
+			}
+			return 0
+		}
+		if ( dbmode == DBMODE_ON_READ ) {
+			efid = SKILL_SPELL_MAGNET
+			efp = 100
+			gosub *readSpellbook
+			return -1
+		}
+		if ( dbmode == DBMODE_DESC ) {
+			if ( jp ) {
+				description(0) = ""
+				description(1) = ""
+				description(2) = ""
+				description(3) = ""
+			}
+			else {
+				description(0) = "The magnet spell book - pull all items to you!"
+				description(1) = "The magnet spell book - pull all items to you!"
+				description(3) = "The magnet spell book - pull all items to you!"
+			}
+			return
+		}
+		return 0
+	}
+	return
+
+*db_ITEM_ID_SPELLBOOK_OF_MAGNET_MORE_STATS
+    ilight(ITEM_ID_SPELLBOOK_OF_MAGNET) = LIGHT_TYPE_NONE
+	ialphanameref(ITEM_ID_SPELLBOOK_OF_MAGNET) = ""
+	iorgweight(ITEM_ID_SPELLBOOK_OF_MAGNET) = 380
+	if ( jp ) {
+		ioriginalnameref(ITEM_ID_SPELLBOOK_OF_MAGNET) = "jp magnet spellbook"
+	}
+	else {
+		ioriginalnameref(ITEM_ID_SPELLBOOK_OF_MAGNET) = "magnet"
+		ioriginalnameref2(ITEM_ID_SPELLBOOK_OF_MAGNET) = "spellbook"
+	}
+	ipicref(ITEM_ID_SPELLBOOK_OF_MAGNET) = xy2pic(0, 13)
+	p = (ITEM_ID_SPELLBOOK_OF_MAGNET + gdata(GDATA_RAND_SEED_A)) \ 6
+	iknownnameref(ITEM_ID_SPELLBOOK_OF_MAGNET) = _namespellbook(p) + strblank + strspellbook
+	icolref(ITEM_ID_SPELLBOOK_OF_MAGNET) = _randcolor(p)
+	irandomname(ITEM_ID_SPELLBOOK_OF_MAGNET) = 1
+	return
+
+*skill_spell_magnet_desc
+    sdataref(SKILL_DATAREF_USE, SKILL_SPELL_MAGNET) = SKILL_ATTR_PER, SKILL_TYPE_SP, 45, TARGET_TYPE_SELF_ONLY, 350
+	skillname(SKILL_SPELL_MAGNET) = lang("???", "Magnet")
+	skilldesc(SKILL_SPELL_MAGNET) = lang("Self", "Self Item Pull")
+	skillencdesc(SKILL_SPELL_MAGNET) = lang("", "")
+	return
+
+*skill_spell_magnet_calc //Shouldn't need for calcspell() but we'll find out 
+    if ( calcskill_skillid == SKILL_SPELL_MAGNET ) {
+
+		return 1
+	}
+	return
+
+*magnet_spell_effect
+    if ( _switch_val == SKILL_SPELL_MAGNET | _switch_sw ) {
+		_switch_sw = 0
+		gosub *com_txtAdvQuit_Magnet_Spell //*com_txtAdvQuit
+		goto *effect_end
+	}
+	return
+
+*magnet_spell_to_book
+    if ( efid == SKILL_SPELL_MAGNET ) {
+        dbid = ITEM_ID_SPELLBOOK_OF_MAGNET
+    }
+	return
+
+*com_txtAdvQuit_Magnet_Spell
+	mtilefilecur = -1
+	gosub *map_prepareTile
+	f = 0
+	inv_getheader -1 //Sets invrange and invhead 
+	repeat invrange, invhead
+		if ( inv(INV_ITEM_NUM, cnt) != 0 ) {
+			f = 1 //Shouldn't this break?
+		}
+	loop
+	if ( f == 1 ) {
+		if ( cdata(CDATA_HP, CHARA_PLAYER) >= 0 ) {
+			txt lang("幾つかの戦利品がある。", "Using Magnet, you can grab some items.")
+			screenupdate = 2 //-1
+			gosub *screen_draw
+			invsubroutine = 1
+			invctrl = 22, 0 //27 by default? Avoid "non-property"
+			gosub *com_inventory
+		}
+	}
+	mode = MODELIST_MAIN
+	atxid = 0
+	await 100
+	snd SOUNDLIST_POP3
+	return
+
