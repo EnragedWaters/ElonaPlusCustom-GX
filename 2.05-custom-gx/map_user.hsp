@@ -1420,7 +1420,7 @@
 			txt lang("家はすでに人であふれかえっている。", "You already have too many guests in your home.")
 			goto *com_home_SWEND1
 		}
-		repeat 10
+		repeat 30 //Default 10 EnragedWaters
 			randomize gdata(GDATA_DAY) + cnt
 			if ( rnd(2) ) {
 				continue
@@ -1442,7 +1442,7 @@
 			cdata(CDATA_EXIST, rc) = CHAR_STATE_TEMP
 			cdata(CDATA_ROLE, rc) = isethirerole(hire)
 			if ( cdata(CDATA_ID, rc) == CREATURE_ID_SHOPKEEPER ) {
-				p = rnd(6)
+				gosub *houseServantsTweak
 				if ( p == 0 ) {
 					cdata(CDATA_ROLE, rc) = ROLE_SHOP_ARMOR
 					cdatan(CDATAN_NAME, rc) = lang("武具店の" + cdatan(CDATAN_NAME, rc), cdatan(CDATAN_NAME, rc) + " of armory")

@@ -33,8 +33,21 @@
     //efp = 100000
 	return
 
-*houseServantsTweak
-
+*houseServantsTweak //Line 1445 in map_user.hsp
+	p = rnd(9)
+	if ( p == 6 ) {
+		cdata(CDATA_ROLE, rc) = ROLE_SHOP_BAKERY
+		cdatan(CDATAN_NAME, rc) = lang("魔法店の" + cdatan(CDATAN_NAME, rc), cdatan(CDATAN_NAME, rc) + " of baker store")
+		cdata(CDATA_PIC, rc) = xy2pic(6, 4) //Baker sprite, otherwise looks like normal merchant.	
+	}
+	if ( p == 7 ) {
+		cdata(CDATA_ROLE, rc) = ROLE_SHOP_FOOD
+		cdatan(CDATAN_NAME, rc) = lang("魔法店の" + cdatan(CDATAN_NAME, rc), cdatan(CDATAN_NAME, rc) + " of food store")
+	}
+	if ( p == 8 ) {
+		cdata(CDATA_ROLE, rc) = ROLE_SHOP_FISH
+		cdatan(CDATAN_NAME, rc) = lang("魔法店の" + cdatan(CDATAN_NAME, rc), cdatan(CDATAN_NAME, rc) + " of fish store")
+	}
 	return
 
 #deffunc removeSpellOverCastTweak //Line 5558 in proc.hsp
@@ -75,7 +88,18 @@
 	}
 	return
 
-//=====Magnet Spell======
+*consoleCommandAddAttribute //Wizard command to max out player attributes
+	if ( instr(buff, 0, "gain_attribute") != (-1) ) {
+		repeat SKILL_ATTR_LUC - SKILL_ATTR_STR, SKILL_ATTR_STR
+			skillmod cnt, tc, 1000000000
+		loop
+		skillmod SKILL_ATTR_LIFE, tc, 1000000000
+		skillmod SKILL_ATTR_MANA, tc, 1000000000
+		noteadd "Done."
+		goto *console_write
+	}
+	return
+	//=====Magnet Spell======
 *db_item_SPELLBOOK_MAGNET
     if ( 20 > objlv ) {
 		goto *db_item_DYING_CICADA //*db_item_DYING_CICADA EnragedWaters
