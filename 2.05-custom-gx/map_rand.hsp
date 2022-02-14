@@ -453,7 +453,7 @@
 				nkane = limit(gdata(GDATA_LEVEL), 1, 400)
 				flt
 				itemcreate -1, ITEM_ID_MUSIC_TICKET, -1, -1, 0
-				inv(INV_ITEM_NUM, ci) = limit(nkane / 3, 1, 70)
+				gosub *nefiaFeverMusicTicketTweak //EnragedWaters
 			}
 			if ( TweakData(TWEAK_GAMEPLAY_DISABLE_DESTINY, TWEAK_CATEGORY_GAMEPLAY) == FALSE ) {
 				if ( gdata(GDATA_FLAG_DESTINY_LETTERS) >= 7 ) {

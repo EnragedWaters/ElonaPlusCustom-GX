@@ -58,10 +58,18 @@
 	petArenaMatchLimit = 100 // Vanilla=3
 	return
 *partyTimeTweak //Changes formula for party time scaling
+
 	//DEFAULT: qdata(QDATA_LEVEL, rq) = limit(rnd(sdata(SKILL_NORMAL_PERFORMER, CHARA_PLAYER) + sdata(SKILL_ATTR_CHA, CHARA_PLAYER) / 10 + 10), int(1.5 * sqrt(sdata(SKILL_NORMAL_PERFORMER, CHARA_PLAYER))) + 10, cdata(CDATA_FAME, CHARA_PLAYER) / 1000 + 10)
 	qdata(QDATA_LEVEL, rq) = limit(rnd(sdata(SKILL_NORMAL_PERFORMER, CHARA_PLAYER) + sdata(SKILL_ATTR_CHA, CHARA_PLAYER) / 10 + 10), int(3.5 * sqrt(sdata(SKILL_NORMAL_PERFORMER, CHARA_PLAYER))) + 10, cdata(CDATA_FAME, CHARA_PLAYER) / 500 + 10)
 	return
+*musicTicketFromPartyTimeTweak //Line 742 in quest.hsp
+	itemcreate -1, ITEM_ID_MUSIC_TICKET, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), 1 + qdata(QDATA_PARAM2, rq) / 8 //  /10 to /8
+	return
 
+*nefiaFeverMusicTicketTweak //Line 456 in map_rand.hsp
+	nkane = limit(gdata(GDATA_LEVEL), 1, 900) //400 vanilla
+	inv(INV_ITEM_NUM, ci) = limit(nkane / 3, 1, 300) //Vanilla was 70 ticket cap - nkane is dungeon floor. 
+	return
 *questColorChangeTweak //Line 3036 in command.hsp
 
 	//This changes quest description color to green if you own the item already
