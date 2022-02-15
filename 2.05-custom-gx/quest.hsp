@@ -105,7 +105,7 @@
 	qdata(QDATA_EXIST, rq) = QUEST_TYPE_NONE
 	qdata(QDATA_TYPE, rq) = QUEST_TYPE_NONE
 	qdata(QDATA_STATUS, rq) = QUEST_STATE_NONE
-	qdata(QDATA_RENEW, rq) = rnd(3 + 1) * 24 + (gdata(GDATA_HOUR) + gdata(GDATA_DAY) * 24 + gdata(GDATA_MONTH) * 24 * 30 + gdata(GDATA_YEAR) * 24 * 30 * 12)
+	gosub *questResetTimerTweak //EnragedWaters
 	qdata(QDATA_REWARD_ITEM, rq) = QUEST_REWARD_NONE
 	if ( rnd(3) == 0 ) {
 		return
@@ -259,11 +259,7 @@
 	}
 	if ( rnd(35) == 0 | (gdata(GDATA_AREA) == AREA_DERPHY & rnd(8) == 0) | (gdata(GDATA_AREA) == AREA_LUDUS & rnd(12) == 0) ) {
 		if ( gdata(GDATA_AREA) != AREA_RUST_PLAZA & gdata(GDATA_AREA) != AREA_OL_DRAN ) {
-			qdata(QDATA_LEVEL, rq) = limit(rnd(sdata(SKILL_NORMAL_DETECTION, CHARA_PLAYER) + sdata(SKILL_ATTR_PER, CHARA_PLAYER) / 30 + 5), int(sqrt(sdata(SKILL_NORMAL_DETECTION, CHARA_PLAYER)) + 1) / 2 + 5, cdata(CDATA_FAME, CHARA_PLAYER) / 2000 + 5)
-			if ( qdata(QDATA_LEVEL, rq) > 66 ) {
-				qdata(QDATA_LEVEL, rq) = 66
-			}
-			qdata(QDATA_RENEW, rq) = (rnd(6) + 2) * 24 + (gdata(GDATA_HOUR) + gdata(GDATA_DAY) * 24 + gdata(GDATA_MONTH) * 24 * 30 + gdata(GDATA_YEAR) * 24 * 30 * 12)
+			gosub *mineFieldQuestDifficultyTweak //EnragedWaters
 			qdata(QDATA_REWARD_ITEM, rq) = QUEST_REWARD_NONE
 			qdata(QDATA_EXIST, rq) = QUEST_TYPE_MINEFIELD
 			qdata(QDATA_TYPE, rq) = QUEST_SUBTYPE_TRAP
@@ -283,8 +279,7 @@
 	}
 	if ( rnd(23) == 0 | (gdata(GDATA_AREA) == AREA_PALMIA & rnd(8) == 0) | (gdata(GDATA_AREA) == AREA_ARCBELC & rnd(2) == 0) ) {
 		if ( gdata(GDATA_AREA) != AREA_RUST_PLAZA & gdata(GDATA_AREA) != AREA_OL_DRAN ) {
-			gosub *partyTimeTweak
-			qdata(QDATA_RENEW, rq) = (rnd(6) + 2) * 24 + (gdata(GDATA_HOUR) + gdata(GDATA_DAY) * 24 + gdata(GDATA_MONTH) * 24 * 30 + gdata(GDATA_YEAR) * 24 * 30 * 12)
+			gosub *partyTimeDifficultyTweak //EnragedWaters
 			qdata(QDATA_REWARD_ITEM, rq) = QUEST_REWARD_NONE
 			qdata(QDATA_EXIST, rq) = QUEST_TYPE_PARTY
 			qdata(QDATA_TYPE, rq) = QUEST_SUBTYPE_PERFORM
@@ -713,78 +708,7 @@
 
 *quest_success
 	snd SOUNDLIST_COMPLETE1
-	p = qdata(QDATA_REWARD, rq)
-	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_HARVEST ) {
-		if ( qdata(QDATA_PARAM1, rq) != 0 ) {
-			if ( qdata(QDATA_PARAM1, rq) * 125 / 100 < qdata(QDATA_PARAM2, rq) ) {
-				p = limit(p * qdata(QDATA_PARAM2, rq) / qdata(QDATA_PARAM1, rq), p, p * 3)
-			}
-		}
-	}
-	if ( p != 0 ) {
-		flt
-		itemcreate -1, ITEM_ID_GOLD_PIECE, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), p
-	}
-	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_PARTY ) {
-		p = 1
-	}
-	else {
-		p = limit(rnd(1 + cdata(CDATA_FAME, CHARA_PLAYER) / 10000), 1, 3)
-	}
-	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_CONQUER | qdata(QDATA_EXIST, rq) == QUEST_TYPE_HUNTEX ) {
-		p = limit(rnd(2 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 2, 6)
-	}
-	flt
-	itemcreate -1, ITEM_ID_PLATINUM_COIN, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), p
-	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_PARTY ) {
-		if ( qdata(QDATA_PARAM1, rq) * 150 / 100 < qdata(QDATA_PARAM2, rq) ) {
-			flt
-			gosub *musicTicketFromPartyTimeTweak //EnragedWaers
-		}
-	}
-	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_MINEFIELD ) {
-		flt
-		itemcreate -1, ITEM_ID_DEVIL_FRAGMENT, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), limit(1 + qdata(QDATA_PARAM2, rq) / 5, 1, 30)
-		inv(INV_ITEM_STATUS, ci) = ITEM_STATUS_NORMAL
-		if ( qdata(QDATA_PARAM1, rq) * 125 / 100 <= qdata(QDATA_PARAM2, rq) | qdata(QDATA_VAR, rq) == 1 ) {
-			flt
-			itemcreate -1, ITEM_ID_BRONZE_COIN, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), 1
-		}
-	}
-	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_HARVEST ) {
-		if ( qdata(QDATA_PARAM1, rq) * 125 / 100 < qdata(QDATA_PARAM2, rq) ) {
-			flt
-			itemcreate -1, ITEM_ID_BRONZE_COIN, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), 1
-		}
-		seedp = rnd(limit(sdata(SKILL_NORMAL_GARDENING, CHARA_PLAYER) / 2, 0, 30) + 80)
-		if ( seedp >= 90 ) {
-			if ( rnd(2) == 0 ) {
-				itemcreate -1, ITEM_ID_HERB_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), 3
-			}
-			else {
-				itemcreate -1, ITEM_ID_HERB_SEED, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), 2
-			}
-		}
-		if ( seedp >= 70 & seedp < 90 ) {
-			if ( rnd(2) == 0 ) {
-				itemcreate -1, ITEM_ID_UNKNOWN_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), 3
-			}
-			else {
-				itemcreate -1, ITEM_ID_MAGICAL_SEED, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), 4
-			}
-		}
-		if ( seedp >= 50 & seedp < 70 ) {
-			itemcreate -1, ITEM_ID_GEM_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), 4
-		}
-		if ( seedp >= 0 & seedp < 50 ) {
-			if ( rnd(2) == 0 ) {
-				itemcreate -1, ITEM_ID_FRUIT_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), 5
-			}
-			else {
-				itemcreate -1, ITEM_ID_VEGETABLE_SEED, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), 5
-			}
-		}
-	}
+	gosub *questRewardTweaks //EnragedWaters
 	if ( qdata(QDATA_REWARD_ITEM, rq) != QUEST_REWARD_NONE ) {
 		p = rnd(rnd(4) + 1) + 1
 		if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_CONQUER | qdata(QDATA_EXIST, rq) == QUEST_TYPE_HUNTEX ) {

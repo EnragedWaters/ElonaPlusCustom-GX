@@ -4448,7 +4448,8 @@
 		if ( fishdata(FISHDATA_PIC, cnt) == 0 ) {
 			continue
 		}
-		i = limit(inv(INV_ITEM_FISHING_BAIT, ci) + (rnd(5) == 0) - (rnd(5) == 0), 0, 3) //Fish/Item chosen. 0,5 to 0,3 - no junk?
+		i = limit(inv(INV_ITEM_FISHING_BAIT, ci) + (rnd(5) == 0) - (rnd(5) == 0), 0, 5) //Fish/Item chosen. 0,5 to 0,4 for no junk.
+		gosub *fishMathTweak
 		if ( gdata(GDATA_WORLD) == AREA_AIMWELL ) {
 			i = 6
 		}
@@ -4496,8 +4497,9 @@
 	if ( gdata(GDATA_WORLD) == AREA_LOST_YLVA ) {
 		inv(INV_ITEM_COL, ci) = 7
 	}
+
 	txt lang(itemname(ci, 1) + "を釣り上げた！", "You get " + itemname(ci, 1) + "!")
-	item_stack CHARA_PLAYER, ci, 1
+	gosub *fishObtainedTweak //EnragedWaters
 	inv(INV_ITEM_CHARGE, turi)--
 	fishsize = 0
 	return
@@ -5555,7 +5557,7 @@
 	efp = calcspellpower(efid, cc)
 	if ( gdata(GDATA_TEMPORARY_FLAGS) == 0 ) {
 		if ( cc == CHARA_PLAYER ) {
-			if ( calcspellcostmp(efid, cc) > cdata(CDATA_MP, cc) | removeSpellOverCastTweak() ) {
+			if ( calcspellcostmp(efid, cc) > cdata(CDATA_MP, cc) | removeSpellOverCastTweak ) { //EnragedWaters
 				txt lang("マナが足りないが、それでも詠唱を試みる？", "You are going to over-cast the spell. Are you sure?")
 				promptYesNo
 				if ( rtval != 0 ) {

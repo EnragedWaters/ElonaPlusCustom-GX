@@ -12,7 +12,114 @@
 //cdata(CDATA_GOLD, CHARA_PLAYER) // For Obtaining cdata on line 3552 in mod.hsp such as position, sex, and hunger.
 //if ( sdata(SKILL_NORMAL_NEGOTIATION, cc) // For obtaining skill levels such as casting level. Found on line 190 in mod.hsp
 //efp is power effectiveness      efp = calcspellpower(efid, cc)
+*mineFieldQuestDifficultyTweak //Line 262 on quest.hsp
+	//Changes cap on minefield quest.
+	qdata(QDATA_LEVEL, rq) = limit(rnd(sdata(SKILL_NORMAL_DETECTION, CHARA_PLAYER) + sdata(SKILL_ATTR_PER, CHARA_PLAYER) / 10 + 5), 2 * int(sqrt(sdata(SKILL_NORMAL_DETECTION, CHARA_PLAYER)) + 1) / 2 + 5, cdata(CDATA_FAME, CHARA_PLAYER) / 1000 + 5)
+	if ( qdata(QDATA_LEVEL, rq) > 132 ) { //doubled it
+		qdata(QDATA_LEVEL, rq) = 132
+	}
+	qdata(QDATA_RENEW, rq) = 24 + (gdata(GDATA_HOUR) + gdata(GDATA_DAY) * 24 + gdata(GDATA_MONTH) * 24 * 30 + gdata(GDATA_YEAR) * 24 * 30 * 12)
+	return
+*questResetTimerTweak //Line 108 in quest.hsp
+	//rnd(3+1) in front removed
+	//Tweaking because with truck vehicle quest renewal sucks ass 
+	//There's a bunch of these thru out quest. Ugh.
+	qdata(QDATA_RENEW, rq) = 24 + (gdata(GDATA_HOUR) + gdata(GDATA_DAY) * 24 + gdata(GDATA_MONTH) * 24 * 30 + gdata(GDATA_YEAR) * 24 * 30 * 12) 
+	return
 
+*questRewardTweaks //Line 716 in quest.hsp
+	//Improving scaling on quest rewards. 
+	//Basically makes it so fame/20,000 improves bronze/pp by +1, same for seeds. 
+	p = qdata(QDATA_REWARD, rq)
+	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_HARVEST ) {
+		if ( qdata(QDATA_PARAM1, rq) != 0 ) {
+			if ( qdata(QDATA_PARAM1, rq) * 125 / 100 < qdata(QDATA_PARAM2, rq) ) {
+				p = limit(p * qdata(QDATA_PARAM2, rq) / qdata(QDATA_PARAM1, rq), p, p * 3)
+			}
+		}
+	}
+	if ( p != 0 ) {
+		flt
+		itemcreate -1, ITEM_ID_GOLD_PIECE, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), p
+	}
+	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_PARTY ) {
+		p = limit(rnd(1 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 1, 10)
+	}
+	else {
+		p = limit(rnd(1 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 1, 10)
+	}
+	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_CONQUER | qdata(QDATA_EXIST, rq) == QUEST_TYPE_HUNTEX ) {
+		p = limit(rnd(1 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 1, 10)
+	}
+	flt
+	itemcreate -1, ITEM_ID_PLATINUM_COIN, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), p
+	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_PARTY ) {
+		if ( qdata(QDATA_PARAM1, rq) * 150 / 100 < qdata(QDATA_PARAM2, rq) ) {
+			flt
+			gosub *musicTicketFromPartyTimeTweak //EnragedWaters
+		}
+	}
+	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_MINEFIELD ) {
+		flt
+		itemcreate -1, ITEM_ID_DEVIL_FRAGMENT, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), limit(1 + qdata(QDATA_PARAM2, rq) / 5, 1, 30)
+		inv(INV_ITEM_STATUS, ci) = ITEM_STATUS_NORMAL
+		if ( qdata(QDATA_PARAM1, rq) * 125 / 100 <= qdata(QDATA_PARAM2, rq) | qdata(QDATA_VAR, rq) == 1 ) {
+			flt
+			itemcreate -1, ITEM_ID_BRONZE_COIN, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), limit(rnd(1 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 1, 10)
+		}
+	}
+	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_HARVEST ) {
+		if ( qdata(QDATA_PARAM1, rq) * 125 / 100 < qdata(QDATA_PARAM2, rq) ) {
+			flt
+			itemcreate -1, ITEM_ID_BRONZE_COIN, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), limit(rnd(1 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 1, 10)
+		}
+		seedp = rnd(limit(sdata(SKILL_NORMAL_GARDENING, CHARA_PLAYER) / 2, 0, 75) + 80) //2,0,30 to 2,0,60
+		if ( seedp >= 90 ) {
+			if ( rnd(2) == 0 ) {
+				itemcreate -1, ITEM_ID_HERB_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), limit(rnd(3 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 3, 10)
+			}
+			else {
+				itemcreate -1, ITEM_ID_HERB_SEED, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), limit(rnd(2 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 2, 10)
+			}
+		}
+		if ( seedp >= 70 & seedp < 90 ) {
+			if ( rnd(2) == 0 ) {
+				itemcreate -1, ITEM_ID_UNKNOWN_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), limit(rnd(3 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 3, 10)
+			}
+			else {
+				itemcreate -1, ITEM_ID_MAGICAL_SEED, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), limit(rnd(4 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 4, 10)
+			}
+		}
+		if ( seedp >= 50 & seedp < 70 ) {
+			itemcreate -1, ITEM_ID_GEM_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), limit(rnd(4 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 4, 10)
+		}
+		if ( seedp >= 0 & seedp < 50 ) {
+			if ( rnd(2) == 0 ) {
+				itemcreate -1, ITEM_ID_FRUIT_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), limit(rnd(5 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 5, 10)
+			}
+			else {
+				itemcreate -1, ITEM_ID_VEGETABLE_SEED, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), limit(rnd(5 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 5, 10)
+			}
+		}
+	}
+	return
+
+*fishObtainedTweak//Line 4502 in proc.hsp
+	//Changes fish obtained to equal fishing lvl/100 + 1
+	item_stack CHARA_PLAYER, ci, (int(sdata(SKILL_NORMAL_FISH, CHARA_PLAYER)/100) +1)
+	return
+*fishMathTweak
+	i = limit(inv(INV_ITEM_FISHING_BAIT, ci) + (rnd(5) == 0) - (rnd(5) == 0), 0, 5) //Fish/Item chosen. 0,5 to 0,3 for no junk.
+	repeat int(sdata(SKILL_ATTR_LUC, CHARA_PLAYER)/100) //Every 100 luck do a 50% chance for re-roll
+		if ( rnd(2)){
+			if (i > 3){ //i = 4/5 is junk.
+				i = limit(inv(INV_ITEM_FISHING_BAIT, ci) + (rnd(5) == 0) - (rnd(5) == 0), 0, 5)
+			}
+		}
+	loop
+	//Perhaps add re-roll chance if i = 4-5 since i=4/5 is junk? 0-3 is fish. 
+	//^Someone mentioned also adding more bait, and quality +1-+9 for fish and maybe bait.
+	return
 *increasedShopStockTweak //Line 222891 in chat.hsp
     //Raises hard cap on shop rank to 250
     //Then adds 1 additional item per 10 levels of player negotiation
@@ -50,17 +157,19 @@
 	}
 	return
 
-#deffunc removeSpellOverCastTweak //Line 5558 in proc.hsp
+#defcfunc removeSpellOverCastTweak //Line 5558 in proc.hsp
 	//Remove spell over cast tweak
 	return TRUE
 
 *petArenaTweak //Line 18763 in chat.hsp
 	petArenaMatchLimit = 100 // Vanilla=3
 	return
-*partyTimeTweak //Changes formula for party time scaling
+
+*partyTimeDifficultyTweak //Changes formula for party time scaling
 
 	//DEFAULT: qdata(QDATA_LEVEL, rq) = limit(rnd(sdata(SKILL_NORMAL_PERFORMER, CHARA_PLAYER) + sdata(SKILL_ATTR_CHA, CHARA_PLAYER) / 10 + 10), int(1.5 * sqrt(sdata(SKILL_NORMAL_PERFORMER, CHARA_PLAYER))) + 10, cdata(CDATA_FAME, CHARA_PLAYER) / 1000 + 10)
-	qdata(QDATA_LEVEL, rq) = limit(rnd(sdata(SKILL_NORMAL_PERFORMER, CHARA_PLAYER) + sdata(SKILL_ATTR_CHA, CHARA_PLAYER) / 10 + 10), int(3.5 * sqrt(sdata(SKILL_NORMAL_PERFORMER, CHARA_PLAYER))) + 10, cdata(CDATA_FAME, CHARA_PLAYER) / 500 + 10)
+	qdata(QDATA_LEVEL, rq) = limit(rnd(sdata(SKILL_NORMAL_PERFORMER, CHARA_PLAYER) + sdata(SKILL_ATTR_CHA, CHARA_PLAYER) / 5 + 10), int(4.5 * sqrt(sdata(SKILL_NORMAL_PERFORMER, CHARA_PLAYER))) + 10, cdata(CDATA_FAME, CHARA_PLAYER) / 500 + 10)
+	qdata(QDATA_RENEW, rq) = 24 + (gdata(GDATA_HOUR) + gdata(GDATA_DAY) * 24 + gdata(GDATA_MONTH) * 24 * 30 + gdata(GDATA_YEAR) * 24 * 30 * 12)
 	return
 *musicTicketFromPartyTimeTweak //Line 742 in quest.hsp
 	itemcreate -1, ITEM_ID_MUSIC_TICKET, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), 1 + qdata(QDATA_PARAM2, rq) / 8 //  /10 to /8
@@ -100,7 +209,8 @@
 	}
 	return
 
-*consoleCommandAddAttribute //Wizard command to max out player attributes
+*consoleCommandAddAttribute //Line 4130 in system.hsp
+	//Wizard command to max out player attributes
 	if ( instr(buff, 0, "gain_attribute") != (-1) ) {
 		repeat SKILL_ATTR_LUC - SKILL_ATTR_STR, SKILL_ATTR_STR
 			skillmod cnt, tc, 1000000000

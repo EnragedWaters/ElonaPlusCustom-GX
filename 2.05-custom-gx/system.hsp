@@ -4127,6 +4127,7 @@
 			noteadd "Done."
 			goto *console_write
 		}
+		gosub *consoleCommandAddAttribute //EnragedWaters
 		if ( instr(buff, 0, "allinv") != (-1) ) {
 			repeat MAX_INV_DATA
 				if ( cnt < RANGE_INV2 ) {
@@ -4235,6 +4236,8 @@
     noteadd "\tgain_spact\tPC gains all special actions."
     noteadd "\tgain_exp\tPC gains a billion of exp."
     noteadd "\tgain_fame\tPC gains fame."
+	noteadd "\tgain_attribute\tPC gains max attributes." //EnragedWaters
+	noteadd "\tgain_spact\tPC gains all special actions."
     noteadd "\tallinv\t\tDisplays all the items in the map."
     noteadd "\tspawn_chara\tSpawns a character by numeric ID."
     noteadd "\tspawn_item\tSpawns an item by numeric ID."
