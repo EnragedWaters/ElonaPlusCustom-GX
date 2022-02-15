@@ -5557,7 +5557,7 @@
 	efp = calcspellpower(efid, cc)
 	if ( gdata(GDATA_TEMPORARY_FLAGS) == 0 ) {
 		if ( cc == CHARA_PLAYER ) {
-			if ( calcspellcostmp(efid, cc) > cdata(CDATA_MP, cc) | removeSpellOverCastTweak ) { //EnragedWaters
+			if ( calcspellcostmp(efid, cc) > cdata(CDATA_MP, cc) | removeSpellOverCastTweak() ) { //EnragedWaters
 				txt lang("マナが足りないが、それでも詠唱を試みる？", "You are going to over-cast the spell. Are you sure?")
 				promptYesNo
 				if ( rtval != 0 ) {
