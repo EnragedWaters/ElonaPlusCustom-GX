@@ -12,6 +12,8 @@
 //cdata(CDATA_GOLD, CHARA_PLAYER) // For Obtaining cdata on line 3552 in mod.hsp such as position, sex, and hunger.
 //if ( sdata(SKILL_NORMAL_NEGOTIATION, cc) // For obtaining skill levels such as casting level. Found on line 190 in mod.hsp
 //efp is power effectiveness      efp = calcspellpower(efid, cc)
+//cbit(CHARA_BIT_NECRO, cc) != 1    <- IF they're NOT necromancy allies
+//flt function sorta works as a "reset" option before creating npcs to avoid accidentally giving them unique properties not otherwise specified
 *mineFieldQuestDifficultyTweak //Line 262 on quest.hsp
 	//Changes cap on minefield quest.
 	qdata(QDATA_LEVEL, rq) = limit(rnd(sdata(SKILL_NORMAL_DETECTION, CHARA_PLAYER) + sdata(SKILL_ATTR_PER, CHARA_PLAYER) / 10 + 5), 2 * int(sqrt(sdata(SKILL_NORMAL_DETECTION, CHARA_PLAYER)) + 1) / 2 + 5, cdata(CDATA_FAME, CHARA_PLAYER) / 1000 + 5)

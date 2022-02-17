@@ -7159,7 +7159,7 @@
 			characreate -1, CREATURE_ID_NECRO_DOLL, 22, 7
 			cdata(CDATA_AI_CALM, rc) = 3
 			cdata(CDATA_CHARACTER_TIER, rc) = CHARACTER_TIER_SUMMONED_NORMAL
-			repeat 5
+			repeat 5 //This is Necromancer ally's 3/"intercept" mode. I believe "1" should make them aggressive. EnragedWaters
 				flt
 				initlv = 140
 				characreate -1, CREATURE_ID_CRYING_WITCH, 8, 11
