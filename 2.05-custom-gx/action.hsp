@@ -7483,9 +7483,7 @@
 			gosub *screen_draw
 			goto *pc_turn
 		}
-		if ( gdata(GDATA_FLAG_MANUSCRIPT_IDEAS) > 100 ) {
-			gdata(GDATA_FLAG_MANUSCRIPT_IDEAS) = 100
-		}
+		gosub *manuScriptTweak //EnragedWaters
 		if ( gdata(GDATA_FLAG_MANUSCRIPT_IDEAS) <= 0 ) {
 			gdata(GDATA_FLAG_MANUSCRIPT_IDEAS) = 0
 		}

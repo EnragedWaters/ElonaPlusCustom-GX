@@ -2196,7 +2196,7 @@
 						}
 					}
 					if ( ii_p == (-1) ) {
-						artifactlocation += lang(iknownnameref(inv(INV_ITEM_ID, ci)) + "は" + gdata(GDATA_YEAR) + "年" + gdata(GDATA_MONTH) + "月に" + mdatan(MDATAN_NAME) + "で生成された。\n", cnven(iknownnameref(inv(INV_ITEM_ID, ci))) + " was created at " + mdatan(MDATAN_NAME) + " in " + gdata(GDATA_DAY) + "/" + gdata(GDATA_MONTH) + ", " + gdata(GDATA_YEAR) + ".")
+						artifactlocation += lang(iknownnameref(inv(INV_ITEM_ID, ci)) + "は" + gdata(GDATA_YEAR) + "年" + gdata(GDATA_MONTH) + "月に" + mdatan(MDATAN_NAME) + "で生成された。\n", cnven(iknownnameref(inv(INV_ITEM_ID, ci))) + " was created at " + mdatan(MDATAN_NAME) + " in " + gdata(GDATA_DAY) + "/" + gdata(GDATA_MONTH) + ", " + gdata(GDATA_YEAR) + " at location" + cnven(iknownnameref(INV_ITEM_X, ci)) + "," + cnven(iknownnameref(INV_ITEM_Y, ci))  + ".") //EnragedWaters
 					}
 				}
 			}

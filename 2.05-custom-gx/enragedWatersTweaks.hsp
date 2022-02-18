@@ -4,8 +4,17 @@
 
 /* TO DOS
 -Fishing tweak - make it so fishing skill does something past 40
-
+-Create adventurer hospital
 */
+
+/*TWEAK CHECKLIST===========
+0. Write tweak in the comments at top.
+1. Add the #define MY_TWEAK into mod.hsp.
+2. Add tweak into array based off it's category(gameplay, convienence, etc.) in custom_tweaks.hsp
+3. Increase listmax by +1 for that category
+4. Add it's description.
+5. Make sure TweakData(myTweakName, TweakCategory) is actually applied in the code
+==========================*/
 
 //cc = CHARA_PLAYER // cc = Current player
 //tc = target Character //      tc = map(tlocx, tlocy, 1) - 1       <-  is usual declaration
@@ -14,6 +23,15 @@
 //efp is power effectiveness      efp = calcspellpower(efid, cc)
 //cbit(CHARA_BIT_NECRO, cc) != 1    <- IF they're NOT necromancy allies
 //flt function sorta works as a "reset" option before creating npcs to avoid accidentally giving them unique properties not otherwise specified
+
+
+*manuScriptTweak //Line 7486 in action.hsp
+	manuscriptMAX = 100 + (sdata(SKILL_NORMAL_MEMORIZATION, CHARA_PLAYER)/20 + sdata(SKILL_NORMAL_DETECTION, CHARA_PLAYER)/20)
+	if ( gdata(GDATA_FLAG_MANUSCRIPT_IDEAS) > manuscriptMAX  ) {
+		gdata(GDATA_FLAG_MANUSCRIPT_IDEAS) = manuscriptMAX
+	}
+	return
+
 *mineFieldQuestDifficultyTweak //Line 262 on quest.hsp
 	//Changes cap on minefield quest.
 	qdata(QDATA_LEVEL, rq) = limit(rnd(sdata(SKILL_NORMAL_DETECTION, CHARA_PLAYER) + sdata(SKILL_ATTR_PER, CHARA_PLAYER) / 10 + 5), 2 * int(sqrt(sdata(SKILL_NORMAL_DETECTION, CHARA_PLAYER)) + 1) / 2 + 5, cdata(CDATA_FAME, CHARA_PLAYER) / 1000 + 5)
@@ -197,7 +215,7 @@
 				if ( refitem(inv(INV_ITEM_ID, cnt), DBSPEC_TYPE) == FILTER_ITEM_FOOD ) {
 					if ( inv(INV_ITEM_PARAM1, cnt) / 1000 == qdata(QDATA_PARAM1, rq) ) {
 						if ( inv(INV_ITEM_PARAM2, cnt) == qdata(QDATA_PARAM2, rq) ) {
-							color 25, 150, 25 //Food required for quest found
+							color 25, 150, 25
 							break
 						}
 					}
