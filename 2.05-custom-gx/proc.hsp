@@ -22681,7 +22681,7 @@
 		mode = MODELIST_MAIN
 		goto *effect_end
 	}
-	gosub *magnet_spell_effect //EnragedWaters
+	//gosub *magnet_spell_effect //EnragedWaters
 *effect_end
 	ci = efcibk
 	efstatus = 0

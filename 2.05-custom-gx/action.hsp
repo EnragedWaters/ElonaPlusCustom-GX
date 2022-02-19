@@ -7788,7 +7788,7 @@
 				if ( efid == SKILL_SPELL_HYDRO_FANG ) {
 					dbid = ITEM_ID_SPELLBOOK_OF_HYDRO_FANG
 				}
-				gosub *magnet_spell_to_book //EnragedWaters
+				//gosub *magnet_spell_to_book //EnragedWaters
 				if ( efid == SKILL_SPELL_NETHER_BOLT ) {
 					dbid = ITEM_ID_SPELLBOOK_OF_NETHER_BOLT
 				}

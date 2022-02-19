@@ -93,7 +93,7 @@
 			flt
 			itemcreate -1, ITEM_ID_BRONZE_COIN, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), limit(rnd(1 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 1, 10)
 		}
-		seedp = rnd(limit(sdata(SKILL_NORMAL_GARDENING, CHARA_PLAYER) / 2, 0, 75) + 80) //2,0,30 to 2,0,60
+		seedp = rnd(limit(sdata(SKILL_NORMAL_GARDENING, CHARA_PLAYER) / 2, 0, 75) + 80) //2,0,30 to 2,0,75
 		if ( seedp >= 90 ) {
 			if ( rnd(2) == 0 ) {
 				itemcreate -1, ITEM_ID_HERB_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), limit(rnd(3 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 3, 10)
@@ -242,6 +242,7 @@
 	}
 	return
 	//=====Magnet Spell======
+	/*
 *db_item_SPELLBOOK_MAGNET
     if ( 20 > objlv ) {
 		goto *db_item_DYING_CICADA //*db_item_DYING_CICADA EnragedWaters
@@ -424,3 +425,4 @@
 	snd SOUNDLIST_POP3
 	return
 
+*/

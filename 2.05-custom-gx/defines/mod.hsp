@@ -334,9 +334,9 @@
 #define global	SKILL_SPELL_POISON_MUCUS	489
 #define global	SKILL_SPELL_SOUND_CANNONBALL	490
 #define global	SKILL_SPELL_HYDRO_FANG	491
-#define global  SKILL_SPELL_MAGNET 492 //EnragedWaters
+//#define global  SKILL_SPELL_MAGNET 492 //EnragedWaters
 
-#define global	MAX_SPELL	(SKILL_SPELL_MAGNET + 1) //SKILL_SPELL_HYDRO_FANG + 1 EnragedWaters
+#define global	MAX_SPELL	(SKILL_SPELL_HYDRO_FANG + 1) //SKILL_SPELL_HYDRO_FANG + 1 EnragedWaters
 
 // Special actions
 #define global	STARTING_SKILL_SPACT	600
