@@ -23552,20 +23552,20 @@
 				inv(INV_ITEM_NUM, ci) = inv(INV_ITEM_NUM, ci) * 200 / 100
 			}
 			if ( p >= 80 ) {
-				inv(INV_ITEM_NUM, ci) = inv(INV_ITEM_NUM, ci) / 2 + 1
+				inv(INV_ITEM_NUM, ci) = inv(INV_ITEM_NUM, ci) 
 				if ( rnd(2) ) {
 					inv(INV_ITEM_NUM, ci) = 0
 					continue
 				}
 			}
 			if ( p >= 100 ) {
-				inv(INV_ITEM_NUM, ci) = inv(INV_ITEM_NUM, ci) / 2 + 1
+				inv(INV_ITEM_NUM, ci) = inv(INV_ITEM_NUM, ci)
 				if ( rnd(3) ) {
 					inv(INV_ITEM_NUM, ci) = 0
 					continue
 				}
 			}
-			inv(INV_ITEM_NUM, ci) = inv(INV_ITEM_NUM, ci) * (100 + cdata(CDATA_ROLE_SHOP_LEVEL, tc)) / 75 + 1
+			inv(INV_ITEM_NUM, ci) = inv(INV_ITEM_NUM, ci) * (100 + cdata(CDATA_ROLE_SHOP_LEVEL, tc)) / 75 + 5
 		}
 		p = refitem(inv(INV_ITEM_ID, ci), DBSPEC_TYPE)
 		if ( inv(INV_ITEM_STATUS, ci) == ITEM_STATUS_CURSED | inv(INV_ITEM_STATUS, ci) == ITEM_STATUS_DOOMED ) {
