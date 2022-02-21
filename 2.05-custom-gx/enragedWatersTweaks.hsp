@@ -24,9 +24,14 @@
 //cbit(CHARA_BIT_NECRO, cc) != 1    <- IF they're NOT necromancy allies
 //flt function sorta works as a "reset" option before creating npcs to avoid accidentally giving them unique properties not otherwise specified
 
-
+*merchantGoldTweak //Line 474 in calculation.hsp
+	//Default: locvar_generatemoney_p += 2500 + cdata(CDATA_ROLE_SHOP_LEVEL, generatemoney_charid) * 250
+	if ( cdata(CDATA_ROLE, generatemoney_charid) >= ROLE_SHOP_MIN & cdata(CDATA_ROLE, generatemoney_charid) < ROLE_GUEST_MIN | cdata(CDATA_ROLE, generatemoney_charid) == ROLE_GUEST_MERCHANT ) {
+		locvar_generatemoney_p += 2500 + cdata(CDATA_ROLE_SHOP_LEVEL, generatemoney_charid) * 1000 //EnragedWaters
+	}
+	return
 *manuScriptTweak //Line 7486 in action.hsp
-	manuscriptMAX = 100 + (sdata(SKILL_NORMAL_MEMORIZATION, CHARA_PLAYER)/20 + sdata(SKILL_NORMAL_DETECTION, CHARA_PLAYER)/20)
+	manuscriptMAX = 100 + int(sdata(SKILL_NORMAL_MEMORIZATION, CHARA_PLAYER)/10) + int(sdata(SKILL_NORMAL_DETECTION, CHARA_PLAYER)/10)
 	if ( gdata(GDATA_FLAG_MANUSCRIPT_IDEAS) > manuscriptMAX  ) {
 		gdata(GDATA_FLAG_MANUSCRIPT_IDEAS) = manuscriptMAX
 	}
@@ -49,7 +54,10 @@
 
 *questRewardTweaks //Line 716 in quest.hsp
 	//Improving scaling on quest rewards. 
-	//Basically makes it so fame/20,000 improves bronze/pp by +1, same for seeds. 
+	minCoin =  1 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000 //Minimum platnium/bronze coins player recieves. Also for seeds.
+	maxCoin =  1 + cdata(CDATA_FAME, CHARA_PLAYER) / 10000 //Max
+	rndCoin =  1 + maxPlat //Since rnd() does -1 to parameter
+	calcReward = 1 + limit(rnd(rndCoin), minCoin, maxCoin)
 	p = qdata(QDATA_REWARD, rq)
 	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_HARVEST ) {
 		if ( qdata(QDATA_PARAM1, rq) != 0 ) {
@@ -62,17 +70,14 @@
 		flt
 		itemcreate -1, ITEM_ID_GOLD_PIECE, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), p
 	}
-	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_PARTY ) {
-		p = limit(rnd(1 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 1, 10)
+	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_PARTY | qdata(QDATA_EXIST, rq) == QUEST_TYPE_CONQUER | qdata(QDATA_EXIST, rq) == QUEST_TYPE_HUNTEX ) {
+		p = calcReward
 	}
 	else {
-		p = limit(rnd(1 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 1, 10)
-	}
-	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_CONQUER | qdata(QDATA_EXIST, rq) == QUEST_TYPE_HUNTEX ) {
-		p = limit(rnd(1 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 1, 10)
+		p = calcReward
 	}
 	flt
-	itemcreate -1, ITEM_ID_PLATINUM_COIN, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), p
+	itemcreate -1, ITEM_ID_PLATINUM_COIN, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), calcReward
 	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_PARTY ) {
 		if ( qdata(QDATA_PARAM1, rq) * 150 / 100 < qdata(QDATA_PARAM2, rq) ) {
 			flt
@@ -85,40 +90,40 @@
 		inv(INV_ITEM_STATUS, ci) = ITEM_STATUS_NORMAL
 		if ( qdata(QDATA_PARAM1, rq) * 125 / 100 <= qdata(QDATA_PARAM2, rq) | qdata(QDATA_VAR, rq) == 1 ) {
 			flt
-			itemcreate -1, ITEM_ID_BRONZE_COIN, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), limit(rnd(1 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 1, 10)
+			itemcreate -1, ITEM_ID_BRONZE_COIN, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), calcReward
 		}
 	}
 	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_HARVEST ) {
 		if ( qdata(QDATA_PARAM1, rq) * 125 / 100 < qdata(QDATA_PARAM2, rq) ) {
 			flt
-			itemcreate -1, ITEM_ID_BRONZE_COIN, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), limit(rnd(1 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 1, 10)
+			itemcreate -1, ITEM_ID_BRONZE_COIN, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), calcReward
 		}
 		seedp = rnd(limit(sdata(SKILL_NORMAL_GARDENING, CHARA_PLAYER) / 2, 0, 75) + 80) //2,0,30 to 2,0,75
 		if ( seedp >= 90 ) {
 			if ( rnd(2) == 0 ) {
-				itemcreate -1, ITEM_ID_HERB_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), limit(rnd(3 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 3, 10)
+				itemcreate -1, ITEM_ID_HERB_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), calcReward
 			}
 			else {
-				itemcreate -1, ITEM_ID_HERB_SEED, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), limit(rnd(2 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 2, 10)
+				itemcreate -1, ITEM_ID_HERB_SEED, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), calcReward
 			}
 		}
 		if ( seedp >= 70 & seedp < 90 ) {
 			if ( rnd(2) == 0 ) {
-				itemcreate -1, ITEM_ID_UNKNOWN_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), limit(rnd(3 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 3, 10)
+				itemcreate -1, ITEM_ID_UNKNOWN_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), calcReward
 			}
 			else {
-				itemcreate -1, ITEM_ID_MAGICAL_SEED, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), limit(rnd(4 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 4, 10)
+				itemcreate -1, ITEM_ID_MAGICAL_SEED, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), calcReward
 			}
 		}
 		if ( seedp >= 50 & seedp < 70 ) {
-			itemcreate -1, ITEM_ID_GEM_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), limit(rnd(4 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 4, 10)
+			itemcreate -1, ITEM_ID_GEM_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), calcReward
 		}
 		if ( seedp >= 0 & seedp < 50 ) {
 			if ( rnd(2) == 0 ) {
-				itemcreate -1, ITEM_ID_FRUIT_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), limit(rnd(5 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 5, 10)
+				itemcreate -1, ITEM_ID_FRUIT_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), calcReward
 			}
 			else {
-				itemcreate -1, ITEM_ID_VEGETABLE_SEED, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), limit(rnd(5 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000), 5, 10)
+				itemcreate -1, ITEM_ID_VEGETABLE_SEED, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), calcReward
 			}
 		}
 	}
@@ -179,7 +184,7 @@
 
 #defcfunc removeSpellOverCastTweak //Line 5558 in proc.hsp
 	//Remove spell over cast tweak
-	return TRUE
+	return FALSE
 
 *petArenaTweak //Line 18763 in chat.hsp
 	petArenaMatchLimit = 100 // Vanilla=3
@@ -204,6 +209,7 @@
 	//This changes quest description color to green if you own the item already
 	// Tweak -> Checks to see if player owns required quest item->If so, changes quest text color for easy turn-in
 	if(qdata(QDATA_EXIST, rq) == QUEST_TYPE_SUPPLY | qdata(QDATA_EXIST, rq) == QUEST_TYPE_COLLECT | qdata(QDATA_EXIST, rq) == QUEST_TYPE_COOK){ 
+		inv_getheader cc
 		repeat invrange, invhead //This repeat should be it's own function with parameters since this is duplicated from chat.hsp
 			if ( inv(INV_ITEM_NUM, cnt) == 0 ) {
 				continue
@@ -227,6 +233,7 @@
 			}
 		loop 
 	}
+	//inv_getheader tc
 	return
 
 *consoleCommandAddAttribute //Line 4130 in system.hsp
@@ -241,8 +248,8 @@
 		goto *console_write
 	}
 	return
-	//=====Magnet Spell======
-	/*
+//=====Magnet Spell======
+/*
 *db_item_SPELLBOOK_MAGNET
     if ( 20 > objlv ) {
 		goto *db_item_DYING_CICADA //*db_item_DYING_CICADA EnragedWaters

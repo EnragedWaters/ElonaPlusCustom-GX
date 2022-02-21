@@ -478,6 +478,7 @@
 		if ( cdata(CDATA_ROLE, generatemoney_charid) == ROLE_SHOP_TRADE ) {
 			locvar_generatemoney_p = 25000 + cdata(CDATA_ROLE_SHOP_LEVEL, generatemoney_charid) * 500
 		}
+		gosub *merchantGoldTweak //EnragedWaters
 	}
 	if ( adata(ADATA_ID, gdata(GDATA_AREA)) == AREA_SHOP ) {
 		if ( getworker(gdata(GDATA_AREA)) != (-1) ) {

@@ -22889,7 +22889,6 @@
 	if ( p > 120 ) {
 		p = 120
 	}
-	gosub *increasedShopStockTweak //EnragedWaters
 	if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_BLACKMARKET ) {
 		p = 7 + limit(cdata(CDATA_ROLE_SHOP_LEVEL, tc) / 7, 1, 30)
 	}
@@ -22938,9 +22937,9 @@
 			if ( rnd(7) == 0 ) {
 				flttypemajor = FILTER_ITEM_SPELLBOOK
 			}
-			if ( rnd(15) == 0 ) {
-				flttypemajor = FILTER_ITEM_BOOK
-			}
+			//if ( rnd(15) == 0 ) { 
+			//	flttypemajor = FILTER_ITEM_BOOK
+			//}
 		}
 		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_SISTER ) {
 			dbid = ITEM_ID_SISTERS_LOVE_FUELED_LUNCH
@@ -23040,6 +23039,7 @@
 		}
 		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_FOOD ) {
 			if ( cdata(CDATA_ID, tc) != CREATURE_ID_AILE_THE_ATTENDANT ) {
+				/*
 				if ( rnd(3) != 0 ) {
 					continue
 				}
@@ -23048,6 +23048,7 @@
 				if ( rnd(5) != 0 ) {
 					continue
 				}
+				*/
 			}
 			flttypemajor = FILTER_ITEM_FOOD
 			if ( rnd(5) == 0 ) {
@@ -23539,7 +23540,7 @@
 		inv(INV_ITEM_NUM, ci) = rnd(rtval) + 1
 		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_BAKERY ) {
 			if ( rnd(5) <= 2 ) {
-				inv(INV_ITEM_NUM, ci) = limit(rnd(cdata(CDATA_ROLE_SHOP_LEVEL, tc) + 1) / 30 + 1, 1, 3) + rnd(2)
+				inv(INV_ITEM_NUM, ci) = limit(rnd(cdata(CDATA_ROLE_SHOP_LEVEL, tc) + 1) + 1, 1, 3 + cdata(CDATA_ROLE_SHOP_LEVEL, tc) + rnd(2))
 			}
 		}
 		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_TRADE ) {
@@ -23576,7 +23577,7 @@
 		}
 		if ( p == FILTER_ITEM_POTION ) {
 			if ( inv(INV_ITEM_ID, ci) == ITEM_ID_BOTTLE_WATER ) {
-				inv(INV_ITEM_NUM, ci) = 0
+				inv(INV_ITEM_NUM, ci) = 1
 			}
 		}
 		if ( p == FILTER_ITEM_FOOD ) {

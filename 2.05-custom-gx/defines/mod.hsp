@@ -5722,9 +5722,9 @@
 #define global	ITEM_ID_SPELLBOOK_OF_THUNDER_VORTEX	1247
 #define global	ITEM_ID_SOCKS2	1248
 #define global	ITEM_ID_AURTEHOM	1249
-#define global	ITEM_ID_SPELLBOOK_OF_MAGNET 1250 //EnragedWaters 
+//#define global	ITEM_ID_SPELLBOOK_OF_MAGNET 1250 //EnragedWaters 
 
-#define global	MAX_ITEM_ID	(ITEM_ID_SPELLBOOK_OF_MAGNET + 3) //ITEM_ID_AURTEHOM + 3 EnragedWaters
+#define global	MAX_ITEM_ID	(ITEM_ID_AURTEHOM + 3) //ITEM_ID_AURTEHOM + 3 EnragedWaters
 
 // Creatures
 #define global	CREATURE_ID_BUG	0 // Also doubles as RANDOM

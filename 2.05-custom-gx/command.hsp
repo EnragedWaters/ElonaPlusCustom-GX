@@ -3034,7 +3034,7 @@
 		}
 		font lang(cfg_font1, cfg_font2), 13 - en * 2, 0
 		color 0, 0, 0
-		gosub *questColorChangeTweak
+		gosub *questColorChangeTweak //Enragedaters
 		pos wx + 20, y + 20
 		mes buff
 	loop
