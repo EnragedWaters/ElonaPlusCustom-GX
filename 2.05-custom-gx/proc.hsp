@@ -4419,11 +4419,14 @@
 		gdata(GDATA_MIN)++
 		return
 	}
+	gosub *manuScriptTravelTweak //EnragedWaters
+	/*
 	if ( gdata(GDATA_FLAG_MANUSCRIPT_IDEAS) < 100 ) {
 		if ( rnd(10000) > rnd(sdata(SKILL_NORMAL_TRAVELING, CHARA_PLAYER) + 1000) ) {
 			gdata(GDATA_FLAG_MANUSCRIPT_IDEAS)++
 		}
 	}
+	*/
 	traveldone = 1
 	gdata(GDATA_TRAVEL_DISTANCE) += 4
 	gdata(GDATA_FLAG_MILES_TRAVELED) += 4
@@ -5537,7 +5540,7 @@
 	efp = calcspellpower(efid, cc)
 	if ( gdata(GDATA_TEMPORARY_FLAGS) == 0 ) {
 		if ( cc == CHARA_PLAYER ) {
-			if ( calcspellcostmp(efid, cc) > cdata(CDATA_MP, cc) ) {
+			/*if ( calcspellcostmp(efid, cc) > cdata(CDATA_MP, cc) ) {
 				txt lang("マナが足りないが、それでも詠唱を試みる？", "You are going to over-cast the spell. Are you sure?")
 				promptYesNo
 				if ( rtval != 0 ) {
@@ -5545,7 +5548,7 @@
 					efsource = 0
 					return 0
 				}
-			}
+			}Remove spell tweak EnragedWaters*/
 			screenupdate = -1
 			gosub *screen_draw
 		}

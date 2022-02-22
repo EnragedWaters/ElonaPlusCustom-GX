@@ -1,0 +1,14 @@
+//TO DO : add to game code
+
+*consoleCommandAddAttribute //Line 4130 in system.hsp
+	//Wizard command to max out player attributes
+	if ( instr(buff, 0, "gain_attribute") != (-1) ) {
+		repeat SKILL_ATTR_LUC - SKILL_ATTR_STR, SKILL_ATTR_STR
+			skillmod cnt, tc, 1000000000
+		loop
+		skillmod SKILL_ATTR_LIFE, tc, 1000000000
+		skillmod SKILL_ATTR_MANA, tc, 1000000000
+		noteadd "Done."
+		goto *console_write
+	}
+	return

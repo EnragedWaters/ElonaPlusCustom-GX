@@ -470,7 +470,7 @@
 		}
 	}
 	return locvar_calcitemvalue_value
-
+/*EnragedWaters shop.hsp tweak
 #deffunc generatemoney int generatemoney_charid
 	locvar_generatemoney_p = rnd(100) + rnd(cdata(CDATA_LEVEL, generatemoney_charid) * 50 + 1)
 	if ( cdata(CDATA_ROLE, generatemoney_charid) >= ROLE_SHOP_MIN & cdata(CDATA_ROLE, generatemoney_charid) < ROLE_GUEST_MIN | cdata(CDATA_ROLE, generatemoney_charid) == ROLE_GUEST_MERCHANT ) {
@@ -493,7 +493,7 @@
 		cdata(CDATA_GOLD, generatemoney_charid) = locvar_generatemoney_p
 	}
 	return
-
+EnragedWaters*/
 #deffunc calccosthire
 	locvar_calccosthire_cost = 0
 	repeat MAX_CHARA_TOTAL - MAX_CHARA_SAVE, MAX_CHARA_SAVE

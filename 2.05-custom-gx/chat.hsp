@@ -22878,7 +22878,7 @@
 	gosub *game_ctrlFile
 	mode = MODELIST_MAIN
 	return
-
+/*EnragedWaters
 *shop_restock
 	inv_getheader -1
 	repeat invrange, invhead
@@ -23676,7 +23676,7 @@
 		return
 	}
 	return
-
+EnragedWaters*/
 *shop_tradePrice
 	dim trate, 9
 	repeat 9

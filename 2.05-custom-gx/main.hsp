@@ -4,6 +4,11 @@
 #packopt name "ElonaPlusCGX"
 #cmpopt varname 1
 
+//=====ENRAGEDWATERS======
+#include "enragedWatersTweaks\\shop.hsp" //Tweaking merchants gold, item quantity, etc.
+#include "enragedWatersTweaks\\questDifficultyAndRewards.hsp" //Tweaking quests
+//========================
+
 ; Define this to enable Lua debugging features.
 ;#define CUSTOM_GX_LUA
 

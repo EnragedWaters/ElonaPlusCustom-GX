@@ -1,0 +1,801 @@
+/*
+Original functions are commented out and are replaced with these.
+*/
+
+#deffunc generatemoney int generatemoney_charid //Line 474 in calculation.hsp
+	locvar_generatemoney_p = rnd(2000) + rnd(cdata(CDATA_LEVEL, generatemoney_charid) * 50 + 1)
+	if ( cdata(CDATA_ROLE, generatemoney_charid) >= ROLE_SHOP_MIN & cdata(CDATA_ROLE, generatemoney_charid) < ROLE_GUEST_MIN | cdata(CDATA_ROLE, generatemoney_charid) == ROLE_GUEST_MERCHANT ) {
+		//If this person is a merchant.
+        locvar_generatemoney_p += 25000 + cdata(CDATA_ROLE_SHOP_LEVEL, generatemoney_charid) * 1000
+		if ( cdata(CDATA_ROLE, generatemoney_charid) == ROLE_SHOP_TRADE ) {
+            //Cargo merchant.
+			locvar_generatemoney_p = 50000 + cdata(CDATA_ROLE_SHOP_LEVEL, generatemoney_charid) * 1000
+		}
+	}
+    //Person shop merchant producing daily gold. Edit later.
+	if ( adata(ADATA_ID, gdata(GDATA_AREA)) == AREA_SHOP ) {
+		if ( getworker(gdata(GDATA_AREA)) != (-1) ) {
+			locvar_generatemoney_sc = getworker(gdata(GDATA_AREA))
+			if ( cbit(CHARA_BIT_SHOP_ELEGANCE, locvar_generatemoney_sc) ) {
+				if ( cdata(CDATA_RELATION, generatemoney_charid) != (-3) ) {
+					locvar_generatemoney_p = locvar_generatemoney_p * 7 / 4 + 2000
+				}
+			}
+		}
+	}
+	if ( cdata(CDATA_GOLD, generatemoney_charid) < locvar_generatemoney_p / 2 ) {
+		cdata(CDATA_GOLD, generatemoney_charid) = locvar_generatemoney_p
+	}
+	return
+
+//Shop restocking.
+*shop_restock
+	inv_getheader -1
+	repeat invrange, invhead
+		inv(INV_ITEM_NUM, cnt) = 0
+	loop
+    //p is the item limit.
+	p = 100 + cdata(CDATA_ROLE_SHOP_LEVEL, tc) * 8 / 10 //Now caps at rank 500.
+	if ( p > 500 ) {
+		p = 500
+	}
+    p += (sdata(SKILL_NORMAL_NEGOTIATION, CHARA_PLAYER)/10) //Add player negotiation/10 to it. 
+	if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_MIROK ) {
+		p = 23
+	}
+	if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_STOKE ) {
+		p = 20
+	}
+	repeat p
+		flt calcobjlv(cdata(CDATA_ROLE_SHOP_LEVEL, tc)), calcfixlv(FIX_QUALITY_GOOD)
+		dbid = 0
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_MAGIC ) {
+			p = rnd(3)
+			if ( p == 0 ) {
+				flttypeminor = FILTER_ITEM_POTION_HEAL
+			}
+			if ( p == 1 ) {
+				flttypemajor = FILTER_ITEM_SCROLL
+			}
+			if ( p == 2 ) {
+				flttypemajor = FILTER_ITEM_POTION
+			}
+			if ( rnd(7) == 0 ) {
+				flttypemajor = FILTER_ITEM_SPELLBOOK
+			}
+		}
+        //The item filters for each shop type. Basically removed red books and gamble chests. Bakers sell food now too.
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_SISTER ) {
+			dbid = ITEM_ID_SISTERS_LOVE_FUELED_LUNCH
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_BOOK_RESERVE ) {
+			listmax = 0
+			repeat MAX_DB
+				if ( itemmemory(2, cnt) > 1 ) {
+					list(0, listmax) = cnt
+					listmax++
+				}
+			loop
+			if ( listmax == 0 ) {
+				return
+			}
+			dbid = list(0, rnd(listmax))
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_NOYEL ) {
+			p = rnd(3)
+			if ( p == 0 ) {
+				flttypemajor = FILTER_ITEM_TOOL
+			}
+			if ( p == 1 ) {
+				flttypemajor = FILTER_ACCESSORY_RING
+			}
+			if ( p == 2 ) {
+				flttypemajor = FILTER_ACCESSORY_AMULET
+			}
+			if ( rnd(3) == 0 ) {
+				fixlv = FIX_QUALITY_GREAT
+			}
+			if ( rnd(10) == 0 ) {
+				fixlv = FIX_QUALITY_MIRACLE
+			}
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_GENERAL ) {
+			p = rnd(5)
+			if ( p == 0 ) {
+				flttypemajor = FILTER_AMMO
+			}
+			if ( p == 1 ) {
+				flttypemajor = FILTER_FURNITURE
+			}
+			if ( p == 2 ) {
+				flttypemajor = FILTER_CLOAK
+			}
+			if ( p == 3 ) {
+				flttypemajor = FILTER_ORE
+			}
+			if ( p == 4 ) {
+				flttypemajor = FILTER_ITEM_TOOL
+			}
+			if ( rnd(8) == 0 ) {
+				flttypemajor = FILTER_CARGO_FOOD
+			}
+			if ( rnd(10) == 0 ) {
+				dbid = isetdeed(rnd(length(isetdeed)))
+			}
+			if ( rnd(20) == 0 ) {
+				dbid = ITEM_ID_DEED_PROPERTY_TRANSFER
+			}
+			if ( gdata(GDATA_MONTH) == 2 ) {
+				if ( rnd(2) == 0 ) {
+					dbid = ITEM_ID_HANDMADE_CHOCOLATE_KIT
+				}
+			}
+			if ( gdata(GDATA_MONTH) == 12 ) {
+				if ( gdata(GDATA_DAY) <= 25 ) {
+					if ( rnd(2) == 0 ) {
+						dbid = ITEM_ID_CHRISTMAS_CAKE_SET
+					}
+				}
+			}
+			if ( gdata(GDATA_MONTH) == 12 ) {
+				if ( gdata(GDATA_DAY) > 25 ) {
+					if ( rnd(20) == 0 ) {
+						dbid = ITEM_ID_CHRISTMAS_CAKE_SET
+					}
+				}
+			}
+			if ( cnt == 1 ) {
+				if ( rnd(4) != 0 ) {
+					dbid = ITEM_ID_MONSTER_BALL
+				}
+			}
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_BAKERY ) {
+            p = rnd(3)
+			if ( p == 0 ) {
+				flttypeminor = FILTER_ITEM_FOOD_BREAD
+			}
+			if ( p == 1 ) {
+				flttypeminor = FILTER_ITEM_FOOD_PASTA
+			}
+            if( p == 2){
+                flttypemajor = FILTER_ITEM_FOOD
+            }
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_FOOD ) {
+			if ( cdata(CDATA_ID, tc) != CREATURE_ID_AILE_THE_ATTENDANT ) {
+				if ( rnd(3) != 0 ) {
+					continue
+				}
+			}
+			if ( cdata(CDATA_ID, tc) == CREATURE_ID_AILE_THE_ATTENDANT ) {
+				if ( rnd(5) != 0 ) {
+					continue
+				}
+			}
+			flttypemajor = FILTER_ITEM_FOOD
+			if ( rnd(5) == 0 ) {
+				flttypemajor = FILTER_CARGO_FOOD
+			}
+			if ( cdata(CDATA_ID, tc) == CREATURE_ID_AILE_THE_ATTENDANT ) {
+				if ( rnd(5) == 0 ) {
+					dbid = ITEM_ID_MINIATURE_BLIMP
+				}
+				if ( rnd(10) == 0 ) {
+					dbid = ITEM_ID_WING
+				}
+			}
+		}
+        //Item quality and specific item types.
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_BLACKMARKET ) {
+			flttypemajor = fsetwear(rnd(length(fsetwear)))
+			fixlv = FIX_QUALITY_GREAT
+			if ( rnd(limit(cdata(CDATA_ROLE_SHOP_LEVEL, tc) / 7, 1, 500) + 200) > rnd(1000) ) {
+				fixlv = FIX_QUALITY_MIRACLE
+			}
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_WANDER | cdata(CDATA_ROLE, tc) == ROLE_GUEST_MERCHANT ) {
+			flttypemajor = fsetwear(rnd(length(fsetwear)))
+			fixlv = FIX_QUALITY_GREAT
+			if ( rnd(2) == 0 ) {
+				fixlv = FIX_QUALITY_MIRACLE
+			}
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_INN ) {
+			if ( cdata(CDATA_ID, tc) == CREATURE_ID_BARTENDER2 ) {
+				flttypemajor = FILTER_ITEM_SPELLBOOK
+			}
+			if ( cdata(CDATA_ID, tc) == CREATURE_ID_BARTENDER2 ) {
+				if ( rnd(2) == 0 ) {
+					flttypeminor = FILTER_ITEM_POTION_ALE
+				}
+			}
+			if ( cdata(CDATA_ID, tc) != CREATURE_ID_BARTENDER2 ) {
+				flttypemajor = FILTER_CARGO_FOOD
+			}
+			if ( cdata(CDATA_ID, tc) != CREATURE_ID_CLERK ) {
+				if ( rnd(4) ) {
+					flttypeminor = FILTER_ITEM_POTION_ALE
+				}
+			}
+			if ( cdata(CDATA_ID, tc) != CREATURE_ID_BARTENDER2 & cdata(CDATA_ID, tc) != CREATURE_ID_CLERK ) {
+				if ( rnd(10) == 0 ) {
+					dbid = ITEM_ID_SMALL_GAMBLE_CHEST
+				}
+				if ( rnd(30) == 0 ) {
+					dbid = isetdrinkinn(rnd(length(isetdrinkinn)))
+				}
+			}
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_GOODS ) {
+			flttypemajor = FILTER_ITEM_ROD
+			if ( rnd(3) == 0 ) {
+				flttypemajor = fsetwear(rnd(length(fsetwear)))
+			}
+			if ( rnd(3) == 0 ) {
+				flttypemajor = FILTER_FURNITURE
+			}
+			if ( rnd(5) == 0 ) {
+				flttypemajor = FILTER_ITEM_FOOD
+			}
+			if ( rnd(4) == 0 ) {
+				flttypemajor = FILTER_ITEM_SCROLL
+			}
+			if ( rnd(15) == 0 ) {
+				flttypemajor = FILTER_ITEM_BOOK
+			}
+			if ( rnd(10) == 0 ) {
+				flttypemajor = FILTER_CARGO_FOOD
+			}
+			if ( rnd(10) == 0 ) {
+				dbid = isetdeed(rnd(length(isetdeed)))
+			}
+			if ( rnd(30) == 0 ) {
+				dbid = ITEM_ID_DEED_PROPERTY_TRANSFER
+			}
+			//if ( rnd(15) == 0 ) { Why. 
+			//	dbid = ITEM_ID_DEED_HEIRSHIP
+			//}
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_ARMOR ) {
+			if ( rnd(limit(cdata(CDATA_ROLE_SHOP_LEVEL, tc), 1, 1000) + 300) > rnd(1000) ) {
+				fixlv = FIX_QUALITY_GREAT
+			}
+			p = rnd(6)
+			if ( p == 0 ) {
+				flttypemajor = FILTER_ARMOR
+			}
+			if ( p == 1 ) {
+				flttypemajor = FILTER_HELM
+			}
+			if ( p == 2 ) {
+				flttypemajor = FILTER_GLOVES
+			}
+			if ( p == 3 ) {
+				flttypemajor = FILTER_BOOTS
+			}
+			if ( p == 4 ) {
+				flttypemajor = FILTER_SHIELD
+			}
+			if ( p == 5 ) {
+				flttypemajor = FILTER_GIRDLE
+			}
+			if ( rnd(3) == 0 ) {
+				if ( rnd(3) == 0 ) {
+					flttypemajor = FILTER_WEAPON
+				}
+				else {
+					flttypemajor = FILTER_RANGE
+				}
+			}
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_TRADE ) {
+			if ( cdata(CDATA_ID, tc) != CREATURE_ID_CLERK ) {
+				flttypemajor = FILTER_CARGO_TRADE
+			}
+			if ( cdata(CDATA_ID, tc) == CREATURE_ID_CLERK ) {
+				if ( rnd(2) == 0 ) {
+					dbid = ITEM_ID_RABBIT_FOOT
+				}
+				else {
+					dbid = ITEM_ID_PAINTING_ERUPTION
+				}
+			}
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_THIEF ) {
+			flttypemajor = FILTER_ITEM_TOOL
+			if ( rnd(2) == 0 ) {
+				dbid = ITEM_ID_LOCKPICK
+			}
+			if ( rnd(2) == 0 ) {
+				dbid = ITEM_ID_DISGUISE_SET
+			}
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_SALESPERSON ) {
+			if ( rnd(4) == 0 ) {
+				flttypemajor = FILTER_RANGE
+			}
+			if ( rnd(5) == 0 ) {
+				flttypemajor = FILTER_AMMO
+			}
+			if ( rnd(3) == 0 ) {
+				flttypemajor = FILTER_ITEM_FOOD
+			}
+			fltn "sf"
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_DEED ) {
+			if ( rnd(2) != 0 ) {
+				continue
+			}
+			flttypemajor = FILTER_ITEM_BOOK
+			if ( rnd(3) == 0 ) {
+				dbid = isetdeed(rnd(length(isetdeed)))
+			}
+			if ( rnd(5) == 0 ) {
+				dbid = ITEM_ID_DEED_PROPERTY_TRANSFER
+			}
+			/*if ( rnd(5) == 0 ) { 
+				dbid = ITEM_ID_DEED_HEIRSHIP
+			}*/
+			if ( rnd(5) == 0 ) {
+				dbid = ITEM_ID_DEED_HOME_RELOCATION
+			}
+			if ( rnd(15) == 0 ) {
+				dbid = ITEM_ID_DEED_DUNGEON
+			}
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_MOUNTAIN2 ) {
+			fltn "spshop"
+			if ( rnd(20) == 0 ) {
+				dbid = ITEM_ID_EVITEM
+			}
+			if ( cnt == 0 ) {
+				dbid = ITEM_ID_SCROLL_GROWTH
+			}
+			if ( cnt == 1 ) {
+				dbid = ITEM_ID_POTION_POTENTIAL
+			}
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_FESTIVAL ) {
+			fltn "fest"
+			if ( rnd(12) == 0 ) {
+				dbid = ITEM_ID_UPSTAIRS
+			}
+			if ( rnd(12) == 0 ) {
+				dbid = ITEM_ID_DOWNSTAIRS
+			}
+			if ( rnd(5) == 0 ) {
+				dbid = ITEM_ID_BOTTLE_SODA
+			}
+			if ( rnd(5) == 0 ) {
+				dbid = ITEM_ID_YITH_YAKI
+			}
+			if ( gdata(GDATA_AREA) == AREA_NOYEL ) {
+				if ( rnd(12) == 0 ) {
+					dbid = ITEM_ID_FESTIVAL_WREATH
+				}
+			}
+			if ( gdata(GDATA_AREA) == AREA_NOYEL ) {
+				if ( rnd(12) == 0 ) {
+					dbid = ITEM_ID_NEW_YEARS_DECORATION
+				}
+			}
+			if ( gdata(GDATA_AREA) == AREA_NOYEL ) {
+				if ( rnd(12) == 0 ) {
+					dbid = ITEM_ID_MINIATURE_TREE
+				}
+			}
+			if ( gdata(GDATA_AREA) == AREA_NOYEL ) {
+				if ( rnd(12) == 0 ) {
+					dbid = ITEM_ID_DEER_HEAD
+				}
+			}
+			if ( gdata(GDATA_AREA) == AREA_NOYEL ) {
+				if ( rnd(12) == 0 ) {
+					dbid = ITEM_ID_FUR_CARPET
+				}
+			}
+			if ( gdata(GDATA_AREA) == AREA_LUDUS ) {
+				if ( rnd(12) == 0 ) {
+					dbid = ITEM_ID_LIGHTSABRE
+				}
+			}
+			if ( gdata(GDATA_AREA) == AREA_LUDUS ) {
+				if ( rnd(12) == 0 ) {
+					dbid = ITEM_ID_LASER_GUN
+				}
+			}
+			if ( gdata(GDATA_AREA) == AREA_LUDUS ) {
+				if ( rnd(12) == 0 ) {
+					dbid = ITEM_ID_KOMA_INU2
+				}
+			}
+			if ( gdata(GDATA_AREA) == AREA_LUDUS ) {
+				if ( rnd(12) == 0 ) {
+					dbid = ITEM_ID_KOMA_INU
+				}
+			}
+			if ( gdata(GDATA_AREA) == AREA_LUDUS ) {
+				if ( rnd(5) == 0 ) {
+					dbid = ITEM_ID_SHAVED_ICE
+				}
+			}
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_MOYER ) {
+			dbid = ITEM_ID_MONSTER_BALL
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_MOUNTAIN1 ) {
+			dbid = ITEM_ID_BOTTLE_DYE
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_OFFICE ) {
+			flttypemajor = FILTER_FURNITURE
+			if ( cdata(CDATA_ID, tc) != CREATURE_ID_CLERK ) {
+				if ( cnt == 0 ) {
+					dbid = ITEM_ID_HEIR_TRUNK
+				}
+				if ( cnt == 1 ) {
+					dbid = ITEM_ID_SHOP_STRONGBOX
+				}
+				if ( cnt == 2 ) {
+					dbid = ITEM_ID_REGISTER
+				}
+				if ( cnt == 3 ) {
+					dbid = ITEM_ID_SALARY_CHEST
+				}
+				if ( cnt == 4 ) {
+					dbid = ITEM_ID_FREEZER
+				}
+				if ( cnt == 5 ) {
+					dbid = ITEM_ID_PLAYBACK_DISC
+				}
+				if ( cnt == 6 ) {
+					dbid = ITEM_ID_HOUSE_BOARD
+				}
+				if ( cnt == 7 ) {
+					dbid = ITEM_ID_DECK
+				}
+				if ( cnt == 8 ) {
+					dbid = ITEM_ID_BIG_BRUSH
+				}
+				if ( cnt == 9 ) {
+					dbid = ITEM_ID_CROP_MANAGEMENT_TOOLS
+				}
+				if ( cnt == 10 ) {
+					dbid = ITEM_ID_YACA_POINT_CARD
+				}
+				if ( cnt > 10 ) {
+					if ( rnd(3) != 0 ) {
+						continue
+					}
+				}
+				if ( cnt == 19 ) {
+					dbid = ITEM_ID_RED_TREASURE_MACHINE
+				}
+				if ( cnt == 20 ) {
+					dbid = ITEM_ID_BLUE_TREASURE_MACHINE
+				}
+				if ( cnt == 21 ) {
+					dbid = ITEM_ID_TAX_MASTERS_TAX_BOX
+				}
+				if ( cnt == 22 ) {
+					dbid = ITEM_ID_1_2_MILLION_TAX_CERTIFICATE
+				}
+				if ( cnt == 23 ) {
+					dbid = ITEM_ID_12_MILLION_TAX_CERTIFICATE
+				}
+			}
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_FISH ) {
+			dbid = ITEM_ID_BAIT
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_MIROK ) {
+			if ( cnt == 0 ) {
+				dbid = ITEM_ID_SCROLL_GROWTH
+			}
+			if ( cnt == 1 ) {
+				dbid = ITEM_ID_SCROLL_FAITH
+			}
+			if ( cnt == 2 ) {
+				dbid = ITEM_ID_SCROLL_SUPERIOR_MATERIAL
+			}
+			if ( cnt == 3 ) {
+				dbid = ITEM_ID_ROD_DOMINATION
+			}
+			if ( cnt == 4 ) {
+				dbid = ITEM_ID_ARTIFACT_SEED
+			}
+			if ( cnt == 5 ) {
+				dbid = ITEM_ID_PRESIDENTS_CHAIR
+			}
+			if ( cnt == 6 ) {
+				dbid = ITEM_ID_BILL
+			}
+			if ( cnt == 7 ) {
+				dbid = ITEM_ID_POTION_CURE_CORRUPTION
+			}
+			if ( cnt == 8 ) {
+				dbid = ITEM_ID_BOTTLE_WATER
+			}
+			if ( cnt == 9 ) {
+				dbid = ITEM_ID_TAX_MASTERS_TAX_BOX
+			}
+			if ( cnt == 10 ) {
+				dbid = ITEM_ID_CAT_SISTERS_DIARY
+			}
+			if ( cnt == 11 ) {
+				dbid = ITEM_ID_LITTLE_SISTERS_DIARY
+			}
+			if ( cnt == 12 ) {
+				dbid = ITEM_ID_GIRLS_DIARY
+			}
+			if ( cnt == 13 ) {
+				dbid = ITEM_ID_SHRINE_GATE
+			}
+			if ( cnt == 14 ) {
+				dbid = ITEM_ID_BOTTLE_HERMES_BLOOD
+			}
+			if ( cnt == 15 ) {
+				dbid = ITEM_ID_SAGES_HELM
+			}
+			if ( cnt == 16 ) {
+				dbid = ITEM_ID_DIABLOS
+			}
+			if ( cnt == 17 ) {
+				dbid = ITEM_ID_LICENCE_THE_VOID_EXPLORER
+			}
+			if ( cnt == 18 ) {
+				dbid = ITEM_ID_GAROKS_HAMMER
+			}
+			if ( cnt == 19 ) {
+				dbid = ITEM_ID_SHIELD_TONFA
+			}
+			if ( cnt == 20 ) {
+				dbid = ITEM_ID_ELEMENTS_EYES
+			}
+			if ( cnt == 21 ) {
+				dbid = ITEM_ID_CLOTHWORLD
+			}
+			if ( cnt == 22 ) {
+				dbid = ITEM_ID_NYOI_MIMIKAKI
+			}
+			if ( cnt > 22 ) {
+				continue
+			}
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_STOKE ) {
+			if ( cnt == 0 ) {
+				dbid = ITEM_ID_VERNIS_ORIGINAL
+			}
+			if ( cnt == 1 ) {
+				dbid = ITEM_ID_STOMAFILLIA
+			}
+			if ( cnt == 2 ) {
+				dbid = ITEM_ID_CURARIA
+			}
+			if ( cnt == 3 ) {
+				dbid = ITEM_ID_ALRAUNIA
+			}
+			if ( cnt == 4 ) {
+				dbid = ITEM_ID_SPENSEWEED
+			}
+			if ( cnt == 5 ) {
+				dbid = ITEM_ID_MAREILON
+			}
+			if ( cnt == 6 ) {
+				dbid = ITEM_ID_MORGIA
+			}
+			if ( cnt == 7 ) {
+				dbid = ITEM_ID_OLDER_SISTERS_DIARY
+			}
+			if ( cnt == 8 ) {
+				dbid = ITEM_ID_BUTLERS_DIARY
+			}
+			if ( cnt == 9 ) {
+				dbid = ITEM_ID_DOG_SISTERS_DIARY
+			}
+			if ( cnt == 10 ) {
+				dbid = ITEM_ID_FIXITY_ANCHOR
+			}
+			if ( cnt == 11 ) {
+				dbid = ITEM_ID_NECROMANTIS
+			}
+			if ( cnt == 12 ) {
+				dbid = ITEM_ID_BOTTLE_SPEED_UPPER
+			}
+			if ( cnt == 13 ) {
+				dbid = ITEM_ID_STRADIVARIUS
+			}
+			if ( cnt == 14 ) {
+				dbid = ITEM_ID_SUPER_LURE
+			}
+			if ( cnt == 15 ) {
+				dbid = ITEM_ID_VALKOINEN_KUOLEMA
+			}
+			if ( cnt == 16 ) {
+				dbid = ITEM_ID_HERO_CHEESE
+			}
+			if ( cnt == 17 ) {
+				dbid = ITEM_ID_MAGIC_FRUIT
+			}
+			if ( cnt == 18 ) {
+				dbid = ITEM_ID_HAPPY_APPLE
+			}
+			if ( cnt == 19 ) {
+				dbid = ITEM_ID_BAMAGICAR
+			}
+			if ( cnt > 19 ) {
+				continue
+			}
+		}
+		itemcreate -1, dbid, -1, -1, 0
+		if ( stat == 0 ) {
+			break
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_MIROK ) {
+			inv(INV_ITEM_NUM, ci) = 1
+			inv(INV_ITEM_STATUS, ci) = ITEM_STATUS_NORMAL
+			if ( inv(INV_ITEM_ID, ci) == ITEM_ID_ROD_DOMINATION ) {
+				inv(INV_ITEM_CHARGE, ci) = 4
+			}
+			continue
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_STOKE ) {
+			inv(INV_ITEM_NUM, ci) = 1
+			inv(INV_ITEM_STATUS, ci) = ITEM_STATUS_NORMAL
+			continue
+		}
+		f = 0
+		if ( instr(filter_item(inv(INV_ITEM_ID, ci)), 0, "/neg/") != (-1) ) {
+			f = 1
+		}
+		if ( instr(filter_item(inv(INV_ITEM_ID, ci)), 0, "/noshop/") != (-1) ) {
+			if ( cdata(CDATA_ROLE, tc) != ROLE_SHOP_MOUNTAIN2 ) {
+				f = 1
+			}
+		}
+		if ( f ) {
+			inv(INV_ITEM_NUM, ci) = 0
+			continue
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_OFFICE ) {
+			flttypemajor = FILTER_FURNITURE
+		}
+		gosub *item_quantity
+		inv(INV_ITEM_NUM, ci) = rtval + rnd(2)
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_TRADE ) {
+			p = trate(inv(INV_ITEM_PARAM1, ci))
+			if ( p <= 70 ) {
+				inv(INV_ITEM_NUM, ci) = inv(INV_ITEM_NUM, ci) * 200 / 100
+			}
+			if ( p <= 50 ) {
+				inv(INV_ITEM_NUM, ci) = inv(INV_ITEM_NUM, ci) * 200 / 100
+			}
+			if ( p >= 80 ) {
+				inv(INV_ITEM_NUM, ci) = inv(INV_ITEM_NUM, ci) / 2 + 1
+				if ( rnd(2) ) {
+					inv(INV_ITEM_NUM, ci) = 0
+					continue
+				}
+			}
+			if ( p >= 100 ) {
+				inv(INV_ITEM_NUM, ci) = inv(INV_ITEM_NUM, ci) / 2 + 1
+				if ( rnd(3) ) {
+					inv(INV_ITEM_NUM, ci) = 0
+					continue
+				}
+			}
+			inv(INV_ITEM_NUM, ci) = inv(INV_ITEM_NUM, ci) * (100 + cdata(CDATA_ROLE_SHOP_LEVEL, tc)) / 75 + 1
+		}
+		p = refitem(inv(INV_ITEM_ID, ci), DBSPEC_TYPE)
+		if ( inv(INV_ITEM_STATUS, ci) == ITEM_STATUS_CURSED | inv(INV_ITEM_STATUS, ci) == ITEM_STATUS_DOOMED ) {
+			inv(INV_ITEM_NUM, ci) = 0
+			continue
+		}
+		if ( inv(INV_ITEM_STATUS, ci) == ITEM_STATUS_BLESSED ) {
+			inv(INV_ITEM_NUM, ci) = 1
+		}
+		if ( p == FILTER_ITEM_POTION ) {
+			if ( inv(INV_ITEM_ID, ci) == ITEM_ID_BOTTLE_WATER ) {
+				inv(INV_ITEM_NUM, ci) = 1
+			}
+		}
+		if ( p == FILTER_ITEM_FOOD ) {
+			if ( refitem(inv(INV_ITEM_ID, ci), DBSPEC_TYPE_MINOR) == FILTER_ITEM_SEED ) {
+				if ( rnd(5) ) {
+					inv(INV_ITEM_NUM, ci) = 0
+				}
+			}
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_MOUNTAIN2 ) {
+			inv(INV_ITEM_VALUE, ci) = limit(inv(INV_ITEM_VALUE, ci), 1, 1000000) * 50
+			if ( inv(INV_ITEM_ID, ci) == ITEM_ID_GIFT ) {
+				inv(INV_ITEM_VALUE, ci) *= 10
+			}
+		}
+		if ( inv(INV_ITEM_ID, ci) == ITEM_ID_CHRISTMAS_CAKE_SET ) {
+			if ( gdata(GDATA_MONTH) != 12 | gdata(GDATA_DAY) > 25 ) {
+				inv(INV_ITEM_VALUE, ci) = inv(INV_ITEM_VALUE, ci) / 2
+			}
+		}
+        //Price multipliers.
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_NOYEL ) {
+			inv(INV_ITEM_VALUE, ci) *= 2
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_BLACKMARKET ) {
+			if ( gdata(GDATA_FLAG_GUILD_THIEF) != 0 ) {
+				inv(INV_ITEM_VALUE, ci) *= 2
+			}
+			else {
+				inv(INV_ITEM_VALUE, ci) *= 3
+			}
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_WANDER ) {
+			inv(INV_ITEM_VALUE, ci) *= 2
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_GUEST_MERCHANT ) {
+			inv(INV_ITEM_VALUE, ci) = inv(INV_ITEM_VALUE, ci) * 4 / 5
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_BOOK_RESERVE ) {
+			inv(INV_ITEM_VALUE, ci) = inv(INV_ITEM_VALUE, ci) * 3 / 4
+			if ( gdata(GDATA_AREA) == AREA_YLVA_LIBRARY ) {
+				inv(INV_ITEM_VALUE, ci) = inv(INV_ITEM_VALUE, ci) * 20
+			}
+		}
+		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_MOYER ) {
+			inv(INV_ITEM_VALUE, ci) *= 2
+		}
+	loop
+	cdata(CDATA_ROLE_RESTOCK, tc) = gdata(GDATA_HOUR) + gdata(GDATA_DAY) * 24 + gdata(GDATA_MONTH) * 24 * 30 + gdata(GDATA_YEAR) * 24 * 30 * 12 + 48 * (1 + (cdata(CDATA_ROLE, tc) == ROLE_SHOP_TRADE))
+	if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_TRADE ) {
+		cdata(CDATA_ROLE_RESTOCK, tc) = gdata(GDATA_HOUR) + gdata(GDATA_DAY) * 24 + gdata(GDATA_MONTH) * 24 * 30 + gdata(GDATA_YEAR) * 24 * 30 * 12 + 168
+	}
+	return
+
+*item_quantity
+    //Item rarity affects quantity despite high stock number earlier.
+    quantityMultiplier = 2
+	p = refitem(inv(INV_ITEM_ID, ci), DBSPEC_TYPE) //The filter - like potion, food, etc.
+	i = refitem(inv(INV_ITEM_ID, ci), DBSPEC_RARE_LEVEL) * quantityReducer //Curaria herb for example is 1000. Morgia 320(more rare.)
+	rtval = 1 //Limits item amount to 1 basically. 1 herb, 1 spellbook, etc.
+	repeat 1
+		if ( i <= 100 ) {
+			break
+		}
+		if ( p == FILTER_ITEM_FOOD ) {
+			rtval = i / 50
+			break
+		}
+		if ( p == FILTER_CARGO_TRADE ) {
+			rtval = i / 200
+			break
+		}
+		if ( p >= FILTER_CARGO ) {
+			rtval = i / 50
+			break
+		}
+		if ( p == FILTER_ITEM_POTION ) {
+			rtval = i / 50
+			break
+		}
+		if ( p == FILTER_ITEM_SCROLL ) {
+			rtval = i / 50
+			break
+		}
+		if ( p == FILTER_FURNITURE ) {
+			rtval = i / 100
+			break
+		}
+		if ( p == FILTER_JUNK ) {
+			rtval = i / 40
+			break
+		}
+		if ( p == FILTER_ITEM_TOOL ) {
+			rtval = i / 400
+			break
+		}
+	loop
+	if ( rtval < 1 ) {
+		rtval = 1
+		return
+	}
+	return

@@ -1,0 +1,358 @@
+#defcfunc maxManuScripts int
+    //Default max is just 100.
+    return 100 + int(sdata(SKILL_NORMAL_MEMORIZATION, CHARA_PLAYER)/8) + int(sdata(SKILL_NORMAL_DETECTION, CHARA_PLAYER)/8)
+
+*manuScriptTravelTweak //In *travel
+    if ( gdata(GDATA_FLAG_MANUSCRIPT_IDEAS) < 100 ) {
+		if ( rnd(10000) > rnd(sdata(SKILL_NORMAL_TRAVELING, CHARA_PLAYER) + 1000) ) {
+			gdata(GDATA_FLAG_MANUSCRIPT_IDEAS)++
+		}
+	}
+    return
+
+*manuScriptTweak //Line 7486 in action.hsp
+    if ( _switch_val == EFFECT_BIG_TABLE | _switch_sw ) {
+        _switch_sw = 0
+        if ( inv_getowner(ci) != (-1) ) {
+            txt lang("床に置かないと使えない。", "You need to put it on the ground.")
+            gosub *screen_draw
+            goto *pc_turn
+        }
+        if ( gdata(GDATA_FLAG_MANUSCRIPT_IDEAS) > maxManuScripts()  ) {
+            gdata(GDATA_FLAG_MANUSCRIPT_IDEAS) = maxManuScripts()
+        }
+        if ( gdata(GDATA_FLAG_MANUSCRIPT_IDEAS) <= 0 ) {
+            gdata(GDATA_FLAG_MANUSCRIPT_IDEAS) = 0
+        }
+        promptAdd lang("何もしない", "Cancel"), "null", 0
+        promptAdd lang("原稿の制作(ネタ：" + gdata(GDATA_FLAG_MANUSCRIPT_IDEAS) + ")", "Manuscript production (" + gdata(GDATA_FLAG_MANUSCRIPT_IDEAS) + " ideas) "), "null", 1
+        promptAdd lang("限定自費出版(指定原稿＋30000gold)", "Self-publishing (30000 gold) "), "null", 2
+        promptAdd lang("魔法書変換(指定ストック半減)", "Spellbook conversion (halves stock) "), "null", 3
+        val = promptx, prompty, 350, 1
+        gosub *prompt_key
+        if ( stat == 0 ) {
+            goto *act_use_SWEND1
+        }
+        if ( rtval == 0 ) {
+            goto *act_use_SWEND1
+        }
+        if ( rtval == 1 ) {
+            if ( gdata(GDATA_FLAG_MANUSCRIPT_IDEAS) <= 0 ) {
+                txt lang("ネタが切れている…。", "You're out of ideas...")
+                goto *act_use_SWEND1
+            }
+            snd SOUNDLIST_ATK_FIRE
+            animeload 20, 0
+            gosub *start_writing
+            txt_questitem
+            goto *act_use_SWEND1
+        }
+        if ( rtval == 2 ) {
+            if ( cdata(CDATA_GOLD, CHARA_PLAYER) < 30000 ) {
+                txt lang("もっと資金が必要だ…。", "You need more money to publish a book...")
+                goto *act_use_SWEND1
+            }
+            txt lang("使用する原稿は？", "Which manuscripts?")
+            invsubroutine = 1
+            invctrl = INVCTRL_MATERIAL_ENCHANT, 21
+            snd SOUNDLIST_INV
+            gosub *com_inventory
+            if ( stat == 1 ) {
+                if ( inv(INV_ITEM_NUM, ci) < 10 ) {
+                    txt lang("もっと枚数が必要だ…。", "You need more manuscripts to publish a book...")
+                    goto *act_use_SWEND1
+                }
+                cdata(CDATA_GOLD, CHARA_PLAYER) -= 30000
+                snd SOUNDLIST_PAYGOLD1
+                booksitu = inv(INV_ITEM_PARAM3, ci)
+                bookpage = limit(inv(INV_ITEM_NUM, ci), 1, 1000)
+                inv(INV_ITEM_NUM, ci) = 0
+                cell_refresh inv(INV_ITEM_X, ci), inv(INV_ITEM_Y, ci)
+                gosub *calcBurdenPc
+                redraw 0
+                gosub *screen_draw
+                gosub *screen_fade
+                gsel BUFFER_BUF
+                buffer 4, FACE_SIZE_WIDTH, FACE_SIZE_HEIGHT
+                pos 0, 0
+                picload exedir + "graphic\\face1" + devfile + ".bmp", 1
+                gsel BUFFER_SCREEN
+                flt
+                itemcreate -1, ITEM_ID_PRODUCED_BOOK, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), 100
+                inv(INV_ITEM_PARAM3, ci) = booksitu
+                inv(INV_ITEM_VALUE, ci) = (booksitu * 3 + 10) * 3 * bookpage
+                item_identify ci, ITEM_KNOWN_FULL
+                item_stack -1, ci, 0
+                txt lang("この本の題名は…！", "What do you want to name this book?")
+                val = 4
+                gosub *com_aka
+                p = stat
+                inv(INV_ITEM_SUB_NAME, ci) = list(1, p) + 40000
+                randomize
+                txt_questitem
+                snd SOUNDLIST_COMPLETE1
+            }
+            goto *act_use_SWEND1
+        }
+        //Spellbooks
+        if ( rtval == 3 ) {
+            efid = -1
+            gosub *com_spellbook
+            if ( efid > 0 ) {
+                num = spell(efid - 400) / 2000
+                spell(efid - 400) /= 2
+                if ( efid == SKILL_SPELL_GEM_POWER ) {
+                    dbid = ITEM_ID_SPELLBOOK_GEM
+                }
+                if ( efid == SKILL_SPELL_WATER_BOLT ) {
+                    dbid = ITEM_ID_SPELLBOOK_WATER_BEAM
+                }
+                if ( efid == SKILL_SPELL_CONCENTRATION ) {
+                    dbid = ITEM_ID_SPELLBOOK_CONCENTRATION
+                }
+                if ( efid == SKILL_SPELL_FEATHER ) {
+                    dbid = ITEM_ID_SPELLBOOK_FEATHER
+                }
+                if ( efid == SKILL_SPELL_WIZARDS_HARVEST ) {
+                    dbid = ITEM_ID_SPELLBOOK_HARVEST
+                }
+                if ( efid == SKILL_SPELL_4DIM_POCKET ) {
+                    dbid = ITEM_ID_SPELLBOOK_4D_POCKET
+                }
+                if ( efid == SKILL_SPELL_CONTINGENCY ) {
+                    dbid = ITEM_ID_SPELLBOOK_CONTINGENCY
+                }
+                if ( efid == SKILL_SPELL_CRYSTAL_SPEAR ) {
+                    dbid = ITEM_ID_SPELLBOOK_MAGIC_LASER
+                }
+                if ( efid == SKILL_SPELL_MAGIC_STORM ) {
+                    dbid = ITEM_ID_SPELLBOOK_MAGIC_BALL
+                }
+                if ( efid == SKILL_SPELL_DARK_EYE ) {
+                    dbid = ITEM_ID_SPELLBOOK_DARKNESS_ARROW
+                }
+                if ( efid == SKILL_SPELL_INCOGNITO ) {
+                    dbid = ITEM_ID_SPELLBOOK_INCOGNITO
+                }
+                if ( efid == SKILL_SPELL_DOOR_CREATION ) {
+                    dbid = ITEM_ID_SPELLBOOK_MAKE_DOOR
+                }
+                if ( efid == SKILL_SPELL_FIRE_WALL ) {
+                    dbid = ITEM_ID_SPELLBOOK_FIRE_WALL
+                }
+                if ( efid == SKILL_SPELL_ACID_GROUND ) {
+                    dbid = ITEM_ID_SPELLBOOK_ACID_GROUND
+                }
+                if ( efid == SKILL_SPELL_HEALING_TOUCH ) {
+                    dbid = ITEM_ID_SPELLBOOK_HEALING_HANDS
+                }
+                if ( efid == SKILL_SPELL_HEALING_RAIN ) {
+                    dbid = ITEM_ID_SPELLBOOK_HEALING_RAIN
+                }
+                if ( efid == SKILL_SPELL_WALL_CREATION ) {
+                    dbid = ITEM_ID_SPELLBOOK_WALL_CREATION
+                }
+                if ( efid == SKILL_SPELL_WEB ) {
+                    dbid = ITEM_ID_SPELLBOOK_WEB
+                }
+                if ( efid == SKILL_SPELL_DOMINATE ) {
+                    dbid = ITEM_ID_SPELLBOOK_DOMINATION
+                }
+                if ( efid == SKILL_SPELL_MUTATION ) {
+                    dbid = ITEM_ID_SPELLBOOK_MUTATION
+                }
+                if ( efid == SKILL_SPELL_SENSE_OBJECT ) {
+                    dbid = ITEM_ID_SPELLBOOK_DETECT_OBJECTS
+                }
+                if ( efid == SKILL_SPELL_DIVINE_WISDOM ) {
+                    dbid = ITEM_ID_SPELLBOOK_KNOWLEDGE
+                }
+                if ( efid == SKILL_SPELL_NIGHTMARE ) {
+                    dbid = ITEM_ID_SPELLBOOK_NIGHTMARE
+                }
+                if ( efid == SKILL_SPELL_VANQUISH_HEX ) {
+                    dbid = ITEM_ID_SPELLBOOK_HOLY_RAIN
+                }
+                if ( efid == SKILL_SPELL_HOLY_LIGHT ) {
+                    dbid = ITEM_ID_SPELLBOOK_HOLY_LIGHT
+                }
+                if ( efid == SKILL_SPELL_HOLY_VEIL ) {
+                    dbid = ITEM_ID_SPELLBOOK_HOLY_VEIL
+                }
+                if ( efid == SKILL_SPELL_ELEMENT_SCAR ) {
+                    dbid = ITEM_ID_SPELLBOOK_ELEMENTAL_SCAR
+                }
+                if ( efid == SKILL_SPELL_MIST_OF_FRAILNESS ) {
+                    dbid = ITEM_ID_SPELLBOOK_WEAKNESS
+                }
+                if ( efid == SKILL_SPELL_HERO ) {
+                    dbid = ITEM_ID_SPELLBOOK_HERO
+                }
+                if ( efid == SKILL_SPELL_SLOW ) {
+                    dbid = ITEM_ID_SPELLBOOK_SLOW
+                }
+                if ( efid == SKILL_SPELL_SPEED ) {
+                    dbid = ITEM_ID_SPELLBOOK_SPEED
+                }
+                if ( efid == SKILL_SPELL_ATTRIBUTE_SHIELD ) {
+                    dbid = ITEM_ID_SPELLBOOK_RESISTANCE
+                }
+                if ( efid == SKILL_SPELL_REGENERATION ) {
+                    dbid = ITEM_ID_SPELLBOOK_REGENERATION
+                }
+                if ( efid == SKILL_SPELL_MIST_OF_SILENCE ) {
+                    dbid = ITEM_ID_SPELLBOOK_SILENCE
+                }
+                if ( efid == SKILL_SPELL_HOLY_SHIELD ) {
+                    dbid = ITEM_ID_SPELLBOOK_HOLY_SHIELD
+                }
+                if ( efid == SKILL_SPELL_WISH ) {
+                    dbid = ITEM_ID_SPELLBOOK_WISHING
+                }
+                if ( efid == SKILL_SPELL_CHAOS_BALL ) {
+                    dbid = ITEM_ID_SPELLBOOK_CHAOS_BALL
+                }
+                if ( efid == SKILL_SPELL_RAGING_ROAR ) {
+                    dbid = ITEM_ID_SPELLBOOK_SOUND_BALL
+                }
+                if ( efid == SKILL_SPELL_FIRE_BALL ) {
+                    dbid = ITEM_ID_SPELLBOOK_FIRE_BALL
+                }
+                if ( efid == SKILL_SPELL_ICE_BALL ) {
+                    dbid = ITEM_ID_SPELLBOOK_ICE_BALL
+                }
+                if ( efid == SKILL_SPELL_MIND_BOLT ) {
+                    dbid = ITEM_ID_SPELLBOOK_ILLUSION_BEAM
+                }
+                if ( efid == SKILL_SPELL_DARKNESS_BOLT ) {
+                    dbid = ITEM_ID_SPELLBOOK_DARKNESS_BEAM
+                }
+                if ( efid == SKILL_SPELL_NERVE_ARROW ) {
+                    dbid = ITEM_ID_SPELLBOOK_NERVE_EYE
+                }
+                if ( efid == SKILL_SPELL_CHAOS_EYE ) {
+                    dbid = ITEM_ID_SPELLBOOK_CHAOS_EYE
+                }
+                if ( efid == SKILL_SPELL_NETHER_ARROW ) {
+                    dbid = ITEM_ID_SPELLBOOK_NETHER_EYE
+                }
+                if ( efid == SKILL_SPELL_MAGIC_DART ) {
+                    dbid = ITEM_ID_SPELLBOOK_MAGIC_ARROW
+                }
+                if ( efid == SKILL_SPELL_CURE_OF_JURE ) {
+                    dbid = ITEM_ID_SPELLBOOK_CURE_JURE
+                }
+                if ( efid == SKILL_SPELL_CURE_OF_ERIS ) {
+                    dbid = ITEM_ID_SPELLBOOK_CURE_ERIS
+                }
+                if ( efid == SKILL_SPELL_HEAL_CRITICAL ) {
+                    dbid = ITEM_ID_SPELLBOOK_CURE_CRITICAL_WOUND
+                }
+                if ( efid == SKILL_SPELL_HEAL_LIGHT ) {
+                    dbid = ITEM_ID_SPELLBOOK_CURE_MINOR_WOUND
+                }
+                if ( efid == SKILL_SPELL_RETURN ) {
+                    dbid = ITEM_ID_SPELLBOOK_RETURN
+                }
+                if ( efid == SKILL_SPELL_ORACLE ) {
+                    dbid = ITEM_ID_SPELLBOOK_ORACLE
+                }
+                if ( efid == SKILL_SPELL_MAGIC_MAP ) {
+                    dbid = ITEM_ID_SPELLBOOK_MAGIC_MAPPING
+                }
+                if ( efid == SKILL_SPELL_SUMMON_MONSTERS ) {
+                    dbid = ITEM_ID_SPELLBOOK_SUMMON_MONSTERS
+                }
+                if ( efid == SKILL_SPELL_SHORT_TELEPORT ) {
+                    dbid = ITEM_ID_SPELLBOOK_MINOR_TELEPORTATION
+                }
+                if ( efid == SKILL_SPELL_LIGHTNING_BOLT ) {
+                    dbid = ITEM_ID_SPELLBOOK_LIGHTNING_BOLT
+                }
+                if ( efid == SKILL_SPELL_FIRE_BOLT ) {
+                    dbid = ITEM_ID_SPELLBOOK_FIRE_BOLT
+                }
+                if ( efid == SKILL_SPELL_ICE_BOLT ) {
+                    dbid = ITEM_ID_SPELLBOOK_ICE_BOLT
+                }
+                if ( efid == SKILL_SPELL_UNCURSE ) {
+                    dbid = ITEM_ID_SPELLBOOK_UNCURSE
+                }
+                if ( efid == SKILL_SPELL_IDENTIFY ) {
+                    dbid = ITEM_ID_SPELLBOOK_IDENTIFY
+                }
+                if ( efid == SKILL_SPELL_TELEPORT ) {
+                    dbid = ITEM_ID_SPELLBOOK_TELEPORTATION
+                }
+                if ( efid == SKILL_SPELL_THUNDER_VORTEX ) {
+                    dbid = ITEM_ID_SPELLBOOK_OF_THUNDER_VORTEX
+                }
+                if ( efid == SKILL_SPELL_ECLIPSE ) {
+                    dbid = ITEM_ID_SPELLBOOK_OF_ECLIPSE_JAIL
+                }
+                if ( efid == SKILL_SPELL_NETHER_WAVE ) {
+                    dbid = ITEM_ID_SPELLBOOK_OF_NETHER_ROAR
+                }
+                if ( efid == SKILL_SPELL_POISON_STORM ) {
+                    dbid = ITEM_ID_SPELLBOOK_OF_POISON_STORM
+                }
+                if ( efid == SKILL_SPELL_BUBBLE_STORM ) {
+                    dbid = ITEM_ID_SPELLBOOK_OF_BUBBLE_STORM
+                }
+                if ( efid == SKILL_SPELL_ILLUSION_ROAR ) {
+                    dbid = ITEM_ID_SPELLBOOK_OF_ILLUSION_ROAR
+                }
+                if ( efid == SKILL_SPELL_ANGUISH_JAIL ) {
+                    dbid = ITEM_ID_SPELLBOOK_OF_ANGUISH_JAIL
+                }
+                if ( efid == SKILL_SPELL_FIRE_CLAW ) {
+                    dbid = ITEM_ID_SPELLBOOK_OF_FIRE_CLAW
+                }
+                if ( efid == SKILL_SPELL_COLD_BLADE ) {
+                    dbid = ITEM_ID_SPELLBOOK_OF_COLD_BLADE
+                }
+                if ( efid == SKILL_SPELL_LIGHTNING_SPEAR ) {
+                    dbid = ITEM_ID_SPELLBOOK_OF_LIGHTNING_SPEAR
+                }
+                if ( efid == SKILL_SPELL_MIND_THORN ) {
+                    dbid = ITEM_ID_SPELLBOOK_OF_MIND_THORN
+                }
+                if ( efid == SKILL_SPELL_POISON_MUCUS ) {
+                    dbid = ITEM_ID_SPELLBOOK_OF_POISON_MUCUS
+                }
+                if ( efid == SKILL_SPELL_SOUND_CANNONBALL ) {
+                    dbid = ITEM_ID_SPELLBOOK_OF_SOUND_CANNONBALL
+                }
+                if ( efid == SKILL_SPELL_HYDRO_FANG ) {
+                    dbid = ITEM_ID_SPELLBOOK_OF_HYDRO_FANG
+                }
+                if ( efid == SKILL_SPELL_NETHER_BOLT ) {
+                    dbid = ITEM_ID_SPELLBOOK_OF_NETHER_BOLT
+                }
+                if ( efid == SKILL_SPELL_POISON_BOLT ) {
+                    dbid = ITEM_ID_SPELLBOOK_OF_POISON_BOLT
+                }
+                if ( efid == SKILL_SPELL_SOUND_BOLT ) {
+                    dbid = ITEM_ID_SPELLBOOK_OF_SOUND_BOLT
+                }
+                if ( efid == SKILL_SPELL_CHAOS_BOLT ) {
+                    dbid = ITEM_ID_SPELLBOOK_OF_CHAOS_BOLT
+                }
+                if ( efid == SKILL_SPELL_NERVE_BOLT ) {
+                    dbid = ITEM_ID_SPELLBOOK_OF_NERVE_BOLT
+                }
+                flt
+                itemcreate -1, dbid, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), num
+                inv(INV_ITEM_CHARGE, ci) = 1
+                item_identify ci, ITEM_KNOWN_FULL
+                txt_questitem
+            }
+            else {
+                snd SOUNDLIST_FAIL1
+            }
+            goto *act_use_SWEND1
+        }
+        goto *act_use_SWEND1
+        _switch_sw++
+    }
+    return

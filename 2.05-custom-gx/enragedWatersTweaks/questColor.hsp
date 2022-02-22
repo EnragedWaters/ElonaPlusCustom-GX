@@ -1,0 +1,31 @@
+//Cooked food is an issue.
+*questColorChangeTweak //Line 3036 in command.hsp
+	//This changes quest description color to green if you own the item already
+	// Tweak -> Checks to see if player owns required quest item->If so, changes quest text color for easy turn-in
+	if(qdata(QDATA_EXIST, rq) == QUEST_TYPE_SUPPLY | qdata(QDATA_EXIST, rq) == QUEST_TYPE_COLLECT | qdata(QDATA_EXIST, rq) == QUEST_TYPE_COOK){ 
+		//inv_getheader cc
+		repeat invrange, invhead //This repeat should be it's own function with parameters since this is duplicated from chat.hsp
+			if ( inv(INV_ITEM_NUM, cnt) == 0 ) {
+				continue
+			}
+			if ( ibit(ITEM_BIT_NO_DROP, cnt) ) {
+				continue
+			}
+			if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_COOK ) {
+				if ( refitem(inv(INV_ITEM_ID, cnt), DBSPEC_TYPE) == FILTER_ITEM_FOOD ) {
+					if ( inv(INV_ITEM_PARAM1, cnt) / 1000 == qdata(QDATA_PARAM1, rq) ) {
+						if ( inv(INV_ITEM_PARAM2, cnt) == qdata(QDATA_PARAM2, rq) ) {
+							color 25, 150, 25
+							break
+						}
+					}
+				}
+			}
+			if ( inv(INV_ITEM_ID, cnt) == qdata(QDATA_DEST_ITEM, rq) ) {
+				color 25, 150, 25 //Item required for quest found
+				break
+			}
+		loop 
+	}
+	//inv_getheader tc 
+	return

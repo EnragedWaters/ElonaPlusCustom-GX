@@ -1,0 +1,27 @@
+// CUSTOM TWEAKS BY ENRAGED WATERS//
+//Idea is to keep tweaks in seperate .hsp for personal use/updating game
+//Not idea for gitHub but the logic is all there so creating a gitHub branch is straight forward
+
+/* TO DOS
+-AI tweak - > Get Crunked -> Increase chance for npcs to drink during party time
+-Spact idea -> Cooking Party - > either a re-roll or +1 to cooked dish.
+-Fishing tweak - make it so fishing skill does something past 40
+-Create adventurer hospital
+*/
+
+/*TWEAK CHECKLIST===========
+0. Write tweak in the comments at top.
+1. Add the #define MY_TWEAK into mod.hsp.
+2. Add tweak into array based off it's category(gameplay, convienence, etc.) in custom_tweaks.hsp
+3. Increase listmax by +1 for that category
+4. Add it's description.
+5. Make sure TweakData(myTweakName, TweakCategory) is actually applied in the code
+==========================*/
+
+//cc = CHARA_PLAYER // cc = Current player
+//tc = target Character //      tc = map(tlocx, tlocy, 1) - 1       <-  is usual declaration
+//cdata(CDATA_GOLD, CHARA_PLAYER) // For Obtaining cdata on line 3552 in mod.hsp such as position, sex, and hunger.
+//if ( sdata(SKILL_NORMAL_NEGOTIATION, cc) // For obtaining skill levels such as casting level. Found on line 190 in mod.hsp
+//efp is power effectiveness      efp = calcspellpower(efid, cc)
+//cbit(CHARA_BIT_NECRO, cc) != 1    <- IF they're NOT necromancy allies
+//flt function sorta works as a "reset" option before creating npcs to avoid accidentally giving them unique properties not otherwise specified
