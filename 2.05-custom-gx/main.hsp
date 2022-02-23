@@ -7,6 +7,11 @@
 //=====ENRAGEDWATERS======
 #include "enragedWatersTweaks\\shop.hsp" //Tweaking merchants gold, item quantity, etc.
 #include "enragedWatersTweaks\\questDifficultyAndRewards.hsp" //Tweaking quests
+#include "enragedWatersTweaks\\arena.hsp"
+#include "enragedWatersTweaks\\manuscript.hsp"
+#include "enragedWatersTweaks\\questColor.hsp"
+#include "enragedWatersTweaks\\wizardMode.hsp" 
+#include "enragedWatersTweaks\\fish.hsp" 
 //========================
 
 ; Define this to enable Lua debugging features.

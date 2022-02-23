@@ -4439,7 +4439,7 @@
 	rowactend cc
 	return
 
-*choose_fish
+/**choose_fish
 	if ( rowactre != 0 ) {
 		return
 	}
@@ -4503,7 +4503,7 @@
 	item_stack CHARA_PLAYER, ci, 1
 	inv(INV_ITEM_CHARGE, turi)--
 	fishsize = 0
-	return
+	return*/
 
 *fishing
 	if ( rowactre != 0 ) {

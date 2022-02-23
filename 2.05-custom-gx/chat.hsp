@@ -18760,7 +18760,8 @@
 			arenaimport = 1
 		}
 		listmax = 0
-		if ( chatval == 40 ) {
+		gosub *petArenaTweak
+		/*if ( chatval == 40 ) {
 			if ( adata(ADATA_ARENA_RENEW_DATE, gdata(GDATA_AREA)) <= gdata(GDATA_HOUR) + gdata(GDATA_DAY) * 24 + gdata(GDATA_MONTH) * 24 * 30 + gdata(GDATA_YEAR) * 24 * 30 * 12 ) {
 				adata(ADATA_ARENA_MATCHES_FOUGHT, gdata(GDATA_AREA)) = 0
 			}
@@ -18799,7 +18800,7 @@
 			}
 			buff = lang("" + arenaop(1) + "人同士のチームバトルで、対戦相手はレベル" + arenaop(2) + "の相手複数" + _da() + "挑戦する" + _noka(1), "It's a " + arenaop(1) + " vs " + arenaop(1) + " match. The opponent's group is formed by the pets less than " + arenaop(2) + " levels. What you say?")
 		}
-		if ( chatval == 49 ) {
+		*/if ( chatval == 49 ) {
 			arenaop = 1, 2, rtval(1)
 			enemylv = rtval(1)
 			arenaop(1) = rtval

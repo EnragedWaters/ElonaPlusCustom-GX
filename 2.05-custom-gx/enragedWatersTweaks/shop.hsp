@@ -2,6 +2,68 @@
 Original functions are commented out and are replaced with these.
 */
 
+*houseServantsTweak //Line 1445 in map_user.hsp
+	repeat 30
+		isethire = CREATURE_ID_MAID, CREATURE_ID_BARTENDER, CREATURE_ID_HEALER, CREATURE_ID_WIZARD, CREATURE_ID_INFORMER, CREATURE_ID_GUARD, CREATURE_ID_SHOPKEEPER, CREATURE_ID_SHOPKEEPER, CREATURE_ID_SHOPKEEPER, CREATURE_ID_SHOPKEEPER, CREATURE_ID_SHOPKEEPER
+		isethirerole = ROLE_MAID, ROLE_BARTENDER, ROLE_HEALER, ROLE_IDENTIFIER, ROLE_INFORMER, ROLE_GUARD, ROLE_SHOP_GOODS, ROLE_SHOP_GOODS, ROLE_SHOP_GOODS, ROLE_SHOP_GOODS, ROLE_SHOP_GOODS
+		randomize gdata(GDATA_DAY) + cnt
+		hire = rnd(length(isethire))
+		dbid = isethire(hire)
+
+		randomize gdata(GDATA_DAY) + cnt
+		flt 20
+		characreate -1, dbid, -3, 0
+		if ( stat == 0 ) {
+			continue
+		}
+		cdata(CDATA_EXIST, rc) = CHAR_STATE_TEMP
+		cdata(CDATA_ROLE, rc) = isethirerole(hire)
+		if ( cdata(CDATA_ID, rc) == CREATURE_ID_SHOPKEEPER ) {
+			p = rnd(9)
+			if ( p == 0 ) {
+				cdata(CDATA_ROLE, rc) = ROLE_SHOP_ARMOR
+				cdatan(CDATAN_NAME, rc) = lang("武具店の" + cdatan(CDATAN_NAME, rc), cdatan(CDATAN_NAME, rc) + " of armory")
+			}
+			if ( p == 1 ) {
+				cdata(CDATA_ROLE, rc) = ROLE_SHOP_GENERAL
+				cdatan(CDATAN_NAME, rc) = lang("雑貨屋の" + cdatan(CDATAN_NAME, rc), cdatan(CDATAN_NAME, rc) + " of general store")
+			}
+			if ( p == 2 ) {
+				cdata(CDATA_ROLE, rc) = ROLE_SHOP_MAGIC
+				cdatan(CDATAN_NAME, rc) = lang("魔法店の" + cdatan(CDATAN_NAME, rc), cdatan(CDATAN_NAME, rc) + " of magic store")
+			}
+			if ( p == 3 ) {
+				cdata(CDATA_ROLE, rc) = ROLE_SHOP_GOODS
+				cdatan(CDATAN_NAME, rc) = lang("何でも屋の" + cdatan(CDATAN_NAME, rc), cdatan(CDATAN_NAME, rc) + " of goods store")
+			}
+			if ( p == 4 ) {
+				cdata(CDATA_ROLE, rc) = ROLE_SHOP_ARMOR
+				cdatan(CDATAN_NAME, rc) = lang("武具店の" + cdatan(CDATAN_NAME, rc), cdatan(CDATAN_NAME, rc) + " of armory")
+			}
+			if ( p == 5 ) {
+				cdata(CDATA_ROLE, rc) = ROLE_SHOP_BLACKMARKET
+				cdatan(CDATAN_NAME, rc) = lang("ブラックマーケットの" + cdatan(CDATAN_NAME, rc), cdatan(CDATAN_NAME, rc) + " of blackmarket")
+			}
+			if ( p == 6 ) {
+				cdata(CDATA_ROLE, rc) = ROLE_SHOP_BAKERY
+				cdatan(CDATAN_NAME, rc) = lang("???@“X??" + cdatan(CDATAN_NAME, rc), cdatan(CDATAN_NAME, rc) + " of baker store")
+				cdata(CDATA_PIC, rc) = xy2pic(6, 4) //Baker sprite, otherwise looks like normal merchant.	
+			}
+			if ( p == 7 ) {
+				cdata(CDATA_ROLE, rc) = ROLE_SHOP_FOOD
+				cdatan(CDATAN_NAME, rc) = lang("???@“X??" + cdatan(CDATAN_NAME, rc), cdatan(CDATAN_NAME, rc) + " of food store")
+			}
+			if ( p == 8 ) {
+				cdata(CDATA_ROLE, rc) = ROLE_SHOP_FISH
+				cdatan(CDATAN_NAME, rc) = lang("???@“X??" + cdatan(CDATAN_NAME, rc), cdatan(CDATAN_NAME, rc) + " of fish store")
+			}
+			randomize
+			cdata(CDATA_ROLE_SHOP_LEVEL, rc) = rnd(15) + 1
+		}
+	return
+
+
+
 #deffunc generatemoney int generatemoney_charid //Line 474 in calculation.hsp
 	locvar_generatemoney_p = rnd(2000) + rnd(cdata(CDATA_LEVEL, generatemoney_charid) * 50 + 1)
 	if ( cdata(CDATA_ROLE, generatemoney_charid) >= ROLE_SHOP_MIN & cdata(CDATA_ROLE, generatemoney_charid) < ROLE_GUEST_MIN | cdata(CDATA_ROLE, generatemoney_charid) == ROLE_GUEST_MERCHANT ) {

@@ -1420,7 +1420,8 @@
 			txt lang("家はすでに人であふれかえっている。", "You already have too many guests in your home.")
 			goto *com_home_SWEND1
 		}
-		repeat 10
+		gosub *houseServantsTweak
+		/*repeat 10
 			randomize gdata(GDATA_DAY) + cnt
 			if ( rnd(2) ) {
 				continue
@@ -1469,7 +1470,7 @@
 				}
 				randomize
 				cdata(CDATA_ROLE_SHOP_LEVEL, rc) = rnd(15) + 1
-			}
+			}*/
 			cnt2 = cnt
 			repeat MAX_CHARA_TOTAL - MAX_CHARA_SAVE, MAX_CHARA_SAVE
 				if ( cnt == rc ) {

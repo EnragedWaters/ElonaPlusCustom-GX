@@ -1,0 +1,69 @@
+*choose_fish
+	if ( rowactre != 0 ) {
+		return
+	}
+	turi = cdata(CDATA_ITEM_USING, CHARA_PLAYER)
+	basyo = 0
+	dbmax = 0
+	dbsum = 0
+	repeat MAX_FISH
+		if ( fishdata(FISHDATA_PIC, cnt) == 0 ) {
+			continue
+		}
+		i = limit(inv(INV_ITEM_FISHING_BAIT, ci) + (rnd(5) == 0) - (rnd(5) == 0), 0, 5)
+        repeat int(sdata(SKILL_ATTR_LUC, CHARA_PLAYER)/100) //Every 100 luck do a 50% chance for re-roll
+            if (i > 3){ //i = 4/5 is junk.
+                i = limit(inv(INV_ITEM_FISHING_BAIT, ci) + (rnd(5) == 0) - (rnd(5) == 0), 0, 5)
+            }
+        loop
+		if ( gdata(GDATA_WORLD) == AREA_AIMWELL ) {
+			i = 6
+		}
+		if ( gdata(GDATA_WORLD) == AREA_SOUTH_TYRIS ) {
+			i += 200
+		}
+		if ( gdata(GDATA_WORLD) == AREA_LOST_YLVA ) {
+			i += 300
+		}
+		if ( fishdata(FISHDATA_LEVEL, cnt) != i ) {
+			continue
+		}
+		dblist(0, dbmax) = cnt, fishdata(FISHDATA_RARE, cnt) + dbsum
+		dbsum += fishdata(FISHDATA_RARE, cnt)
+		dbmax++
+	loop
+	fish = 1
+	if ( dbsum != 0 ) {
+		exrand_rnd dbtmp, dbsum
+		repeat dbmax
+			if ( dblist(1, cnt) > dbtmp ) {
+				fish = dblist(0, cnt)
+				break
+			}
+		loop
+	}
+	return
+
+*get_fish
+	flt
+	itemcreate 0, fishdata(FISHDATA_ID, fish), -1, -1, 0
+	inv(INV_ITEM_SUB_NAME, ci) = fish
+	inv(INV_ITEM_PIC, ci) = fishdata(FISHDATA_PIC, fish)
+	if ( inv(INV_ITEM_ID, ci) == ITEM_ID_FISH ) {
+		fishsize = (rnd(10) * rnd(10) + 80) / 10
+	}
+	if ( inv(INV_ITEM_ID, ci) == ITEM_ID_FISH_JUNK ) {
+		fishsize = 10
+	}
+	inv(INV_ITEM_VALUE, ci) = fishdata(FISHDATA_VALUE, fish) / 10 * fishsize
+	inv(INV_ITEM_WEIGHT, ci) = fishdata(FISHDATA_WEIGHT, fish) / 10 * fishsize
+	if ( gdata(GDATA_WORLD) == AREA_SOUTH_TYRIS ) {
+		inv(INV_ITEM_COL, ci) = 5
+	}
+	if ( gdata(GDATA_WORLD) == AREA_LOST_YLVA ) {
+		inv(INV_ITEM_COL, ci) = 7
+	}
+	txt lang(itemname(ci, 1) + "を釣り上げた！", "You get " + itemname(ci, 1) + "!")
+	item_stack CHARA_PLAYER, ci, (int(sdata(SKILL_NORMAL_FISH, CHARA_PLAYER)/100) +1)
+	inv(INV_ITEM_CHARGE, turi)--
+	fishsize = 0

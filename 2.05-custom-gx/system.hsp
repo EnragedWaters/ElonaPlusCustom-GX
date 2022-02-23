@@ -4127,6 +4127,7 @@
 			noteadd "Done."
 			goto *console_write
 		}
+		*gosub consoleCommandAddAttribute
 		if ( instr(buff, 0, "allinv") != (-1) ) {
 			repeat MAX_INV_DATA
 				if ( cnt < RANGE_INV2 ) {
