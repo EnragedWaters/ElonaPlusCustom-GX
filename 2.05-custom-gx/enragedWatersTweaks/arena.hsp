@@ -18,6 +18,7 @@
             chatMore lang("ようこそペットの王！" + _kimi(3) + "のペットと戦うため、今日も挑戦者がやってきている" + _yo(2), "Welcome! A challenger has come to fight with your pet!")
         }
         buff = lang("一対一の戦いで、対戦相手はレベル" + arenaop(2) + "相当の相手" + _da() + "挑戦する" + _noka(1), "The opponent is around level " + arenaop(2) + ". Want to give it a try? ")
+    }
         if ( chatval == 41 ) {
 			if ( adata(ADATA_ARENA_RENEW_DATE, gdata(GDATA_AREA)) <= gdata(GDATA_HOUR) + gdata(GDATA_DAY) * 24 + gdata(GDATA_MONTH) * 24 * 30 + gdata(GDATA_YEAR) * 24 * 30 * 12 ) {
 				adata(ADATA_ARENA_MATCHES_FOUGHT, gdata(GDATA_AREA)) = 0

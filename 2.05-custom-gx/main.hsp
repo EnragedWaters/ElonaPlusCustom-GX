@@ -4,16 +4,6 @@
 #packopt name "ElonaPlusCGX"
 #cmpopt varname 1
 
-//=====ENRAGEDWATERS======
-#include "enragedWatersTweaks\\shop.hsp" //Tweaking merchants gold, item quantity, etc.
-#include "enragedWatersTweaks\\questDifficultyAndRewards.hsp" //Tweaking quests
-#include "enragedWatersTweaks\\arena.hsp"
-#include "enragedWatersTweaks\\manuscript.hsp"
-#include "enragedWatersTweaks\\questColor.hsp"
-#include "enragedWatersTweaks\\wizardMode.hsp" 
-#include "enragedWatersTweaks\\fish.hsp" 
-//========================
-
 ; Define this to enable Lua debugging features.
 ;#define CUSTOM_GX_LUA
 
@@ -146,6 +136,7 @@
 #define global VARIANT_TITLE "Elona+ Custom-GX 2.10.1.1"
 #define global VERSION_STRING "6.10"
 #define global VERSION_NUMBER int(double(VERSION_STRING) * 1000)
+
 
 	develop = dirinfo(4) == "--develop"
 
@@ -283,7 +274,7 @@
 	; #include "db_class_fake.hsp"
 	; #include "db_creature_fake.hsp"
 	; #endif
-
+	
 	#include "randname.hsp"
 	#include "adv.hsp"
 	#include "quest.hsp"
@@ -293,6 +284,16 @@
 	#include "help.hsp"
 
 	#include "lua.hsp"
+	//=====ENRAGEDWATERS======
+	//Have to place it here because of color_green defined in lua.hsp
+	#include "enragedWatersTweaks\\shop.hsp" //Tweaking merchants gold, item quantity, etc.
+	#include "enragedWatersTweaks\\questDifficultyAndRewards.hsp" //Tweaking quests
+	#include "enragedWatersTweaks\\arena.hsp"
+	#include "enragedWatersTweaks\\manuscript.hsp"
+	#include "enragedWatersTweaks\\questColor.hsp"
+	#include "enragedWatersTweaks\\wizardMode.hsp" 
+	#include "enragedWatersTweaks\\fish.hsp" 
+	//========================
 
 #ifdef CUSTOM_GX_MOCK
 	#include "mock_lib.hsp"

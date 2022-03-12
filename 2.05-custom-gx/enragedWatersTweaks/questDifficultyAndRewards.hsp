@@ -345,14 +345,14 @@
 	p = qdata(QDATA_REWARD, rq)
     minCoin =  1 + cdata(CDATA_FAME, CHARA_PLAYER) / 20000 //Minimum platnium/bronze coins player recieves. Also for seeds.
 	maxCoin =  1 + cdata(CDATA_FAME, CHARA_PLAYER) / 10000 //Max
-	rndCoin =  1 + maxPlat //Since rnd() does -1 to parameter
-	p = 1 + limit(rnd(rndCoin), minCoin, maxCoin)
+	rndCoin =  1 + maxCoin //Since rnd() does -1 to parameter
+	coinReward = limit(rnd(1 + maxCoin), minCoin, maxCoin)
 	if ( p != 0 ) {
 		flt
-		itemcreate -1, 3 * ITEM_ID_GOLD_PIECE, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), p
+		itemcreate -1, ITEM_ID_GOLD_PIECE, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), p * 5
 	}
 	flt
-	itemcreate -1, ITEM_ID_PLATINUM_COIN, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), p
+	itemcreate -1, ITEM_ID_PLATINUM_COIN, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), coinReward
 	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_PARTY ) {
 		if ( qdata(QDATA_PARAM1, rq) * 150 / 100 < qdata(QDATA_PARAM2, rq) ) {
 			flt
@@ -365,40 +365,40 @@
 		inv(INV_ITEM_STATUS, ci) = ITEM_STATUS_NORMAL
 		if ( qdata(QDATA_PARAM1, rq) * 125 / 100 <= qdata(QDATA_PARAM2, rq) | qdata(QDATA_VAR, rq) == 1 ) {
 			flt
-			itemcreate -1, ITEM_ID_BRONZE_COIN, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), p
+			itemcreate -1, ITEM_ID_BRONZE_COIN, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), coinReward
 		}
 	}
 	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_HARVEST ) {
 		if ( qdata(QDATA_PARAM1, rq) * 125 / 100 < qdata(QDATA_PARAM2, rq) ) {
 			flt
-			itemcreate -1, ITEM_ID_BRONZE_COIN, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), p
+			itemcreate -1, ITEM_ID_BRONZE_COIN, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), coinReward
 		}
 		seedp = rnd(limit(sdata(SKILL_NORMAL_GARDENING, CHARA_PLAYER) / 2, 0, 100) + 80)
 		if ( seedp >= 90 ) {
 			if ( rnd(2) == 0 ) {
-				itemcreate -1, ITEM_ID_HERB_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), p
+				itemcreate -1, ITEM_ID_HERB_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), coinReward
 			}
 			else {
-				itemcreate -1, ITEM_ID_HERB_SEED, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), p
+				itemcreate -1, ITEM_ID_HERB_SEED, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), coinReward
 			}
 		}
 		if ( seedp >= 70 & seedp < 90 ) {
 			if ( rnd(2) == 0 ) {
-				itemcreate -1, ITEM_ID_UNKNOWN_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), p
+				itemcreate -1, ITEM_ID_UNKNOWN_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), coinReward
 			}
 			else {
-				itemcreate -1, ITEM_ID_MAGICAL_SEED, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), p
+				itemcreate -1, ITEM_ID_MAGICAL_SEED, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), coinReward
 			}
 		}
 		if ( seedp >= 50 & seedp < 70 ) {
-			itemcreate -1, ITEM_ID_GEM_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), p
+			itemcreate -1, ITEM_ID_GEM_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), coinReward
 		}
 		if ( seedp >= 0 & seedp < 50 ) {
 			if ( rnd(2) == 0 ) {
-				itemcreate -1, ITEM_ID_FRUIT_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), p
+				itemcreate -1, ITEM_ID_FRUIT_SEED, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), coinReward
 			}
 			else {
-				itemcreate -1, ITEM_ID_VEGETABLE_SEED, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), p
+				itemcreate -1, ITEM_ID_VEGETABLE_SEED, cdata(CDATA_X, cc), cdata(CDATA_Y, cc), coinReward
 			}
 		}
 	}
@@ -439,10 +439,10 @@
 			itemcreate -1, ITEM_ID_DUMMY, cdata(CDATA_X, CHARA_PLAYER), cdata(CDATA_Y, CHARA_PLAYER), 0
 		loop
 	}
-	modkarma CHARA_PLAYER, 1
+	modkarma CHARA_PLAYER, 2
 	gdata(GDATA_QUEST_FAME) = calcfame(0, qdata(QDATA_LEVEL, rq) * 6 + 40)
 	txtef COLOR_GREEN
-	txt lang(qname(rq) + "から受けた依頼を完了した。", "You have completed the quest taken from " + qname(rq) + ".")
+	txt lang(qname(rq) + "から受けた依頼を完了した截", "You have completed the quest taken from " + qname(rq) + ".")
 	if ( gdata(STARTING_GDATA_FLAG + 326) == 100 ) {
 		gdata(STARTING_GDATA_FLAG + 326) = 300
 	}
@@ -450,12 +450,12 @@
 	mdata(MDATA_CITY_AUTHORITY) += hatugen
 	if ( mdata(MDATA_CITY_ETHER_CORRUPTION) != 0 ) {
 		txtef COLOR_GREEN
-		txt lang("発言力を" + hatugen + "獲得（現在" + mdata(MDATA_CITY_AUTHORITY) + "）、", "You get " + hatugen + " praise.")
+		txt lang("発言力を" + hatugen + "獲得拱現昊" + mdata(MDATA_CITY_AUTHORITY) + "挧戡", "You get " + hatugen + " praise.")
 	}
 	gdata(GDATA_FLAG_JOBS_COMPLETED)++
 	txtef COLOR_GREEN
 	txtmore
-	txt lang("" + gdata(GDATA_QUEST_FAME) + "の名声値を手に入れた。", "You gain " + gdata(GDATA_QUEST_FAME) + " fame.")
+	txt lang("" + gdata(GDATA_QUEST_FAME) + "の名攫値を手に入れた截", "You gain " + gdata(GDATA_QUEST_FAME) + " fame.")
 	cdata(CDATA_FAME, CHARA_PLAYER) += gdata(GDATA_QUEST_FAME)
 	txt_questitem
 	if ( qdata(QDATA_EXIST, rq) == QUEST_TYPE_DELIVER ) {

@@ -1470,7 +1470,7 @@
 				}
 				randomize
 				cdata(CDATA_ROLE_SHOP_LEVEL, rc) = rnd(15) + 1
-			}*/
+			}
 			cnt2 = cnt
 			repeat MAX_CHARA_TOTAL - MAX_CHARA_SAVE, MAX_CHARA_SAVE
 				if ( cnt == rc ) {
@@ -1482,7 +1482,7 @@
 					}
 				}
 			loop
-		loop
+		loop*/
 		randomize
 		txtnew
 		txt lang("誰を雇用する？", "Who do you want to hire?")

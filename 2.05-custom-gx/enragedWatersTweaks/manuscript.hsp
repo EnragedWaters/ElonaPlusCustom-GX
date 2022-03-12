@@ -1,9 +1,9 @@
 #defcfunc maxManuScripts int
     //Default max is just 100.
-    return 100 + int(sdata(SKILL_NORMAL_MEMORIZATION, CHARA_PLAYER)/8) + int(sdata(SKILL_NORMAL_DETECTION, CHARA_PLAYER)/8)
+    return 100 + int(sdata(SKILL_NORMAL_MEMORIZATION, CHARA_PLAYER)/10) + int(sdata(SKILL_NORMAL_DETECTION, CHARA_PLAYER)/10) + int(sdata(SKILL_NORMAL_PERFORMER, CHARA_PLAYER)/10) + int(sdata(SKILL_NORMAL_MEDITATION, CHARA_PLAYER)/10)
 
 *manuScriptTravelTweak //In *travel
-    if ( gdata(GDATA_FLAG_MANUSCRIPT_IDEAS) < 100 ) {
+    if ( gdata(GDATA_FLAG_MANUSCRIPT_IDEAS) < maxManuScripts() ) {
 		if ( rnd(10000) > rnd(sdata(SKILL_NORMAL_TRAVELING, CHARA_PLAYER) + 1000) ) {
 			gdata(GDATA_FLAG_MANUSCRIPT_IDEAS)++
 		}

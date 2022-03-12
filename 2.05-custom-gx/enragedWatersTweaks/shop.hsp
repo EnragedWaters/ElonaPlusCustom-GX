@@ -60,6 +60,18 @@ Original functions are commented out and are replaced with these.
 			randomize
 			cdata(CDATA_ROLE_SHOP_LEVEL, rc) = rnd(15) + 1
 		}
+		cnt2 = cnt
+		repeat MAX_CHARA_TOTAL - MAX_CHARA_SAVE, MAX_CHARA_SAVE
+			if ( cnt == rc ) {
+				continue
+			}
+			if ( cdatan(CDATAN_NAME, cnt) == cdatan(CDATAN_NAME, rc) ) {
+				if ( cdata(CDATA_EXIST, cnt) != CHAR_STATE_DEAD ) {
+					chara_vanquish rc
+				}
+			}
+		loop
+	loop
 	return
 
 
@@ -213,16 +225,13 @@ Original functions are commented out and are replaced with these.
 			}
 		}
 		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_BAKERY ) {
-            p = rnd(3)
+            p = rnd(2)
 			if ( p == 0 ) {
 				flttypeminor = FILTER_ITEM_FOOD_BREAD
 			}
 			if ( p == 1 ) {
 				flttypeminor = FILTER_ITEM_FOOD_PASTA
 			}
-            if( p == 2){
-                flttypemajor = FILTER_ITEM_FOOD
-            }
 		}
 		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_FOOD ) {
 			if ( cdata(CDATA_ID, tc) != CREATURE_ID_AILE_THE_ATTENDANT ) {
@@ -259,7 +268,7 @@ Original functions are commented out and are replaced with these.
 		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_WANDER | cdata(CDATA_ROLE, tc) == ROLE_GUEST_MERCHANT ) {
 			flttypemajor = fsetwear(rnd(length(fsetwear)))
 			fixlv = FIX_QUALITY_GREAT
-			if ( rnd(2) == 0 ) {
+			if ( rnd(1) == 0 ) {
 				fixlv = FIX_QUALITY_MIRACLE
 			}
 		}
@@ -792,7 +801,7 @@ Original functions are commented out and are replaced with these.
 			}
 		}
 		if ( cdata(CDATA_ROLE, tc) == ROLE_SHOP_WANDER ) {
-			inv(INV_ITEM_VALUE, ci) *= 2
+			inv(INV_ITEM_VALUE, ci) *= 4
 		}
 		if ( cdata(CDATA_ROLE, tc) == ROLE_GUEST_MERCHANT ) {
 			inv(INV_ITEM_VALUE, ci) = inv(INV_ITEM_VALUE, ci) * 4 / 5
@@ -815,44 +824,44 @@ Original functions are commented out and are replaced with these.
 
 *item_quantity
     //Item rarity affects quantity despite high stock number earlier.
-    quantityMultiplier = 2
+    //quantityMultiplier = 1
 	p = refitem(inv(INV_ITEM_ID, ci), DBSPEC_TYPE) //The filter - like potion, food, etc.
-	i = refitem(inv(INV_ITEM_ID, ci), DBSPEC_RARE_LEVEL) * quantityReducer //Curaria herb for example is 1000. Morgia 320(more rare.)
+	i = refitem(inv(INV_ITEM_ID, ci), DBSPEC_RARE_LEVEL) + cdata(CDATA_ROLE_SHOP_LEVEL, tc) * 1.25 //* quantityMultiplier Curaria herb for example is 1000. Morgia 320(more rare.)
 	rtval = 1 //Limits item amount to 1 basically. 1 herb, 1 spellbook, etc.
 	repeat 1
 		if ( i <= 100 ) {
 			break
 		}
 		if ( p == FILTER_ITEM_FOOD ) {
-			rtval = i / 50
+			rtval = i / 500
 			break
 		}
 		if ( p == FILTER_CARGO_TRADE ) {
-			rtval = i / 200
+			rtval = i / 180
 			break
 		}
 		if ( p >= FILTER_CARGO ) {
-			rtval = i / 50
+			rtval = i / 90
 			break
 		}
 		if ( p == FILTER_ITEM_POTION ) {
-			rtval = i / 50
+			rtval = i / 90
 			break
 		}
 		if ( p == FILTER_ITEM_SCROLL ) {
-			rtval = i / 50
+			rtval = i / 90
 			break
 		}
 		if ( p == FILTER_FURNITURE ) {
-			rtval = i / 100
+			rtval = i / 190
 			break
 		}
 		if ( p == FILTER_JUNK ) {
-			rtval = i / 40
+			rtval = i / 70
 			break
 		}
 		if ( p == FILTER_ITEM_TOOL ) {
-			rtval = i / 400
+			rtval = i / 450
 			break
 		}
 	loop
